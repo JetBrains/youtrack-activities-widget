@@ -1,0 +1,11 @@
+{
+  "key": "you-track-activities-widget",
+  "name": "YouTrack activities widget",
+  "version": "1.0.0",
+  "description": "Shows and filters recent activities ",
+  "author": "pavel.nikolaev@jetbrains.com",
+  "products": {
+    "Hub": "2018.2",
+    "YouTrack": "2018.2"
+  }
+}
