@@ -1,0 +1,32 @@
+@import '~@jetbrains/ring-ui/components/global/global';
+
+.activities-widget {
+  color: var(--ring-text-color);
+
+  $search-context-width: $ring-unit * 12;
+
+  &__search-context {
+    display: inline-block;
+    float: left;
+
+    width: $search-context-width;
+  }
+
+  &__search-query {
+    width: calc(100% - #{$search-context-width});
+
+    margin-left: $search-context-width;
+
+    vertical-align: top;
+  }
+
+  &__form-select {
+    width: 100%;
+
+    vertical-align: top;
+  }
+
+  &__activity {
+    margin-bottom: $ring-unit;
+  }
+}

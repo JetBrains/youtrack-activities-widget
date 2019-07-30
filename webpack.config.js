@@ -1,7 +1,7 @@
 const {join, resolve} = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const variables = require('@jetbrains/ring-ui/extract-css-vars');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ringUiWebpackConfig = require('@jetbrains/ring-ui/webpack.config');
 
 const pkgConfig = require('./package.json').config;
@@ -27,59 +27,42 @@ const webpackConfig = () => ({
   output: {
     path: resolve(__dirname, pkgConfig.dist),
     filename: '[name].js',
-    publicPath: '',
-    devtoolModuleFilenameTemplate: '/[absolute-resource-path]'
+    devtoolModuleFilenameTemplate: '[absolute-resource-path]'
   },
   module: {
     rules: [
       ...ringUiWebpackConfig.config.module.rules,
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         include: componentsPath,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]__[hash:base64:7]'
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: {
-                ctx: {variables}
-              }
-            }
-          }
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ]
       },
       {
-        // Loaders for any other external packages styles
         test: /\.css$/,
-        include: /node_modules/,
-        exclude: ringUiWebpackConfig.componentsPath,
+        exclude: [componentsPath, ringUiWebpackConfig.componentsPath],
         use: ['style-loader', 'css-loader']
       },
       {
         test: /\.js$/,
-        include: [componentsPath],
+        include: [
+          join(__dirname, 'node_modules/chai-as-promised'),
+          componentsPath
+        ],
         loader: 'babel-loader?cacheDirectory'
       },
       {
         test: /\.po$/,
-        include: [
-          componentsPath
-        ],
+        include: componentsPath,
         use: [
           'json-loader',
           {
             loader: 'angular-gettext-loader',
-            options: {
-              format: 'json'
-            }
+            options: {format: 'json'}
           }
         ]
       }
@@ -89,6 +72,7 @@ const webpackConfig = () => ({
     headers: {
       'Access-Control-Allow-Origin': '*'
     },
+    disableHostCheck: true,
     stats: {
       assets: false,
       children: false,
@@ -100,7 +84,10 @@ const webpackConfig = () => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: 'html-loader?interpolate!src/index.html'
-    })
+    }),
+    new CopyWebpackPlugin([
+      'manifest.json'
+    ], {})
   ]
 });
 

@@ -1,20 +1,26 @@
-import DashboardAddons from 'hub-dashboard-addons';
+import 'hub-dashboard-addons/dashboard.css';
+
 import React from 'react';
 import {render} from 'react-dom';
+import DashboardAddons from 'hub-dashboard-addons';
 import {setLocale} from 'hub-dashboard-addons/dist/localization';
+import ConfigWrapper from '@jetbrains/hub-widget-ui/dist/config-wrapper';
 
-import Widget from './widget';
+import ActivitiesWidget from './activities-widget';
 import TRANSLATIONS from './translations';
 
-import 'file-loader?name=[name].[ext]!../../manifest.json'; // eslint-disable-line import/no-unresolved
+const CONFIG_FIELDS = ['filter'];
 
 DashboardAddons.registerWidget((dashboardApi, registerWidgetApi) => {
-  // setLocale('ru', TRANSLATIONS);
   setLocale(DashboardAddons.locale, TRANSLATIONS);
+  const configWrapper = new ConfigWrapper(dashboardApi, CONFIG_FIELDS);
+
   return render(
-    <Widget
+    <ActivitiesWidget
       dashboardApi={dashboardApi}
       registerWidgetApi={registerWidgetApi}
+      configWrapper={configWrapper}
+      editable={DashboardAddons.editable}
     />,
     document.getElementById('app-container')
   );

@@ -8,10 +8,6 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: src/app/say-hello.js:4
-msgid "Hello, {{username}}"
-msgstr ""
-
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr ""

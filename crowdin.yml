@@ -6,8 +6,8 @@
 
 files: [
  {
-  "source" : "/src/app/translations/youtrack-activities-widget.pot",
-  "dest": "/widgets/youtrack-activities-widget/youtrack-activities-widget.pot",
+  "source" : "/src/app/translations/default.pot",
+  "dest": "/widgets/youtrack-activities-widget/default.pot",
   "translation": "/src/app/translations/youtrack-activities-widget_%two_letters_code%.po"
  }
 ]
