@@ -22,12 +22,14 @@ import {loadPinnedIssueFolders, queryUsers, underlineAndSuggest} from './resourc
 
 const MIN_YOUTRACK_VERSION = '2019.1';
 
-const toSelectItem = user => user && {
+const toUserSelectItem = user => user && {
   key: user.id,
   label: user.name,
   avatar: user.avatarURL,
   model: user
 };
+
+const toItems = model => (model ? [model] : []);
 
 class ActivitiesEditForm extends React.Component {
 
@@ -44,13 +46,14 @@ class ActivitiesEditForm extends React.Component {
 
   constructor(props) {
     super(props);
-    const selectedYouTrack = {
-      id: filter.youTrackId
-    };
+    const initialYouTrack = filter.youTrackId && {id: filter.youTrackId};
+
     this.state = {
-      availableYoutracks: [selectedYouTrack],
-      availableAuthors: [toSelectItem(filter.author)],
-      request: null
+      availableYouTracks: toItems(initialYouTrack),
+      availableAuthors: toItems(toUserSelectItem(filter.author)),
+      request: null,
+      selectedYouTrack: initialYouTrack,
+      errorMessage: null
     };
     this.underlineAndSuggestDebouncer = new DebounceDecorator();
   }
@@ -71,7 +74,7 @@ class ActivitiesEditForm extends React.Component {
     );
     const selected = youtracks.filter(yt => yt.id === youTrackId)[0];
     this.setState({
-      availableYoutracks: youtracks,
+      availableYouTracks: youtracks,
       selectedYouTrack: selected
     });
   }
@@ -130,7 +133,7 @@ class ActivitiesEditForm extends React.Component {
   };
 
   changeAuthor = selected => {
-    filter.author = selected.map(it => it.model).filter(it => it.isUser);
+    filter.author = selected;
     this.props.syncConfig();
   };
 
@@ -145,14 +148,14 @@ class ActivitiesEditForm extends React.Component {
 
   queryUsers = async q => {
     const fetchHub = this.props.dashboardApi.fetchHub;
-    const usersData = queryUsers(fetchHub, q);
-    this.setState({request: usersData});
+    const usersDataRequest = queryUsers(fetchHub, q);
+    this.setState({request: usersDataRequest});
 
-    const data = await usersData;
+    const usersData = await usersDataRequest;
 
     // only the latest request is relevant
-    if (this.state.request === usersData) {
-      const users = (data[0].users || []).map(it => {
+    if (this.state.request === usersDataRequest) {
+      const users = (usersData.users || []).map(it => {
         if (it.profile && it.profile.avatar && it.profile.avatar.url) {
           it.avatarURL = it.profile.avatar.url;
         } else {
@@ -161,7 +164,7 @@ class ActivitiesEditForm extends React.Component {
         return it;
       });
       this.setState({
-        availableAuthors: users.map(toSelectItem),
+        availableAuthors: users.map(toUserSelectItem),
         request: null
       });
     }
@@ -184,13 +187,14 @@ class ActivitiesEditForm extends React.Component {
         <Select
           className="activities-widget__form-select"
           size={InputSize.S}
+          multiple={false}
           data={this.state.availableAuthors}
           filter={{
             placeholder: 'Search user',
             fn: () => true // disable client filtering
           }}
           onFilter={this.queryUsers}
-          selected={toSelectItem(selected)}
+          selected={toUserSelectItem(selected)}
           onChange={this.changeAuthor}
           loading={!!this.state.request}
           clear
@@ -206,7 +210,7 @@ class ActivitiesEditForm extends React.Component {
       errorMessage
     } = this.state;
 
-    const contextOptions = (allContexts || []).map(toSelectItem);
+    const contextOptions = (allContexts || []).map(toUserSelectItem);
     contextOptions.unshift(ActivitiesEditForm.EVERYTHING_CONTEXT_OPTION);
 
     if (errorMessage) {
@@ -223,7 +227,7 @@ class ActivitiesEditForm extends React.Component {
             type={Select.Type.BUTTON}
             size={InputSize.S}
             data={contextOptions}
-            selected={toSelectItem(filter.context)}
+            selected={toUserSelectItem(filter.context)}
             onSelect={this.changeSearchContext}
             filter
             loading={!allContexts}
@@ -251,7 +255,7 @@ class ActivitiesEditForm extends React.Component {
 
   render() {
     const {
-      availableYoutracks,
+      availableYouTracks,
       errorMessage,
       allContexts
     } = this.state;
@@ -266,12 +270,12 @@ class ActivitiesEditForm extends React.Component {
     return (
       <div className="activities-widget">
         {
-          availableYoutracks.length > 1 &&
+          availableYouTracks.length > 1 &&
           (
             <Select
               size={InputSize.FULL}
               type={Select.Type.BUTTON}
-              data={availableYoutracks.map(youTrackServiceToSelectItem)}
+              data={availableYouTracks.map(youTrackServiceToSelectItem)}
               selected={youTrackServiceToSelectItem(filter.youTrackId)}
               onSelect={this.changeYouTrack}
               filter
