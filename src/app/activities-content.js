@@ -13,7 +13,6 @@ import './style/activities-widget.scss';
 class ActivitiesContent extends React.Component {
 
   static propTypes = {
-    youTrack: PropTypes.object,
     activities: PropTypes.array,
     isLoading: PropTypes.bool,
     isLoadDataError: PropTypes.bool,

@@ -125,7 +125,6 @@ class ActivitiesWidget extends React.Component {
 
   renderContent = () => (
     <ActivitiesContent
-      youTrack={this.state.youTrack}
       activities={this.state.activities}
       isLoading={this.state.isLoading}
       isLoadDataError={this.state.isLoadDataError}

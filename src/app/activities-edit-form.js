@@ -22,13 +22,6 @@ import {loadPinnedIssueFolders, queryUsers, underlineAndSuggest} from './resourc
 
 const MIN_YOUTRACK_VERSION = '2019.1';
 
-function toUsers(array) {
-  return array.map(it => {
-    it.isUser = true;
-    return it;
-  });
-}
-
 const toSelectItem = user => user && {
   key: user.id,
   label: user.name,
@@ -51,8 +44,11 @@ class ActivitiesEditForm extends React.Component {
 
   constructor(props) {
     super(props);
+    const selectedYouTrack = {
+      id: filter.youTrackId
+    };
     this.state = {
-      availableYoutracks: [],
+      availableYoutracks: [selectedYouTrack],
       availableAuthors: [toSelectItem(filter.author)],
       request: null
     };
@@ -70,12 +66,12 @@ class ActivitiesEditForm extends React.Component {
 
   async loadYouTrackList() {
     const {youTrackId} = filter;
-    const youTracks = await ServiceResource.getYouTrackServices(
+    const youtracks = await ServiceResource.getYouTrackServices(
       this.props.dashboardApi.fetchHub, MIN_YOUTRACK_VERSION
     );
-    const selected = youTracks.filter(yt => yt.id === youTrackId)[0];
+    const selected = youtracks.filter(yt => yt.id === youTrackId)[0];
     this.setState({
-      availableYoutracks: youTracks,
+      availableYoutracks: youtracks,
       selectedYouTrack: selected
     });
   }
@@ -164,9 +160,8 @@ class ActivitiesEditForm extends React.Component {
         }
         return it;
       });
-      const authors = toUsers(users);
       this.setState({
-        availableAuthors: authors.map(toSelectItem),
+        availableAuthors: users.map(toSelectItem),
         request: null
       });
     }
@@ -182,7 +177,7 @@ class ActivitiesEditForm extends React.Component {
   }
 
   renderAuthor() {
-    const selected = toUsers(filter.authors);
+    const selected = filter.author;
 
     return (
       <div>
