@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import QueryAssist from '@jetbrains/ring-ui/components/query-assist/query-assist';
+import QueryAssist
+  from '@jetbrains/ring-ui/components/query-assist/query-assist';
 import {Size as InputSize} from '@jetbrains/ring-ui/components/input/input';
 import Select from '@jetbrains/ring-ui/components/select/select';
-import LoaderInline from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
+import LoaderInline
+  from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import HttpErrorHandler from '@jetbrains/hub-widget-ui/dist/http-error-handler';
+import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form';
 import '@jetbrains/ring-ui/components/form/form.scss';
 
 import {DatePicker} from '@jetbrains/ring-ui'; // theme css file
@@ -113,13 +116,11 @@ class ActivitiesEditForm extends React.Component {
 
   changeSearchContext = selected => {
     filter.context = selected.model;
-    this.props.syncConfig();
   };
 
   changeDateRange = range => {
     filter.startDate = range.from;
     filter.endDate = range.to;
-    this.props.syncConfig();
   };
 
   loadAllBackendData = async () => {
@@ -190,7 +191,6 @@ class ActivitiesEditForm extends React.Component {
         }
         {
           <ActivityAuthorSelector
-            syncConfig={this.props.syncConfig}
             dashboardApi={this.props.dashboardApi}
           />
         }
@@ -213,30 +213,38 @@ class ActivitiesEditForm extends React.Component {
     };
 
     return (
-      <div className="activities-widget">
-        {
-          availableYouTracks.length > 1 &&
-          (
-            <Select
-              size={InputSize.FULL}
-              type={Select.Type.BUTTON}
-              data={availableYouTracks.map(toServiceSelectItem)}
-              selected={toServiceSelectItem(filter.youTrackId)}
-              onSelect={this.changeYouTrack}
-              filter
-              label={i18n('Select YouTrack')}
-            />
-          )
-        }
-        <div className="ring-form__group">
+      <ConfigurationForm
+        warning={errorMessage}
+        isInvalid={!!errorMessage}
+        isLoading={this.state.isLoading}
+        onSave={this.props.syncConfig}
+        onCancel={this.props.cancelConfig}
+      >
+        <div className="activities-widget">
           {
-            allContexts && this.renderFilteringSettings()
+            availableYouTracks.length > 1 &&
+            (
+              <Select
+                size={InputSize.FULL}
+                type={Select.Type.BUTTON}
+                data={availableYouTracks.map(toServiceSelectItem)}
+                selected={toServiceSelectItem(filter.youTrackId)}
+                onSelect={this.changeYouTrack}
+                filter
+                label={i18n('Select YouTrack')}
+              />
+            )
           }
-          {
-            !allContexts && !errorMessage && <LoaderInline/>
-          }
+          <div className="ring-form__group">
+            {
+              allContexts && this.renderFilteringSettings()
+            }
+            {
+              !allContexts && !errorMessage && <LoaderInline/>
+            }
+          </div>
         </div>
-      </div>
+      </ConfigurationForm>
     );
   }
 }

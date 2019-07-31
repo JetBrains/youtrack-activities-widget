@@ -23,7 +23,6 @@ const toUserSelectItem = user => user && {
 class ActivityAuthorSelector extends React.Component {
 
   static propTypes = {
-    syncConfig: PropTypes.func,
     dashboardApi: PropTypes.object
   };
 
@@ -39,7 +38,6 @@ class ActivityAuthorSelector extends React.Component {
 
   changeAuthor = selected => {
     filter.author = selected;
-    this.props.syncConfig();
   };
 
   queryUsers = async q => {
