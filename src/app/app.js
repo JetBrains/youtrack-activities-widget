@@ -22,6 +22,6 @@ DashboardAddons.registerWidget((dashboardApi, registerWidgetApi) => {
       configWrapper={configWrapper}
       editable={DashboardAddons.editable}
     />,
-    document.getElementById('app-container')
+    document.getElementById('app')
   );
 });
