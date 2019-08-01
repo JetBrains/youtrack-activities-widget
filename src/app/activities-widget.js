@@ -51,7 +51,7 @@ class ActivitiesWidget extends React.Component {
         isLoading: false,
         isLoadDataError: false
       }),
-      onRefresh: () => this.loadActivitiesWithError()
+      onRefresh: () => this.tryLoadActivities()
     });
 
     this.initialize(dashboardApi);
@@ -91,6 +91,7 @@ class ActivitiesWidget extends React.Component {
       filter.youTrackId = youTrackService.id;
       await filter.sync(this.props);
       this.setState({isConfiguring: false});
+      await this.tryLoadActivities();
     }
   }
 
@@ -99,22 +100,29 @@ class ActivitiesWidget extends React.Component {
     return await dashboardApi.fetch(filter.youTrackId, url, params);
   };
 
-  loadActivitiesWithError = async () => {
+  tryLoadActivities = async () => {
+    this.setState({isLoading: true});
     try {
-      const activities = await loadActivities(this.fetchYouTrack, filter.query);
+      const activities = await loadActivities(
+        this.fetchYouTrack,
+        filter.author,
+        filter.query
+      );
       this.setState({activities});
     } catch (error) {
       this.setState({isLoadDataError: true});
     }
+    this.setState({isLoading: false});
   };
 
   editConfiguration = () => {
     this.setState({isConfiguring: true});
   };
 
-  syncConfiguration = async () => {
+  submitConfiguration = async () => {
     await filter.sync(this.props);
     this.setState({isConfiguring: false});
+    await this.tryLoadActivities();
   };
 
   cancelConfiguration = async () => {
@@ -126,7 +134,7 @@ class ActivitiesWidget extends React.Component {
   renderConfiguration = () => (
     <ActivitiesEditForm
       title={this.state.title}
-      syncConfig={this.syncConfiguration}
+      submitConfig={this.submitConfiguration}
       cancelConfig={this.cancelConfiguration}
       dashboardApi={this.props.dashboardApi}
     />
@@ -148,7 +156,7 @@ class ActivitiesWidget extends React.Component {
       isLoading
     } = this.state;
 
-    const widgetTitle = 'Activities'; //TODO
+    const widgetTitle = 'YouTrack Activities';
     return (
       <ConfigurableWidget
         isConfiguring={isConfiguring}

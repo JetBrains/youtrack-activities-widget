@@ -31,15 +31,16 @@ const ACTIVITIES_FIELDS = `id,timestamp,category(id),${AUTHOR_FIELDS},added(${CH
 // eslint-disable-next-line max-len
 const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCate';
 
-export async function loadActivities(fetchYouTrack, query) {
+export async function loadActivities(fetchYouTrack, author, query) {
   const packSize = 50;
   const skipSize = 0; //TODO implement paging
   const fields = `fields=${ACTIVITIES_FIELDS}`;
   const categories = `&categories=${CATEGORIES}`;
+  const authorId = author ? `&author=${author.id}` : '';
   const issueQuery = query ? `&issueQuery=${encodeURIComponent(query)}` : '';
   const top = `&$top=${packSize}`;
   const skip = `&$skip=${skipSize || 0}`;
   return await fetchYouTrack(
-    `api/activities?${fields}${categories}${issueQuery}${top}${skip}`
+    `api/activities?${fields}${categories}${authorId}${issueQuery}${top}${skip}`
   );
 }

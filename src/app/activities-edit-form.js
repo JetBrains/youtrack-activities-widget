@@ -19,7 +19,7 @@ import './style/activities-widget.scss';
 class ActivitiesEditForm extends React.Component {
 
   static propTypes = {
-    syncConfig: PropTypes.func,
+    submitConfig: PropTypes.func,
     cancelConfig: PropTypes.func,
     dashboardApi: PropTypes.object
   };
@@ -81,7 +81,7 @@ class ActivitiesEditForm extends React.Component {
         warning={errorMessage}
         isInvalid={!!errorMessage}
         isLoading={isLoading}
-        onSave={this.props.syncConfig}
+        onSave={this.props.submitConfig}
         onCancel={this.props.cancelConfig}
       >
         <div className="activities-widget">
