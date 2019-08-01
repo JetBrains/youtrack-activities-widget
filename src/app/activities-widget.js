@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import ConfigurableWidget
   from '@jetbrains/hub-widget-ui/dist/configurable-widget';
+import {observer} from 'mobx-react';
 
 import ServiceResource from './components/service-resource';
 import ActivitiesEditForm from './activities-edit-form';
@@ -10,6 +11,7 @@ import ActivitiesContent from './activities-content';
 import {loadActivities} from './resources';
 import filter from './activities-filter';
 
+@observer
 class ActivitiesWidget extends React.Component {
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
@@ -46,7 +48,8 @@ class ActivitiesWidget extends React.Component {
     registerWidgetApi({
       onConfigure: () => this.setState({
         isConfiguring: true,
-        isLoading: false
+        isLoading: false,
+        isLoadDataError: false
       }),
       onRefresh: () => this.loadActivitiesWithError()
     });
@@ -91,9 +94,14 @@ class ActivitiesWidget extends React.Component {
     }
   }
 
-  loadActivitiesWithError = async (search, context) => {
+  fetchYouTrack = async (url, params) => {
+    const {dashboardApi} = this.props;
+    return await dashboardApi.fetch(filter.youTrackId, url, params);
+  };
+
+  loadActivitiesWithError = async () => {
     try {
-      await loadActivities(search, context);
+      await loadActivities(this.fetchYouTrack, filter.query);
     } catch (error) {
       this.setState({isLoadDataError: true});
     }

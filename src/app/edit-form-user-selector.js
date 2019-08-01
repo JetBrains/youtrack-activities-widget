@@ -13,31 +13,36 @@ import './style/activities-widget.scss';
 import {queryUsers} from './resources';
 
 
-const toUserSelectItem = user => user && {
+const toSelectOption = user => user && {
   key: user.id,
   label: user.name,
   avatar: user.avatarURL,
   model: user
 };
 
-class ActivityAuthorSelector extends React.Component {
+class EditFormUserSelector extends React.Component {
 
   static propTypes = {
-    dashboardApi: PropTypes.object
+    dashboardApi: PropTypes.object,
+    onChange: PropTypes.func
   };
 
   constructor(props) {
     super(props);
 
+    const selected = toSelectOption(filter.author);
+    const options = (selected ? [selected] : []);
     this.state = {
-      availableAuthors: [],
-      request: null,
-      errorMessage: null
+      availableAuthors: options,
+      selectedAuthor: selected,
+      request: null
     };
   }
 
   changeAuthor = selected => {
-    filter.author = selected;
+    this.setState({selectedAuthor: selected});
+    const newAuthor = selected && selected.model;
+    this.props.onChange(newAuthor);
   };
 
   queryUsers = async q => {
@@ -58,13 +63,13 @@ class ActivityAuthorSelector extends React.Component {
         return it;
       });
       this.setState({
-        availableAuthors: users.map(toUserSelectItem),
+        availableAuthors: users.map(toSelectOption),
         request: null
       });
     }
   };
 
-  renderAuthor() {
+  render() {
     return (
       <div>
         <Select
@@ -77,7 +82,7 @@ class ActivityAuthorSelector extends React.Component {
             fn: () => true // disable client filtering
           }}
           onFilter={this.queryUsers}
-          selected={toUserSelectItem(filter.author)}
+          selected={this.state.selectedAuthor}
           onChange={this.changeAuthor}
           loading={!!this.state.request}
           clear
@@ -86,14 +91,7 @@ class ActivityAuthorSelector extends React.Component {
       </div>
     );
   }
-
-  render() {
-    const {errorMessage} = this.state;
-    return errorMessage
-      ? <span>{errorMessage}</span>
-      : this.renderAuthor();
-  }
 }
 
 
-export default ActivityAuthorSelector;
+export default EditFormUserSelector;

@@ -35,11 +35,11 @@ export async function loadActivities(fetchYouTrack, query) {
   const packSize = 50;
   const skipSize = 0; //TODO implement paging
   const fields = `fields=${ACTIVITIES_FIELDS}`;
-  const categories = `categories=${CATEGORIES}`;
-  const issueQuery = `issueQuery=${encodeURIComponent(query)}`;
-  const top = `$top=${packSize}`;
-  const skip = `$skip=${skipSize || 0}`;
+  const categories = `&categories=${CATEGORIES}`;
+  const issueQuery = query ? `&issueQuery=${encodeURIComponent(query)}` : '';
+  const top = `&$top=${packSize}`;
+  const skip = `&$skip=${skipSize || 0}`;
   return await fetchYouTrack(
-    `api/activities?${fields}&${categories}&${issueQuery}&${top}&${skip}`
+    `api/activities?${fields}${categories}${issueQuery}${top}${skip}`
   );
 }

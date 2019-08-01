@@ -3,7 +3,7 @@
 .activities-widget {
   color: var(--ring-text-color);
 
-  $search-context-width: $ring-unit * 12;
+  $search-context-width: $ring-unit * 16;
 
   &__search-context {
     display: inline-block;

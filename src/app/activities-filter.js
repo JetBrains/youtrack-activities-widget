@@ -5,8 +5,8 @@ const FORMAT = 'YYYY-MM-DD';
 
 class ActivitiesFilter {
 
-  @observable search = null;
   @observable context = null;
+  @observable query = null;
 
   @observable startDate = null;
   @observable endDate = null;
@@ -19,7 +19,7 @@ class ActivitiesFilter {
     try {
       const filter = props.configWrapper.getFieldValue('filter');
       const WEEK_AGO = -7;
-      this.search = filter.search;
+      this.query = filter.query;
       this.context = filter.context;
 
       this.startDate = filter.startDate
@@ -51,7 +51,7 @@ class ActivitiesFilter {
       context: context
         ? {id: context.id, name: context.name, $type: context.$type}
         : null,
-      search: this.search,
+      query: this.query,
 
       startDate: formatDate(this.startDate),
       endDate: formatDate(this.endDate),
