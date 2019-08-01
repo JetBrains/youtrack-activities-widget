@@ -101,7 +101,8 @@ class ActivitiesWidget extends React.Component {
 
   loadActivitiesWithError = async () => {
     try {
-      await loadActivities(this.fetchYouTrack, filter.query);
+      const activities = await loadActivities(this.fetchYouTrack, filter.query);
+      this.setState({activities});
     } catch (error) {
       this.setState({isLoadDataError: true});
     }

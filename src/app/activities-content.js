@@ -56,9 +56,12 @@ class ActivitiesContent extends React.Component {
 
   presentChange = changes => {
     if (Array.isArray(changes)) {
-      return changes.map(change => `${change.id}: ${change.name}`).join();
+      if (changes.length === 0) {
+        return '[-]';
+      }
+      return changes.map(change => `[${change.id}:${change.name}]`).join();
     }
-    return changes;
+    return changes || '-';
   };
 
   renderBody = () => (
@@ -66,9 +69,11 @@ class ActivitiesContent extends React.Component {
       {
         (this.props.activities || []).map(activity => (
           <div key={`activity-${activity.id}`} className="activities-widget__activity">
-            <span>{`author: ${activity.author.login}`}</span>
-            <span>{`added: ${this.presentChange(activity.added)}`}</span>
-            <span>{`removed: ${this.presentChange(activity.removed)}`}</span>
+            <p>{`category: ${activity.category.id} `}</p>
+            <p>{`author: ${activity.author.login} `}</p>
+            <p>{`timestamp: ${activity.timestamp} `}</p>
+            <p>{`added: ${this.presentChange(activity.added)}`}</p>
+            <p>{`removed: ${this.presentChange(activity.removed)}`}</p>
           </div>
         ))
       }

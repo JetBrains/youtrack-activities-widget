@@ -27,7 +27,7 @@ export async function queryUsers(fetchHub, query) {
 const CHANGE_FIELDS = 'id,name';
 const AUTHOR_FIELDS = 'author(id,login)';
 // eslint-disable-next-line max-len
-const ACTIVITIES_FIELDS = `id,category(id),${AUTHOR_FIELDS},added(${CHANGE_FIELDS}),removed(${CHANGE_FIELDS})`;
+const ACTIVITIES_FIELDS = `id,timestamp,category(id),${AUTHOR_FIELDS},added(${CHANGE_FIELDS}),removed(${CHANGE_FIELDS})`;
 // eslint-disable-next-line max-len
 const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCate';
 

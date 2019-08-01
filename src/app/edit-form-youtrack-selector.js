@@ -17,8 +17,6 @@ const MIN_YOUTRACK_VERSION = '2019.1';
 class EditFormYoutrackSelector extends React.Component {
 
   static propTypes = {
-    syncConfig: PropTypes.func,
-    cancelConfig: PropTypes.func,
     dashboardApi: PropTypes.object
   };
 
