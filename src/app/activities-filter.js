@@ -5,6 +5,8 @@ const FORMAT = 'YYYY-MM-DD';
 
 class ActivitiesFilter {
 
+  static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
+
   @observable context = null;
   @observable query = null;
 
@@ -14,6 +16,8 @@ class ActivitiesFilter {
   @observable author = null;
 
   @observable youTrackId = null;
+
+  @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
   restore(props) {
     try {
@@ -30,6 +34,7 @@ class ActivitiesFilter {
         : new Date();
 
       this.author = filter.author || null;
+      this.refreshPeriod = filter.refreshPeriod;
     } catch (e) {
       this.sync(props);
     }
@@ -60,7 +65,9 @@ class ActivitiesFilter {
         ? {id: author.id, name: author.name, avatarURL: author.avatarURL}
         : null,
 
-      youTrack: {id: this.youTrackId}
+      youTrack: {id: this.youTrackId},
+
+      refreshPeriod: this.refreshPeriod
     };
   }
 }

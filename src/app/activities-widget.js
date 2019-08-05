@@ -13,6 +13,8 @@ import filter from './activities-filter';
 
 @observer
 class ActivitiesWidget extends React.Component {
+  static MILLIS_IN_SEC = 1000; // eslint-disable-line no-magic-numbers
+
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
       if (predefinedYouTrack && predefinedYouTrack.id) {
@@ -146,6 +148,8 @@ class ActivitiesWidget extends React.Component {
       isLoading={this.state.isLoading}
       isLoadDataError={this.state.isLoadDataError}
       editable={this.props.editable}
+      tickPeriod={filter.refreshPeriod * ActivitiesWidget.MILLIS_IN_SEC}
+      onTick={this.tryLoadActivities} //TODO use incremental loading
       onEdit={this.editConfiguration}
     />
   );

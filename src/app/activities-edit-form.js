@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import LoaderInline
   from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
-import ConfigurationForm
-  from '@jetbrains/hub-widget-ui/dist/configuration-form';
+import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form';
+import RefreshPeriod from '@jetbrains/hub-widget-ui/dist/refresh-period';
 import {DatePicker} from '@jetbrains/ring-ui'; // theme css file
 import '@jetbrains/ring-ui/components/form/form.scss';
 
@@ -47,6 +47,10 @@ class ActivitiesEditForm extends React.Component {
     filter.author = author;
   };
 
+  changeRefreshPeriod = period => {
+    filter.refreshPeriod = period;
+  };
+
   renderFilteringSettings() {
     return (
       <div className="ring-form__group">
@@ -70,17 +74,30 @@ class ActivitiesEditForm extends React.Component {
     );
   }
 
+  renderRefreshPeriod() {
+    const {isLoading, errorMessage} = this.state;
+
+    if (isLoading || errorMessage) {
+      return '';
+    }
+
+    return (
+      <RefreshPeriod
+        seconds={filter.refreshPeriod}
+        onChange={this.changeRefreshPeriod}
+      />
+    );
+  }
+
   render() {
-    const {
-      isLoading,
-      errorMessage
-    } = this.state;
+    const {isLoading, errorMessage} = this.state;
 
     return (
       <ConfigurationForm
         warning={errorMessage}
         isInvalid={!!errorMessage}
         isLoading={isLoading}
+        panelControls={this.renderRefreshPeriod()}
         onSave={this.props.submitConfig}
         onCancel={this.props.cancelConfig}
       >
