@@ -3,27 +3,28 @@
 .activities-widget {
   color: var(--ring-text-color);
 
-  $search-context-width: $ring-unit * 16;
+  &__issue-filter {
+    margin-bottom: 4 * $ring-unit;
 
-  &__search-context {
-    display: inline-block;
-    float: left;
+    &__query {
+      width: 100%;
 
-    width: $search-context-width;
+      vertical-align: top;
+    }
   }
 
-  &__search-query {
-    width: calc(100% - #{$search-context-width});
+  &__user-selector {
+    margin-bottom: 4 * $ring-unit;
 
-    margin-left: $search-context-width;
+    &__form-select {
+      width: 100%;
 
-    vertical-align: top;
+      vertical-align: top;
+    }
   }
 
-  &__form-select {
-    width: 100%;
-
-    vertical-align: top;
+  &__date-picker {
+    margin-bottom: 4 * $ring-unit;
   }
 
   &__activity {

@@ -70,6 +70,7 @@ class ActivitiesContent extends React.Component {
         (this.props.activities || []).map(activity => (
           <div key={`activity-${activity.id}`} className="activities-widget__activity">
             <p>{`category: ${activity.category.id} `}</p>
+            <p>{`issue: ${activity.target.idReadable} `}</p>
             <p>{`author: ${activity.author.login} `}</p>
             <p>{`timestamp: ${activity.timestamp} `}</p>
             <p>{`added: ${this.presentChange(activity.added)}`}</p>

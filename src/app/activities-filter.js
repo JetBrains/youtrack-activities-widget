@@ -7,10 +7,10 @@ class ActivitiesFilter {
 
   static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
 
-  @observable context = null;
   @observable query = null;
 
   @observable startDate = null;
+
   @observable endDate = null;
 
   @observable author = null;
@@ -24,7 +24,6 @@ class ActivitiesFilter {
       const filter = props.configWrapper.getFieldValue('filter');
       const WEEK_AGO = -7;
       this.query = filter.query;
-      this.context = filter.context;
 
       this.startDate = filter.startDate
         ? parse(filter.startDate, FORMAT)
@@ -45,7 +44,6 @@ class ActivitiesFilter {
   }
 
   toConfig() {
-    const context = this.context;
     const author = this.author;
 
     function formatDate(date) {
@@ -53,9 +51,6 @@ class ActivitiesFilter {
     }
 
     return {
-      context: context
-        ? {id: context.id, name: context.name, $type: context.$type}
-        : null,
       query: this.query,
 
       startDate: formatDate(this.startDate),

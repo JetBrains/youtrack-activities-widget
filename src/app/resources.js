@@ -1,10 +1,4 @@
 const QUERY_ASSIST_FIELDS = 'query,caret,styleRanges(start,length,style),suggestions(options,prefix,option,suffix,description,matchingStart,matchingEnd,caret,completionStart,completionEnd,group,icon)';
-const WATCH_FOLDERS_FIELDS = 'id,$type,name,query,shortName';
-
-export async function loadPinnedIssueFolders(fetchYouTrack, loadAll) {
-  const packSize = 100;
-  return await fetchYouTrack(`api/userIssueFolders?fields=${WATCH_FOLDERS_FIELDS}&$top=${loadAll ? -1 : packSize}`);
-}
 
 export async function underlineAndSuggest(fetchYouTrack, query, caret, folder) {
   return await fetchYouTrack(`api/search/assist?fields=${QUERY_ASSIST_FIELDS}`, {
@@ -27,7 +21,7 @@ export async function queryUsers(fetchHub, query) {
 const CHANGE_FIELDS = 'id,name';
 const AUTHOR_FIELDS = 'author(id,login)';
 // eslint-disable-next-line max-len
-const ACTIVITIES_FIELDS = `id,timestamp,category(id),${AUTHOR_FIELDS},added(${CHANGE_FIELDS}),removed(${CHANGE_FIELDS})`;
+const ACTIVITIES_FIELDS = `id,timestamp,category(id),target(id,idReadable),${AUTHOR_FIELDS},added(${CHANGE_FIELDS}),removed(${CHANGE_FIELDS})`;
 // eslint-disable-next-line max-len
 const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCate';
 

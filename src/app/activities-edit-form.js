@@ -7,6 +7,7 @@ import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form'
 import RefreshPeriod from '@jetbrains/hub-widget-ui/dist/refresh-period';
 import {DatePicker} from '@jetbrains/ring-ui'; // theme css file
 import '@jetbrains/ring-ui/components/form/form.scss';
+import {observer} from 'mobx-react';
 
 import filter from './activities-filter';
 import EditFormUserSelector from './edit-form-user-selector';
@@ -15,7 +16,7 @@ import EditFormYoutrackSelector from './edit-form-youtrack-selector';
 
 import './style/activities-widget.scss';
 
-
+@observer
 class ActivitiesEditForm extends React.Component {
 
   static propTypes = {
@@ -38,9 +39,8 @@ class ActivitiesEditForm extends React.Component {
     filter.endDate = range.to;
   };
 
-  changeIssueQuery = (context, query) => {
+  changeIssueQuery = query => {
     filter.query = query;
-    filter.context = context;
   };
 
   changAuthor = author => {
@@ -59,15 +59,16 @@ class ActivitiesEditForm extends React.Component {
             dashboardApi={this.props.dashboardApi}
             onChange={this.changeIssueQuery}
           />
+          <EditFormUserSelector
+            dashboardApi={this.props.dashboardApi}
+            onChange={this.changAuthor}
+          />
           <DatePicker
+            className="activities-widget__date-picker"
             from={filter.startDate}
             to={filter.endDate}
             onChange={this.changeDateRange}
             range
-          />
-          <EditFormUserSelector
-            dashboardApi={this.props.dashboardApi}
-            onChange={this.changAuthor}
           />
         </div>
       </div>
