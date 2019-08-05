@@ -25,16 +25,19 @@ const ACTIVITIES_FIELDS = `id,timestamp,category(id),target(id,idReadable),${AUT
 // eslint-disable-next-line max-len
 const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCate';
 
-export async function loadActivities(fetchYouTrack, author, query) {
+export async function loadActivities(fetchYouTrack, author, query, start, end) {
   const packSize = 50;
   const skipSize = 0; //TODO implement paging
   const fields = `fields=${ACTIVITIES_FIELDS}`;
   const categories = `&categories=${CATEGORIES}`;
   const authorId = author ? `&author=${author.id}` : '';
   const issueQuery = query ? `&issueQuery=${encodeURIComponent(query)}` : '';
+  const startParam = start ? `&start=${start}` : '';
+  const endParam = start ? `&end=${end}` : '';
   const top = `&$top=${packSize}`;
   const skip = `&$skip=${skipSize || 0}`;
+  const reverse = '&reverse=true';
   return await fetchYouTrack(
-    `api/activities?${fields}${categories}${authorId}${issueQuery}${top}${skip}`
+    `api/activities?${fields}${categories}${authorId}${issueQuery}${startParam}${endParam}${top}${skip}${reverse}`
   );
 }

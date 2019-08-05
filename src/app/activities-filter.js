@@ -1,5 +1,5 @@
 import {observable} from 'mobx';
-import {addDays, format, parse} from 'date-fns';
+import {format, parse} from 'date-fns';
 
 const FORMAT = 'YYYY-MM-DD';
 
@@ -9,11 +9,9 @@ class ActivitiesFilter {
 
   @observable query = null;
 
-  @observable startDate = null;
-
-  @observable endDate = null;
-
   @observable author = null;
+
+  @observable date = null;
 
   @observable youTrackId = null;
 
@@ -21,19 +19,11 @@ class ActivitiesFilter {
 
   restore(props) {
     try {
-      const filter = props.configWrapper.getFieldValue('filter');
-      const WEEK_AGO = -7;
-      this.query = filter.query;
-
-      this.startDate = filter.startDate
-        ? parse(filter.startDate, FORMAT)
-        : addDays(new Date(), WEEK_AGO);
-      this.endDate = filter.endDate
-        ? parse(filter.endDate, FORMAT)
-        : new Date();
-
-      this.author = filter.author || null;
-      this.refreshPeriod = filter.refreshPeriod;
+      const storedFilter = props.configWrapper.getFieldValue('filter');
+      this.query = storedFilter.query;
+      this.date = storedFilter.date && parse(storedFilter.date, FORMAT);
+      this.author = storedFilter.author || null;
+      this.refreshPeriod = storedFilter.refreshPeriod;
     } catch (e) {
       this.sync(props);
     }
@@ -44,24 +34,19 @@ class ActivitiesFilter {
   }
 
   toConfig() {
-    const author = this.author;
+    const toConfigAuthor = author => author && {
+      id: author.id,
+      name: author.name,
+      avatarURL: author.avatarURL
+    };
 
-    function formatDate(date) {
-      return date ? format(date, FORMAT) : null;
-    }
+    const toConfigDate = date => date && format(date, FORMAT);
 
     return {
       query: this.query,
-
-      startDate: formatDate(this.startDate),
-      endDate: formatDate(this.endDate),
-
-      author: author
-        ? {id: author.id, name: author.name, avatarURL: author.avatarURL}
-        : null,
-
+      date: toConfigDate(this.date),
+      author: toConfigAuthor(this.author),
       youTrack: {id: this.youTrackId},
-
       refreshPeriod: this.refreshPeriod
     };
   }

@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LoaderInline
-  from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
+import LoaderInline from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
 import Link from '@jetbrains/ring-ui/components/link/link';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import withTimerHOC from '@jetbrains/hub-widget-ui/dist/timer';
+import {format} from 'date-fns';
 
 import './style/activities-widget.scss';
+
+const FORMAT = 'YYYY-MM-DDTHH:mm:ss.SSS';
 
 class ActivitiesContent extends React.Component {
 
@@ -69,10 +71,10 @@ class ActivitiesContent extends React.Component {
       {
         (this.props.activities || []).map(activity => (
           <div key={`activity-${activity.id}`} className="activities-widget__activity">
-            <p>{`category: ${activity.category.id} `}</p>
-            <p>{`issue: ${activity.target.idReadable} `}</p>
-            <p>{`author: ${activity.author.login} `}</p>
-            <p>{`timestamp: ${activity.timestamp} `}</p>
+            <p>{`category: ${activity.category.id}`}</p>
+            <p>{`issue: ${activity.target.idReadable}`}</p>
+            <p>{`author: ${activity.author.login}`}</p>
+            <p>{`timestamp: ${activity.timestamp} (${format(activity.timestamp, FORMAT)})`}</p>
             <p>{`added: ${this.presentChange(activity.added)}`}</p>
             <p>{`removed: ${this.presentChange(activity.removed)}`}</p>
           </div>

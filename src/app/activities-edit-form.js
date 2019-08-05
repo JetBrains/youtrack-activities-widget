@@ -34,9 +34,8 @@ class ActivitiesEditForm extends React.Component {
     };
   }
 
-  changeDateRange = range => {
-    filter.startDate = range.from;
-    filter.endDate = range.to;
+  changeDate = moment => {
+    filter.date = moment.toDate();
   };
 
   changeIssueQuery = query => {
@@ -65,10 +64,9 @@ class ActivitiesEditForm extends React.Component {
           />
           <DatePicker
             className="activities-widget__date-picker"
-            from={filter.startDate}
-            to={filter.endDate}
-            onChange={this.changeDateRange}
-            range
+            date={filter.date}
+            onChange={this.changeDate}
+            clear
           />
         </div>
       </div>

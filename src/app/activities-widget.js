@@ -102,13 +102,34 @@ class ActivitiesWidget extends React.Component {
     return await dashboardApi.fetch(filter.youTrackId, url, params);
   };
 
+  toDayStart = date => {
+    if (!date) {
+      return date;
+    }
+    const start = new Date(date.getTime());
+    start.setHours(0, 0, 0, 0);
+    return start.getTime();
+  };
+
+  toDayEnd = date => {
+    if (!date) {
+      return date;
+    }
+    const end = new Date(date.getTime());
+    end.setHours(0, 0, 0, 0);
+    end.setDate(date.getDate() + 1);
+    return end.getTime();
+  };
+
   tryLoadActivities = async () => {
     this.setState({isLoading: true});
     try {
       const activities = await loadActivities(
         this.fetchYouTrack,
         filter.author,
-        filter.query
+        filter.query,
+        this.toDayStart(filter.date),
+        this.toDayEnd(filter.date)
       );
       this.setState({activities});
     } catch (error) {
