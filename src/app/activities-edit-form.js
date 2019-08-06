@@ -35,7 +35,7 @@ class ActivitiesEditForm extends React.Component {
   }
 
   changeDate = moment => {
-    filter.date = moment.toDate();
+    filter.date = moment && moment.toDate();
   };
 
   changeIssueQuery = query => {
