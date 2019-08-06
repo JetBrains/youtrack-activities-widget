@@ -15,6 +15,8 @@ class ActivitiesFilter {
 
   @observable youTrackId = null;
 
+  @observable youTrackUrl = null;
+
   @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
   restore(props) {
@@ -23,6 +25,8 @@ class ActivitiesFilter {
       this.query = storedFilter.query;
       this.date = storedFilter.date && parse(storedFilter.date, FORMAT);
       this.author = storedFilter.author || null;
+      this.youTrackId = storedFilter.youTrack.id;
+      this.youTrackUrl = storedFilter.youTrack.homeUrl;
       this.refreshPeriod = storedFilter.refreshPeriod;
     } catch (e) {
       this.sync(props);
@@ -46,7 +50,7 @@ class ActivitiesFilter {
       query: this.query,
       date: toConfigDate(this.date),
       author: toConfigAuthor(this.author),
-      youTrack: {id: this.youTrackId},
+      youTrack: {id: this.youTrackId, homeUrl: this.youTrackUrl},
       refreshPeriod: this.refreshPeriod
     };
   }

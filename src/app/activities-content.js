@@ -8,7 +8,8 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import withTimerHOC from '@jetbrains/hub-widget-ui/dist/timer';
 
-import ContentBasicActivity from './content-basic-activity';
+import ContentDefaultActivity from './content-default-activity';
+import ContentCommentActivity from './content-comment-activity';
 
 import './style/activities-widget.scss';
 
@@ -61,14 +62,21 @@ class ActivitiesContent extends React.Component {
       {
         (this.props.activities || []).map(activity => (
           <div key={activity.id}>
-            <ContentBasicActivity
-              activity={activity}
-            />
+            {this.renderActivity(activity)}
           </div>
         ))
       }
     </div>
   );
+
+  renderActivity = activity => {
+    const categoryId = activity.category.id;
+    if (categoryId === 'CommentsCategory') {
+      return <ContentCommentActivity activity={activity}/>;
+    } else {
+      return <ContentDefaultActivity activity={activity}/>;
+    }
+  };
 
   render() {
     const {

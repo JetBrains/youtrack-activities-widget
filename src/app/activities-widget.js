@@ -66,16 +66,17 @@ class ActivitiesWidget extends React.Component {
   initialize = async dashboardApi => {
     await this.props.configWrapper.init();
 
-    const youTrackService = await ActivitiesWidget.getDefaultYouTrackService(
+    const service = await ActivitiesWidget.getDefaultYouTrackService(
       dashboardApi, {
-        id: filter.youTrackId
+        id: filter.youTrackId,
+        homeUrl: filter.youTrackUrl
       }
     );
 
     if (this.props.configWrapper.isNewConfig()) {
-      this.initializeNewWidget(youTrackService);
+      this.initializeNewWidget(service);
     } else {
-      await this.initializeExistingWidget(youTrackService);
+      await this.initializeExistingWidget(service);
     }
   };
 
@@ -83,6 +84,7 @@ class ActivitiesWidget extends React.Component {
     if (youTrackService && youTrackService.id) {
       this.setState({isConfiguring: true});
       filter.youTrackId = youTrackService.id;
+      filter.youTrackUrl = youTrackService.homeUrl;
       await filter.sync(this.props);
     }
   }
@@ -91,6 +93,7 @@ class ActivitiesWidget extends React.Component {
     await filter.restore(this.props);
     if (youTrackService && youTrackService.id) {
       filter.youTrackId = youTrackService.id;
+      filter.youTrackUrl = youTrackService.homeUrl;
       await filter.sync(this.props);
       this.setState({isConfiguring: false});
       await this.tryLoadActivities();

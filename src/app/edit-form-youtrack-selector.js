@@ -22,7 +22,10 @@ class EditFormYoutrackSelector extends React.Component {
 
   constructor(props) {
     super(props);
-    const youTrack = filter.youTrackId && {id: filter.youTrackId};
+    const youTrack = filter.youTrackId && {
+      id: filter.youTrackId,
+      homeUrl: filter.youTrackUrl
+    };
 
     this.state = {
       availableYouTracks: youTrack ? [youTrack] : [],
@@ -42,11 +45,11 @@ class EditFormYoutrackSelector extends React.Component {
   }
 
   async loadYouTrackList() {
-    const {youTrackId} = filter;
+    const {youTrack} = filter;
     const youtracks = await ServiceResource.getYouTrackServices(
       this.props.dashboardApi.fetchHub, MIN_YOUTRACK_VERSION
     );
-    const selected = youtracks.filter(yt => yt.id === youTrackId)[0];
+    const selected = youtracks.filter(yt => yt.id === youTrack.id)[0];
     this.setState({
       availableYouTracks: youtracks,
       selectedYouTrack: selected

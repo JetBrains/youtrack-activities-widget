@@ -27,7 +27,44 @@
     margin-bottom: 4 * $ring-unit;
   }
 
+  $icon-width: $ring-unit * 5;
+
   &__activity {
     margin-bottom: 4 * $ring-unit;
+
+    &__issue {
+      margin-left: $icon-width;
+
+      &__id {
+        white-space: nowrap;
+      }
+
+      &__summary {
+        margin-left: $ring-unit;
+      }
+    }
+
+    &__author {
+      line-height: normal; //TODO
+      &__icon {
+        width: $icon-width;
+      }
+
+      &__name {
+        width: $icon-width; //TODO
+      }
+
+      &__action {
+        width: $icon-width; //TODO
+      }
+
+      &__time {
+        width: $icon-width; //TODO
+      }
+    }
+
+    &__change {
+      margin-left: $icon-width;
+    }
   }
 }
