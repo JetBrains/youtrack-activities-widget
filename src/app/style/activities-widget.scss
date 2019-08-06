@@ -36,7 +36,13 @@
     font-size: 14px;
 
     &__issue {
-      margin-left: $icon-column;
+      display: block;
+      overflow: hidden;
+
+      margin: 0 0 0 $icon-column;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
       &__id {
         white-space: nowrap;
@@ -87,7 +93,7 @@
     }
 
     &__change {
-      margin-left: $icon-column;
+      margin: 0 0 0 $icon-column;
     }
   }
 }
