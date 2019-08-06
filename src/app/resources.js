@@ -23,21 +23,22 @@ const AUTHOR_FIELDS = 'author(id,login)';
 // eslint-disable-next-line max-len
 const ACTIVITIES_FIELDS = `id,timestamp,category(id),target(id,idReadable),${AUTHOR_FIELDS},added(${CHANGE_FIELDS}),removed(${CHANGE_FIELDS})`;
 // eslint-disable-next-line max-len
-const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCate';
+const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 
 export async function loadActivities(fetchYouTrack, author, query, start, end) {
   const packSize = 50;
   const skipSize = 0; //TODO implement paging
-  const fields = `fields=${ACTIVITIES_FIELDS}`;
-  const categories = `&categories=${CATEGORIES}`;
-  const authorId = author ? `&author=${author.id}` : '';
-  const issueQuery = query ? `&issueQuery=${encodeURIComponent(query)}` : '';
-  const startParam = start ? `&start=${start}` : '';
-  const endParam = start ? `&end=${end}` : '';
-  const top = `&$top=${packSize}`;
-  const skip = `&$skip=${skipSize || 0}`;
-  const reverse = '&reverse=true';
-  return await fetchYouTrack(
-    `api/activities?${fields}${categories}${authorId}${issueQuery}${startParam}${endParam}${top}${skip}${reverse}`
-  );
+  const params = [
+    `fields=${ACTIVITIES_FIELDS}`,
+    `categories=${CATEGORIES}`,
+    `$top=${packSize}`,
+    `$skip=${skipSize}`,
+    'reverse=true',
+    author && `author=${author.id}`,
+    query && `issueQuery=${encodeURIComponent(query)}`,
+    start && `start=${start}`,
+    end && `end=${end}`
+  ];
+  const paramsStr = params.filter(p => !!p).join('&');
+  return await fetchYouTrack(`api/activities?${paramsStr}`);
 }
