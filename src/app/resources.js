@@ -18,15 +18,16 @@ export async function queryUsers(fetchHub, query) {
   });
 }
 
-const CHANGE = 'id,name,text';
+const CHANGE = 'id,name,text,fullName';
 const ADD = `added(${CHANGE})`;
 const REM = `removed(${CHANGE})`;
 const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';
 const ISSUE = 'id,idReadable,summary,resolved';
 const TARGET = `target(${ISSUE},issue(${ISSUE}))`;
 const AUTHOR_GROUP = 'authorGroup(name,icon)';
+const FIELD = 'field(customField(name,fieldType(valueType,isMultiValue)))';
 // eslint-disable-next-line max-len
-const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${AUTHOR_GROUP}`;
+const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${AUTHOR_GROUP},${FIELD}`;
 // eslint-disable-next-line max-len
 const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 

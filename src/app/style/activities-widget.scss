@@ -27,8 +27,9 @@
     margin-bottom: 4 * $ring-unit;
   }
 
-  $icon-column: $ring-unit * 4;
-  $white-space: $ring-unit / 2;
+  $left-indent: $ring-unit * 4;
+  $right-indent: $ring-unit * 2;
+  $word-space: $ring-unit / 2;
 
   &__activity {
     margin-bottom: 4 * $ring-unit;
@@ -39,7 +40,7 @@
       display: block;
       overflow: hidden;
 
-      margin: 0 0 0 $icon-column;
+      margin: 0 $right-indent 0 $left-indent;
 
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -49,7 +50,7 @@
       }
 
       &__summary {
-        margin-left: $white-space;
+        margin-left: $word-space;
       }
     }
 
@@ -61,7 +62,7 @@
 
         float: left;
 
-        width: $icon-column;
+        width: $left-indent;
 
         $group-width: $ring-unit * 2;
 
@@ -76,24 +77,42 @@
       }
 
       &_info {
-        margin: $ring-unit 0 $ring-unit $icon-column;
+        margin: $ring-unit $right-indent $ring-unit $left-indent;
 
         &_name {
-          width: $icon-column;
+          width: $left-indent;
         }
 
         &_action {
-          margin-left: $white-space;
+          margin-left: $ring-unit;
+
+          color: var(--ring-secondary-color);
         }
 
         &_time {
-          margin-left: $white-space;
+          margin-left: $word-space;
+
+          color: var(--ring-secondary-color);
         }
       }
     }
 
     &__change {
-      margin: 0 0 0 $icon-column;
+      margin: 0 $right-indent 0 $left-indent;
+
+      &_field-name {
+        margin-right: $ring-unit;
+      }
+
+      &_added {
+        margin-right: $word-space;
+
+        color: var(--ring-icon-success-color);
+      }
+
+      &_removed {
+        text-decoration: line-through;
+      }
     }
   }
 }

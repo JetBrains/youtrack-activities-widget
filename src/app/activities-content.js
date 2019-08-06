@@ -10,7 +10,7 @@ import withTimerHOC from '@jetbrains/hub-widget-ui/dist/timer';
 
 import ContentDefaultActivity from './content-default-activity';
 import ContentCommentActivity from './content-comment-activity';
-
+import ContentCustomFieldActivity from './content-custom-field-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {
@@ -71,10 +71,13 @@ class ActivitiesContent extends React.Component {
 
   renderActivity = activity => {
     const categoryId = activity.category.id;
-    if (categoryId === 'CommentsCategory') {
-      return <ContentCommentActivity activity={activity}/>;
-    } else {
-      return <ContentDefaultActivity activity={activity}/>;
+    switch (categoryId) {
+      case 'CommentsCategory':
+        return <ContentCommentActivity activity={activity}/>;
+      case 'CustomFieldCategory':
+        return <ContentCustomFieldActivity activity={activity}/>;
+      default:
+        return <ContentDefaultActivity activity={activity}/>;
     }
   };
 
