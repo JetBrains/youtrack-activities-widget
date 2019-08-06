@@ -27,44 +27,67 @@
     margin-bottom: 4 * $ring-unit;
   }
 
-  $icon-width: $ring-unit * 5;
+  $icon-column: $ring-unit * 4;
+  $white-space: $ring-unit / 2;
 
   &__activity {
     margin-bottom: 4 * $ring-unit;
 
+    font-size: 14px;
+
     &__issue {
-      margin-left: $icon-width;
+      margin-left: $icon-column;
 
       &__id {
         white-space: nowrap;
       }
 
       &__summary {
-        margin-left: $ring-unit;
+        margin-left: $white-space;
       }
     }
 
     &__author {
-      line-height: normal; //TODO
-      &__icon {
-        width: $icon-width;
+      width: 100%;
+
+      &_avatar {
+        position: relative;
+
+        float: left;
+
+        width: $icon-column;
+
+        $group-width: $ring-unit * 2;
+
+        &_group {
+          position: absolute;
+          bottom: -2px;
+          left: 6px;
+
+          width: $group-width;
+          height: $group-width;
+        }
       }
 
-      &__name {
-        width: $icon-width; //TODO
-      }
+      &_info {
+        margin: $ring-unit 0 $ring-unit $icon-column;
 
-      &__action {
-        width: $icon-width; //TODO
-      }
+        &_name {
+          width: $icon-column;
+        }
 
-      &__time {
-        width: $icon-width; //TODO
+        &_action {
+          margin-left: $white-space;
+        }
+
+        &_time {
+          margin-left: $white-space;
+        }
       }
     }
 
     &__change {
-      margin-left: $icon-width;
+      margin-left: $icon-column;
     }
   }
 }

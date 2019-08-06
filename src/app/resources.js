@@ -18,14 +18,15 @@ export async function queryUsers(fetchHub, query) {
   });
 }
 
-const CHANGE_FIELDS = 'id,name,text';
-const ADD_FIELDS = `added(${CHANGE_FIELDS})`;
-const REM_FIELDS = `removed(${CHANGE_FIELDS})`;
-const AUTHOR_FIELDS = 'author(id,login)';
-const ISSUE_FIELDS = 'id,idReadable,summary,resolved';
-const TARGET_FIELDS = `target(${ISSUE_FIELDS},issue(${ISSUE_FIELDS}))`;
+const CHANGE = 'id,name,text';
+const ADD = `added(${CHANGE})`;
+const REM = `removed(${CHANGE})`;
+const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';
+const ISSUE = 'id,idReadable,summary,resolved';
+const TARGET = `target(${ISSUE},issue(${ISSUE}))`;
+const AUTHOR_GROUP = 'authorGroup(name,icon)';
 // eslint-disable-next-line max-len
-const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET_FIELDS},${AUTHOR_FIELDS},${ADD_FIELDS},${REM_FIELDS}`;
+const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${AUTHOR_GROUP}`;
 // eslint-disable-next-line max-len
 const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 
