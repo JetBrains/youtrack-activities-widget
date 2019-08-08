@@ -109,17 +109,23 @@
       width: 100%;
 
       &__field-name {
-        //display: inline-block;
-
         margin-right: $ring-unit;
 
         white-space: nowrap;
       }
 
       &__value {
-        //display: inline-block;
-
         flex: 1;
+
+        max-width: 400px;
+
+        &__added {
+          //TODO
+        }
+
+        &__removed {
+          //TODO
+        }
       }
     }
 

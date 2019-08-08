@@ -17,7 +17,7 @@ class ContentLinkActivity extends ContentDefaultActivity {
           {`${fieldName}:`}
         </div>
         <div className="activities-widget__activity__link__value">
-          <div>
+          <div className="activities-widget__activity__link__value__removed">
             {
               activity.removed.map(removedLinkIssue =>
                 (
@@ -28,6 +28,8 @@ class ContentLinkActivity extends ContentDefaultActivity {
                 )
               )
             }
+          </div>
+          <div className="activities-widget__activity__link__value__added">
             {
               activity.added.map(addedLinkIssue =>
                 (
