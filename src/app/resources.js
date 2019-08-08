@@ -18,7 +18,7 @@ export async function queryUsers(fetchHub, query) {
   });
 }
 
-const CHANGE = 'id,name,text,fullName';
+const CHANGE = 'id,name,text,fullName,project(shortName),numberInProject';
 const ADD = `added(${CHANGE})`;
 const REM = `removed(${CHANGE})`;
 const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';

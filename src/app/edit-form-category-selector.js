@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Table from '@jetbrains/ring-ui/components/table/table';
 import Selection from '@jetbrains/ring-ui/components/table/selection';

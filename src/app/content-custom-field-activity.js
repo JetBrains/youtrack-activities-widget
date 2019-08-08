@@ -44,12 +44,12 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     return (
       <span>
         <span
-          className="activities-widget__activity__change_added"
+          className="activities-widget__activity__change__added"
         >
           {activity.added.map(presentValue).join(',')}
         </span>
         <span
-          className="activities-widget__activity__change_removed"
+          className="activities-widget__activity__change__removed"
         >
           {activity.removed.map(presentValue).join(',')}
         </span>
@@ -94,7 +94,7 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
 
     return (
       <div>
-        <span className="activities-widget__activity__change_field-name">
+        <span className="activities-widget__activity__change__field-name">
           {`${fieldName}:`}
         </span>
         {change}

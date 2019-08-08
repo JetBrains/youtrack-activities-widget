@@ -104,17 +104,17 @@
     &__change {
       margin: 0 $right-indent 0 $left-indent;
 
-      &_field-name {
+      &__field-name {
         margin-right: $ring-unit;
       }
 
-      &_added {
+      &__added {
         margin-right: $word-space;
 
         color: var(--ring-icon-success-color);
       }
 
-      &_removed {
+      &__removed {
         text-decoration: line-through;
       }
     }
