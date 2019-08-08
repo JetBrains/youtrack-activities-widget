@@ -12,6 +12,7 @@ import ContentDefaultActivity from './content-default-activity';
 import ContentCommentActivity from './content-comment-activity';
 import ContentProjectActivity from './content-project-activity';
 import ContentCustomFieldActivity from './content-custom-field-activity';
+import ContentLinkActivity from './content-link-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {
@@ -79,6 +80,8 @@ class ActivitiesContent extends React.Component {
         return <ContentCustomFieldActivity activity={activity}/>;
       case 'ProjectCategory':
         return <ContentProjectActivity activity={activity}/>;
+      case 'LinksCategory':
+        return <ContentLinkActivity activity={activity}/>;
       default:
         return <ContentDefaultActivity activity={activity}/>;
     }

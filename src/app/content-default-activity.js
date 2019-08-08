@@ -42,7 +42,11 @@ class ContentDefaultActivity extends React.Component {
         key={`activity-${activity.id}`}
         className="activities-widget__activity"
       >
-        <ActivityIssueInfo activity={activity}/>
+        <div className="activities-widget__activity__issue">
+          <ActivityIssueInfo
+            issue={activity.target.issue || activity.target}
+          />
+        </div>
         <AuthorActionInfo activity={activity}/>
         <div className="activities-widget__activity__change">
           {this.renderContent(activity)}

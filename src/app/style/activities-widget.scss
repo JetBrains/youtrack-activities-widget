@@ -33,7 +33,23 @@
 
   $left-indent: $ring-unit * 4;
   $right-indent: $ring-unit * 2;
-  $word-space: $ring-unit / 2;
+  $small-indent: $ring-unit / 2;
+
+  &__issue {
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &__id {
+      white-space: nowrap;
+    }
+
+    &__summary {
+      margin-left: $small-indent;
+    }
+  }
 
   &__activity {
     margin-bottom: 4 * $ring-unit;
@@ -41,21 +57,7 @@
     font-size: 14px;
 
     &__issue {
-      display: block;
-      overflow: hidden;
-
       margin: 0 $right-indent 0 $left-indent;
-
-      white-space: nowrap;
-      text-overflow: ellipsis;
-
-      &__id {
-        white-space: nowrap;
-      }
-
-      &__summary {
-        margin-left: $word-space;
-      }
     }
 
     &__author {
@@ -94,10 +96,30 @@
         }
 
         &_time {
-          margin-left: $word-space;
+          margin-left: $small-indent;
 
           color: var(--ring-secondary-color);
         }
+      }
+    }
+
+    &__link {
+      display: flex;
+
+      width: 100%;
+
+      &__field-name {
+        //display: inline-block;
+
+        margin-right: $ring-unit;
+
+        white-space: nowrap;
+      }
+
+      &__value {
+        //display: inline-block;
+
+        flex: 1;
       }
     }
 
@@ -106,10 +128,12 @@
 
       &__field-name {
         margin-right: $ring-unit;
+
+        white-space: nowrap;
       }
 
       &__added {
-        margin-right: $word-space;
+        margin-right: $small-indent;
 
         color: var(--ring-icon-success-color);
       }

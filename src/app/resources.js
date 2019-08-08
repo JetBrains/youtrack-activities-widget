@@ -18,14 +18,20 @@ export async function queryUsers(fetchHub, query) {
   });
 }
 
-const CHANGE = 'id,name,text,fullName,project(shortName),numberInProject';
+const ISSUE = 'id,idReadable,summary,resolved';
+const CHANGED_VALUES = [
+  'id,name',
+  'text',
+  'project(shortName),numberInProject',
+  ISSUE
+];
+const CHANGE = CHANGED_VALUES.join(',');
 const ADD = `added(${CHANGE})`;
 const REM = `removed(${CHANGE})`;
 const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';
-const ISSUE = 'id,idReadable,summary,resolved';
 const TARGET = `target(${ISSUE},issue(${ISSUE}))`;
 const AUTHOR_GROUP = 'authorGroup(name,icon)';
-const FIELD = 'field(customField(name,fieldType(valueType,isMultiValue)))';
+const FIELD = 'field(presentation,customField(name,fieldType(valueType,isMultiValue)))';
 // eslint-disable-next-line max-len
 const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${AUTHOR_GROUP},${FIELD}`;
 // eslint-disable-next-line max-len
