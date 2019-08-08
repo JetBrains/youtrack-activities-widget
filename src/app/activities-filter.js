@@ -1,7 +1,4 @@
 import {observable} from 'mobx';
-import {format, parse} from 'date-fns';
-
-const FORMAT = 'YYYY-MM-DD';
 
 class ActivitiesFilter {
 
@@ -11,11 +8,11 @@ class ActivitiesFilter {
 
   @observable author = null;
 
-  @observable date = null;
-
   @observable youTrackId = null;
 
   @observable youTrackUrl = null;
+
+  @observable categories = null;
 
   @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
@@ -23,10 +20,10 @@ class ActivitiesFilter {
     try {
       const storedFilter = props.configWrapper.getFieldValue('filter');
       this.query = storedFilter.query;
-      this.date = storedFilter.date && parse(storedFilter.date, FORMAT);
       this.author = storedFilter.author || null;
       this.youTrackId = storedFilter.youTrack.id;
       this.youTrackUrl = storedFilter.youTrack.homeUrl;
+      this.categories = storedFilter.categories;
       this.refreshPeriod = storedFilter.refreshPeriod;
     } catch (e) {
       this.sync(props);
@@ -44,12 +41,12 @@ class ActivitiesFilter {
       avatarURL: author.avatarURL
     };
 
-    const toConfigDate = date => date && format(date, FORMAT);
+    const toConfigCategories = categories => categories && categories.slice();
 
     return {
       query: this.query,
-      date: toConfigDate(this.date),
       author: toConfigAuthor(this.author),
+      categories: toConfigCategories(this.categories),
       youTrack: {id: this.youTrackId, homeUrl: this.youTrackUrl},
       refreshPeriod: this.refreshPeriod
     };

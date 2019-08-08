@@ -45,11 +45,11 @@ class EditFormYoutrackSelector extends React.Component {
   }
 
   async loadYouTrackList() {
-    const {youTrack} = filter;
+    const {youTrackId} = filter;
     const youtracks = await ServiceResource.getYouTrackServices(
       this.props.dashboardApi.fetchHub, MIN_YOUTRACK_VERSION
     );
-    const selected = youtracks.filter(yt => yt.id === youTrack.id)[0];
+    const selected = youtracks.filter(yt => yt.id === youTrackId)[0];
     this.setState({
       availableYouTracks: youtracks,
       selectedYouTrack: selected

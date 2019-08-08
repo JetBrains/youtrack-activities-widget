@@ -29,22 +29,24 @@ const FIELD = 'field(customField(name,fieldType(valueType,isMultiValue)))';
 // eslint-disable-next-line max-len
 const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${AUTHOR_GROUP},${FIELD}`;
 // eslint-disable-next-line max-len
-const CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
+const ALL_CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 
-export async function loadActivities(fetchYouTrack, author, query, start, end) {
+// eslint-disable-next-line max-len
+export async function loadActivities(fetchYouTrack, params) {
   const packSize = 50;
   const skipSize = 0; //TODO implement paging
-  const params = [
+  const categories = params.categories && params.categories.join(',');
+  const queryParams = [
     `fields=${ACTIVITIES_FIELDS}`,
-    `categories=${CATEGORIES}`,
+    `categories=${categories || ALL_CATEGORIES}`,
     `$top=${packSize}`,
     `$skip=${skipSize}`,
     'reverse=true',
-    author && `author=${author.id}`,
-    query && `issueQuery=${encodeURIComponent(query)}`,
-    start && `start=${start}`,
-    end && `end=${end}`
+    params.author && `author=${params.author.id}`,
+    params.query && `issueQuery=${encodeURIComponent(params.query)}`,
+    params.start && `start=${params.start}`,
+    params.end && `end=${params.end}`
   ];
-  const paramsStr = params.filter(p => !!p).join('&');
-  return await fetchYouTrack(`api/activities?${paramsStr}`);
+  const queryParamsStr = queryParams.filter(p => !!p).join('&');
+  return await fetchYouTrack(`api/activities?${queryParamsStr}`);
 }

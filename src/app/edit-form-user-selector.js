@@ -23,8 +23,7 @@ const toSelectOption = user => user && {
 class EditFormUserSelector extends React.Component {
 
   static propTypes = {
-    dashboardApi: PropTypes.object,
-    onChange: PropTypes.func
+    dashboardApi: PropTypes.object
   };
 
   constructor(props) {
@@ -41,8 +40,7 @@ class EditFormUserSelector extends React.Component {
 
   changeAuthor = selected => {
     this.setState({selectedAuthor: selected});
-    const newAuthor = selected && selected.model;
-    this.props.onChange(newAuthor);
+    filter.author = selected && selected.model;
   };
 
   queryUsers = async q => {

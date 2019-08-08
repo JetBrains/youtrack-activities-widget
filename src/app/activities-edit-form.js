@@ -5,15 +5,15 @@ import LoaderInline
   from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
 import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form';
 import RefreshPeriod from '@jetbrains/hub-widget-ui/dist/refresh-period';
-import {DatePicker} from '@jetbrains/ring-ui'; // theme css file
-import '@jetbrains/ring-ui/components/form/form.scss';
 import {observer} from 'mobx-react';
 
 import filter from './activities-filter';
 import EditFormUserSelector from './edit-form-user-selector';
 import EditFormQueryToolbar from './edit-form-query-toolbar';
+import EditFormCategorySelector from './edit-form-category-selector';
 import EditFormYoutrackSelector from './edit-form-youtrack-selector';
 
+import '@jetbrains/ring-ui/components/form/form.scss';
 import './style/activities-widget.scss';
 
 @observer
@@ -34,18 +34,6 @@ class ActivitiesEditForm extends React.Component {
     };
   }
 
-  changeDate = moment => {
-    filter.date = moment && moment.toDate();
-  };
-
-  changeIssueQuery = query => {
-    filter.query = query;
-  };
-
-  changAuthor = author => {
-    filter.author = author;
-  };
-
   changeRefreshPeriod = period => {
     filter.refreshPeriod = period;
   };
@@ -54,20 +42,9 @@ class ActivitiesEditForm extends React.Component {
     return (
       <div className="ring-form__group">
         <div>
-          <EditFormQueryToolbar
-            dashboardApi={this.props.dashboardApi}
-            onChange={this.changeIssueQuery}
-          />
-          <EditFormUserSelector
-            dashboardApi={this.props.dashboardApi}
-            onChange={this.changAuthor}
-          />
-          <DatePicker
-            className="activities-widget__date-picker"
-            date={filter.date}
-            onChange={this.changeDate}
-            clear
-          />
+          <EditFormQueryToolbar dashboardApi={this.props.dashboardApi}/>
+          <EditFormUserSelector dashboardApi={this.props.dashboardApi}/>
+          <EditFormCategorySelector/>
         </div>
       </div>
     );

@@ -105,34 +105,16 @@ class ActivitiesWidget extends React.Component {
     return await dashboardApi.fetch(filter.youTrackId, url, params);
   };
 
-  toDayStart = date => {
-    if (!date) {
-      return date;
-    }
-    const start = new Date(date.getTime());
-    start.setHours(0, 0, 0, 0);
-    return start.getTime();
-  };
-
-  toDayEnd = date => {
-    if (!date) {
-      return date;
-    }
-    const end = new Date(date.getTime());
-    end.setHours(0, 0, 0, 0);
-    end.setDate(date.getDate() + 1);
-    return end.getTime();
-  };
-
   tryLoadActivities = async () => {
     this.setState({isLoading: true});
     try {
       const activities = await loadActivities(
         this.fetchYouTrack,
-        filter.author,
-        filter.query,
-        this.toDayStart(filter.date),
-        this.toDayEnd(filter.date)
+        {
+          author: filter.author,
+          query: filter.query,
+          categories: filter.categories
+        }
       );
       this.setState({activities});
     } catch (error) {
@@ -152,9 +134,9 @@ class ActivitiesWidget extends React.Component {
   };
 
   cancelConfiguration = async () => {
+    await filter.restore(this.props);
     this.setState({isConfiguring: false});
     await this.props.dashboardApi.exitConfigMode();
-    this.initialize(this.props.dashboardApi);
   };
 
   renderConfiguration = () => (
