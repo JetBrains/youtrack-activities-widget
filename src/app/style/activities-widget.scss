@@ -68,9 +68,13 @@
   }
 
   &__activity {
-    margin-bottom: 4 * $ring-unit;
+    padding-bottom: 4 * $ring-unit;
 
     font-size: 14px;
+
+    &_new {
+      background: var(--ring-selected-background-color);
+    }
 
     &__issue {
       margin: 0 $right-indent 0 $left-indent;

@@ -1,19 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import classNames from 'classnames';
 import {format} from 'date-fns';
 
 import AuthorActionInfo from './components/author-action-info';
 import ActivityIssueInfo from './components/activity-issue-info';
 
 const FORMAT = 'YYYY-MM-DD HH:mm';
+const HIGHLIGHT_TIMEOUT = 5000;
 
 class ContentDefaultActivity extends React.Component {
 
-  static propTypes = {activity: PropTypes.object};
+  static propTypes = {
+    activity: PropTypes.object
+  };
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      new: props.activity.new
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => this.setState({new: null}), HIGHLIGHT_TIMEOUT);
   }
 
   presentChange = changes => {
@@ -37,10 +48,14 @@ class ContentDefaultActivity extends React.Component {
 
   render() {
     const {activity} = this.props;
+    const getActivityClassName = () => classNames(
+      'activities-widget__activity',
+      this.state.new && 'activities-widget__activity_new'
+    );
     return (
       <div
         key={`activity-${activity.id}`}
-        className="activities-widget__activity"
+        className={getActivityClassName()}
       >
         <div className="activities-widget__activity__issue">
           <ActivityIssueInfo

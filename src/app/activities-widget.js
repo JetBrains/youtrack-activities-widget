@@ -11,9 +11,10 @@ import ActivitiesContent from './activities-content';
 import {loadActivities, loadActivitiesPage} from './resources';
 import filter from './activities-filter';
 
+const MILLIS_IN_SEC = 1000;
+
 @observer
 class ActivitiesWidget extends React.Component {
-  static MILLIS_IN_SEC = 1000; // eslint-disable-line no-magic-numbers
 
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
@@ -53,7 +54,7 @@ class ActivitiesWidget extends React.Component {
         isLoading: false,
         isLoadingError: false
       }),
-      onRefresh: () => this.reload()
+      onRefresh: () => this.tryLoadNewActivities()
     });
 
     this.initialize(dashboardApi);
@@ -113,10 +114,13 @@ class ActivitiesWidget extends React.Component {
         {
           author: filter.author,
           query: filter.query,
-          start: timestamp,
+          start: timestamp && (timestamp + 1),
           categories: filter.categories
         }
       );
+      incActivities.forEach(activity => {
+        activity.new = true;
+      });
       const newest = incActivities[0];
       const oldActivities = this.state.activities || [];
       const newActivities = incActivities.concat(oldActivities);
@@ -208,7 +212,7 @@ class ActivitiesWidget extends React.Component {
       hasMore={this.state.hasMore}
       onLoadMore={this.loadMore}
       editable={this.props.editable}
-      tickPeriod={filter.refreshPeriod * ActivitiesWidget.MILLIS_IN_SEC}
+      tickPeriod={filter.refreshPeriod * MILLIS_IN_SEC}
       onTick={this.tryLoadNewActivities}
       onEdit={this.editConfiguration}
     />
