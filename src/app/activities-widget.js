@@ -44,8 +44,7 @@ class ActivitiesWidget extends React.Component {
     this.state = {
       isConfiguring: false,
       isLoading: false,
-      isLoadingError: false,
-      isLoadingMore: false
+      isLoadingError: false
     };
 
     registerWidgetApi({
@@ -54,7 +53,7 @@ class ActivitiesWidget extends React.Component {
         isLoading: false,
         isLoadingError: false
       }),
-      onRefresh: () => this.tryLoadActivitiesPage(false)
+      onRefresh: () => this.reload()
     });
 
     this.initialize(dashboardApi);
@@ -97,7 +96,7 @@ class ActivitiesWidget extends React.Component {
       filter.youTrackUrl = youTrackService.homeUrl;
       await filter.sync(this.props);
       this.setState({isConfiguring: false});
-      await this.tryLoadActivitiesPage(false);
+      await this.reload();
     }
   }
 
@@ -131,7 +130,6 @@ class ActivitiesWidget extends React.Component {
   };
 
   tryLoadActivitiesPage = async loadMore => {
-    !loadMore && this.setState({isLoading: true});
     try {
       const {cursor} = this.state;
       const page = await loadActivitiesPage(
@@ -143,11 +141,8 @@ class ActivitiesWidget extends React.Component {
           categories: filter.categories
         }
       );
-      const newest = page.activities[0];
-      const oldTimestamp = this.state.timestamp;
-      const newTimestamp = newest && newest.timestamp || oldTimestamp;
-      const oldActivities = loadMore ? (this.state.activities || []) : [];
-      const newActivities = oldActivities.slice().concat(page.activities);
+      const newTimestamp = this.updatedTimestamp(loadMore, page);
+      const newActivities = this.updatedActivities(loadMore, page);
       this.setState({
         activities: newActivities,
         timestamp: newTimestamp,
@@ -157,10 +152,28 @@ class ActivitiesWidget extends React.Component {
     } catch (error) {
       this.setState({isLoadingError: true});
     }
-    !loadMore && this.setState({isLoading: false});
   };
 
-  loadMore = () => this.tryLoadActivitiesPage(true);
+  updatedActivities(loadMore, page) {
+    const oldActivities = loadMore ? (this.state.activities || []) : [];
+    return oldActivities.slice().concat(page.activities);
+  }
+
+  updatedTimestamp(loadMore, page) {
+    const newest = page.activities[0];
+    const oldTimestamp = loadMore ? this.state.timestamp : null;
+    return newest && newest.timestamp || oldTimestamp;
+  }
+
+  reload = async () => {
+    this.setState({isLoading: true});
+    await this.tryLoadActivitiesPage(false);
+    this.setState({isLoading: false});
+  };
+
+  loadMore = async () => {
+    await this.tryLoadActivitiesPage(true);
+  };
 
   editConfiguration = () => {
     this.setState({isConfiguring: true});
@@ -169,7 +182,7 @@ class ActivitiesWidget extends React.Component {
   submitConfiguration = async () => {
     await filter.sync(this.props);
     this.setState({isConfiguring: false});
-    await this.tryLoadActivitiesPage();
+    await this.reload();
   };
 
   cancelConfiguration = async () => {

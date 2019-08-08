@@ -29,6 +29,10 @@ class ActivitiesContent extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      isLoadingMore: false
+    };
   }
 
   renderNoActivitiesError() {
@@ -59,7 +63,13 @@ class ActivitiesContent extends React.Component {
     />
   );
 
-  renderLoader = () => (<LoaderInline/>);
+  renderLoader = () => <LoaderInline/>;
+
+  loadMore = async () => {
+    this.setState({isLoadingMore: true});
+    await this.props.onLoadMore();
+    this.setState({isLoadingMore: false});
+  };
 
   renderBody = () => (
     <div className="activities-widget">
@@ -71,10 +81,18 @@ class ActivitiesContent extends React.Component {
         ))
       }
       {
-        this.props.hasMore &&
+        this.state.isLoadingMore &&
+        (
+          <div className="activities-widget__load-more">
+            <LoaderInline/>
+          </div>
+        )
+      }
+      {
+        !this.state.isLoadingMore && this.props.hasMore &&
         (
           <div
-            onClick={this.props.onLoadMore}
+            onClick={this.loadMore}
             className="activities-widget__load-more"
           >
             <Link pseudo>{i18n('Show more')}</Link>
