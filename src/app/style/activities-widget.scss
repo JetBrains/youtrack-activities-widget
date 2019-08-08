@@ -35,6 +35,22 @@
   $right-indent: $ring-unit * 2;
   $small-indent: $ring-unit / 2;
 
+  &__load-more {
+    margin: 4px 0;
+    padding: 4px 0;
+
+    text-align: center;
+
+    border: 1px dashed var(--ring-borders-color);
+    border-radius: 3px;
+
+    font-size: var(--ring-font-size-smaller);
+
+    &:hover {
+      border-color: var(--ring-pale-control-color);
+    }
+  }
+
   &__issue {
     display: block;
     overflow: hidden;

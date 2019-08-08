@@ -22,7 +22,9 @@ class ActivitiesContent extends React.Component {
     isLoading: PropTypes.bool,
     isLoadDataError: PropTypes.bool,
     onEdit: PropTypes.func,
-    editable: PropTypes.bool
+    onLoadMore: PropTypes.func,
+    editable: PropTypes.bool,
+    hasMore: PropTypes.bool
   };
 
   constructor(props) {
@@ -67,6 +69,17 @@ class ActivitiesContent extends React.Component {
             {this.renderActivity(activity)}
           </div>
         ))
+      }
+      {
+        this.props.hasMore &&
+        (
+          <div
+            onClick={this.props.onLoadMore}
+            className="activities-widget__load-more"
+          >
+            <Link pseudo>{i18n('Show more')}</Link>
+          </div>
+        )
       }
     </div>
   );

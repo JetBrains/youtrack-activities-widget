@@ -8,7 +8,7 @@ import {observer} from 'mobx-react';
 import ServiceResource from './components/service-resource';
 import ActivitiesEditForm from './activities-edit-form';
 import ActivitiesContent from './activities-content';
-import {loadActivities} from './resources';
+import {loadActivities, loadActivitiesPage} from './resources';
 import filter from './activities-filter';
 
 @observer
@@ -44,16 +44,17 @@ class ActivitiesWidget extends React.Component {
     this.state = {
       isConfiguring: false,
       isLoading: false,
-      isLoadDataError: false
+      isLoadingError: false,
+      isLoadingMore: false
     };
 
     registerWidgetApi({
       onConfigure: () => this.setState({
         isConfiguring: true,
         isLoading: false,
-        isLoadDataError: false
+        isLoadingError: false
       }),
-      onRefresh: () => this.tryLoadActivities()
+      onRefresh: () => this.tryLoadActivitiesPage(false)
     });
 
     this.initialize(dashboardApi);
@@ -96,7 +97,7 @@ class ActivitiesWidget extends React.Component {
       filter.youTrackUrl = youTrackService.homeUrl;
       await filter.sync(this.props);
       this.setState({isConfiguring: false});
-      await this.tryLoadActivities();
+      await this.tryLoadActivitiesPage(false);
     }
   }
 
@@ -118,10 +119,42 @@ class ActivitiesWidget extends React.Component {
       );
       this.setState({activities});
     } catch (error) {
-      this.setState({isLoadDataError: true});
+      this.setState({isLoadingError: true});
     }
     this.setState({isLoading: false});
   };
+
+  tryLoadActivitiesPage = async loadMore => {
+    !loadMore && this.setState({isLoading: true});
+    try {
+      const {cursor} = this.state;
+      const page = await loadActivitiesPage(
+        this.fetchYouTrack,
+        {
+          cursor: loadMore && cursor,
+          author: filter.author,
+          query: filter.query,
+          categories: filter.categories
+        }
+      );
+      const newest = page.activities[0];
+      const oldTimestamp = this.state.timestamp;
+      const newTimestamp = newest && newest.timestamp || oldTimestamp;
+      const oldActivities = loadMore ? (this.state.activities || []) : [];
+      const newActivities = oldActivities.slice().concat(page.activities);
+      this.setState({
+        activities: newActivities,
+        timestamp: newTimestamp,
+        cursor: page.beforeCursor,
+        hasMore: page.hasBefore
+      });
+    } catch (error) {
+      this.setState({isLoadingError: true});
+    }
+    !loadMore && this.setState({isLoading: false});
+  };
+
+  loadMore = () => this.tryLoadActivitiesPage(true);
 
   editConfiguration = () => {
     this.setState({isConfiguring: true});
@@ -130,7 +163,7 @@ class ActivitiesWidget extends React.Component {
   submitConfiguration = async () => {
     await filter.sync(this.props);
     this.setState({isConfiguring: false});
-    await this.tryLoadActivities();
+    await this.tryLoadActivitiesPage();
   };
 
   cancelConfiguration = async () => {
@@ -152,10 +185,12 @@ class ActivitiesWidget extends React.Component {
     <ActivitiesContent
       activities={this.state.activities}
       isLoading={this.state.isLoading}
-      isLoadDataError={this.state.isLoadDataError}
+      isLoadDataError={this.state.isLoadingError}
+      hasMore={this.state.hasMore}
+      onLoadMore={this.loadMore}
       editable={this.props.editable}
       tickPeriod={filter.refreshPeriod * ActivitiesWidget.MILLIS_IN_SEC}
-      onTick={this.tryLoadActivities} //TODO use incremental loading
+      onTick={this.tryLoadActivities}
       onEdit={this.editConfiguration}
     />
   );

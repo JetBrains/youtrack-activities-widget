@@ -37,7 +37,6 @@ const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},
 // eslint-disable-next-line max-len
 const ALL_CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 
-// eslint-disable-next-line max-len
 export async function loadActivities(fetchYouTrack, params) {
   const packSize = 50;
   const skipSize = 0; //TODO implement paging
@@ -55,4 +54,22 @@ export async function loadActivities(fetchYouTrack, params) {
   ];
   const queryParamsStr = queryParams.filter(p => !!p).join('&');
   return await fetchYouTrack(`api/activities?${queryParamsStr}`);
+}
+
+const ACTIVITIES_FIELDS_PAGE = `beforeCursor,hasBefore,afterCursor,hasAfter,activities(${ACTIVITIES_FIELDS})`;
+
+export async function loadActivitiesPage(fetchYouTrack, params) {
+  const packSize = 50;
+  const categories = params.categories && params.categories.join(',');
+  const queryParams = [
+    `fields=${ACTIVITIES_FIELDS_PAGE}`,
+    `categories=${categories || ALL_CATEGORIES}`,
+    `$top=${packSize}`,
+    'reverse=true',
+    params.cursor && `cursor=${encodeURIComponent(params.cursor)}`,
+    params.author && `author=${params.author.id}`,
+    params.query && `issueQuery=${encodeURIComponent(params.query)}`
+  ];
+  const queryParamsStr = queryParams.filter(p => !!p).join('&');
+  return await fetchYouTrack(`api/activitiesPage?${queryParamsStr}`);
 }
