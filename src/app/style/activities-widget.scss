@@ -83,39 +83,41 @@
     &__author {
       width: 100%;
 
-      &_avatar {
+      &__avatar {
         position: relative;
+        bottom: -4px;
 
         float: left;
 
         width: $left-indent;
 
-        $group-width: $ring-unit * 2;
-
-        &_group {
+        &__group {
           position: absolute;
-          bottom: -2px;
-          left: 6px;
+          right: 4px;
+          bottom: -1px;
 
-          width: $group-width;
-          height: $group-width;
+          width: 14px;
+          height: 14px;
+
+          border-radius: 3px;
         }
       }
 
-      &_info {
-        margin: $ring-unit $right-indent $ring-unit $left-indent;
+      &__info {
+        margin: 0 $right-indent 0 $left-indent;
+        padding: $ring-unit 0 $ring-unit 0;
 
-        &_name {
+        &__name {
           width: $left-indent;
         }
 
-        &_action {
+        &__action {
           margin-left: $ring-unit;
 
           color: var(--ring-secondary-color);
         }
 
-        &_time {
+        &__time {
           margin-left: $small-indent;
 
           color: var(--ring-secondary-color);

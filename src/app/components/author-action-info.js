@@ -7,13 +7,17 @@ import {UserCardTooltip} from '@jetbrains/ring-ui/components/user-card/user-card
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import {format} from 'date-fns';
 
+import filter from './../activities-filter';
+
 import '../style/activities-widget.scss';
 
 const FORMAT = 'YYYY-MM-DD HH:mm';
 
 class AuthorActionInfo extends React.Component {
 
-  static propTypes = {activity: PropTypes.object};
+  static propTypes = {
+    activity: PropTypes.object
+  };
 
   toCardUser = user => ({
     id: user.ringId,
@@ -30,39 +34,39 @@ class AuthorActionInfo extends React.Component {
     return (
       <div className="activities-widget__activity__author">
         <div
-          className="activities-widget__activity__author_avatar"
+          className="activities-widget__activity__author__avatar"
         >
           <Avatar
-            size={Size.Size18}
-            url={activity.author.avatarUrl}
+            size={Size.Size24}
+            url={filter.youTrackUrl + activity.author.avatarUrl}
           />
           {
             activity.authorGroup && (
               <img
-                className="activities-widget__activity__author_avatar_group"
+                className="activities-widget__activity__author__avatar__group"
                 src={activity.authorGroup.icon}
               />
             )
           }
         </div>
-        <div className="activities-widget__activity__author_info">
+        <div className="activities-widget__activity__author__info">
           <UserCardTooltip
             user={cardUser}
           >
             <Link
-              className="activities-widget__activity__author_info_name"
+              className="activities-widget__activity__author__info__name"
               href={cardUser.href}
             >
               {activity.author.fullName}
             </Link>
           </UserCardTooltip>
           <span
-            className="activities-widget__activity__author_info_action"
+            className="activities-widget__activity__author__info__action"
           >
             {i18n('updated')}
           </span>
           <span
-            className="activities-widget__activity__author_info_time"
+            className="activities-widget__activity__author__info__time"
           >
             {format(activity.timestamp, FORMAT)}
           </span>
