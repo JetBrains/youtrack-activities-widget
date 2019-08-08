@@ -106,22 +106,28 @@ class ActivitiesWidget extends React.Component {
     return await dashboardApi.fetch(filter.youTrackId, url, params);
   };
 
-  tryLoadActivities = async () => {
-    this.setState({isLoading: true});
+  tryLoadNewActivities = async () => {
     try {
-      const activities = await loadActivities(
+      const {timestamp} = this.state;
+      const incActivities = await loadActivities(
         this.fetchYouTrack,
         {
           author: filter.author,
           query: filter.query,
+          start: timestamp,
           categories: filter.categories
         }
       );
-      this.setState({activities});
+      const newest = incActivities[0];
+      const oldActivities = this.state.activities || [];
+      const newActivities = incActivities.concat(oldActivities);
+      this.setState({
+        activities: newActivities,
+        timestamp: newest && newest.timestamp || timestamp
+      });
     } catch (error) {
       this.setState({isLoadingError: true});
     }
-    this.setState({isLoading: false});
   };
 
   tryLoadActivitiesPage = async loadMore => {
@@ -190,7 +196,7 @@ class ActivitiesWidget extends React.Component {
       onLoadMore={this.loadMore}
       editable={this.props.editable}
       tickPeriod={filter.refreshPeriod * ActivitiesWidget.MILLIS_IN_SEC}
-      onTick={this.tryLoadActivities}
+      onTick={this.tryLoadNewActivities}
       onEdit={this.editConfiguration}
     />
   );
