@@ -50,7 +50,7 @@ class ActivitiesContent extends React.Component {
               pseudo
               onClick={this.props.onEdit}
             >
-              {i18n('Edit search query')}
+              {i18n('Edit filter settings')}
             </Link>
           )
         }

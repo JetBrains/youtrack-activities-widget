@@ -17,7 +17,8 @@ import {underlineAndSuggest} from './resources';
 class EditFormQueryToolbar extends React.Component {
 
   static propTypes = {
-    dashboardApi: PropTypes.object
+    dashboardApi: PropTypes.object,
+    onChange: PropTypes.func
   };
 
   constructor(props) {
@@ -50,7 +51,7 @@ class EditFormQueryToolbar extends React.Component {
 
   changeSearchQuery = query => {
     this.setState({query});
-    filter.query = this.state.query;
+    this.props.onChange(query);
   };
 
   onQueryAssistInputChange = queryAssistModel =>
