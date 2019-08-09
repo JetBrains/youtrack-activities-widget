@@ -8,7 +8,9 @@ import './style/activities-widget.scss';
 
 const LOST_EMPTY_VALUE = i18n('[Empty value]');
 const REMOVED_FIELD = i18n('[Removed field]');
+const REMOVED_FIELD_TYPE = {valueType: 'removed'};
 const SIMPLE_TYPES = [
+  'removed',
   'date',
   'date and time',
   'float',
@@ -19,8 +21,10 @@ const SIMPLE_TYPES = [
 
 class ContentCustomFieldActivity extends ContentDefaultActivity {
 
-  static getPresenter(field) {
-    switch (field.fieldType.valueType) {
+  // eslint-disable-next-line complexity
+  static getPresenter = fieldType => {
+    switch (fieldType.valueType) {
+      case 'removed':
       case 'integer':
       case 'string':
       case 'float':
@@ -31,14 +35,12 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
       default:
         return value => value && value.name;
     }
-  }
-
-  isSimpleValueField = field => {
-    const type = field.fieldType.valueType;
-    return SIMPLE_TYPES.indexOf(type) !== -1;
   };
 
-  isMultiValueField = field => field.fieldType.isMultiValue;
+  // eslint-disable-next-line max-len
+  isSimpleValueField = fieldType => SIMPLE_TYPES.indexOf(fieldType.valueType) >= 0;
+
+  isMultiValueField = fieldType => fieldType.isMultiValue;
 
   renderMultiValueChange(activity, presentValue) {
     return (
@@ -77,16 +79,18 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     );
   }
 
-  // eslint-disable-next-line react/display-name
+  // eslint-disable-next-line react/display-name,complexity
   renderContent = activity => {
     const field = activity.field && activity.field.customField;
     const fieldName = field && field.name || REMOVED_FIELD;
-    const presentValue = ContentCustomFieldActivity.getPresenter(field);
+    const fieldType = field && field.fieldType || REMOVED_FIELD_TYPE;
+
+    const presentValue = ContentCustomFieldActivity.getPresenter(fieldType);
 
     let change;
-    if (this.isSimpleValueField(field)) {
+    if (this.isSimpleValueField(fieldType)) {
       change = this.renderSimpleValueChange(activity, presentValue);
-    } else if (this.isMultiValueField(field)) {
+    } else if (this.isMultiValueField(fieldType)) {
       change = this.renderMultiValueChange(activity, presentValue);
     } else {
       change = this.renderSingleValueChange(activity, presentValue);
