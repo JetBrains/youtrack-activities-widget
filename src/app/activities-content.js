@@ -13,6 +13,7 @@ import ContentCommentActivity from './content-comment-activity';
 import ContentProjectActivity from './content-project-activity';
 import ContentCustomFieldActivity from './content-custom-field-activity';
 import ContentLinkActivity from './content-link-activity';
+import ContentTextActivity from './content-text-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {
@@ -113,6 +114,9 @@ class ActivitiesContent extends React.Component {
         return <ContentProjectActivity activity={activity}/>;
       case 'LinksCategory':
         return <ContentLinkActivity activity={activity}/>;
+      case 'SummaryCategory':
+      case 'DescriptionCategory':
+        return <ContentTextActivity activity={activity}/>;
       default:
         return <ContentDefaultActivity activity={activity}/>;
     }

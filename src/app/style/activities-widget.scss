@@ -170,5 +170,27 @@
         text-decoration: line-through;
       }
     }
+
+    &__text {
+      display: flex;
+
+      &__field-name {
+        margin-right: $ring-unit;
+
+        white-space: nowrap;
+      }
+
+      &__value {
+        flex: 1;
+
+        &__added {
+          background: #e6ffe6;
+        }
+
+        &__removed {
+          background: #ffe6e6;
+        }
+      }
+    }
   }
 }
