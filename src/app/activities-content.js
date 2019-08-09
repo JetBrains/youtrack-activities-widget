@@ -14,6 +14,7 @@ import ContentProjectActivity from './content-project-activity';
 import ContentCustomFieldActivity from './content-custom-field-activity';
 import ContentLinkActivity from './content-link-activity';
 import ContentTextActivity from './content-text-activity';
+import ContentActionActivity from './content-action-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {
@@ -103,6 +104,7 @@ class ActivitiesContent extends React.Component {
     </div>
   );
 
+  // eslint-disable-next-line complexity
   renderActivity = activity => {
     const categoryId = activity.category.id;
     switch (categoryId) {
@@ -117,6 +119,9 @@ class ActivitiesContent extends React.Component {
       case 'SummaryCategory':
       case 'DescriptionCategory':
         return <ContentTextActivity activity={activity}/>;
+      case 'IssueCreatedCategory':
+      case 'IssueResolvedCategory':
+        return <ContentActionActivity activity={activity}/>;
       default:
         return <ContentDefaultActivity activity={activity}/>;
     }

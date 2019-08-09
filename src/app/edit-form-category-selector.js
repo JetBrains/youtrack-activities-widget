@@ -9,14 +9,14 @@ import filter from './activities-filter';
 import './style/activities-widget.scss';
 
 const CATEGORIES = [
-  {id: 'IssueCreatedCategory', name: i18n('New issues')},
-  {id: 'IssueResolvedCategory', name: i18n('Resolved issues')},
   {id: 'AttachmentsCategory', name: i18n('Attachments')},
   {id: 'DescriptionCategory', name: i18n('Description')},
   {id: 'CommentsCategory', name: i18n('Comments')},
   {id: 'CustomFieldCategory', name: i18n('Custom fields')},
+  {id: 'IssueCreatedCategory', name: i18n('New issues')},
   {id: 'LinksCategory', name: i18n('Links')},
   {id: 'ProjectCategory', name: i18n('Project')},
+  {id: 'IssueResolvedCategory', name: i18n('Resolved issues')},
   {id: 'SprintCategory', name: i18n('Sprints')},
   {id: 'SummaryCategory', name: i18n('Summary')},
   {id: 'TagsCategory', name: i18n('Tags')},
