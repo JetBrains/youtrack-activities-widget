@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import Link from '@jetbrains/ring-ui/components/link/link';
 
@@ -17,17 +18,25 @@ class ActivityIssueInfo extends React.Component {
     const {issue} = this.props;
     const issueId = issue.idReadable;
     const issueHref = `${filter.youTrackUrl}/issue/${issueId}`;
+
+    const getIssueLinkClassName = baseClassName => {
+      const resolved = issue.resolved !== undefined && issue.resolved !== null;
+      return classNames(
+        baseClassName, resolved && `${baseClassName}_resolved`
+      );
+    };
+
     return (
       <div className="activities-widget__issue">
         <Link
-          className="activities-widget__issue__id"
+          className={getIssueLinkClassName('activities-widget__issue__id')}
           href={issueHref}
         >
           {issueId}
         </Link>
         <Link
           key={`issue-summary-${issue.id}`}
-          className="activities-widget__issue__summary"
+          className={getIssueLinkClassName('activities-widget__issue__summary')}
           href={issueHref}
         >
           {issue.summary}

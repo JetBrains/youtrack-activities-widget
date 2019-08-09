@@ -56,10 +56,20 @@
 
     &__id {
       white-space: nowrap;
+
+      &_resolved {
+        text-decoration: line-through;
+
+        color: var(--ring-secondary-color);
+      }
     }
 
     &__summary {
       margin-left: $small-indent;
+
+      &_resolved {
+        color: var(--ring-secondary-color);
+      }
     }
   }
 
