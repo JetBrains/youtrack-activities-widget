@@ -17,6 +17,7 @@ import ContentTextActivity from './content-text-activity';
 import ContentActionActivity from './content-action-activity';
 import ContentVcsChangeActivity from './content-vcs-activity';
 import './style/activities-widget.scss';
+import ContentSprintActivity from './content-spring-activity';
 
 class ActivitiesContent extends React.Component {
 
@@ -113,6 +114,8 @@ class ActivitiesContent extends React.Component {
         return <ContentCommentActivity activity={activity}/>;
       case 'CustomFieldCategory':
         return <ContentCustomFieldActivity activity={activity}/>;
+      case 'SprintCategory':
+        return <ContentSprintActivity activity={activity}/>;
       case 'ProjectCategory':
         return <ContentProjectActivity activity={activity}/>;
       case 'LinksCategory':

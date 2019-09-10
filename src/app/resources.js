@@ -25,6 +25,7 @@ const CHANGED_VALUES = [
   'urls',
   'version',
   'project(shortName),numberInProject',
+  'agile(id,name)',
   ISSUE
 ];
 const CHANGE = CHANGED_VALUES.join(',');
