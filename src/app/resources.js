@@ -22,6 +22,8 @@ const ISSUE = 'id,idReadable,summary,resolved';
 const CHANGED_VALUES = [
   'id,name',
   'text',
+  'urls',
+  'version',
   'project(shortName),numberInProject',
   ISSUE
 ];

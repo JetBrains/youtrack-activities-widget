@@ -46,6 +46,10 @@ class ContentDefaultActivity extends React.Component {
     </div>
   );
 
+  authorInfo = activity => (
+    <AuthorActionInfo activity={activity}/>
+  );
+
   render() {
     const {activity} = this.props;
     const getActivityClassName = () => classNames(
@@ -62,7 +66,7 @@ class ContentDefaultActivity extends React.Component {
             issue={activity.target.issue || activity.target}
           />
         </div>
-        <AuthorActionInfo activity={activity}/>
+        {this.authorInfo(activity)}
         <div className="activities-widget__activity__change">
           {this.renderContent(activity)}
         </div>

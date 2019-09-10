@@ -11,5 +11,9 @@
   "dependencies": {
     "YouTrack": ">=2019.1",
     "Hub": ">=2019.1"
+  },
+  "capabilities": {
+    "popups": true,
+    "topNavigation": true
   }
 }

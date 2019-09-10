@@ -16,7 +16,8 @@ const FORMAT = 'YYYY-MM-DD HH:mm';
 class AuthorActionInfo extends React.Component {
 
   static propTypes = {
-    activity: PropTypes.object
+    activity: PropTypes.object,
+    actionTitle: PropTypes.string
   };
 
   toCardUser = user => ({
@@ -30,6 +31,10 @@ class AuthorActionInfo extends React.Component {
 
   render() {
     const {activity} = this.props;
+    let {actionTitle} = this.props;
+    if (!actionTitle) {
+      actionTitle = i18n('updated');
+    }
     const cardUser = this.toCardUser(activity.author);
     return (
       <div className="activities-widget__activity__author">
@@ -63,7 +68,7 @@ class AuthorActionInfo extends React.Component {
           <span
             className="activities-widget__activity__author__info__action"
           >
-            {i18n('updated')}
+            {actionTitle}
           </span>
           <span
             className="activities-widget__activity__author__info__time"

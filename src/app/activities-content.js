@@ -15,6 +15,7 @@ import ContentCustomFieldActivity from './content-custom-field-activity';
 import ContentLinkActivity from './content-link-activity';
 import ContentTextActivity from './content-text-activity';
 import ContentActionActivity from './content-action-activity';
+import ContentVcsChangeActivity from './content-vcs-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {
@@ -122,6 +123,8 @@ class ActivitiesContent extends React.Component {
       case 'IssueCreatedCategory':
       case 'IssueResolvedCategory':
         return <ContentActionActivity activity={activity}/>;
+      case 'VcsChangeCategory':
+        return <ContentVcsChangeActivity activity={activity}/>;
       default:
         return <ContentDefaultActivity activity={activity}/>;
     }
