@@ -19,6 +19,7 @@ export async function queryUsers(fetchHub, query) {
 }
 
 const ISSUE = 'id,idReadable,summary,resolved';
+const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';
 const CHANGED_VALUES = [
   'id,name',
   'text',
@@ -26,12 +27,15 @@ const CHANGED_VALUES = [
   'version',
   'project(shortName),numberInProject',
   'agile(id,name)',
+  'date',
+  'type(name)',
+  'duration(presentation,updated, minutes)',
+  AUTHOR,
   ISSUE
 ];
 const CHANGE = CHANGED_VALUES.join(',');
 const ADD = `added(${CHANGE})`;
 const REM = `removed(${CHANGE})`;
-const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';
 const TARGET = `target(${ISSUE},issue(${ISSUE}))`;
 const AUTHOR_GROUP = 'authorGroup(name,icon)';
 const FIELD = 'field(presentation,customField(name,fieldType(valueType,isMultiValue)))';

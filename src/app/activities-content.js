@@ -17,6 +17,7 @@ import ContentTextActivity from './content-text-activity';
 import ContentActionActivity from './content-action-activity';
 import ContentVcsChangeActivity from './content-vcs-activity';
 import ContentSprintActivity from './content-sprint-activity';
+import ContentWorkItemsActivity from './content-workitems-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {
@@ -128,6 +129,8 @@ class ActivitiesContent extends React.Component {
         return <ContentActionActivity activity={activity}/>;
       case 'VcsChangeCategory':
         return <ContentVcsChangeActivity activity={activity}/>;
+      case 'WorkItemCategory':
+        return <ContentWorkItemsActivity activity={activity}/>;
       default:
         return <ContentDefaultActivity activity={activity}/>;
     }

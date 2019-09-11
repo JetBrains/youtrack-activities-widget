@@ -115,6 +115,48 @@
       margin-top: -24px;
     }
 
+    &__work_item {
+      &__container {
+        display: flex;
+      }
+
+      &__cell {
+        width: 88px;
+        padding-right: 4px;
+        padding-left: 4px;
+
+        text-align: left;
+
+        &_duration {
+          white-space: nowrap;
+
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        &_type {
+          overflow: hidden;
+
+          width: 110px;
+
+          text-align: left;
+          text-overflow: ellipsis;
+        }
+
+        &_text {
+          width: 100%;
+        }
+      }
+
+      &__separator {
+        width: 5px;
+
+        text-align: center;
+
+        color: #cfdbe5;
+      }
+    }
+
     &__author {
       width: 100%;
 

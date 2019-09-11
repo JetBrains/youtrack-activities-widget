@@ -17,7 +17,9 @@ class AuthorActionInfo extends React.Component {
 
   static propTypes = {
     activity: PropTypes.object,
-    actionTitle: PropTypes.string
+    actionTitle: PropTypes.string,
+    user: PropTypes.object,
+    timestamp: PropTypes.number
   };
 
   toCardUser = user => ({
@@ -35,7 +37,10 @@ class AuthorActionInfo extends React.Component {
     if (!actionTitle) {
       actionTitle = i18n('updated');
     }
-    const cardUser = this.toCardUser(activity.author);
+    const author = this.props.user || activity.author;
+    const cardUser = this.toCardUser(author);
+    const timestamp = this.props.timestamp || activity.timestamp;
+
     return (
       <div className="activities-widget__activity__author">
         <div
@@ -43,7 +48,7 @@ class AuthorActionInfo extends React.Component {
         >
           <Avatar
             size={Size.Size24}
-            url={filter.youTrackUrl + activity.author.avatarUrl}
+            url={filter.youTrackUrl + author.avatarUrl}
           />
           {
             activity.authorGroup && (
@@ -62,7 +67,7 @@ class AuthorActionInfo extends React.Component {
               className="activities-widget__activity__author__info__name"
               href={cardUser.href}
             >
-              {activity.author.fullName}
+              {author.fullName}
             </Link>
           </UserCardTooltip>
           <span
@@ -73,7 +78,7 @@ class AuthorActionInfo extends React.Component {
           <span
             className="activities-widget__activity__author__info__time"
           >
-            {format(activity.timestamp, FORMAT)}
+            {format(timestamp, FORMAT)}
           </span>
         </div>
       </div>
