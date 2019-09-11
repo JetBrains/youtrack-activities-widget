@@ -83,10 +83,11 @@ class ActivitiesEditForm extends React.Component {
   render() {
     const {isLoading, errorMessage} = this.state;
 
+    const isInvalid = !!errorMessage || !(filter.categories || []).length;
     return (
       <ConfigurationForm
         warning={errorMessage}
-        isInvalid={!!errorMessage}
+        isInvalid={isInvalid}
         isLoading={isLoading}
         panelControls={this.renderRefreshPeriod()}
         onSave={this.props.submitConfig}

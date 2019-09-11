@@ -49,10 +49,7 @@ class EditFormCategorySelector extends React.Component {
     return new Set(selected);
   };
 
-  fromSelected = selected => {
-    const categories = [...selected].map(it => it.id);
-    return (categories.length === CATEGORIES.length) ? null : categories;
-  };
+  fromSelected = selected => [...selected].map(it => it.id);
 
   onSelect = newSelection => {
     this.setState({selection: newSelection});

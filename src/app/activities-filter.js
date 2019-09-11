@@ -12,7 +12,7 @@ class ActivitiesFilter {
 
   @observable youTrackUrl = null;
 
-  @observable categories = null;
+  @observable categories = [];
 
   @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
