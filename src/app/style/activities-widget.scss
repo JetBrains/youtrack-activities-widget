@@ -47,11 +47,11 @@
       font-size: var(--ring-font-size-smaller);
     }
 
-    .headerCell_728:first-child {
+    [data-test|=ring-table-header-cell]:first-child {
       padding-left: $ring-unit !important;
     }
 
-    .cell_a14:first-child {
+    [data-test|=ring-table-cell]:first-child {
       padding-left: $ring-unit !important;
     }
   }
