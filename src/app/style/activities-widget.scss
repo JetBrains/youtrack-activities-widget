@@ -25,6 +25,29 @@
 
   &__category-selector {
     margin-bottom: 4 * $ring-unit;
+
+    &__title {
+      padding: $ring-unit 0 $ring-unit/2 0;
+
+      font-size: var(--ring-font-size);
+      font-weight: bold;
+    }
+
+    &__info {
+      padding: 0 0 $ring-unit 0;
+
+      color: var(--ring-secondary-color);
+
+      font-size: var(--ring-font-size-smaller);
+    }
+
+    .headerCell_728:first-child {
+      padding-left: $ring-unit !important;
+    }
+
+    .cell_a14:first-child {
+      padding-left: $ring-unit !important;
+    }
   }
 
   $left-indent: $ring-unit * 4;

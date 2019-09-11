@@ -61,7 +61,8 @@ class EditFormCategorySelector extends React.Component {
 
   columns = [
     {
-      id: 'name'
+      id: 'name',
+      title: i18n('Name')
     },
 
     {
@@ -74,12 +75,17 @@ class EditFormCategorySelector extends React.Component {
     const {data, selection} = this.state;
     return (
       <div className="activities-widget__category-selector">
+        <div className="activities-widget__category-selector__title">
+          {i18n('Activity Categories')}
+        </div>
+        <div className="activities-widget__category-selector__info">
+          {i18n('Text about what categories are and other info')}
+        </div>
         <Table
           data={data}
           columns={this.columns}
           selection={selection}
           onSelect={this.onSelect}
-          caption={i18n('Activity categories')}
           selectable
         />
       </div>
