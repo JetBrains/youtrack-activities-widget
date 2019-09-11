@@ -4,7 +4,7 @@
   color: var(--ring-text-color);
 
   &__issue-filter {
-    margin-bottom: 4 * $ring-unit;
+    margin-bottom: 3 * $ring-unit;
 
     &__query {
       width: 100%;
@@ -14,7 +14,13 @@
   }
 
   &__user-selector {
-    margin-bottom: 4 * $ring-unit;
+    margin-bottom: 3 * $ring-unit;
+
+    &__title {
+      color: var(--ring-secondary-color);
+
+      font-size: var(--ring-font-size-smaller);
+    }
 
     &__form-select {
       width: 100%;
@@ -24,10 +30,10 @@
   }
 
   &__category-selector {
-    margin-bottom: 4 * $ring-unit;
+    margin-bottom: 2 * $ring-unit;
 
     &__title {
-      padding: $ring-unit 0 $ring-unit/2 0;
+      padding: 0 0 $ring-unit/2 0;
 
       font-size: var(--ring-font-size);
       font-weight: bold;

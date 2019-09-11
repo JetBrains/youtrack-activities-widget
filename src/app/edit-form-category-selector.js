@@ -9,20 +9,19 @@ import filter from './activities-filter';
 import './style/activities-widget.scss';
 
 const CATEGORIES = [
-  {id: 'AttachmentsCategory', name: i18n('Attachments')},
+  {id: 'IssueCreatedCategory', name: i18n('New issues')},
+  {id: 'IssueResolvedCategory', name: i18n('Resolved issues')},
+  {id: 'SummaryCategory', name: i18n('Summary')},
   {id: 'DescriptionCategory', name: i18n('Description')},
   {id: 'CommentsCategory', name: i18n('Comments')},
   {id: 'CustomFieldCategory', name: i18n('Custom fields')},
-  {id: 'IssueCreatedCategory', name: i18n('New issues')},
+  {id: 'AttachmentsCategory', name: i18n('Attachments')},
   {id: 'LinksCategory', name: i18n('Links')},
   {id: 'ProjectCategory', name: i18n('Project')},
-  {id: 'IssueResolvedCategory', name: i18n('Resolved issues')},
   {id: 'SprintCategory', name: i18n('Sprints')},
-  {id: 'SummaryCategory', name: i18n('Summary')},
+  {id: 'WorkItemCategory', name: i18n('Work items')},
   {id: 'TagsCategory', name: i18n('Tags')},
-  {id: 'IssueVisibilityCategory', name: i18n('Visibility')},
-  {id: 'VcsChangeCategory', name: i18n('Vcs changes')},
-  {id: 'WorkItemCategory', name: i18n('Work items')}
+  {id: 'VcsChangeCategory', name: i18n('Vcs changes')}
 ];
 
 class EditFormCategorySelector extends React.Component {
@@ -60,11 +59,6 @@ class EditFormCategorySelector extends React.Component {
     {
       id: 'name',
       title: i18n('Name')
-    },
-
-    {
-      id: 'description',
-      title: i18n('Description')
     }
   ];
 

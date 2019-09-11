@@ -71,6 +71,9 @@ class EditFormUserSelector extends React.Component {
   render() {
     return (
       <div className="activities-widget__user-selector">
+        <div className="activities-widget__user-selector__title">
+          {i18n('Author')}
+        </div>
         <Select
           className="activities-widget__user-selector__form-select"
           size={InputSize.S}
