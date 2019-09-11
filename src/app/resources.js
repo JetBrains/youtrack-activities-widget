@@ -28,6 +28,7 @@ const CHANGED_VALUES = [
   'project(shortName),numberInProject',
   'agile(id,name)',
   'date',
+  'url',
   'type(name)',
   'duration(presentation,updated,minutes)',
   AUTHOR,

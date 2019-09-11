@@ -14,6 +14,8 @@ import ContentProjectActivity from './content-project-activity';
 import ContentCustomFieldActivity from './content-custom-field-activity';
 import ContentLinkActivity from './content-link-activity';
 import ContentTextActivity from './content-text-activity';
+import ContentAttachmentActivity from './content-attachment-activity';
+import ContentTagActivity from './content-tag-activity';
 import ContentActionActivity from './content-action-activity';
 import ContentVcsChangeActivity from './content-vcs-activity';
 import ContentSprintActivity from './content-sprint-activity';
@@ -131,6 +133,10 @@ class ActivitiesContent extends React.Component {
         return <ContentVcsChangeActivity activity={activity}/>;
       case 'WorkItemCategory':
         return <ContentWorkItemsActivity activity={activity}/>;
+      case 'TagsCategory':
+        return <ContentTagActivity activity={activity}/>;
+      case 'AttachmentsCategory':
+        return <ContentAttachmentActivity activity={activity}/>;
       default:
         return <ContentDefaultActivity activity={activity}/>;
     }
