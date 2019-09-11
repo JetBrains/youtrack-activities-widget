@@ -122,6 +122,16 @@
     }
 
     &__work_item {
+      &__period_minutes {
+        color: #999;
+
+        font-weight: 700;
+      }
+
+      &__period_hours {
+        font-weight: 700;
+      }
+
       &__container {
         display: flex;
       }

@@ -29,7 +29,7 @@ const CHANGED_VALUES = [
   'agile(id,name)',
   'date',
   'type(name)',
-  'duration(presentation,updated, minutes)',
+  'duration(presentation,updated,minutes)',
   AUTHOR,
   ISSUE
 ];

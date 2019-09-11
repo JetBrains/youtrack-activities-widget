@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import React from 'react';
 
 import {i18n} from 'hub-dashboard-addons/dist/localization';
@@ -21,6 +22,19 @@ const SIMPLE_TYPES = [
 
 class ContentCustomFieldActivity extends ContentDefaultActivity {
 
+  // eslint-disable-next-line react/display-name
+  static getPeriodPresentation = value => {
+    const minutes = Math.floor(value % 60);
+    const minutesPresentation = `${Math.floor(minutes / 10) || '0'}${minutes % 10 || '0'}${i18n('m')}`;
+    const hours = Math.floor(value / 60);
+    const hoursPresentation = hours ? (hours + i18n('h')) : '';
+    return (
+      <React.Fragment>
+        <span className="activities-widget__activity__work_item__period_hours">{hoursPresentation}</span> <span className="activities-widget__activity__work_item__period_minutes">{minutesPresentation}</span>
+      </React.Fragment>
+    );
+  };
+
   // eslint-disable-next-line complexity
   static getPresenter = fieldType => {
     switch (fieldType.valueType) {
@@ -30,8 +44,9 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
       case 'float':
       case 'date':
       case 'date and time':
-      case 'period':
         return value => value;
+      case 'period':
+        return ContentCustomFieldActivity.getPeriodPresentation;
       default:
         return value => value && value.name;
     }

@@ -7,6 +7,7 @@ import ContentDefaultActivity from './content-default-activity';
 import './style/activities-widget.scss';
 
 import AuthorActionInfo from './components/author-action-info';
+import ContentCustomFieldActivity from './content-custom-field-activity';
 
 
 class ContentWorkItemsActivity extends ContentDefaultActivity {
@@ -42,7 +43,8 @@ class ContentWorkItemsActivity extends ContentDefaultActivity {
         <div
           className="activities-widget__activity__work_item__cell activities-widget__activity__work_item__cell_duration"
         >
-          {item.duration.presentation}
+          {/* eslint-disable-next-line max-len */}
+          {ContentCustomFieldActivity.getPeriodPresentation(item.duration.minutes)}
         </div>
         <span className="activities-widget__activity__work_item__separator">
           {'|'}
