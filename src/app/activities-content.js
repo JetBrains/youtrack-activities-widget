@@ -16,8 +16,8 @@ import ContentLinkActivity from './content-link-activity';
 import ContentTextActivity from './content-text-activity';
 import ContentActionActivity from './content-action-activity';
 import ContentVcsChangeActivity from './content-vcs-activity';
+import ContentSprintActivity from './content-sprint-activity';
 import './style/activities-widget.scss';
-import ContentSprintActivity from './content-spring-activity';
 
 class ActivitiesContent extends React.Component {
 

@@ -25,15 +25,23 @@ class ContentSprintActivity extends ContentDefaultActivity {
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => {
-    const field = activity.field;
+    const fieldName = activity.field.presentation;
+    const wasRemovedOne = activity.removed && activity.removed.length === 1;
+    const wasAddedOne = activity.added && activity.added.length === 1;
     return (
       <div key={activity.id}>
         <span>
-          <span className="activities-widget__activity__change__field-name">{field.presentation}</span>{' \u27F6 '}
-          {activity.removed.map(sprint => this.renderSprintLink(sprint, true))}
-          {activity.added.map(sprint => this.renderSprintLink(sprint, false))}
+          <span className="activities-widget__activity__change__field-name">
+            {`${fieldName}:`}
+          </span>
+          {activity.removed.map(sprint =>
+            this.renderSprintLink(sprint, true))
+          }
+          {wasRemovedOne && wasAddedOne && ' \u27F6 '}
+          {activity.added.map(sprint =>
+            this.renderSprintLink(sprint, false))
+          }
         </span>
-
       </div>
     );
   }

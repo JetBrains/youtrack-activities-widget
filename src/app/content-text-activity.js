@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {i18n} from 'hub-dashboard-addons/dist/localization';
-
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
