@@ -24,7 +24,8 @@ class ActivitiesFilter {
       this.youTrackId = storedFilter.youTrack.id;
       this.youTrackUrl = storedFilter.youTrack.homeUrl;
       this.categories = storedFilter.categories;
-      this.refreshPeriod = storedFilter.refreshPeriod;
+      this.refreshPeriod = storedFilter.refreshPeriod ||
+        ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
     } catch (e) {
       this.sync(props);
     }
