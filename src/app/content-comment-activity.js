@@ -13,6 +13,8 @@ class ContentCommentActivity extends ContentDefaultActivity {
       {activity.added[0].text}
     </div>
   );
+
+  canBeOpenInIssueStream = () => true;
 }
 
 

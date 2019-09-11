@@ -264,6 +264,12 @@
       }
     }
 
+    &__open-item {
+      float: right;
+
+      color: var(--ring-icon-color);
+    }
+
     &__text {
       display: flex;
 

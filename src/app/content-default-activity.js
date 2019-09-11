@@ -50,12 +50,15 @@ class ContentDefaultActivity extends React.Component {
     <AuthorActionInfo activity={activity}/>
   );
 
+  canBeOpenInIssueStream = () => false;
+
   render() {
     const {activity} = this.props;
     const getActivityClassName = () => classNames(
       'activities-widget__activity',
       this.state.new && 'activities-widget__activity_new'
     );
+
     return (
       <div
         key={`activity-${activity.id}`}
@@ -63,6 +66,8 @@ class ContentDefaultActivity extends React.Component {
       >
         <div className="activities-widget__activity__issue">
           <ActivityIssueInfo
+            showLinkToActivityStream={this.canBeOpenInIssueStream()}
+            activityId={activity.id}
             issue={activity.target.issue || activity.target}
           />
         </div>
