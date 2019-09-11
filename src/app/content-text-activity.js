@@ -3,10 +3,9 @@ import React from 'react';
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
-
+import CollapsibleBlock from './components/collapsible-block';
 
 class ContentTextActivity extends ContentDefaultActivity {
-
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => {
@@ -16,18 +15,19 @@ class ContentTextActivity extends ContentDefaultActivity {
         <div className="activities-widget__activity__text__field-name">
           {`${fieldName}:`}
         </div>
-        <div className="activities-widget__activity__text__value">
-          <div className="activities-widget__activity__text__value__added">
-            {activity.added}
+        <CollapsibleBlock>
+          <div className="activities-widget__activity__text__value">
+            <div className="activities-widget__activity__text__value__added">
+              {activity.added}
+            </div>
+            <div className="activities-widget__activity__text__value__removed">
+              {activity.removed}
+            </div>
           </div>
-          <div className="activities-widget__activity__text__value__removed">
-            {activity.removed}
-          </div>
-        </div>
+        </CollapsibleBlock>
       </div>
     );
   }
 }
-
 
 export default ContentTextActivity;

@@ -11,9 +11,10 @@ import filter from './../activities-filter';
 
 import '../style/activities-widget.scss';
 
-const FORMAT = 'YYYY-MM-DD HH:mm';
 
 class AuthorActionInfo extends React.Component {
+
+  static FORMAT = 'YYYY-MM-DD HH:mm';
 
   static propTypes = {
     activity: PropTypes.object,
@@ -78,7 +79,7 @@ class AuthorActionInfo extends React.Component {
           <span
             className="activities-widget__activity__author__info__time"
           >
-            {format(timestamp, FORMAT)}
+            {format(timestamp, AuthorActionInfo.FORMAT)}
           </span>
         </div>
       </div>
