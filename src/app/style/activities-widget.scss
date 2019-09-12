@@ -282,12 +282,16 @@
       &__value {
         flex: 1;
 
-        &__added {
-          background: #e6ffe6;
+        .diff-ins {
+          text-decoration: none;
+
+          background-color: #e6ffe6;
         }
 
-        &__removed {
-          background: #ffe6e6;
+        .diff-del {
+          text-decoration: none;
+
+          background-color: #ffe6e6;
         }
       }
     }

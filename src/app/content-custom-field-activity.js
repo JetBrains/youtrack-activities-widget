@@ -8,6 +8,7 @@ import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
 import AuthorActionInfo from './components/author-action-info';
+import diff from './diff';
 import CollapsibleBlock from './components/collapsible-block';
 
 const LOST_EMPTY_VALUE = i18n('[Empty value]');
@@ -109,17 +110,20 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
   }
 
   renderTextValueChange(activity) {
+    const fieldName = activity.field.presentation;
+
+    const formattedDiff = diff.format('wdiff-html',
+      diff(activity.removed || '', activity.added || '')
+    );
+
     return (
-      <CollapsibleBlock>
-        <div className="activities-widget__activity__text__value">
-          <div className="activities-widget__activity__text__value__added">
-            {activity.added}
+      <div className="activities-widget__activity__text">
+        <CollapsibleBlock fieldName={fieldName}>
+          <div className="activities-widget__activity__text__value">
+            <span dangerouslySetInnerHTML={{__html: formattedDiff}}/>
           </div>
-          <div className="activities-widget__activity__text__value__removed">
-            {activity.removed}
-          </div>
-        </div>
-      </CollapsibleBlock>
+        </CollapsibleBlock>
+      </div>
     );
   }
 
@@ -134,36 +138,23 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     const presentValue = ContentCustomFieldActivity.getPresenter(fieldType);
 
     let change;
-    let isTextField = false;
     if (this.isSimpleValueField(fieldType)) {
       change = this.renderSimpleValueChange(activity, presentValue);
     } else if (this.isMultiValueField(fieldType)) {
       change = this.renderMultiValueChange(activity, presentValue);
     } else if (fieldType.valueType === 'text') {
-      isTextField = true;
-      change = this.renderTextValueChange(activity);
+      return this.renderTextValueChange(activity);
     } else {
       change = this.renderSingleValueChange(activity, presentValue);
     }
 
-    if (isTextField) {
-      return (
-        <div className="activities-widget__activity__text">
-          <div className="activities-widget__activity__text__field-name">
-            {`${fieldName}:`}
-          </div>
-          {change}
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <span className="activities-widget__activity__change__field-name">
-            {`${fieldName}:`}
-          </span>{change}
-        </div>
-      );
-    }
+    return (
+      <div>
+        <span className="activities-widget__activity__change__field-name">
+          {`${fieldName}:`}
+        </span>{change}
+      </div>
+    );
   };
 }
 

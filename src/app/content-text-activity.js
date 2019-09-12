@@ -4,30 +4,28 @@ import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
 import CollapsibleBlock from './components/collapsible-block';
+import diff from './diff';
 
 class ContentTextActivity extends ContentDefaultActivity {
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => {
     const fieldName = activity.field.presentation;
+
+    const formattedDiff = diff.format('wdiff-html',
+      diff(activity.removed || '', activity.added || '')
+    );
+
     return (
       <div className="activities-widget__activity__text">
-        <div className="activities-widget__activity__text__field-name">
-          {`${fieldName}:`}
-        </div>
-        <CollapsibleBlock>
+        <CollapsibleBlock fieldName={fieldName}>
           <div className="activities-widget__activity__text__value">
-            <div className="activities-widget__activity__text__value__added">
-              {activity.added}
-            </div>
-            <div className="activities-widget__activity__text__value__removed">
-              {activity.removed}
-            </div>
+            <span dangerouslySetInnerHTML={{__html: formattedDiff}}/>
           </div>
         </CollapsibleBlock>
       </div>
     );
-  }
+  };
 }
 
 export default ContentTextActivity;
