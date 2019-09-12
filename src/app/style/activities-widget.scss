@@ -86,6 +86,10 @@
     &__id {
       white-space: nowrap;
 
+      color: var(--ring-text-color);
+
+      font-size: 13px;
+
       &_resolved {
         text-decoration: line-through;
 
@@ -103,7 +107,7 @@
   }
 
   &__activity {
-    padding-bottom: 4 * $ring-unit;
+    padding-bottom: 3 * $ring-unit;
 
     font-size: 14px;
 
@@ -112,7 +116,7 @@
     }
 
     &__issue {
-      margin: 0 $right-indent 0 $left-indent;
+      margin: 0 $right-indent 0 0;
     }
 
     &__vcs_change_link {
@@ -197,7 +201,7 @@
       }
 
       &__info {
-        margin: 0 $right-indent 0 $left-indent;
+        margin: 0 $right-indent 0 0;
         padding: $ring-unit 0 $ring-unit 0;
 
         &__name {
