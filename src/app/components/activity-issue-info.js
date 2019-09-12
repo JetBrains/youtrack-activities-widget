@@ -1,4 +1,4 @@
-import {RenamedIcon} from '@jetbrains/ring-ui/components/icon';
+import {Renamed10pxIcon} from '@jetbrains/ring-ui/components/icon';
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -59,7 +59,7 @@ class ActivityIssueInfo extends React.Component {
         </Link>
         {showLinkToActivityStream && (
           <a href={this.linkToActivityItem()}>
-            <RenamedIcon
+            <Renamed10pxIcon
               className="activities-widget__activity__open-item"
               size={16}
             />
