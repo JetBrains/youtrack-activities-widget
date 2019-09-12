@@ -133,29 +133,25 @@ class ActivitiesWidget extends React.Component {
     }
   };
 
-  tryLoadActivitiesPage = async loadMore => {
-    try {
-      const {cursor} = this.state;
-      const page = await loadActivitiesPage(
-        this.fetchYouTrack,
-        {
-          cursor: loadMore && cursor,
-          author: filter.author,
-          query: filter.query,
-          categories: filter.categories
-        }
-      );
-      const newTimestamp = this.updatedTimestamp(loadMore, page);
-      const newActivities = this.updatedActivities(loadMore, page);
-      this.setState({
-        activities: newActivities,
-        timestamp: newTimestamp,
-        cursor: page.beforeCursor,
-        hasMore: page.hasBefore
-      });
-    } catch (error) {
-      this.setState({isLoadingError: true});
-    }
+  loadActivitiesPage = async loadMore => {
+    const {cursor} = this.state;
+    const page = await loadActivitiesPage(
+      this.fetchYouTrack,
+      {
+        cursor: loadMore && cursor,
+        author: filter.author,
+        query: filter.query,
+        categories: filter.categories
+      }
+    );
+    const newTimestamp = this.updatedTimestamp(loadMore, page);
+    const newActivities = this.updatedActivities(loadMore, page);
+    this.setState({
+      activities: newActivities,
+      timestamp: newTimestamp,
+      cursor: page.beforeCursor,
+      hasMore: page.hasBefore
+    });
   };
 
   updatedActivities(loadMore, page) {
@@ -170,13 +166,18 @@ class ActivitiesWidget extends React.Component {
   }
 
   reload = async () => {
-    this.setState({isLoading: true});
-    await this.tryLoadActivitiesPage(false);
-    this.setState({isLoading: false});
+    try {
+      this.setState({isLoading: true});
+      await this.loadActivitiesPage(false);
+    } catch (error) {
+      this.setState({isLoadDataError: true});
+    } finally {
+      this.setState({isLoading: false});
+    }
   };
 
   loadMore = async () => {
-    await this.tryLoadActivitiesPage(true);
+    await this.loadActivitiesPage(true);
   };
 
   editConfiguration = () => {

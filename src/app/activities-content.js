@@ -8,6 +8,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import withTimerHOC from '@jetbrains/hub-widget-ui/dist/timer';
 
+import ControlLoadMore from './control-load-more';
 import ContentDefaultActivity from './content-default-activity';
 import ContentCommentActivity from './content-comment-activity';
 import ContentProjectActivity from './content-project-activity';
@@ -37,9 +38,7 @@ class ActivitiesContent extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isLoadingMore: false
-    };
+    this.state = {};
   }
 
   renderNoActivitiesError() {
@@ -72,12 +71,6 @@ class ActivitiesContent extends React.Component {
 
   renderLoader = () => <LoaderInline/>;
 
-  loadMore = async () => {
-    this.setState({isLoadingMore: true});
-    await this.props.onLoadMore();
-    this.setState({isLoadingMore: false});
-  };
-
   renderBody = () => (
     <div className="activities-widget">
       {
@@ -88,22 +81,11 @@ class ActivitiesContent extends React.Component {
         ))
       }
       {
-        this.state.isLoadingMore &&
-        (
-          <div className="activities-widget__load-more">
-            <LoaderInline/>
-          </div>
-        )
-      }
-      {
-        !this.state.isLoadingMore && this.props.hasMore &&
-        (
-          <div
-            onClick={this.loadMore}
-            className="activities-widget__load-more"
-          >
-            <Link pseudo>{i18n('Show more')}</Link>
-          </div>
+        this.props.hasMore && (
+          <ControlLoadMore
+            onLoadMore={this.props.onLoadMore}
+            hasMore={this.state.hasMore}
+          />
         )
       }
     </div>
