@@ -279,6 +279,10 @@
         white-space: nowrap;
       }
 
+      &__field-details {
+        margin-left: $ring-unit;
+      }
+
       &__value {
         flex: 1;
 

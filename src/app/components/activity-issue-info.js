@@ -61,7 +61,6 @@ class ActivityIssueInfo extends React.Component {
           <a href={this.linkToActivityItem()}>
             <Renamed10pxIcon
               className="activities-widget__activity__open-item"
-              size={16}
             />
           </a>
         )

@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ClickableLink from '@jetbrains/ring-ui/components/link/link';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
-import {CaretDown10pxIcon, CaretRight10pxIcon} from '@jetbrains/ring-ui/components/icon';
+import {CaretDown10pxIcon,
+  CaretRight10pxIcon} from '@jetbrains/ring-ui/components/icon';
 
 class CollapsibleBlock extends React.Component {
 
@@ -36,7 +37,7 @@ class CollapsibleBlock extends React.Component {
           <ClickableLink onClick={this.toggleExpanded}>
             {this.state.expanded && <CaretDown10pxIcon/>}
             {!this.state.expanded && <CaretRight10pxIcon/>}
-            {i18n('Details')}
+            <span className="activities-widget__activity__text__field-details">{i18n('Details')}</span>
           </ClickableLink>
         </div>
         <div className="activities-widget__activity__text__value">
