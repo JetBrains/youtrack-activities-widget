@@ -40,7 +40,7 @@ class ActivitiesWidget extends React.Component {
 
   constructor(props) {
     super(props);
-    const {registerWidgetApi, dashboardApi} = props;
+    const {registerWidgetApi} = props;
 
     this.state = {
       isConfiguring: false,
@@ -56,8 +56,6 @@ class ActivitiesWidget extends React.Component {
       }),
       onRefresh: () => this.tryLoadNewActivities()
     });
-
-    this.initialize(dashboardApi);
   }
 
   componentDidMount() {
