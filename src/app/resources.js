@@ -38,10 +38,9 @@ const CHANGE = CHANGED_VALUES.join(',');
 const ADD = `added(${CHANGE})`;
 const REM = `removed(${CHANGE})`;
 const TARGET = `target(${ISSUE},issue(${ISSUE}))`;
-const AUTHOR_GROUP = 'authorGroup(name,icon)';
 const FIELD = 'field(presentation,customField(name,fieldType(valueType,isMultiValue)))';
 // eslint-disable-next-line max-len
-const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${AUTHOR_GROUP},${FIELD}`;
+const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${FIELD}`;
 // eslint-disable-next-line max-len
 const ALL_CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 
