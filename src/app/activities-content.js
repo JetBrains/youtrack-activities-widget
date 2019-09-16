@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import LoaderInline
   from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
 import Link from '@jetbrains/ring-ui/components/link/link';
+import Alert from '@jetbrains/ring-ui/components/alert/alert';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import withTimerHOC from '@jetbrains/hub-widget-ui/dist/timer';
@@ -28,16 +29,16 @@ class ActivitiesContent extends React.Component {
   static propTypes = {
     activities: PropTypes.array,
     isLoading: PropTypes.bool,
-    isLoadDataError: PropTypes.bool,
-    onEdit: PropTypes.func,
-    onLoadMore: PropTypes.func,
+    loadingError: PropTypes.object,
+    onResetError: PropTypes.func,
     editable: PropTypes.bool,
-    hasMore: PropTypes.bool
+    onEdit: PropTypes.func,
+    hasMore: PropTypes.bool,
+    onLoadMore: PropTypes.func
   };
 
   constructor(props) {
     super(props);
-
     this.state = {};
   }
 
@@ -71,8 +72,24 @@ class ActivitiesContent extends React.Component {
 
   renderLoader = () => <LoaderInline/>;
 
+  onCloseIncrementalError = () => {
+    this.props.onResetError({incrementalUpdate: null});
+  };
+
   renderBody = () => (
     <div className="activities-widget">
+      {
+        this.props.loadingError.incrementalUpdate &&
+        (
+          <Alert
+            type={Alert.Type.ERROR}
+            onCloseRequest={this.onCloseIncrementalError}
+            inline
+          >
+            {i18n('Could not load new activities')}
+          </Alert>
+        )
+      }
       {
         (this.props.activities || []).map(activity => (
           <div key={activity.id}>
@@ -128,13 +145,13 @@ class ActivitiesContent extends React.Component {
     const {
       activities,
       isLoading,
-      isLoadDataError
+      loadingError
     } = this.props;
 
     if (isLoading) {
       return this.renderLoader();
     }
-    if (isLoadDataError) {
+    if (loadingError.initialLoad) {
       return this.renderLoadDataError();
     }
     if (!activities || !activities.length) {

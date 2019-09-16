@@ -45,14 +45,14 @@ class ActivitiesWidget extends React.Component {
     this.state = {
       isConfiguring: false,
       isLoading: false,
-      isLoadingError: false
+      loadingError: {}
     };
 
     registerWidgetApi({
       onConfigure: () => this.setState({
         isConfiguring: true,
         isLoading: false,
-        isLoadingError: false
+        loadingError: {}
       }),
       onRefresh: () => this.tryLoadNewActivities()
     });
@@ -127,7 +127,7 @@ class ActivitiesWidget extends React.Component {
         timestamp: newest && newest.timestamp || timestamp
       });
     } catch (error) {
-      this.setState({isLoadingError: true});
+      this.setState({loadingError: {onUpdate: error.message}});
     }
   };
 
@@ -168,10 +168,14 @@ class ActivitiesWidget extends React.Component {
       this.setState({isLoading: true});
       await this.loadActivitiesPage(false);
     } catch (error) {
-      this.setState({isLoadDataError: true});
+      this.setState({loadingError: {initialLoad: error.message}});
     } finally {
       this.setState({isLoading: false});
     }
+  };
+
+  resetError = mergeError => {
+    this.setState({loadingError: mergeError});
   };
 
   loadMore = async () => {
@@ -207,7 +211,8 @@ class ActivitiesWidget extends React.Component {
     <ActivitiesContent
       activities={this.state.activities}
       isLoading={this.state.isLoading}
-      isLoadDataError={this.state.isLoadingError}
+      loadingError={this.state.loadingError}
+      onResetError={this.resetError}
       hasMore={this.state.hasMore}
       onLoadMore={this.loadMore}
       editable={this.props.editable}
