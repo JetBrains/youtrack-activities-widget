@@ -4,7 +4,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import Link from '@jetbrains/ring-ui/components/link/link';
 
-import AuthorActionInfo from './components/author-action-info';
+import ActivityAuthorInfo from './components/activity-author-info';
 
 import ContentDefaultActivity from './content-default-activity';
 
@@ -20,13 +20,7 @@ class ContentVcsChangeActivity extends ContentDefaultActivity {
 
   getCommitUrl = change => change.urls[0];
 
-  // eslint-disable-next-line react/display-name
-  authorInfo = activity => (
-    <AuthorActionInfo
-      activity={activity}
-      actionTitle={i18n('committed changes')}
-    />
-  );
+  getActionTitle = () => i18n('committed changes');
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => (

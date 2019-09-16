@@ -2,12 +2,12 @@ import React from 'react';
 
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import {format} from 'date-fns';
+import classNames from 'classnames';
 
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
 
-import AuthorActionInfo from './components/author-action-info';
 import ContentCustomFieldActivity from './content-custom-field-activity';
 
 
@@ -15,13 +15,18 @@ class ContentWorkItemsActivity extends ContentDefaultActivity {
 
   static FORMAT = 'DD MMM YYYY';
 
+  getCellClassName = cellName => {
+    const cellClass = 'activities-widget__activity__work_item__cell';
+    return classNames(cellClass, `${cellClass}_${cellName}`);
+  };
+
   getComment = workItem => {
     if (workItem.text && workItem.text.length) {
       return (
         <React.Fragment>
-          {this.separator()}
+          {this.getSeparator()}
           <div
-            className="activities-widget__activity__work_item__cell activities-widget__activity__work_item__cell_text"
+            className={this.getCellClassName('text')}
           >
             {workItem.text}
           </div>
@@ -35,33 +40,28 @@ class ContentWorkItemsActivity extends ContentDefaultActivity {
   };
 
   // eslint-disable-next-line react/display-name
-  separator = () => (
-    <span className="activities-widget__activity__work_item__cell activities-widget__activity__work_item__cell_separator">
+  getSeparator = () => (
+    <span className={this.getCellClassName('separator')}>
       {'|'}
     </span>
   );
-
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => {
     const item = activity.added[0];
     return (
       <div className="activities-widget__activity__work_item__container">
-        <div
-          className="activities-widget__activity__work_item__cell activities-widget__activity__work_item__cell_date"
-        >
+        <div className={this.getCellClassName('date')}>
           <span>{format(item.date, ContentWorkItemsActivity.FORMAT)}</span>
         </div>
-        {this.separator()}
-        <div
-          className="activities-widget__activity__work_item__cell activities-widget__activity__work_item__cell_duration"
-        >
+        {this.getSeparator()}
+        <div className={this.getCellClassName('duration')}>
           {/* eslint-disable-next-line max-len */}
           {ContentCustomFieldActivity.getPeriodPresentation(item.duration.minutes)}
         </div>
-        {this.separator()}
+        {this.getSeparator()}
         <div
-          className="activities-widget__activity__work_item__cell activities-widget__activity__work_item__cell_type"
+          className={this.getCellClassName('type')}
           title={item.type && item.type.name}
         >
           {(item.type && item.type.name) || i18n('No type')}
@@ -71,14 +71,9 @@ class ContentWorkItemsActivity extends ContentDefaultActivity {
     );
   };
 
-  // eslint-disable-next-line react/display-name
-  authorInfo = activity => (
-    <AuthorActionInfo
-      activity={activity}
-      actionTitle={i18n('added work item at')}
-      user={activity.added[0].author}
-    />
-  );
+  getActionTitle = () => i18n('added work item');
+
+  getCustomAuthor = () => this.props.activity.added[0].author;
 }
 
 

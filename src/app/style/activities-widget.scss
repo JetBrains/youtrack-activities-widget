@@ -76,16 +76,6 @@
     }
   }
 
-  &__stream-link {
-    float: right;
-
-    padding: $ring-unit 0 $ring-unit 0;
-
-    &__icon {
-      color: var(--ring-icon-color);
-    }
-  }
-
   &__issue {
     display: block;
     overflow: hidden;
@@ -131,12 +121,143 @@
 
     &__action {
       display: flex;
+
+      width: 100%;
+
+      &__author {
+        &__avatar {
+          position: relative;
+          bottom: -4px;
+
+          float: left;
+
+          width: $left-indent;
+
+          &__group {
+            position: absolute;
+            right: 4px;
+            bottom: -1px;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 3px;
+          }
+        }
+
+        &__info {
+          margin: 0 0 0 $left-indent;
+          padding: $ring-unit 0 $ring-unit 0;
+
+          &__name {
+            width: $left-indent;
+          }
+        }
+      }
+
+      &__title {
+        margin-left: $ring-unit;
+        padding: $ring-unit 0 $ring-unit 0;
+
+        color: var(--ring-secondary-color);
+      }
+
+      &__time {
+        margin-left: $small-indent;
+        padding: $ring-unit 0 $ring-unit 0;
+
+        color: var(--ring-secondary-color);
+      }
+
+      &__stream-link {
+        flex: 20;
+
+        width: auto;
+
+        padding: $ring-unit 0 $ring-unit 0;
+
+        &__icon {
+          float: right;
+
+          color: var(--ring-icon-color);
+        }
+      }
     }
 
-    &__vcs_change_link {
-      float: right;
+    &__change {
+      margin: 0 $right-indent 0 $left-indent;
 
-      margin-top: -24px;
+      &__field-name {
+        margin-right: $ring-unit;
+
+        white-space: nowrap;
+      }
+
+      &__added {
+        margin-right: $small-indent;
+
+        color: var(--ring-icon-success-color);
+      }
+
+      &__removed {
+        text-decoration: line-through;
+      }
+    }
+
+    &__text {
+      display: flex;
+
+      &__field-name {
+        margin-right: $ring-unit;
+
+        white-space: nowrap;
+      }
+
+      &__field-details {
+        margin-left: $ring-unit;
+      }
+
+      &__value {
+        flex: 1;
+
+        .diff-ins {
+          text-decoration: none;
+
+          background-color: #e6ffe6;
+        }
+
+        .diff-del {
+          text-decoration: none;
+
+          background-color: #ffe6e6;
+        }
+      }
+    }
+
+    &__link {
+      display: flex;
+
+      width: 100%;
+
+      &__field-name {
+        margin-right: $ring-unit;
+
+        white-space: nowrap;
+      }
+
+      &__value {
+        flex: 1;
+
+        max-width: 400px;
+
+        &__added {
+          //TODO
+        }
+
+        &__removed {
+          //TODO
+        }
+      }
     }
 
     &__work_item {
@@ -209,125 +330,10 @@
       }
     }
 
-    &__author {
-      width: 100%;
+    &__vcs_change_link {
+      float: right;
 
-      &__avatar {
-        position: relative;
-        bottom: -4px;
-
-        float: left;
-
-        width: $left-indent;
-
-        &__group {
-          position: absolute;
-          right: 4px;
-          bottom: -1px;
-
-          width: 14px;
-          height: 14px;
-
-          border-radius: 3px;
-        }
-      }
-
-      &__info {
-        margin: 0 $right-indent 0 $left-indent;
-        padding: $ring-unit 0 $ring-unit 0;
-
-        &__name {
-          width: $left-indent;
-        }
-
-        &__action {
-          margin-left: $ring-unit;
-
-          color: var(--ring-secondary-color);
-        }
-
-        &__time {
-          margin-left: $small-indent;
-
-          color: var(--ring-secondary-color);
-        }
-      }
-    }
-
-    &__link {
-      display: flex;
-
-      width: 100%;
-
-      &__field-name {
-        margin-right: $ring-unit;
-
-        white-space: nowrap;
-      }
-
-      &__value {
-        flex: 1;
-
-        max-width: 400px;
-
-        &__added {
-          //TODO
-        }
-
-        &__removed {
-          //TODO
-        }
-      }
-    }
-
-    &__change {
-      margin: 0 $right-indent 0 $left-indent;
-
-      &__field-name {
-        margin-right: $ring-unit;
-
-        white-space: nowrap;
-      }
-
-      &__added {
-        margin-right: $small-indent;
-
-        color: var(--ring-icon-success-color);
-      }
-
-      &__removed {
-        text-decoration: line-through;
-      }
-    }
-
-    &__text {
-      display: flex;
-
-      &__field-name {
-        margin-right: $ring-unit;
-
-        white-space: nowrap;
-      }
-
-      &__field-details {
-        margin-left: $ring-unit;
-      }
-
-      &__value {
-        flex: 1;
-
-        .diff-ins {
-          text-decoration: none;
-
-          background-color: #e6ffe6;
-        }
-
-        .diff-del {
-          text-decoration: none;
-
-          background-color: #ffe6e6;
-        }
-      }
+      margin-top: -24px;
     }
   }
 }

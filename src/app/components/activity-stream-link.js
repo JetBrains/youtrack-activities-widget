@@ -10,8 +10,7 @@ class ActivityStreamLink extends React.Component {
 
   static propTypes = {
     issue: PropTypes.object,
-    activityId: PropTypes.string,
-    className: PropTypes.string
+    activityId: PropTypes.string
   };
 
   linkToActivityItem() {
@@ -22,10 +21,10 @@ class ActivityStreamLink extends React.Component {
 
   render() {
     return (
-      <div className="activities-widget__stream-link">
+      <div className="activities-widget__activity__action__stream-link">
         <a href={this.linkToActivityItem()}>
           <Renamed10pxIcon
-            className="activities-widget__stream-link__icon"
+            className="activities-widget__activity__action__stream-link__icon"
           />
         </a>
       </div>

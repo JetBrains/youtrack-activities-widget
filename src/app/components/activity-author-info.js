@@ -4,23 +4,17 @@ import PropTypes from 'prop-types';
 import Link from '@jetbrains/ring-ui/components/link/link';
 import Avatar, {Size} from '@jetbrains/ring-ui/components/avatar/avatar';
 import {UserCardTooltip} from '@jetbrains/ring-ui/components/user-card/user-card';
-import {i18n} from 'hub-dashboard-addons/dist/localization';
-import {format} from 'date-fns';
 
 import filter from './../activities-filter';
 
 import '../style/activities-widget.scss';
 
 
-class AuthorActionInfo extends React.Component {
-
-  static FORMAT = 'YYYY-MM-DD HH:mm';
+class ActivityAuthorInfo extends React.Component {
 
   static propTypes = {
     activity: PropTypes.object,
-    actionTitle: PropTypes.string,
-    user: PropTypes.object,
-    timestamp: PropTypes.number
+    user: PropTypes.object
   };
 
   toCardUser = user => ({
@@ -34,18 +28,13 @@ class AuthorActionInfo extends React.Component {
 
   render() {
     const {activity} = this.props;
-    let {actionTitle} = this.props;
-    if (!actionTitle) {
-      actionTitle = i18n('updated');
-    }
     const author = this.props.user || activity.author;
     const cardUser = this.toCardUser(author);
-    const timestamp = this.props.timestamp || activity.timestamp;
 
     return (
-      <div className="activities-widget__activity__author">
+      <div className="activities-widget__activity__action__author">
         <div
-          className="activities-widget__activity__author__avatar"
+          className="activities-widget__activity__action__author__avatar"
         >
           <Avatar
             size={Size.Size24}
@@ -54,33 +43,24 @@ class AuthorActionInfo extends React.Component {
           {
             activity.authorGroup && (
               <img
-                className="activities-widget__activity__author__avatar__group"
+                className="activities-widget__activity__action__author__avatar__group"
                 src={activity.authorGroup.icon}
+                alt=""
               />
             )
           }
         </div>
-        <div className="activities-widget__activity__author__info">
+        <div className="activities-widget__activity__action__author__info">
           <UserCardTooltip
             user={cardUser}
           >
             <Link
-              className="activities-widget__activity__author__info__name"
+              className="activities-widget__activity__action__author__info__name"
               href={cardUser.href}
             >
               {author.fullName}
             </Link>
           </UserCardTooltip>
-          <span
-            className="activities-widget__activity__author__info__action"
-          >
-            {actionTitle}
-          </span>
-          <span
-            className="activities-widget__activity__author__info__time"
-          >
-            {format(timestamp, AuthorActionInfo.FORMAT)}
-          </span>
         </div>
       </div>
     );
@@ -88,4 +68,4 @@ class AuthorActionInfo extends React.Component {
 }
 
 
-export default AuthorActionInfo;
+export default ActivityAuthorInfo;

@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {format} from 'date-fns';
 
-import AuthorActionInfo from './components/author-action-info';
+import ActivityAuthorInfo from './components/activity-author-info';
 import ActivityIssueInfo from './components/activity-issue-info';
 import ActivityStreamLink from './components/activity-stream-link';
+import ActivityActionInfo from './components/activity-action-info';
+import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 const FORMAT = 'YYYY-MM-DD HH:mm';
 const HIGHLIGHT_TIMEOUT = 5000;
@@ -47,9 +49,9 @@ class ContentDefaultActivity extends React.Component {
     </div>
   );
 
-  authorInfo = activity => (
-    <AuthorActionInfo activity={activity}/>
-  );
+  getActionTitle = () => i18n('updated');
+
+  getCustomAuthor = () => null;
 
   canBeOpenInIssueStream = () => false;
 
@@ -72,8 +74,20 @@ class ContentDefaultActivity extends React.Component {
           />
         </div>
         <div className="activities-widget__activity__action">
-          {this.authorInfo(activity)}
-          {this.canBeOpenInIssueStream && (
+          {
+            <ActivityAuthorInfo
+              activity={activity}
+              user={this.getCustomAuthor()}
+              className={'activities-widget__activity__action'}
+            />
+          }
+          {
+            <ActivityActionInfo
+              activity={activity}
+              actionTitle={this.getActionTitle()}
+            />
+          }
+          {this.canBeOpenInIssueStream() && (
             <ActivityStreamLink
               issue={issue}
               activityId={activity.id}
