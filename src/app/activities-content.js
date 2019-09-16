@@ -21,7 +21,7 @@ import ContentTagActivity from './content-tag-activity';
 import ContentActionActivity from './content-action-activity';
 import ContentVcsChangeActivity from './content-vcs-activity';
 import ContentSprintActivity from './content-sprint-activity';
-import ContentWorkItemsActivity from './content-workitems-activity';
+import ContentWorkItemsActivity from './content-work-items-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {

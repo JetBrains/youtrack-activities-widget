@@ -97,7 +97,7 @@ msgstr ""
 msgid "No activities found"
 msgstr ""
 
-#: src/app/content-workitems-activity.js:56
+#: src/app/content-work-items-activity.js:56
 msgid "No type"
 msgstr ""
 
@@ -186,7 +186,7 @@ msgstr ""
 msgid "[Removed field]"
 msgstr ""
 
-#: src/app/content-workitems-activity.js:67
+#: src/app/content-work-items-activity.js:67
 msgid "added work item on"
 msgstr ""
 
