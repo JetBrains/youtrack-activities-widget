@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import LoaderInline
   from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
 import Link from '@jetbrains/ring-ui/components/link/link';
-import Alert from '@jetbrains/ring-ui/components/alert/alert';
+import Alert, {Container} from '@jetbrains/ring-ui/components/alert/alert';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import withTimerHOC from '@jetbrains/hub-widget-ui/dist/timer';
@@ -85,13 +85,17 @@ class ActivitiesContent extends React.Component {
       {
         this.props.loadingError.incrementalUpdate &&
         (
-          <Alert
-            type={Alert.Type.ERROR}
-            onCloseRequest={this.onCloseIncrementalError}
-            inline
-          >
-            {this.props.loadingError.incrementalUpdate.title}
-          </Alert>
+          <Container>
+            <Alert
+              type={Alert.Type.ERROR}
+              closeable={false}
+              timeout={3000}
+              onCloseRequest={this.onCloseIncrementalError}
+              inline
+            >
+              {this.props.loadingError.incrementalUpdate.title}
+            </Alert>
+          </Container>
         )
       }
       {
