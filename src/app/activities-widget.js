@@ -5,6 +5,8 @@ import ConfigurableWidget
   from '@jetbrains/hub-widget-ui/dist/configurable-widget';
 import {observer} from 'mobx-react';
 
+import {i18n} from 'hub-dashboard-addons/dist/localization';
+
 import ServiceResource from './components/service-resource';
 import ActivitiesEditForm from './activities-edit-form';
 import ActivitiesContent from './activities-content';
@@ -127,7 +129,10 @@ class ActivitiesWidget extends React.Component {
         timestamp: newest && newest.timestamp || timestamp
       });
     } catch (error) {
-      this.setState({loadingError: {onUpdate: error.message}});
+      this.updateError({incrementalUpdate: {
+        title: i18n('Could not load new activities'),
+        message: error.message
+      }});
     }
   };
 
@@ -174,7 +179,7 @@ class ActivitiesWidget extends React.Component {
     }
   };
 
-  resetError = mergeError => {
+  updateError = mergeError => {
     this.setState({loadingError: mergeError});
   };
 
@@ -212,7 +217,7 @@ class ActivitiesWidget extends React.Component {
       activities={this.state.activities}
       isLoading={this.state.isLoading}
       loadingError={this.state.loadingError}
-      onResetError={this.resetError}
+      onUpdateError={this.updateError}
       hasMore={this.state.hasMore}
       onLoadMore={this.loadMore}
       editable={this.props.editable}

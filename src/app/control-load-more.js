@@ -4,19 +4,15 @@ import PropTypes from 'prop-types';
 import LoaderInline
   from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
 import Link from '@jetbrains/ring-ui/components/link/link';
-import Message from '@jetbrains/ring-ui/components/message/message';
-import Popup from '@jetbrains/ring-ui/components/popup/popup';
-import exception from '@jetbrains/icons/exception.svg';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import './style/activities-widget.scss';
-
-const {Directions} = Popup.PopupProps;
 
 class ControlLoadMore extends React.Component {
 
   static propTypes = {
     onLoadMore: PropTypes.func,
+    onLoadMoreError: PropTypes.func,
     hasMore: PropTypes.bool
   };
 
@@ -24,8 +20,7 @@ class ControlLoadMore extends React.Component {
     super(props);
 
     this.state = {
-      isLoadingMore: false,
-      loadingMoreError: null
+      isLoadingMore: false
     };
   }
 
@@ -34,14 +29,13 @@ class ControlLoadMore extends React.Component {
       this.setState({isLoadingMore: true});
       await this.props.onLoadMore();
     } catch (error) {
-      this.setState({loadingMoreError: error.message});
+      this.props.onLoadMoreError({
+        title: i18n('Could not request more activities'),
+        message: error.message
+      });
     } finally {
       this.setState({isLoadingMore: false});
     }
-  };
-
-  resetLoadingMoreError = () => {
-    this.setState({loadingMoreError: null});
   };
 
   render() {
@@ -50,19 +44,6 @@ class ControlLoadMore extends React.Component {
         {
           this.state.isLoadingMore && (
             <LoaderInline/>
-          )
-        }
-        {
-          this.state.loadingMoreError &&
-          (
-            <Message
-              icon={exception}
-              title={i18n('Could not request more activities')}
-              onClose={this.resetLoadingMoreError}
-              direction={Directions.TOP_LEFT}
-            >
-              {this.state.loadingMoreError}
-            </Message>
           )
         }
         {

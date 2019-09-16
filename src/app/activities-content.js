@@ -30,7 +30,7 @@ class ActivitiesContent extends React.Component {
     activities: PropTypes.array,
     isLoading: PropTypes.bool,
     loadingError: PropTypes.object,
-    onResetError: PropTypes.func,
+    onUpdateError: PropTypes.func,
     editable: PropTypes.bool,
     onEdit: PropTypes.func,
     hasMore: PropTypes.bool,
@@ -72,8 +72,12 @@ class ActivitiesContent extends React.Component {
 
   renderLoader = () => <LoaderInline/>;
 
+  onLoadMoreError = error => {
+    this.props.onUpdateError({incrementalUpdate: error});
+  };
+
   onCloseIncrementalError = () => {
-    this.props.onResetError({incrementalUpdate: null});
+    this.props.onUpdateError({incrementalUpdate: null});
   };
 
   renderBody = () => (
@@ -86,7 +90,7 @@ class ActivitiesContent extends React.Component {
             onCloseRequest={this.onCloseIncrementalError}
             inline
           >
-            {i18n('Could not load new activities')}
+            {this.props.loadingError.incrementalUpdate.title}
           </Alert>
         )
       }
@@ -101,6 +105,7 @@ class ActivitiesContent extends React.Component {
         this.props.hasMore && (
           <ControlLoadMore
             onLoadMore={this.props.onLoadMore}
+            onLoadMoreError={this.onLoadMoreError}
             hasMore={this.state.hasMore}
           />
         )
