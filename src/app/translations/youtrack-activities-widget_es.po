@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-09-12 15:18\n"
+"PO-Revision-Date: 2019-09-16 09:45\n"
 
 #: src/app/edit-form-category-selector.js:70
 msgid "Activity Categories"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: src/app/activities-content.js:68
+#: src/app/activities-content.js:69
 msgid "Can't load information from service."
 msgstr ""
 
@@ -41,7 +41,11 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: src/app/control-load-more.js:60
+#: src/app/activities-widget.js:133
+msgid "Could not load new activities"
+msgstr ""
+
+#: src/app/control-load-more.js:33
 msgid "Could not request more activities"
 msgstr ""
 
@@ -57,7 +61,7 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: src/app/activities-content.js:57
+#: src/app/activities-content.js:58
 msgid "Edit filter settings"
 msgstr ""
 
@@ -89,7 +93,7 @@ msgstr ""
 msgid "New issues"
 msgstr ""
 
-#: src/app/activities-content.js:48
+#: src/app/activities-content.js:49
 msgid "No activities found"
 msgstr ""
 
@@ -126,7 +130,7 @@ msgstr ""
 msgid "Selected YouTrack service is not available"
 msgstr ""
 
-#: src/app/control-load-more.js:72
+#: src/app/control-load-more.js:53
 msgid "Show more"
 msgstr ""
 
