@@ -203,6 +203,13 @@ class ActivitiesWidget extends React.Component {
     await this.props.dashboardApi.exitConfigMode();
   };
 
+  getWidgetTitle = () => {
+    const query = filter.query;
+    return query && query.length
+      ? i18n('Activities \u2014 ') + query
+      : i18n('Activities');
+  };
+
   renderConfiguration = () => (
     <ActivitiesEditForm
       title={this.state.title}
@@ -233,12 +240,11 @@ class ActivitiesWidget extends React.Component {
       isLoading
     } = this.state;
 
-    const widgetTitle = 'YouTrack Activities';
     return (
       <ConfigurableWidget
         isConfiguring={isConfiguring}
         dashboardApi={this.props.dashboardApi}
-        widgetTitle={widgetTitle}
+        widgetTitle={this.getWidgetTitle()}
         widgetLoader={isLoading}
         Configuration={this.renderConfiguration}
         Content={this.renderContent}
