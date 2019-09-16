@@ -11,7 +11,15 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-09-16 09:44\n"
+"PO-Revision-Date: 2019-09-16 17:36\n"
+
+#: src/app/activities-widget.js:210
+msgid "Activities"
+msgstr ""
+
+#: src/app/activities-widget.js:209
+msgid "Activities —"
+msgstr ""
 
 #: src/app/edit-form-category-selector.js:70
 msgid "Activity Categories"
@@ -65,14 +73,6 @@ msgstr ""
 msgid "Edit filter settings"
 msgstr ""
 
-#: src/app/content-action-activity.js:15
-msgid "Issue created"
-msgstr ""
-
-#: src/app/content-action-activity.js:17
-msgid "Issue resolved"
-msgstr ""
-
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr ""
@@ -97,7 +97,7 @@ msgstr ""
 msgid "No activities found"
 msgstr ""
 
-#: src/app/content-work-items-activity.js:56
+#: src/app/content-work-items-activity.js:67
 msgid "No type"
 msgstr ""
 
@@ -186,16 +186,24 @@ msgstr ""
 msgid "[Removed field]"
 msgstr ""
 
-#: src/app/content-work-items-activity.js:67
-msgid "added work item on"
+#: src/app/content-work-items-activity.js:74
+msgid "added work item"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr ""
 
-#: src/app/content-vcs-activity.js:27
+#: src/app/content-comment-activity.js:21
+msgid "commented"
+msgstr ""
+
+#: src/app/content-vcs-activity.js:21
 msgid "committed changes"
+msgstr ""
+
+#: src/app/content-action-activity.js:18
+msgid "created issue"
 msgstr ""
 
 #: src/app/content-custom-field-activity.js:34
@@ -206,7 +214,11 @@ msgstr ""
 msgid "m"
 msgstr ""
 
-#: src/app/components/activity-author-info.js:39
+#: src/app/content-action-activity.js:20
+msgid "resolved issue"
+msgstr ""
+
+#: src/app/content-default-activity.js:53
 msgid "updated"
 msgstr ""
 
