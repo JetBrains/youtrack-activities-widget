@@ -1,4 +1,3 @@
-import {Renamed10pxIcon} from '@jetbrains/ring-ui/components/icon';
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -8,14 +7,13 @@ import classNames from 'classnames';
 import Link from '@jetbrains/ring-ui/components/link/link';
 
 import filter from '../activities-filter';
+
 import '../style/activities-widget.scss';
 
 class ActivityIssueInfo extends React.Component {
 
   static propTypes = {
     issue: PropTypes.object,
-    showLinkToActivityStream: PropTypes.bool,
-    activityId: PropTypes.string,
     className: PropTypes.string
   };
 
@@ -25,13 +23,8 @@ class ActivityIssueInfo extends React.Component {
     return `${filter.youTrackUrl}/issue/${issueId}`;
   }
 
-  linkToActivityItem() {
-    const issueHref = this.linkToIssue();
-    return `${issueHref}#focus=streamItem-${this.props.activityId}`;
-  }
-
   render() {
-    const {issue, showLinkToActivityStream} = this.props;
+    const {issue} = this.props;
     const issueId = issue.idReadable;
     const issueHref = this.linkToIssue();
 
@@ -57,14 +50,6 @@ class ActivityIssueInfo extends React.Component {
         >
           {issue.summary}
         </Link>
-        {showLinkToActivityStream && (
-          <a href={this.linkToActivityItem()}>
-            <Renamed10pxIcon
-              className="activities-widget__activity__open-item"
-            />
-          </a>
-        )
-        }
       </div>
     );
   }

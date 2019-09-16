@@ -5,6 +5,7 @@ import {format} from 'date-fns';
 
 import AuthorActionInfo from './components/author-action-info';
 import ActivityIssueInfo from './components/activity-issue-info';
+import ActivityStreamLink from './components/activity-stream-link';
 
 const FORMAT = 'YYYY-MM-DD HH:mm';
 const HIGHLIGHT_TIMEOUT = 5000;
@@ -54,6 +55,7 @@ class ContentDefaultActivity extends React.Component {
 
   render() {
     const {activity} = this.props;
+    const issue = activity.target.issue || activity.target;
     const getActivityClassName = () => classNames(
       'activities-widget__activity',
       this.state.new && 'activities-widget__activity_new'
@@ -66,12 +68,19 @@ class ContentDefaultActivity extends React.Component {
       >
         <div className="activities-widget__activity__issue">
           <ActivityIssueInfo
-            showLinkToActivityStream={this.canBeOpenInIssueStream()}
-            activityId={activity.id}
-            issue={activity.target.issue || activity.target}
+            issue={issue}
           />
         </div>
-        {this.authorInfo(activity)}
+        <div className="activities-widget__activity__action">
+          {this.authorInfo(activity)}
+          {this.canBeOpenInIssueStream && (
+            <ActivityStreamLink
+              issue={issue}
+              activityId={activity.id}
+            />
+          )
+          }
+        </div>
         <div className="activities-widget__activity__change">
           {this.renderContent(activity)}
         </div>

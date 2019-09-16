@@ -76,6 +76,16 @@
     }
   }
 
+  &__stream-link {
+    float: right;
+
+    padding: $ring-unit 0 $ring-unit 0;
+
+    &__icon {
+      color: var(--ring-icon-color);
+    }
+  }
+
   &__issue {
     display: block;
     overflow: hidden;
@@ -117,6 +127,10 @@
 
     &__issue {
       margin: 0 $right-indent 0 $left-indent;
+    }
+
+    &__action {
+      display: flex;
     }
 
     &__vcs_change_link {
@@ -266,12 +280,6 @@
       &__removed {
         text-decoration: line-through;
       }
-    }
-
-    &__open-item {
-      float: right;
-
-      color: var(--ring-icon-color);
     }
 
     &__text {
