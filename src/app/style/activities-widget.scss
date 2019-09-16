@@ -116,7 +116,7 @@
     }
 
     &__issue {
-      margin: 0 $right-indent 0 0;
+      margin: 0 $right-indent 0 $left-indent;
     }
 
     &__vcs_change_link {
@@ -201,7 +201,7 @@
       }
 
       &__info {
-        margin: 0 $right-indent 0 0;
+        margin: 0 $right-indent 0 $left-indent;
         padding: $ring-unit 0 $ring-unit 0;
 
         &__name {
