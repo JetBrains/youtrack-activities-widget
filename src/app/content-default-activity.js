@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {format} from 'date-fns';
 
+import {i18n} from 'hub-dashboard-addons/dist/localization';
+
 import ActivityAuthorInfo from './components/activity-author-info';
 import ActivityIssueInfo from './components/activity-issue-info';
 import ActivityStreamLink from './components/activity-stream-link';
 import ActivityActionInfo from './components/activity-action-info';
-import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 const FORMAT = 'YYYY-MM-DD HH:mm';
 const HIGHLIGHT_TIMEOUT = 5000;

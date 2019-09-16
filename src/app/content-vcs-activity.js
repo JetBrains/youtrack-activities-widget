@@ -4,8 +4,6 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import Link from '@jetbrains/ring-ui/components/link/link';
 
-import ActivityAuthorInfo from './components/activity-author-info';
-
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
