@@ -245,17 +245,23 @@
         white-space: nowrap;
       }
 
-      &__value {
-        flex: 1;
+      &__change {
+        width: 100%;
 
-        max-width: 400px;
-
-        &__added {
-          //TODO
+        :first-child {
+          margin-left: 0;
         }
 
-        &__removed {
-          //TODO
+        &__value {
+          margin-left: $ring-unit;
+
+          &_added {
+            //TODO
+          }
+
+          &_removed {
+            text-decoration: line-through;
+          }
         }
       }
     }
