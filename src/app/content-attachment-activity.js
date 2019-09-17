@@ -13,24 +13,40 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
   renderAttachmentLink(attachment, removed) {
     if (removed) {
       return (
-        <span className="activities-widget__activity__change__removed" key={attachment.id}>{attachment.name}</span>
+        <span
+          className="activities-widget__activity__change__removed"
+          key={attachment.id}
+        >
+          {attachment.name}
+        </span>
       );
-    } else {
+    } else if (attachment.url) {
       const attachmentHref = `${filter.youTrackUrl}${attachment.url}`;
       return (
-        // eslint-disable-next-line max-len
-        <Link key={attachment.id} target={'_blank'} href={attachmentHref}>{attachment.name}</Link>
+        <Link
+          key={attachment.id}
+          target={'_blank'}
+          href={attachmentHref}
+        >
+          {attachment.name}
+        </Link>
+      );
+    } else {
+      return (
+        <span key={attachment.id}>
+          {attachment.name}
+        </span>
       );
     }
   }
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => (
-    <div key={activity.id}>
+    <div>
+      <span className="activities-widget__activity__change__field-name">
+        {`${activity.field.presentation}:`}
+      </span>
       <span>
-        <span className="activities-widget__activity__change__field-name">
-          {`${activity.field.presentation}:`}
-        </span>
         {activity.removed.map(attachment =>
           this.renderAttachmentLink(attachment, true)
         )}
@@ -39,7 +55,7 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
         )}
       </span>
     </div>
-  )
+  );
 }
 
 export default ContentAttachmentActivity;
