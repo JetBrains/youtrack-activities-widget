@@ -88,6 +88,7 @@ class EditFormUserSelector extends React.Component {
           onChange={this.changeAuthor}
           loading={!!this.state.request}
           clear
+          onOpen={this.queryUsers}
           label={i18n('All authors')}
         />
       </div>
