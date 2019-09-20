@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {Size as InputSize} from '@jetbrains/ring-ui/components/input/input';
 import Select from '@jetbrains/ring-ui/components/select/select';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
-import HttpErrorHandler from '@jetbrains/hub-widget-ui/dist/http-error-handler';
 import '@jetbrains/ring-ui/components/form/form.scss';
 
 import ServiceResource from './components/service-resource';
@@ -45,31 +44,18 @@ class EditFormYoutrackSelector extends React.Component {
   }
 
   async loadYouTrackList() {
-    const {youTrackId} = filter;
     const youtracks = await ServiceResource.getYouTrackServices(
       this.props.dashboardApi.fetchHub, MIN_YOUTRACK_VERSION
     );
-    const selected = youtracks.filter(yt => yt.id === youTrackId)[0];
     this.setState({
-      availableYouTracks: youtracks,
-      selectedYouTrack: selected
+      availableYouTracks: youtracks
     });
   }
 
   async onAfterYouTrackChanged() {
     this.setFormLoaderEnabled(true);
-    try {
-      await this.loadAllBackendData();
-    } catch (err) {
-      this.setState({
-        isLoading: false,
-        errorMessage: HttpErrorHandler.getMessage(
-          err,
-          i18n('Selected YouTrack service is not available')
-        )
-      });
-      return;
-    }
+    filter.youTrackId = this.state.selectedYouTrack.id;
+    filter.youTrackUrl = this.state.selectedYouTrack.homeUrl;
     this.setFormLoaderEnabled(false);
   }
 
@@ -81,7 +67,11 @@ class EditFormYoutrackSelector extends React.Component {
   };
 
   render() {
-    const {availableYouTracks, selectedYouTrack} = this.state;
+    const {availableYouTracks} = this.state;
+
+    const selectedYouTrack = (availableYouTracks || []).filter(
+      youTrack => youTrack.id === filter.youTrackId
+    )[0];
 
     const toSelectOption = service => service && {
       key: service.id,
