@@ -11,13 +11,13 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-09-17 12:26\n"
+"PO-Revision-Date: 2019-09-20 14:09\n"
 
-#: src/app/activities-widget.js:210
+#: src/app/activities-widget.js:211
 msgid "Activities"
 msgstr ""
 
-#: src/app/activities-widget.js:209
+#: src/app/activities-widget.js:210
 msgid "Activities —"
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: src/app/activities-widget.js:133
+#: src/app/activities-widget.js:134
 msgid "Could not load new activities"
 msgstr ""
 
@@ -122,12 +122,8 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/app/edit-form-youtrack-selector.js:103
+#: src/app/edit-form-youtrack-selector.js:93
 msgid "Select YouTrack"
-msgstr ""
-
-#: src/app/edit-form-youtrack-selector.js:68
-msgid "Selected YouTrack service is not available"
 msgstr ""
 
 #: src/app/control-load-more.js:53
