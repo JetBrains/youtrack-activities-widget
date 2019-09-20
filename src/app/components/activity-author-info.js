@@ -23,8 +23,15 @@ class ActivityAuthorInfo extends React.Component {
     login: user.login,
     email: user.email,
     avatarUrl: user.avatarUrl,
-    href: `/users/${user.ringId}`
+    href: `${filter.youTrackUrl}/users/${user.ringId}`
   });
+
+  toAvatarUrl = avatarUrl => {
+    if (avatarUrl && avatarUrl.charAt(0) === '/') {
+      return filter.youTrackUrl + avatarUrl;
+    }
+    return avatarUrl;
+  };
 
   render() {
     const {activity} = this.props;
@@ -38,7 +45,7 @@ class ActivityAuthorInfo extends React.Component {
         >
           <Avatar
             size={Size.Size24}
-            url={filter.youTrackUrl + author.avatarUrl}
+            url={this.toAvatarUrl(author.avatarUrl)}
           />
           {
             activity.authorGroup && (
