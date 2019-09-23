@@ -224,6 +224,8 @@
       &__value {
         flex: 1;
 
+        white-space: initial;
+
         .diff-ins {
           text-decoration: none;
 
