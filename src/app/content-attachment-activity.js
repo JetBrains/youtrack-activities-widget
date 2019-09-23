@@ -3,9 +3,20 @@ import React from 'react';
 import Link from '@jetbrains/ring-ui/components/link/link';
 
 import ContentDefaultActivity from './content-default-activity';
-
 import './style/activities-widget.scss';
 import filter from './activities-filter';
+
+const previewWhiteList = [
+  'image/gif',
+  'image/png',
+  'image/jpeg',
+  'image/x-icon',
+  'image/bmp',
+  'image/x-windows-bmp',
+  'image/tiff',
+  'image/x-tiff',
+  'image/webp'
+];
 
 
 class ContentAttachmentActivity extends ContentDefaultActivity {
@@ -22,6 +33,24 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
       );
     } else if (attachment.url) {
       const attachmentHref = `${filter.youTrackUrl}${attachment.url}`;
+      const hasPreview = previewWhiteList.indexOf(attachment.mimeType);
+
+      if (hasPreview >= 0) {
+        const thumbnailUrl = `${attachmentHref}&w=96&h=64&c=false`;
+        return (
+          <span>
+            <Link
+              key={attachment.id}
+              target={'_blank'}
+              href={attachmentHref}
+              onMouseOver={this.showPreview}
+              onMouseOut={this.hidePreview}
+            >
+              <img width={96} height={64} src={thumbnailUrl}/>
+            </Link>
+          </span>
+        );
+      }
       return (
         <Link
           key={attachment.id}
@@ -43,7 +72,7 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
   // eslint-disable-next-line react/display-name
   renderContent = activity => (
     <div>
-      <span className="activities-widget__activity__change__field-name">
+      <span className="activities-widget__activity__change__field-name activities-widget__activity__change__preview-title">
         {`${activity.field.presentation}:`}
       </span>
       <span>

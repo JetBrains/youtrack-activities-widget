@@ -202,6 +202,10 @@
       &__removed {
         text-decoration: line-through;
       }
+
+      &__preview-title {
+        float: left;
+      }
     }
 
     &__text {

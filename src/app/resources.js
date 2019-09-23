@@ -29,6 +29,7 @@ const CHANGED_VALUES = [
   'agile(id,name)',
   'date',
   'url',
+  'mimeType',
   'type(name)',
   'duration(presentation,updated,minutes)',
   AUTHOR,
