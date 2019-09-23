@@ -36,17 +36,15 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
       const hasPreview = previewWhiteList.indexOf(attachment.mimeType);
 
       if (hasPreview >= 0) {
-        const thumbnailUrl = `${attachmentHref}&w=96&h=64&c=false`;
+        const thumbnailURL = `${filter.youTrackUrl}${attachment.thumbnailURL}`;
         return (
           <span>
             <Link
               key={attachment.id}
               target={'_blank'}
               href={attachmentHref}
-              onMouseOver={this.showPreview}
-              onMouseOut={this.hidePreview}
             >
-              <img width={96} height={64} src={thumbnailUrl}/>
+              <img width={96} height={64} src={thumbnailURL}/>
             </Link>
           </span>
         );

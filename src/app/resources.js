@@ -30,6 +30,7 @@ const CHANGED_VALUES = [
   'date',
   'url',
   'mimeType',
+  'thumbnailURL',
   'type(name)',
   'duration(presentation,updated,minutes)',
   AUTHOR,
