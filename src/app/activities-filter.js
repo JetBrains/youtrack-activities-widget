@@ -1,5 +1,7 @@
 import {observable} from 'mobx';
 
+import {CATEGORIES} from './components/categories';
+
 class ActivitiesFilter {
 
   static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
@@ -12,7 +14,8 @@ class ActivitiesFilter {
 
   @observable youTrackUrl = null;
 
-  @observable categories = [];
+  // eslint-disable-next-line max-len
+  @observable categoriesIds = CATEGORIES.filter(it => it.default).map(it => it.id);
 
   @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
@@ -25,7 +28,7 @@ class ActivitiesFilter {
       this.author = storedFilter.author || null;
       this.youTrackId = storedFilter.youTrack.id;
       this.youTrackUrl = storedFilter.youTrack.homeUrl;
-      this.categories = storedFilter.categories;
+      this.categoriesIds = storedFilter.categories;
       this.refreshPeriod = storedFilter.refreshPeriod ||
         ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
     } catch (e) {
@@ -44,12 +47,13 @@ class ActivitiesFilter {
       avatarURL: author.avatarURL
     };
 
-    const toConfigCategories = categories => categories && categories.slice();
+    // eslint-disable-next-line max-len
+    const toConfigCategoriesIds = categories => categories && categories.map(it => it.id);
 
     return {
       query: this.query,
       author: toConfigAuthor(this.author),
-      categories: toConfigCategories(this.categories),
+      categoriesIds: toConfigCategoriesIds(this.categoriesIds),
       youTrack: {id: this.youTrackId, homeUrl: this.youTrackUrl},
       refreshPeriod: this.refreshPeriod
     };

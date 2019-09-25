@@ -78,7 +78,7 @@ class ActivitiesEditForm extends React.Component {
   render() {
     const {isLoading, errorMessage} = this.state;
 
-    const isInvalid = !!errorMessage || !(filter.categories || []).length;
+    const isInvalid = !!errorMessage || !(filter.categoriesIds || []).length;
     return (
       <ConfigurationForm
         warning={errorMessage}

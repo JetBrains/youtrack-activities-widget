@@ -133,7 +133,7 @@ class ActivitiesWidget extends React.Component {
           author: filter.author,
           query: filter.query,
           start: timestamp && (timestamp + 1),
-          categories: filter.categories
+          categories: filter.categoriesIds
         }
       );
       incActivities.forEach(activity => {
@@ -162,7 +162,7 @@ class ActivitiesWidget extends React.Component {
         cursor: loadMore && cursor,
         author: filter.author,
         query: filter.query,
-        categories: filter.categories
+        categories: filter.categoriesIds
       }
     );
     const newTimestamp = this.updatedTimestamp(loadMore, page);

@@ -5,24 +5,8 @@ import Selection from '@jetbrains/ring-ui/components/table/selection';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import filter from './activities-filter';
-
+import {CATEGORIES} from './components/categories';
 import './style/activities-widget.scss';
-
-const CATEGORIES = [
-  {id: 'IssueCreatedCategory', name: i18n('New issues')},
-  {id: 'IssueResolvedCategory', name: i18n('Resolved issues')},
-  {id: 'ProjectCategory', name: i18n('Project')},
-  {id: 'TagsCategory', name: i18n('Tags')},
-  {id: 'SummaryCategory', name: i18n('Summary')},
-  {id: 'DescriptionCategory', name: i18n('Description')},
-  {id: 'CustomFieldCategory', name: i18n('Custom fields')},
-  {id: 'AttachmentsCategory', name: i18n('Attachments')},
-  {id: 'LinksCategory', name: i18n('Links')},
-  {id: 'CommentsCategory', name: i18n('Comments')},
-  {id: 'SprintCategory', name: i18n('Sprints')},
-  {id: 'WorkItemCategory', name: i18n('Work items')},
-  {id: 'VcsChangeCategory', name: i18n('Vcs changes')}
-];
 
 class EditFormCategorySelector extends React.Component {
 
@@ -33,15 +17,15 @@ class EditFormCategorySelector extends React.Component {
       data: CATEGORIES,
       selection: new Selection({
         data: CATEGORIES,
-        selected: this.toSelected(filter.categories)
+        selected: this.toSelected(filter.categoriesIds)
       })
     };
   }
 
-  toSelected = categories => {
+  toSelected = categoriesIds => {
     let selected;
-    if (categories) {
-      selected = CATEGORIES.filter(it => categories.indexOf(it.id) >= 0);
+    if (categoriesIds) {
+      selected = CATEGORIES.filter(it => categoriesIds.indexOf(it.id) >= 0);
     } else {
       selected = CATEGORIES;
     }
@@ -52,7 +36,7 @@ class EditFormCategorySelector extends React.Component {
 
   onSelect = newSelection => {
     this.setState({selection: newSelection});
-    filter.categories = this.fromSelected(newSelection.getSelected());
+    filter.categoriesIds = this.fromSelected(newSelection.getSelected());
   };
 
   columns = [
