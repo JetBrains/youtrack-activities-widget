@@ -11,13 +11,13 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-09-25 10:07\n"
+"PO-Revision-Date: 2019-09-25 10:31\n"
 
-#: src/app/activities-widget.js:222
+#: src/app/activities-widget.js:223
 msgid "Activities"
 msgstr ""
 
-#: src/app/activities-widget.js:221
+#: src/app/activities-widget.js:222
 msgid "Activities —"
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: src/app/activities-widget.js:145
+#: src/app/activities-widget.js:146
 msgid "Could not load new activities"
 msgstr ""
 
