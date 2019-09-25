@@ -5,6 +5,7 @@ import QueryAssist
   from '@jetbrains/ring-ui/components/query-assist/query-assist';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import '@jetbrains/ring-ui/components/form/form.scss';
+import {observer} from 'mobx-react';
 
 import DebounceDecorator from './debounceDecorator';
 import filter from './activities-filter';
@@ -14,19 +15,15 @@ import './style/activities-widget.scss';
 // eslint-disable-next-line max-len
 import {underlineAndSuggest} from './resources';
 
+@observer
 class EditFormQueryToolbar extends React.Component {
 
   static propTypes = {
-    dashboardApi: PropTypes.object,
-    onChange: PropTypes.func
+    dashboardApi: PropTypes.object
   };
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      query: filter.query
-    };
     this.underlineAndSuggestDebouncer = new DebounceDecorator();
   }
 
@@ -50,15 +47,14 @@ class EditFormQueryToolbar extends React.Component {
     );
 
   changeSearchQuery = query => {
-    this.setState({query});
-    this.props.onChange(query);
+    filter.query = query;
   };
 
   onQueryAssistInputChange = queryAssistModel =>
     this.changeSearchQuery(queryAssistModel.query);
 
   render() {
-    const {query} = this.state;
+    const {query} = filter;
 
     return (
       <div className="activities-widget__issue-filter">

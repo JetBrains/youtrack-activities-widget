@@ -18,6 +18,14 @@ export async function queryUsers(fetchHub, query) {
   });
 }
 
+export async function loadConfigL10n(fetchYouTrack) {
+  return fetchYouTrack('api/config', {
+    query: {
+      fields: 'l10n(predefinedQueries)'
+    }
+  });
+}
+
 const ISSUE = 'id,idReadable,summary,resolved';
 const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';
 const CHANGED_VALUES = [

@@ -10,7 +10,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import ServiceResource from './components/service-resource';
 import ActivitiesEditForm from './activities-edit-form';
 import ActivitiesContent from './activities-content';
-import {loadActivities, loadActivitiesPage} from './resources';
+import {loadActivities, loadActivitiesPage, loadConfigL10n} from './resources';
 import filter from './activities-filter';
 
 const MILLIS_IN_SEC = 1000;
@@ -76,9 +76,19 @@ class ActivitiesWidget extends React.Component {
     );
 
     if (this.props.configWrapper.isNewConfig()) {
-      this.initializeNewWidget(service);
+      await this.initializeNewWidget(service);
     } else {
       await this.initializeExistingWidget(service);
+    }
+  };
+
+  createDefaultQuery = async () => {
+    try {
+      const config = await loadConfigL10n(this.fetchYouTrack);
+      const l10nQueries = config.l10n.predefinedQueries;
+      return `${l10nQueries.by}: ${l10nQueries.me}`;
+    } catch (e) {
+      return '';
     }
   };
 
@@ -87,6 +97,7 @@ class ActivitiesWidget extends React.Component {
       this.setState({isConfiguring: true});
       filter.youTrackId = youTrackService.id;
       filter.youTrackUrl = youTrackService.homeUrl;
+      filter.query = await this.createDefaultQuery();
       await filter.sync(this.props);
     }
   }

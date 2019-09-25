@@ -35,10 +35,6 @@ class ActivitiesEditForm extends React.Component {
     };
   }
 
-  changeQuery = query => {
-    filter.query = query;
-  };
-
   changeAuthor = author => {
     filter.author = author;
   };
@@ -53,7 +49,6 @@ class ActivitiesEditForm extends React.Component {
         <div>
           <EditFormQueryToolbar
             dashboardApi={this.props.dashboardApi}
-            onChange={this.changeQuery}
           />
           <EditFormUserSelector
             dashboardApi={this.props.dashboardApi}
