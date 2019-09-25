@@ -93,9 +93,7 @@ class ActivitiesWidget extends React.Component {
     );
     if (youTrackService && youTrackService.id) {
       this.setState({isConfiguring: true});
-      filter.youTrackId = youTrackService.id;
-      filter.youTrackUrl = youTrackService.homeUrl;
-      filter.query = await this.createDefaultQuery();
+      this.setNewService(youTrackService);
       await filter.sync(this.props);
     }
   }
@@ -118,6 +116,13 @@ class ActivitiesWidget extends React.Component {
       await this.reload();
     }
   }
+
+  setNewService = async selectedYouTrack => {
+    filter.youTrackId = selectedYouTrack.id;
+    filter.youTrackUrl = selectedYouTrack.homeUrl;
+    filter.query = await this.createDefaultQuery();
+    await filter.sync(this.props);
+  };
 
   fetchYouTrack = async (url, params) => {
     const {dashboardApi} = this.props;
@@ -233,6 +238,7 @@ class ActivitiesWidget extends React.Component {
       title={this.state.title}
       submitConfig={this.submitConfiguration}
       cancelConfig={this.cancelConfiguration}
+      onServiceChange={this.setNewService}
       dashboardApi={this.props.dashboardApi}
     />
   );

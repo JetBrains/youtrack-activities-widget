@@ -23,6 +23,7 @@ class ActivitiesEditForm extends React.Component {
   static propTypes = {
     submitConfig: PropTypes.func,
     cancelConfig: PropTypes.func,
+    onServiceChange: PropTypes.func,
     dashboardApi: PropTypes.object
   };
 
@@ -92,6 +93,7 @@ class ActivitiesEditForm extends React.Component {
           {
             <EditFormYoutrackSelector
               dashboardApi={this.props.dashboardApi}
+              onChangeAsync={this.props.onServiceChange}
             />
           }
           {

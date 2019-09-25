@@ -17,7 +17,8 @@ const MIN_YOUTRACK_VERSION = '2019.1';
 class EditFormYoutrackSelector extends React.Component {
 
   static propTypes = {
-    dashboardApi: PropTypes.object
+    dashboardApi: PropTypes.object,
+    onChangeAsync: PropTypes.func
   };
 
   constructor(props) {
@@ -37,7 +38,6 @@ class EditFormYoutrackSelector extends React.Component {
 
   componentDidMount() {
     this.loadYouTrackList();
-    this.onAfterYouTrackChanged();
   }
 
   setFormLoaderEnabled(isLoading) {
@@ -56,8 +56,7 @@ class EditFormYoutrackSelector extends React.Component {
   async onAfterYouTrackChanged() {
     this.setFormLoaderEnabled(true);
     if (this.state.selectedYouTrack) {
-      filter.youTrackId = this.state.selectedYouTrack.id;
-      filter.youTrackUrl = this.state.selectedYouTrack.homeUrl;
+      await this.props.onChangeAsync(this.state.selectedYouTrack);
     }
     this.setFormLoaderEnabled(false);
   }
