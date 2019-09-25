@@ -177,13 +177,13 @@ class IssueLine extends React.Component {
     const firstValue = IssueLine.toArray(issueField.value)[0];
 
     return (
-      <div className="issues-list-widget__field-value">
+      <div className="issue-card-panel__field-value">
         {IssueLine.getValuePresentation(issueField, this.props.dateFormats)}
         {
           firstValue.avatarUrl &&
           (
             <img
-              className="issues-list-widget__field-avatar"
+              className="issue-card-panel__field-avatar"
               src={firstValue.avatarUrl}
             />
           )
@@ -192,7 +192,7 @@ class IssueLine extends React.Component {
           IssueLine.isColoredValue(firstValue) &&
           (
             <span
-              className="issues-list-widget__field-color issues-list-widget__colored-field"
+              className="issue-card-panel__field-color issue-card-panel__colored-field"
               style={IssueLine.fieldColorToCss(firstValue.color)}
             >
               {IssueLine.getFirstLetter(firstValue)}
@@ -204,17 +204,17 @@ class IssueLine extends React.Component {
   }
 
   renderFields(issueFields, fixed) {
-    const fixClassName = fixed ? 'issues-list-widget__fields-fix' : '';
+    const fixClassName = fixed ? 'issue-card-panel__fields-fix' : '';
     return (
-      <div className={`issues-list-widget__fields ${fixClassName}`}>
+      <div className={`issue-card-panel__fields ${fixClassName}`}>
         {
           issueFields.map(issueField => (
             <div
               key={`field-line-${issueField.id}`}
-              className="issues-list-widget__field-row"
+              className="issue-card-panel__field-row"
             >
-              <div className="issues-list-widget__field">
-                <div className="issues-list-widget__field-title">
+              <div className="issue-card-panel__field">
+                <div className="issue-card-panel__field-title">
                   {IssueLine.getName(issueField.projectCustomField.field)}
                 </div>
                 {this.renderFieldValue(issueField)}
@@ -274,7 +274,7 @@ class IssueLine extends React.Component {
               </span>
             </Link>
           </div>
-          <span className="issues-list-widget__issue-toggler">
+          <span className="issue-card-panel__issue-toggler">
             {
               expanded
                 ? (
@@ -297,7 +297,7 @@ class IssueLine extends React.Component {
             expanded &&
             (
               <div
-                className="issues-list-widget__issue-expanded-block"
+                className="issue-card-panel__issue-expanded-block"
                 data-test="issue-line-expanded-block"
               >
                 {this.renderFields(valuableFields)}
