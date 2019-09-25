@@ -16,6 +16,8 @@ class ActivitiesFilter {
 
   @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
+  dashboardApi = null;
+
   restore(props) {
     try {
       const storedFilter = props.configWrapper.getFieldValue('filter');

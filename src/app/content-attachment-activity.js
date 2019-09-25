@@ -21,12 +21,13 @@ const previewWhiteList = [
 
 class ContentAttachmentActivity extends ContentDefaultActivity {
 
-  renderAttachmentLink(attachment, removed) {
+  renderAttachmentLink(activity, attachment, removed) {
+    const uniqueKey = `${activity.id}${attachment.id}`;
     if (removed) {
       return (
         <span
           className="activities-widget__activity__change__removed"
-          key={attachment.id}
+          key={uniqueKey}
         >
           {attachment.name}
         </span>
@@ -38,9 +39,8 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
       if (hasPreview >= 0) {
         const thumbnailURL = `${filter.youTrackUrl}${attachment.thumbnailURL}`;
         return (
-          <span>
+          <span key={uniqueKey}>
             <Link
-              key={attachment.id}
               target={'_blank'}
               href={attachmentHref}
             >
@@ -51,7 +51,7 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
       }
       return (
         <Link
-          key={attachment.id}
+          key={uniqueKey}
           target={'_blank'}
           href={attachmentHref}
         >
@@ -60,7 +60,7 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
       );
     } else {
       return (
-        <span key={attachment.id}>
+        <span key={uniqueKey}>
           {attachment.name}
         </span>
       );
@@ -75,10 +75,10 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
       </span>
       <span>
         {activity.removed.map(attachment =>
-          this.renderAttachmentLink(attachment, true)
+          this.renderAttachmentLink(activity, attachment, true)
         )}
         {activity.added.map(attachment =>
-          this.renderAttachmentLink(attachment, false)
+          this.renderAttachmentLink(activity, attachment, false)
         )}
       </span>
     </div>

@@ -67,6 +67,7 @@ class ActivitiesWidget extends React.Component {
   initialize = async dashboardApi => {
     await this.props.configWrapper.init();
     await filter.restore(this.props);
+    filter.dashboardApi = dashboardApi;
 
     const service = await ActivitiesWidget.getDefaultYouTrackService(
       dashboardApi, {

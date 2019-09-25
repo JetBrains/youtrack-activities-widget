@@ -1,5 +1,14 @@
 const QUERY_ASSIST_FIELDS = 'query,caret,styleRanges(start,length,style),suggestions(options,prefix,option,suffix,description,matchingStart,matchingEnd,caret,completionStart,completionEnd,group,icon)';
 
+const PROJECT_CUSTOM_FIELD_FIELDS = 'id,bundle(id),field(id,name,localizedName,fieldType(id,valueType))';
+const ISSUE_FIELD_VALUE_FIELDS = 'id,name,localizedName,login,avatarUrl,name,presentation,minutes,color(id,foreground,background)';
+const ISSUE_FIELD_FIELDS = `id,value(${ISSUE_FIELD_VALUE_FIELDS}),projectCustomField(${PROJECT_CUSTOM_FIELD_FIELDS})`;
+const ISSUE_FIELDS = `id,idReadable,summary,resolved,fields(${ISSUE_FIELD_FIELDS})`;
+
+export async function loadIssue(fetchYouTrack, id) {
+  return await fetchYouTrack(`api/issues/${id}?fields=${ISSUE_FIELDS}`);
+}
+
 export async function underlineAndSuggest(fetchYouTrack, query, caret, folder) {
   return await fetchYouTrack(`api/search/assist?fields=${QUERY_ASSIST_FIELDS}`, {
     method: 'POST',

@@ -1,52 +1,62 @@
 import React from 'react';
-import classNames from 'classnames';
-import Link from '@jetbrains/ring-ui/components/link/link';
 
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
-import filter from './activities-filter';
+import IssueLine from './components/issue-line';
 
 
 class ContentLinkActivity extends ContentDefaultActivity {
 
-  getValueClassName = link => {
-    const valueClass = 'activities-widget__activity__link__change__value';
-    const modClass = link.removed ? `${valueClass}_removed` : `${valueClass}_added`;
-    return classNames(valueClass, modClass);
-  };
-
-  linkToIssue = issue => {
-    const issueId = issue.idReadable;
-    return `${filter.youTrackUrl}/issue/${issueId}`;
-  };
-
   // eslint-disable-next-line react/display-name
   renderContent = activity => {
     const fieldName = activity.field.presentation;
-    const links = activity.removed.map(issue => ({issue, removed: true})).
-      concat(activity.added.map(issue => ({issue, removed: false})));
+    const removedLinks = activity.removed;
+    const addedLinks = activity.added;
 
     return (
       <div className="activities-widget__activity__link">
-        <div className="activities-widget__activity__link__field-name">
-          {`${fieldName}:`}
-        </div>
-        <div className="activities-widget__activity__link__change">
-          {
-            links.map(link =>
-              (
-                <Link
-                  key={link.issue.id}
-                  className={this.getValueClassName(link)}
-                  href={this.linkToIssue(link.issue)}
-                >
-                  {link.issue.idReadable}
-                </Link>
-              )
-            )
-          }
-        </div>
+        {
+          addedLinks.length > 0 && (
+            <div className="activities-widget__activity__link__field-name">
+              {`${fieldName}:`}
+            </div>
+          )
+        }
+        {
+          addedLinks.length > 0 && (
+            <div className="activities-widget__activity__link__change">
+              {addedLinks.map(issue => (
+                <IssueLine
+                  issue={issue}
+                  removed={false}
+                  key={`${activity.id}${issue.id}`}
+                />)
+              )}
+            </div>
+          )
+        }
+        {
+          removedLinks.length > 0 && (
+            <div
+              className="activities-widget__activity__link__field-name activities-widget__activity__link__field-removed"
+            >
+              {`${fieldName}:`}
+            </div>
+          )
+        }
+        {
+          removedLinks.length > 0 && (
+            <div className="activities-widget__activity__link__change">
+              {removedLinks.map(issue => (
+                <IssueLine
+                  issue={issue}
+                  key={`${activity.id}${issue.id}`}
+                />)
+              )}
+            </div>
+          )
+        }
       </div>
     );
   };
