@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-09-25 13:10\n"
+"PO-Revision-Date: 2019-09-25 15:02\n"
 
 #: src/app/activities-widget.js:228
 msgid "Activities"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Activities —"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:70
+#: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr ""
 
@@ -29,7 +29,7 @@ msgstr ""
 msgid "All authors"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:19
+#: src/app/components/categories.js:10
 msgid "Attachments"
 msgstr ""
 
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:21
+#: src/app/components/categories.js:12
 msgid "Comments"
 msgstr ""
 
@@ -57,11 +57,11 @@ msgstr ""
 msgid "Could not request more activities"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:18
+#: src/app/components/categories.js:9
 msgid "Custom fields"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:17
+#: src/app/components/categories.js:8
 msgid "Description"
 msgstr ""
 
@@ -81,15 +81,15 @@ msgstr ""
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:20
+#: src/app/components/categories.js:11
 msgid "Links"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:61
+#: src/app/edit-form-category-selector.js:45
 msgid "Name"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:12
+#: src/app/components/categories.js:4
 msgid "New issues"
 msgstr ""
 
@@ -109,12 +109,12 @@ msgstr ""
 msgid "Oops! Something went wrong..."
 msgstr "К сожалению, возникла какая-то проблема..."
 
+#: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:19
-#: src/app/edit-form-category-selector.js:14
 msgid "Project"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:13
+#: src/app/components/categories.js:5
 msgid "Resolved issues"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/app/edit-form-youtrack-selector.js:98
+#: src/app/edit-form-youtrack-selector.js:96
 msgid "Select YouTrack"
 msgstr ""
 
@@ -130,11 +130,11 @@ msgstr ""
 msgid "Show more"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:22
+#: src/app/components/categories.js:14
 msgid "Sprints"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:16
+#: src/app/components/categories.js:7
 msgid "Summary"
 msgstr ""
 
@@ -146,11 +146,11 @@ msgstr ""
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:15
+#: src/app/components/categories.js:13
 msgid "Tags"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:73
+#: src/app/edit-form-category-selector.js:57
 msgid "Text about what categories are and other info"
 msgstr ""
 
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Type search query"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:24
+#: src/app/components/categories.js:16
 msgid "Vcs changes"
 msgstr ""
 
@@ -170,7 +170,7 @@ msgstr ""
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "Виджет обновляется раз в {{minutesCount}} мин"
 
-#: src/app/edit-form-category-selector.js:23
+#: src/app/components/categories.js:15
 msgid "Work items"
 msgstr ""
 
