@@ -66,20 +66,11 @@ class ActivitiesWidget extends React.Component {
 
   initialize = async dashboardApi => {
     await this.props.configWrapper.init();
-    await filter.restore(this.props);
-    filter.dashboardApi = dashboardApi;
-
-    const service = await ActivitiesWidget.getDefaultYouTrackService(
-      dashboardApi, {
-        id: filter.youTrackId,
-        homeUrl: filter.youTrackUrl
-      }
-    );
 
     if (this.props.configWrapper.isNewConfig()) {
-      await this.initializeNewWidget(service);
+      await this.initializeNewWidget(dashboardApi);
     } else {
-      await this.initializeExistingWidget(service);
+      await this.initializeExistingWidget(dashboardApi);
     }
   };
 
@@ -93,7 +84,13 @@ class ActivitiesWidget extends React.Component {
     }
   };
 
-  async initializeNewWidget(youTrackService) {
+  async initializeNewWidget(dashboardApi) {
+    const youTrackService = await ActivitiesWidget.getDefaultYouTrackService(
+      dashboardApi, {
+        id: filter.youTrackId,
+        homeUrl: filter.youTrackUrl
+      }
+    );
     if (youTrackService && youTrackService.id) {
       this.setState({isConfiguring: true});
       filter.youTrackId = youTrackService.id;
@@ -103,8 +100,16 @@ class ActivitiesWidget extends React.Component {
     }
   }
 
-  async initializeExistingWidget(youTrackService) {
+  async initializeExistingWidget(dashboardApi) {
     await filter.restore(this.props);
+
+    const youTrackService = await ActivitiesWidget.getDefaultYouTrackService(
+      dashboardApi, {
+        id: filter.youTrackId,
+        homeUrl: filter.youTrackUrl
+      }
+    );
+
     if (youTrackService && youTrackService.id) {
       filter.youTrackId = youTrackService.id;
       filter.youTrackUrl = youTrackService.homeUrl;

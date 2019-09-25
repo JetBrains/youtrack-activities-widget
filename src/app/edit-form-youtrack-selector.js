@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import {Size as InputSize} from '@jetbrains/ring-ui/components/input/input';
 import Select from '@jetbrains/ring-ui/components/select/select';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
+import {observer} from 'mobx-react';
+
 import '@jetbrains/ring-ui/components/form/form.scss';
 
 import ServiceResource from './components/service-resource';
@@ -13,6 +15,7 @@ import './style/activities-widget.scss';
 
 const MIN_YOUTRACK_VERSION = '2019.1';
 
+@observer
 class EditFormYoutrackSelector extends React.Component {
 
   static propTypes = {
@@ -54,8 +57,10 @@ class EditFormYoutrackSelector extends React.Component {
 
   async onAfterYouTrackChanged() {
     this.setFormLoaderEnabled(true);
-    filter.youTrackId = this.state.selectedYouTrack.id;
-    filter.youTrackUrl = this.state.selectedYouTrack.homeUrl;
+    if (this.state.selectedYouTrack) {
+      filter.youTrackId = this.state.selectedYouTrack.id;
+      filter.youTrackUrl = this.state.selectedYouTrack.homeUrl;
+    }
     this.setFormLoaderEnabled(false);
   }
 
