@@ -11,13 +11,13 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-09-20 21:01\n"
+"PO-Revision-Date: 2019-09-25 10:07\n"
 
-#: src/app/activities-widget.js:211
+#: src/app/activities-widget.js:222
 msgid "Activities"
 msgstr ""
 
-#: src/app/activities-widget.js:210
+#: src/app/activities-widget.js:221
 msgid "Activities —"
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: src/app/activities-widget.js:134
+#: src/app/activities-widget.js:145
 msgid "Could not load new activities"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "No type"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:74
+#: src/app/edit-form-query-toolbar.js:70
 msgid "Only activities from the issues matching the search query get to the result."
 msgstr ""
 
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Text about what categories are and other info"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:68
+#: src/app/edit-form-query-toolbar.js:64
 msgid "Type search query"
 msgstr ""
 
