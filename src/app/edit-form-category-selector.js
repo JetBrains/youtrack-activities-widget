@@ -14,7 +14,7 @@ class EditFormCategorySelector extends React.Component {
     super(props);
 
     this.state = {
-      data: CATEGORIES,
+      data: CATEGORIES.sort((a, b) => a.name.localeCompare(b.name)),
       selection: new Selection({
         data: CATEGORIES,
         selected: this.toSelected(filter.categoriesIds)
