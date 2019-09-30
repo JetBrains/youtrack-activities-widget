@@ -73,6 +73,7 @@ export async function loadActivities(fetchYouTrack, params) {
     `$top=${packSize}`,
     `$skip=${skipSize}`,
     'reverse=true',
+    'effective=true',
     params.author && `author=${params.author.id}`,
     params.query && `issueQuery=${encodeURIComponent(params.query)}`,
     params.start && `start=${params.start}`,
