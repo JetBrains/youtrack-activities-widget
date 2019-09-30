@@ -93,6 +93,7 @@ export async function loadActivitiesPage(fetchYouTrack, params) {
     `categories=${categories || ALL_CATEGORIES}`,
     `$top=${packSize}`,
     'reverse=true',
+    'effective=true',
     params.cursor && `cursor=${encodeURIComponent(params.cursor)}`,
     params.author && `author=${params.author.id}`,
     params.query && `issueQuery=${encodeURIComponent(params.query)}`
