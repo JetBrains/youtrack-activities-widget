@@ -92,9 +92,9 @@ class ActivitiesWidget extends React.Component {
       }
     );
     if (youTrackService && youTrackService.id) {
-      this.setState({isConfiguring: true});
-      this.setNewService(youTrackService);
+      await this.setNewService(youTrackService);
       await filter.sync(this.props);
+      this.setState({isConfiguring: true});
     }
   }
 
