@@ -13,5 +13,5 @@ export const CATEGORIES = [
   {id: 'TagsCategory', name: i18n('Tags')},
   {id: 'SprintCategory', name: i18n('Sprints')},
   {id: 'WorkItemCategory', name: i18n('Work items')},
-  {id: 'VcsChangeCategory', name: i18n('Vcs changes')}
+  {id: 'VcsChangeCategory', name: i18n('VCS changes')}
 ];

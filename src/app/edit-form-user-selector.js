@@ -72,7 +72,7 @@ class EditFormUserSelector extends React.Component {
     return (
       <div className="activities-widget__user-selector">
         <div className="activities-widget__user-selector__title">
-          {i18n('Author')}
+          {i18n('Change authors')}
         </div>
         <Select
           className="activities-widget__user-selector__form-select"
@@ -89,7 +89,7 @@ class EditFormUserSelector extends React.Component {
           loading={!!this.state.request}
           clear
           onOpen={this.queryUsers}
-          label={i18n('All authors')}
+          label={i18n('Any user')}
         />
       </div>
     );

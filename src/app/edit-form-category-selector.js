@@ -42,7 +42,7 @@ class EditFormCategorySelector extends React.Component {
   columns = [
     {
       id: 'name',
-      title: i18n('Name')
+      title: i18n('Category')
     }
   ];
 
@@ -54,7 +54,7 @@ class EditFormCategorySelector extends React.Component {
           {i18n('Activity Categories')}
         </div>
         <div className="activities-widget__category-selector__info">
-          {i18n('Text about what categories are and other info')}
+          {i18n('Select which types of updates are shown in the activity feed')}
         </div>
         <Table
           data={data}

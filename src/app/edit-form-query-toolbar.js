@@ -61,13 +61,13 @@ class EditFormQueryToolbar extends React.Component {
         <div className="activities-widget__issue-filter__query">
           <QueryAssist
             query={query}
-            placeholder={i18n('Type search query')}
+            placeholder={i18n('Enter a search query')}
             onChange={this.onQueryAssistInputChange}
             dataSource={this.queryAssistDataSource}
           />
         </div>
         <div className="ring-form__control__description">
-          {i18n('Only activities from the issues matching the search query get to the result.')}
+          {i18n('Activity is only shown for issues that match the search criteria')}
         </div>
       </div>
     );

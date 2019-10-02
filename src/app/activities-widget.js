@@ -229,8 +229,8 @@ class ActivitiesWidget extends React.Component {
   getWidgetTitle = () => {
     const query = filter.query;
     return query && query.length
-      ? i18n('Activities \u2014 ') + query
-      : i18n('Activities');
+      ? i18n('Issue Activity Feed \u2014 ') + query
+      : i18n('Issue Activity Feed');
   };
 
   renderConfiguration = () => (
