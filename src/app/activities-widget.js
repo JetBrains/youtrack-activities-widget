@@ -62,6 +62,7 @@ class ActivitiesWidget extends React.Component {
 
   componentDidMount() {
     this.initialize(this.props.dashboardApi);
+    filter.dashboardApi = this.props.dashboardApi;
   }
 
   initialize = async dashboardApi => {
