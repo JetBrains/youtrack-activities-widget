@@ -11,30 +11,22 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-09-26 21:02\n"
-
-#: src/app/activities-widget.js:233
-msgid "Activities"
-msgstr ""
-
-#: src/app/activities-widget.js:232
-msgid "Activities —"
-msgstr ""
+"PO-Revision-Date: 2019-10-02 09:35\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr ""
 
+#: src/app/edit-form-query-toolbar.js:70
+msgid "Activity is only shown for issues that match the search criteria"
+msgstr ""
+
 #: src/app/edit-form-user-selector.js:92
-msgid "All authors"
+msgid "Any user"
 msgstr ""
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
-msgstr ""
-
-#: src/app/edit-form-user-selector.js:75
-msgid "Author"
 msgstr ""
 
 #: src/app/activities-content.js:69
@@ -43,6 +35,14 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
+msgstr ""
+
+#: src/app/edit-form-category-selector.js:45
+msgid "Category"
+msgstr ""
+
+#: src/app/edit-form-user-selector.js:75
+msgid "Change authors"
 msgstr ""
 
 #: src/app/components/categories.js:12
@@ -73,6 +73,18 @@ msgstr ""
 msgid "Edit filter settings"
 msgstr ""
 
+#: src/app/edit-form-query-toolbar.js:64
+msgid "Enter a search query"
+msgstr ""
+
+#: src/app/activities-widget.js:233
+msgid "Issue Activity Feed"
+msgstr ""
+
+#: src/app/activities-widget.js:232
+msgid "Issue Activity Feed —"
+msgstr ""
+
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr ""
@@ -85,10 +97,6 @@ msgstr ""
 msgid "Links"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:45
-msgid "Name"
-msgstr ""
-
 #: src/app/components/categories.js:4
 msgid "New issues"
 msgstr ""
@@ -99,10 +107,6 @@ msgstr ""
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
-msgstr ""
-
-#: src/app/edit-form-query-toolbar.js:70
-msgid "Only activities from the issues matching the search query get to the result."
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
@@ -124,6 +128,10 @@ msgstr ""
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
+msgstr ""
+
+#: src/app/edit-form-category-selector.js:57
+msgid "Select which types of updates are shown in the activity feed"
 msgstr ""
 
 #: src/app/control-load-more.js:53
@@ -150,16 +158,8 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:57
-msgid "Text about what categories are and other info"
-msgstr ""
-
-#: src/app/edit-form-query-toolbar.js:64
-msgid "Type search query"
-msgstr ""
-
 #: src/app/components/categories.js:16
-msgid "Vcs changes"
+msgid "VCS changes"
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
