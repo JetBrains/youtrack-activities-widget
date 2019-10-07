@@ -33,18 +33,23 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
         </span>
       );
     } else if (attachment.url) {
-      const attachmentHref = `${filter.youTrackUrl}${attachment.url}`;
+      if (!filter.hasOwnProperty('homeUrlNoContext')) {
+        // eslint-disable-next-line new-cap,max-len
+        filter.homeUrlNoContext = new window.URL(filter.youTrackUrl).origin;
+      }
+
+      const attachmentHref = `${filter.homeUrlNoContext}${attachment.url}`;
       const hasPreview = previewWhiteList.indexOf(attachment.mimeType);
 
       if (hasPreview >= 0) {
-        const thumbnailURL = `${filter.youTrackUrl}${attachment.thumbnailURL}`;
+        const thumbnailURL = `${filter.homeUrlNoContext}${attachment.thumbnailURL}`;
         return (
           <span key={uniqueKey}>
             <Link
               target={'_blank'}
               href={attachmentHref}
             >
-              <img width={96} height={64} src={thumbnailURL}/>
+              <img width={96} height={64} src={thumbnailURL} alt={'preview'}/>
             </Link>
           </span>
         );
