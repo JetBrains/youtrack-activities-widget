@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-10-09 17:49\n"
+"PO-Revision-Date: 2019-10-09 18:01\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: src/app/activities-widget.js:157
+#: src/app/activities-widget.js:155
 msgid "Could not load new activities"
 msgstr ""
 
@@ -77,11 +77,11 @@ msgstr ""
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:238
+#: src/app/activities-widget.js:236
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:237
+#: src/app/activities-widget.js:235
 msgid "Issue Activity Feed —"
 msgstr ""
 
