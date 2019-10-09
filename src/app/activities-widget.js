@@ -94,7 +94,6 @@ class ActivitiesWidget extends React.Component {
     );
     if (youTrackService && youTrackService.id) {
       await this.setNewService(youTrackService);
-      await filter.sync(this.props);
       this.setState({isConfiguring: true});
     }
   }
@@ -122,7 +121,6 @@ class ActivitiesWidget extends React.Component {
     filter.youTrackId = selectedYouTrack.id;
     filter.youTrackUrl = selectedYouTrack.homeUrl;
     filter.query = await this.createDefaultQuery();
-    await filter.sync(this.props);
   };
 
   fetchYouTrack = async (url, params) => {
