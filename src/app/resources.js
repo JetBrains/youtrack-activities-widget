@@ -74,6 +74,7 @@ export async function loadActivities(fetchYouTrack, params) {
     `$skip=${skipSize}`,
     'reverse=true',
     'effective=true',
+    'imported=false',
     params.author && `author=${params.author.id}`,
     params.query && `issueQuery=${encodeURIComponent(params.query)}`,
     params.start && `start=${params.start}`,
@@ -94,6 +95,7 @@ export async function loadActivitiesPage(fetchYouTrack, params) {
     `$top=${packSize}`,
     'reverse=true',
     'effective=true',
+    'imported=false',
     params.cursor && `cursor=${encodeURIComponent(params.cursor)}`,
     params.author && `author=${params.author.id}`,
     params.query && `issueQuery=${encodeURIComponent(params.query)}`
