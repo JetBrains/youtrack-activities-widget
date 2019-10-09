@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-10-08 21:10\n"
+"PO-Revision-Date: 2019-10-09 17:43\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -77,11 +77,11 @@ msgstr ""
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:234
+#: src/app/activities-widget.js:238
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:233
+#: src/app/activities-widget.js:237
 msgid "Issue Activity Feed —"
 msgstr ""
 
