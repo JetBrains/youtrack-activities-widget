@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-10-04 21:19\n"
+"PO-Revision-Date: 2019-10-08 21:09\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
