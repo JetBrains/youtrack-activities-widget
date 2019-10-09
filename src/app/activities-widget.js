@@ -222,9 +222,13 @@ class ActivitiesWidget extends React.Component {
   };
 
   cancelConfiguration = async () => {
-    await filter.restore(this.props);
-    this.setState({isConfiguring: false});
-    await this.props.dashboardApi.exitConfigMode();
+    if (this.props.configWrapper.isNewConfig()) {
+      await this.props.dashboardApi.removeWidget();
+    } else {
+      await filter.restore(this.props);
+      this.setState({isConfiguring: false});
+      await this.props.dashboardApi.exitConfigMode();
+    }
   };
 
   getWidgetTitle = () => {
