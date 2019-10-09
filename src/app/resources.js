@@ -66,7 +66,7 @@ const ALL_CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCat
 export async function loadActivities(fetchYouTrack, params) {
   const packSize = 50;
   const skipSize = 0; //TODO implement paging
-  const categories = params.categories && params.categories.join(',');
+  const categories = params.categoriesIds && params.categoriesIds.join(',');
   const queryParams = [
     `fields=${ACTIVITIES_FIELDS}`,
     `categories=${categories || ALL_CATEGORIES}`,
@@ -88,7 +88,7 @@ const ACTIVITIES_FIELDS_PAGE = `beforeCursor,hasBefore,afterCursor,hasAfter,acti
 
 export async function loadActivitiesPage(fetchYouTrack, params) {
   const packSize = 50;
-  const categories = params.categories && params.categories.join(',');
+  const categories = params.categoriesIds && params.categoriesIds.join(',');
   const queryParams = [
     `fields=${ACTIVITIES_FIELDS_PAGE}`,
     `categories=${categories || ALL_CATEGORIES}`,

@@ -28,7 +28,7 @@ class ActivitiesFilter {
       this.author = storedFilter.author || null;
       this.youTrackId = storedFilter.youTrack.id;
       this.youTrackUrl = storedFilter.youTrack.homeUrl;
-      this.categoriesIds = storedFilter.categories;
+      this.categoriesIds = storedFilter.categoriesIds;
       this.refreshPeriod = storedFilter.refreshPeriod ||
         ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
     } catch (e) {
@@ -47,13 +47,10 @@ class ActivitiesFilter {
       avatarURL: author.avatarURL
     };
 
-    // eslint-disable-next-line max-len
-    const toConfigCategoriesIds = categories => categories && categories.map(it => it.id);
-
     return {
       query: this.query,
       author: toConfigAuthor(this.author),
-      categoriesIds: toConfigCategoriesIds(this.categoriesIds),
+      categoriesIds: this.categoriesIds.slice(),
       youTrack: {id: this.youTrackId, homeUrl: this.youTrackUrl},
       refreshPeriod: this.refreshPeriod
     };
