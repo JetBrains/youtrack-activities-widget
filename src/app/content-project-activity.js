@@ -10,8 +10,12 @@ import './style/activities-widget.scss';
 class ContentProjectActivity extends ContentDefaultActivity {
 
   toIssueId = key => {
-    const projectKey = key.project.shortName;
-    return `${projectKey}, ${projectKey}-${key.numberInProject}`;
+    if (key) {
+      const projectKey = key.project.shortName;
+      return `${projectKey}, ${projectKey}-${key.numberInProject}`;
+    } else {
+      return `[${i18n('Deleted')}]`;
+    }
   };
 
   // eslint-disable-next-line react/display-name
