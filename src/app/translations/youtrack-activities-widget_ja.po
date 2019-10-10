@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-10-10 10:05\n"
+"PO-Revision-Date: 2019-10-10 12:28\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -59,10 +59,6 @@ msgstr ""
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
-msgstr ""
-
-#: src/app/content-project-activity.js:17
-msgid "Deleted"
 msgstr ""
 
 #: src/app/components/categories.js:8
@@ -162,6 +158,10 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
+#: src/app/content-project-activity.js:17
+msgid "Unknown"
+msgstr ""
+
 #: src/app/components/categories.js:16
 msgid "VCS changes"
 msgstr ""
@@ -182,8 +182,12 @@ msgstr ""
 msgid "[Empty value]"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:15
+#: src/app/content-custom-field-activity.js:16
 msgid "[Removed field]"
+msgstr ""
+
+#: src/app/content-custom-field-activity.js:15
+msgid "[Unknown format]"
 msgstr ""
 
 #: src/app/content-work-items-activity.js:74
@@ -206,11 +210,11 @@ msgstr ""
 msgid "created issue"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:34
+#: src/app/content-custom-field-activity.js:35
 msgid "h"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:32
+#: src/app/content-custom-field-activity.js:33
 msgid "m"
 msgstr ""
 
