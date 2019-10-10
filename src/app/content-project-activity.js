@@ -14,7 +14,7 @@ class ContentProjectActivity extends ContentDefaultActivity {
       const projectKey = key.project.shortName;
       return `${projectKey}, ${projectKey}-${key.numberInProject}`;
     } else {
-      return `[${i18n('Deleted')}]`;
+      return `[${i18n('Unknown')}]`;
     }
   };
 
