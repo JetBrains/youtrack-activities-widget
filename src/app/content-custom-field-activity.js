@@ -16,7 +16,6 @@ const UNKNOWN_FORMAT = i18n('[Unknown format]');
 const REMOVED_FIELD = i18n('[Removed field]');
 const REMOVED_FIELD_TYPE = {valueType: 'removed'};
 const SIMPLE_TYPES = [
-  'removed',
   'date',
   'date and time',
   'float',
@@ -66,10 +65,19 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     }
   };
 
+  static getRemovedPresentation = value => {
+    if (value && typeof value === 'object') {
+      return value.name || UNKNOWN_FORMAT;
+    } else {
+      return value || LOST_EMPTY_VALUE;
+    }
+  };
+
   // eslint-disable-next-line complexity
   static getPresenter = fieldType => {
     switch (fieldType.valueType) {
       case 'removed':
+        return ContentCustomFieldActivity.getRemovedPresentation;
       case 'integer':
       case 'string':
       case 'float':
@@ -88,6 +96,8 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
   isSimpleValueField = fieldType => SIMPLE_TYPES.indexOf(fieldType.valueType) >= 0;
 
   isMultiValueField = fieldType => fieldType.isMultiValue;
+
+  isRemovedField = fieldType => fieldType === 'removed';
 
   extractSingleValue = values => {
     if (values && values.length) {
@@ -134,6 +144,23 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     );
   }
 
+  renderRemovedFieldValueChange(activity, presentValue) {
+    // in case of lost information about field we can only guess the type of
+    // from the kind of data in added or removed activity fields
+    const isArray = obj => (obj && Array.isArray(obj));
+    const isMulti = obj => (obj && obj.length && obj.length > 1);
+
+    if (isArray(activity.removed) || isArray(activity.added)) {
+      if (isMulti(activity.removed) || isMulti(activity.removed)) {
+        return this.renderMultiValueChange(activity, presentValue);
+      } else {
+        return this.renderSingleValueChange(activity, presentValue);
+      }
+    } else {
+      return this.renderSimpleValueChange(activity, presentValue);
+    }
+  }
+
   renderTextValueChange(activity) {
     const fieldName = activity.field.presentation;
 
@@ -163,7 +190,9 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     const presentValue = ContentCustomFieldActivity.getPresenter(fieldType);
 
     let change;
-    if (this.isSimpleValueField(fieldType)) {
+    if (this.isRemovedField(fieldType)) {
+      change = this.renderRemovedFieldValueChange(activity, presentValue);
+    } else if (this.isSimpleValueField(fieldType)) {
       change = this.renderSimpleValueChange(activity, presentValue);
     } else if (this.isMultiValueField(fieldType)) {
       change = this.renderMultiValueChange(activity, presentValue);
