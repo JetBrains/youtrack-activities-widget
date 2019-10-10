@@ -12,6 +12,7 @@ import diff from './diff';
 import CollapsibleBlock from './components/collapsible-block';
 
 const LOST_EMPTY_VALUE = i18n('[Empty value]');
+const UNKNOWN_FORMAT = i18n('[Unknown format]');
 const REMOVED_FIELD = i18n('[Removed field]');
 const REMOVED_FIELD_TYPE = {valueType: 'removed'};
 const SIMPLE_TYPES = [
@@ -49,6 +50,22 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     }
   };
 
+  static getValuePresentation = value => {
+    if (value) {
+      return value;
+    } else {
+      return LOST_EMPTY_VALUE;
+    }
+  };
+
+  static getNamePresentation = value => {
+    if (value) {
+      return value.name || UNKNOWN_FORMAT;
+    } else {
+      return LOST_EMPTY_VALUE;
+    }
+  };
+
   // eslint-disable-next-line complexity
   static getPresenter = fieldType => {
     switch (fieldType.valueType) {
@@ -56,14 +73,14 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
       case 'integer':
       case 'string':
       case 'float':
-        return value => value;
+        return ContentCustomFieldActivity.getValuePresentation;
       case 'date':
       case 'date and time':
         return ContentCustomFieldActivity.getDatePresentation;
       case 'period':
         return ContentCustomFieldActivity.getPeriodPresentation;
       default:
-        return value => value && value.name;
+        return ContentCustomFieldActivity.getNamePresentation;
     }
   };
 
@@ -71,6 +88,14 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
   isSimpleValueField = fieldType => SIMPLE_TYPES.indexOf(fieldType.valueType) >= 0;
 
   isMultiValueField = fieldType => fieldType.isMultiValue;
+
+  extractSingleValue = values => {
+    if (values && values.length) {
+      return values[0];
+    } else {
+      return null;
+    }
+  };
 
   renderMultiValueChange(activity, presentValue) {
     return (
@@ -92,9 +117,9 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
   renderSingleValueChange(activity, presentValue) {
     return (
       <span>
-        {presentValue(activity.removed[0]) || LOST_EMPTY_VALUE}
+        {presentValue(this.extractSingleValue(activity.removed))}
         {' \u27F6 '}
-        {presentValue(activity.added[0]) || LOST_EMPTY_VALUE}
+        {presentValue(this.extractSingleValue(activity.added))}
       </span>
     );
   }
@@ -102,9 +127,9 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
   renderSimpleValueChange(activity, presentValue) {
     return (
       <span>
-        {presentValue(activity.removed) || LOST_EMPTY_VALUE}
+        {presentValue(activity.removed)}
         {' \u27F6 '}
-        {presentValue(activity.added) || LOST_EMPTY_VALUE}
+        {presentValue(activity.added)}
       </span>
     );
   }
