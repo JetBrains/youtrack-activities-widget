@@ -132,8 +132,19 @@ class ActivitiesContent extends React.Component {
       case 'LinksCategory':
         return <ContentLinkActivity activity={activity}/>;
       case 'SummaryCategory':
+        return (
+          <ContentTextActivity
+            activity={activity}
+            fieldName={i18n('Summary changed')}
+          />
+        );
       case 'DescriptionCategory':
-        return <ContentTextActivity activity={activity}/>;
+        return (
+          <ContentTextActivity
+            activity={activity}
+            fieldName={i18n('Description changed')}
+          />
+        );
       case 'IssueCreatedCategory':
       case 'IssueResolvedCategory':
         return <ContentActionActivity activity={activity}/>;

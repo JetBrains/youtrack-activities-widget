@@ -1,17 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import ContentDefaultActivity from './content-default-activity';
+import CollapsibleBlock from './components/collapsible-block';
 
 import './style/activities-widget.scss';
-import CollapsibleBlock from './components/collapsible-block';
 import diff from './diff';
 
 class ContentTextActivity extends ContentDefaultActivity {
 
+  static propTypes = {
+    fieldName: PropTypes.string
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
   // eslint-disable-next-line react/display-name
   renderContent = activity => {
-    const fieldName = activity.field.presentation;
-
+    const fieldName = this.props.fieldName || activity.field.presentation;
     const formattedDiff = diff.format('wdiff-html',
       diff(activity.removed || '', activity.added || '')
     );

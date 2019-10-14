@@ -152,7 +152,7 @@
   }
 
   &__entry {
-    margin-bottom: 3 * $ring-unit;
+    padding-bottom: 3 * $ring-unit;
 
     font-size: 14px;
 
@@ -174,6 +174,8 @@
       &__avatar {
         width: 49px;
         min-width: 49px;
+
+        margin-top: 1px;
       }
 
       &__data {

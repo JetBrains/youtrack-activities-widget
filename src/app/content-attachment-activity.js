@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from '@jetbrains/ring-ui/components/link/link';
+import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import ContentDefaultActivity from './content-default-activity';
 import './style/activities-widget.scss';
@@ -73,21 +74,24 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
   }
 
   // eslint-disable-next-line react/display-name
-  renderContent = activity => (
-    <div>
-      <span className="activities-widget__activity__change__field-name activities-widget__activity__change__preview-title">
-        {`${activity.field.presentation}:`}
-      </span>
-      <span>
-        {activity.removed.map(attachment =>
-          this.renderAttachmentLink(activity, attachment, true)
-        )}
-        {activity.added.map(attachment =>
-          this.renderAttachmentLink(activity, attachment, false)
-        )}
-      </span>
-    </div>
-  );
+  renderContent = activity => {
+    const fieldName = i18n('Attachment');
+    return (
+      <div>
+        <span className="activities-widget__activity__change__field-name activities-widget__activity__change__preview-title">
+          {`${fieldName}:`}
+        </span>
+        <span>
+          {activity.removed.map(attachment =>
+            this.renderAttachmentLink(activity, attachment, true)
+          )}
+          {activity.added.map(attachment =>
+            this.renderAttachmentLink(activity, attachment, false)
+          )}
+        </span>
+      </div>
+    );
+  }
 }
 
 export default ContentAttachmentActivity;
