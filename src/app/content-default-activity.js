@@ -29,8 +29,31 @@ class ContentDefaultActivity extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({new: null}), HIGHLIGHT_TIMEOUT);
+    if (this.props.activity.new) {
+      this.setTimer();
+    }
   }
+
+  componentWillUnmount() {
+    this.clearTimer();
+  }
+
+  setTimer = () => {
+    if (this.timer) {
+      throw new Error('Timer reset is prohibited');
+    }
+    this.timer = setTimeout(() => {
+      this.setState({new: null});
+      this.timer = null;
+    }, HIGHLIGHT_TIMEOUT);
+  };
+
+  clearTimer = () => {
+    if (this.timer) {
+      clearTimeout(this.timer);
+      this.timer = null;
+    }
+  };
 
   presentChange = changes => {
     if (Array.isArray(changes)) {
