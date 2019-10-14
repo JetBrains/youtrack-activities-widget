@@ -35,7 +35,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"

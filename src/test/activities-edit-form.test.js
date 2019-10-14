@@ -33,9 +33,8 @@ describe('ActivitiesEditForm', () => {
   const mountActivitiesEditForm = () =>
     mount(
       <ActivitiesEditForm
-        title={'hello-title'}
-        onSubmit={onSubmitSpy}
-        onCancel={onCancelSpy}
+        submitConfig={onSubmitSpy}
+        cancelConfig={onCancelSpy}
         onServiceChange={onServiceChangeSpy}
         dashboardApi={dashboardApiMock}
       />
@@ -43,9 +42,8 @@ describe('ActivitiesEditForm', () => {
 
   it('should create component', () => {
     const editFormInstance = mountActivitiesEditForm().instance();
-    editFormInstance.should.be.an('object');
-    editFormInstance.state.title.should.be.equal('hello-title');
-    editFormInstance.state.isLoading.should.be.an(false);
+    (editFormInstance).should.be.an('object');
+    (editFormInstance.state.isLoading).should.equal(false);
   });
 
   it('should call cancel-callback on cancel', () => {

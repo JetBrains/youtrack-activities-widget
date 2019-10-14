@@ -238,7 +238,6 @@ class ActivitiesWidget extends React.Component {
 
   renderConfiguration = () => (
     <ActivitiesEditForm
-      title={this.state.title}
       submitConfig={this.submitConfiguration}
       cancelConfig={this.cancelConfiguration}
       onServiceChange={this.setNewService}

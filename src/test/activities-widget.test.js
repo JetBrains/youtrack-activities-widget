@@ -4,6 +4,8 @@ import React from 'react';
 
 import ActivitiesWidget from '../app/activities-widget';
 
+import filter from '../app/activities-filter';
+
 import {
   getDashboardApiMock, getRegisterWidgetApiMock
 } from './mocks';
@@ -16,6 +18,8 @@ describe('ActivitiesWidget', () => {
   beforeEach(() => {
     dashboardApiMock = getDashboardApiMock();
     registerWidgetApiMock = getRegisterWidgetApiMock();
+    filter.youTrackId = '1-1';
+    filter.youTrackUrl = 'localhost';
   });
 
   it('should export ActivitiesWidget', () => {
@@ -34,8 +38,8 @@ describe('ActivitiesWidget', () => {
     const widgetInstance = mountActivitiesWidget().instance();
 
     (widgetInstance).should.be.an('object');
-    (widgetInstance.state.isLoading).should.be.equal(true);
-    (widgetInstance.state.isConfiguring).should.be.equal(false);
+    (widgetInstance.state.isLoading).should.equal(false);
+    (widgetInstance.state.isConfiguring).should.equal(false);
   });
 
   it('should register widget api during initialization', () => {
