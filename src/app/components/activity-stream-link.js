@@ -21,13 +21,11 @@ class ActivityStreamLink extends React.Component {
 
   render() {
     return (
-      <div className="activities-widget__activity__action__stream-link">
-        <a href={this.linkToActivityItem()}>
-          <Renamed10pxIcon
-            className="activities-widget__activity__action__stream-link__icon"
-          />
-        </a>
-      </div>
+      <a href={this.linkToActivityItem()}>
+        <Renamed10pxIcon
+          className="activities-widget__stream-link-icon"
+        />
+      </a>
     );
   }
 }

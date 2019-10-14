@@ -189,7 +189,7 @@ msgstr ""
 msgid "m"
 msgstr ""
 
-#: src/app/components/activity-author-info.js:39
+#: src/app/components/activity-author-link.js:39
 msgid "updated"
 msgstr ""
 

@@ -29,7 +29,7 @@ class CollapsibleBlock extends React.Component {
   render() {
     const fieldName = this.props.fieldName;
     return (
-      <div className="activities-widget__issue">
+      <div className="activities-widget__collapsible-block">
         <div>
           <span className="activities-widget__activity__text__field-name">
             {`${fieldName}:`}

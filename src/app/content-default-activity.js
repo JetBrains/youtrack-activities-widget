@@ -5,10 +5,11 @@ import {format} from 'date-fns';
 
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
-import ActivityAuthorInfo from './components/activity-author-info';
+import ActivityAuthorLink from './components/activity-author-link';
 import ActivityIssueInfo from './components/activity-issue-info';
 import ActivityStreamLink from './components/activity-stream-link';
 import ActivityActionInfo from './components/activity-action-info';
+import ActivityAuthorAvatar from './components/activity-author-avatar';
 
 const FORMAT = 'YYYY-MM-DD HH:mm';
 const HIGHLIGHT_TIMEOUT = 5000;
@@ -60,44 +61,53 @@ class ContentDefaultActivity extends React.Component {
     const {activity} = this.props;
     const issue = activity.target.issue || activity.target;
     const getActivityClassName = () => classNames(
-      'activities-widget__activity',
-      this.state.new && 'activities-widget__activity_new'
+      'activities-widget__entry',
+      this.state.new && 'activities-widget__entry_new'
     );
 
     return (
       <div
-        key={`activity-${activity.id}`}
+        key={`entry-${activity.id}`}
         className={getActivityClassName()}
       >
-        <div className="activities-widget__activity__issue">
+        <div className="activities-widget__entry__container">
           <ActivityIssueInfo
             issue={issue}
           />
         </div>
-        <div className="activities-widget__activity__action">
-          {
-            <ActivityAuthorInfo
+        <div className="activities-widget__entry__user-activity">
+          <div className="activities-widget__entry__user-activity__avatar">
+            <ActivityAuthorAvatar
               activity={activity}
               user={this.getCustomAuthor()}
-              className={'activities-widget__activity__action'}
             />
-          }
-          {
-            <ActivityActionInfo
-              activity={activity}
-              actionTitle={this.getActionTitle()}
-            />
-          }
-          {this.canBeOpenInIssueStream() && (
-            <ActivityStreamLink
-              issue={issue}
-              activityId={activity.id}
-            />
-          )
-          }
-        </div>
-        <div className="activities-widget__activity__change">
-          {this.renderContent(activity)}
+          </div>
+          <div className="activities-widget__entry__user-activity__data">
+            <div className="activities-widget__entry__user-activity__data__header">
+              <div className="activities-widget__entry__user-activity__data__header__action">
+                <ActivityAuthorLink
+                  activity={activity}
+                  user={this.getCustomAuthor()}
+                />
+                <ActivityActionInfo
+                  activity={activity}
+                  actionTitle={this.getActionTitle()}
+                />
+              </div>
+              {this.canBeOpenInIssueStream() && (
+                <div className="activities-widget__entry__user-activity__data__header__stream-link">
+                  <ActivityStreamLink
+                    issue={issue}
+                    activityId={activity.id}
+                  />
+                </div>
+              )
+              }
+            </div>
+            <div className="activities-widget__entry__user-activity__data__content">
+              {this.renderContent(activity)}
+            </div>
+          </div>
         </div>
       </div>
     );

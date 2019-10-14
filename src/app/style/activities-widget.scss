@@ -59,6 +59,8 @@
   $left-indent: $ring-unit * 4;
   $right-indent: $ring-unit * 2;
   $small-indent: $ring-unit / 2;
+  $header-line-height: 3 * $ring-unit;
+  $content-line-height: 22px;
 
   &__load-more {
     margin: 4px 0;
@@ -83,12 +85,14 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 
+    font-weight: bold;
+
     &__id {
       white-space: nowrap;
 
       color: var(--ring-text-color);
 
-      font-size: 13px;
+      font-size: var(--ring-font-size-larger);
 
       &_resolved {
         text-decoration: line-through;
@@ -110,8 +114,45 @@
     }
   }
 
-  &__activity {
-    padding-bottom: 3 * $ring-unit;
+  &__author-avatar {
+    position: relative;
+
+    &__icon {
+      position: relative;
+    }
+
+    &__group {
+      position: absolute;
+      right: 6px;
+      bottom: 1px;
+
+      width: 14px;
+      height: 14px;
+
+      border-radius: 2px;
+    }
+  }
+
+  &__author-link {
+    margin-right: $small-indent;
+  }
+
+  &__action-name {
+    margin-right: $small-indent;
+
+    color: var(--ring-secondary-color);
+  }
+
+  &__action-time {
+    color: var(--ring-secondary-color);
+  }
+
+  &__stream-link-icon {
+    color: var(--ring-icon-color);
+  }
+
+  &__entry {
+    margin-bottom: 3 * $ring-unit;
 
     font-size: 14px;
 
@@ -119,75 +160,51 @@
       background: var(--ring-selected-background-color);
     }
 
-    &__issue {
-      margin: 0 $right-indent 0 $left-indent;
+    &__container {
+      margin-bottom: $ring-unit;
+
+      line-height: $header-line-height;
     }
 
-    &__action {
+    &__user-activity {
       display: flex;
 
       width: 100%;
 
-      &__author {
-        &__avatar {
-          position: relative;
-          bottom: -4px;
+      &__avatar {
+        width: 49px;
+        min-width: 49px;
+      }
 
-          float: left;
+      &__data {
+        flex-grow: 1;
 
-          width: $left-indent;
+        &__header {
+          display: flex;
 
-          &__group {
-            position: absolute;
-            right: 4px;
-            bottom: -1px;
+          line-height: $header-line-height;
 
-            width: 14px;
-            height: 14px;
+          &__action {
+            margin-right: $small-indent;
+          }
 
-            border-radius: 3px;
+          &__stream-link {
+            flex-grow: 1;
+
+            text-align: right;
+
+            vertical-align: baseline;
           }
         }
 
-        &__info {
-          margin: 0 0 0 $left-indent;
-          padding: $ring-unit 0 $ring-unit 0;
-
-          &__name {
-            width: $left-indent;
-          }
-        }
-      }
-
-      &__title {
-        margin-left: $ring-unit;
-        padding: $ring-unit 0 $ring-unit 0;
-
-        color: var(--ring-secondary-color);
-      }
-
-      &__time {
-        margin-left: $small-indent;
-        padding: $ring-unit 0 $ring-unit 0;
-
-        color: var(--ring-secondary-color);
-      }
-
-      &__stream-link {
-        flex: 20;
-
-        width: auto;
-
-        padding: $ring-unit 0 $ring-unit 0;
-
-        &__icon {
-          float: right;
-
-          color: var(--ring-icon-color);
+        &__content {
+          line-height: 22px;
         }
       }
     }
+  }
 
+  &__activity {
     &__change {
       margin: 0 $right-indent 0 $left-indent;
 

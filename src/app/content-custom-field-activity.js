@@ -7,7 +7,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
-import ActivityAuthorInfo from './components/activity-author-info';
+import ActivityAuthorLink from './components/activity-author-link';
 import diff from './diff';
 import CollapsibleBlock from './components/collapsible-block';
 
@@ -43,7 +43,7 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
   // eslint-disable-next-line react/display-name
   static getDatePresentation = value => {
     if (value) {
-      return format(value, ActivityAuthorInfo.FORMAT);
+      return format(value, ActivityAuthorLink.FORMAT);
     } else {
       return LOST_EMPTY_VALUE;
     }
