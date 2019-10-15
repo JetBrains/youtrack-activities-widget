@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-10-14 22:43\n"
+"PO-Revision-Date: 2019-10-15 12:47\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -25,11 +25,15 @@ msgstr ""
 msgid "Any user"
 msgstr ""
 
+#: src/app/content-attachment-activity.js:78
+msgid "Attachment"
+msgstr ""
+
 #: src/app/components/categories.js:10
 msgid "Attachments"
 msgstr ""
 
-#: src/app/activities-content.js:69
+#: src/app/activities-content.js:70
 msgid "Can't load information from service."
 msgstr ""
 
@@ -65,11 +69,15 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: src/app/activities-content.js:146
+msgid "Description changed"
+msgstr ""
+
 #: src/app/components/collapsible-block.js:40
 msgid "Details"
 msgstr ""
 
-#: src/app/activities-content.js:58
+#: src/app/activities-content.js:59
 msgid "Edit filter settings"
 msgstr ""
 
@@ -101,7 +109,7 @@ msgstr ""
 msgid "New issues"
 msgstr ""
 
-#: src/app/activities-content.js:49
+#: src/app/activities-content.js:50
 msgid "No activities found"
 msgstr ""
 
@@ -134,6 +142,7 @@ msgstr ""
 msgid "Select which types of updates are shown in the activity feed"
 msgstr ""
 
+#: src/app/components/issue-line.js:324
 #: src/app/control-load-more.js:53
 msgid "Show more"
 msgstr ""
@@ -144,6 +153,10 @@ msgstr ""
 
 #: src/app/components/categories.js:7
 msgid "Summary"
+msgstr ""
+
+#: src/app/activities-content.js:139
+msgid "Summary changed"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
@@ -206,7 +219,7 @@ msgstr ""
 msgid "committed changes"
 msgstr ""
 
-#: src/app/content-created-activity.js:18
+#: src/app/content-created-activity.js:16
 msgid "created issue"
 msgstr ""
 
@@ -218,11 +231,11 @@ msgstr ""
 msgid "m"
 msgstr ""
 
-#: src/app/content-created-activity.js:20
+#: src/app/content-resolved-activity.js:14
 msgid "resolved issue"
 msgstr ""
 
-#: src/app/content-default-activity.js:54
+#: src/app/content-default-activity.js:77
 msgid "updated"
 msgstr ""
 
