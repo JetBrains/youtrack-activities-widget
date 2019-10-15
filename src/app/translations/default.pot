@@ -48,11 +48,11 @@ msgstr ""
 msgid "Edit filter settings"
 msgstr ""
 
-#: src/app/content-action-activity.js:15
+#: src/app/content-created-activity.js:15
 msgid "Issue created"
 msgstr ""
 
-#: src/app/content-action-activity.js:17
+#: src/app/content-created-activity.js:17
 msgid "Issue resolved"
 msgstr ""
 

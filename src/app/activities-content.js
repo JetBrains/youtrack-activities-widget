@@ -18,7 +18,8 @@ import ContentLinkActivity from './content-link-activity';
 import ContentTextActivity from './content-text-activity';
 import ContentAttachmentActivity from './content-attachment-activity';
 import ContentTagActivity from './content-tag-activity';
-import ContentActionActivity from './content-action-activity';
+import ContentCreatedActivity from './content-created-activity';
+import ContentResolvedActivity from './content-resolved-activity';
 import ContentVcsChangeActivity from './content-vcs-activity';
 import ContentSprintActivity from './content-sprint-activity';
 import ContentWorkItemsActivity from './content-work-items-activity';
@@ -146,8 +147,9 @@ class ActivitiesContent extends React.Component {
           />
         );
       case 'IssueCreatedCategory':
+        return <ContentCreatedActivity activity={activity}/>;
       case 'IssueResolvedCategory':
-        return <ContentActionActivity activity={activity}/>;
+        return <ContentResolvedActivity activity={activity}/>;
       case 'VcsChangeCategory':
         return <ContentVcsChangeActivity activity={activity}/>;
       case 'WorkItemCategory':

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {i18n} from 'hub-dashboard-addons/dist/localization';
 import fecha from 'fecha';
 import Link from '@jetbrains/ring-ui/components/link/link';
 import {
@@ -45,7 +46,7 @@ class IssueLine extends React.Component {
     );
   }
 
-  static getValuePresentation(issueField, dateFromats) {
+  static getValuePresentation(issueField, dateFormats) {
     const field = issueField.projectCustomField &&
       issueField.projectCustomField.field;
     const fieldType = (field && field.fieldType && field.fieldType.valueType) ||
@@ -53,7 +54,7 @@ class IssueLine extends React.Component {
     return IssueLine.toArray(issueField.value || []).map(value => {
       if (fieldType.indexOf('date') > -1) {
         return IssueLine.getDatePresentation(
-          value, dateFromats, fieldType.indexOf('time') > -1
+          value, dateFormats, fieldType.indexOf('time') > -1
         );
       }
       return IssueLine.getName(value) || value.presentation ||
@@ -61,14 +62,12 @@ class IssueLine extends React.Component {
     }).join(', ');
   }
 
-  static toArray = value =>
-    (Array.isArray(value) ? value : [value]);
+  static toArray = value => (Array.isArray(value) ? value : [value]);
 
   static getFirstLetter = value =>
     (IssueLine.getName(value) || 'c')[0].toUpperCase();
 
-  static isColoredValue = value =>
-    value.color && value.color.id > 0;
+  static isColoredValue = value => value.color && value.color.id > 0;
 
   static getColoredSquareModel(issue) {
 
@@ -115,14 +114,14 @@ class IssueLine extends React.Component {
     return makeColorFieldPresentationObject(fieldWithColoredValues);
   }
 
-  static onOpenIssue = evt =>
-    evt.stopPropagation();
+  static onOpenIssue = evt => evt.stopPropagation();
 
   static propTypes = {
     issue: PropTypes.object,
     removed: PropTypes.bool,
     homeUrl: PropTypes.string,
-    dateFormats: PropTypes.object
+    dateFormats: PropTypes.object,
+    showMore: PropTypes.bool
   };
 
   static defaultProps = {
@@ -246,6 +245,44 @@ class IssueLine extends React.Component {
     this.setState({expanded: false});
   };
 
+  renderIssueLink(issue) {
+    return (
+      <Link
+        href={this.linkToIssue(issue)}
+        className={this.getValueClassName(issue, true)}
+      >
+        <span className={this.getValueClassName(issue, false)}>
+          {issue.idReadable}
+        </span>
+        <span
+          className="activities-widget__issue-card__header__link__summary"
+        >
+          {issue.summary}
+        </span>
+      </Link>
+    );
+  }
+
+  getOnClick(expanded) {
+    return expanded ? this.closeFields : this.getFieldsAndExpand;
+  }
+
+  renderChevron(expanded, color) {
+    return expanded ? (
+      <ChevronUpIcon
+        size={ChevronUpIcon.Size.Size14}
+        color={color}
+        onClick={this.getOnClick(expanded)}
+      />
+    ) : (
+      <ChevronDownIcon
+        size={ChevronDownIcon.Size.Size14}
+        color={color}
+        onClick={this.getOnClick(expanded)}
+      />
+    );
+  }
+
   render() {
     const {
       issue,
@@ -253,58 +290,55 @@ class IssueLine extends React.Component {
       expanded
     } = this.state;
 
+    const {showMore} = this.props;
+
     return (
-      <div>
+      <div className="activities-widget__issue-card">
         <div
-          className="activities-widget__activity__link__change__item"
+          className="activities-widget__issue-card__header"
           key={issue.id}
         >
-          <div className="activities-widget__activity__link__change__id-summary">
-            <Link
-              href={this.linkToIssue(issue)}
-              className={this.getValueClassName(issue, true)}
-            >
-              <span
-                className={this.getValueClassName(issue, false)}
-              >
-                {issue.idReadable}
-              </span>
-              <span className="activities-widget__issue__summary_text">
-                {issue.summary}
-              </span>
-            </Link>
-          </div>
-          <span className="issue-card-panel__issue-toggler">
-            {
-              expanded
-                ? (
-                  <ChevronUpIcon
-                    size={ChevronUpIcon.Size.Size14}
-                    color={ChevronUpIcon.Color.GRAY}
-                    onClick={this.closeFields}
-                  />
-                )
-                : (
-                  <ChevronDownIcon
-                    size={ChevronDownIcon.Size.Size14}
-                    color={ChevronDownIcon.Color.GRAY}
-                    onClick={this.getFieldsAndExpand}
-                  />
-                )
-            }
-          </span>
           {
-            expanded &&
-            (
-              <div
-                className="issue-card-panel__issue-expanded-block"
-                data-test="issue-line-expanded-block"
-              >
-                {this.renderFields(valuableFields)}
+            !showMore && (
+              <React.Fragment>
+                <div className="activities-widget__issue-card__header__link">
+                  {this.renderIssueLink(issue)}
+                </div>
+                <div className="activities-widget__issue-card__header__toggle">
+                  <span className="issue-card-paznel__issue-toggle">
+                    {this.renderChevron(expanded, ChevronUpIcon.Color.GRAY)}
+                  </span>
+                </div>
+              </React.Fragment>
+            )
+          }
+          {
+            showMore && (
+              <div className="activities-widget__issue-card__header__toggle">
+                <a
+                  className="issue-card-panel__issue-toggle"
+                  onClick={this.getOnClick(expanded)}
+                >
+                  {this.renderChevron(expanded, ChevronUpIcon.Color.BLUE)}
+                  <span className="issue-card-panel__issue-toggle__text">
+                    {i18n('Show more')}
+                  </span>
+                </a>
               </div>
             )
           }
         </div>
+        {
+          expanded &&
+          (
+            <div
+              className="issue-card-panel__issue-expanded-block"
+              data-test="issue-line-expanded-block"
+            >
+              {this.renderFields(valuableFields)}
+            </div>
+          )
+        }
       </div>
     );
   }

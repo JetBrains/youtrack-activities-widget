@@ -60,7 +60,6 @@
   $right-indent: $ring-unit * 2;
   $small-indent: $ring-unit / 2;
   $header-line-height: 3 * $ring-unit;
-  $content-line-height: 22px;
 
   &__load-more {
     margin: 4px 0;
@@ -84,8 +83,6 @@
 
     white-space: nowrap;
     text-overflow: ellipsis;
-
-    font-weight: bold;
 
     &__id {
       white-space: nowrap;
@@ -151,6 +148,34 @@
     color: var(--ring-icon-color);
   }
 
+  &__issue-card {
+    &__header {
+      display: flex;
+
+      &__link {
+        display: block;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+
+        &__summary {
+          margin-left: $small-indent;
+        }
+      }
+
+      &__toggle {
+        margin-left: $small-indent;
+
+        text-align: left;
+
+        vertical-align: baseline;
+      }
+    }
+  }
+
   &__entry {
     padding-bottom: 3 * $ring-unit;
 
@@ -163,6 +188,8 @@
     &__container {
       margin-bottom: $ring-unit;
 
+      font-weight: bold;
+
       line-height: $header-line-height;
     }
 
@@ -174,8 +201,6 @@
       &__avatar {
         width: 49px;
         min-width: 49px;
-
-        margin-top: 1px;
       }
 
       &__data {
@@ -270,56 +295,14 @@
         margin-right: $ring-unit;
 
         white-space: nowrap;
-      }
 
-      &__field-removed {
-        white-space: nowrap;
-        text-decoration: line-through;
+        &_removed {
+          text-decoration: line-through;
+        }
       }
 
       &__change {
-        overflow: hidden;
-
-        width: 100%;
-
-        white-space: nowrap;
-
-        text-overflow: ellipsis;
-
-        :first-child {
-          margin-left: 0;
-        }
-
-        &__id-summary {
-          display: inline-block;
-          overflow: hidden;
-
-          max-width: 90%;
-
-          text-overflow: ellipsis;
-        }
-
-        &__item {
-          overflow: hidden;
-
-          margin-left: 0;
-
-          white-space: nowrap;
-
-          text-overflow: ellipsis;
-        }
-
-        &__value {
-          margin-left: $ring-unit;
-
-          &_added {
-            //TODO
-          }
-
-          &_removed {
-            text-decoration: line-through;
-          }
-        }
+        flex-grow: 1;
       }
     }
 
@@ -451,37 +434,18 @@
     line-height: 13px;
   }
 
-  &__issue-toggler {
-    position: relative;
-
-    top: -3px;
-    right: 0;
-
-    width: 3 * $ring-unit;
-
+  &__issue-toggle {
     cursor: pointer;
 
-    white-space: nowrap;
+    &__text {
+      margin-left: $ring-unit / 2;
 
-    background-color: var(--ring-content-background-color);
-
-    .issues-list-widget__issue_highlighted & {
-      display: inline-block;
-    }
-
-    .issues-list-widget__issue_expanded & {
-      top: 0;
-
-      display: inline-block;
+      color: var(--ring-main-color);
     }
   }
 
   &__issue-summary {
     margin-left: $ring-unit;
-  }
-
-  .issues-list-widget__issue-summary.issues-list-widget__issue-summary_resolved {
-    color: var(--ring-secondary-color);
   }
 
   &__fields {

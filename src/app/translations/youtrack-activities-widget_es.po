@@ -206,7 +206,7 @@ msgstr ""
 msgid "committed changes"
 msgstr ""
 
-#: src/app/content-action-activity.js:18
+#: src/app/content-created-activity.js:18
 msgid "created issue"
 msgstr ""
 
@@ -218,7 +218,7 @@ msgstr ""
 msgid "m"
 msgstr ""
 
-#: src/app/content-action-activity.js:20
+#: src/app/content-created-activity.js:20
 msgid "resolved issue"
 msgstr ""
 
