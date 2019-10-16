@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-10-15 12:48\n"
+"PO-Revision-Date: 2019-10-16 14:12\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -203,7 +203,7 @@ msgstr ""
 msgid "[Unknown format]"
 msgstr ""
 
-#: src/app/content-work-items-activity.js:74
+#: src/app/content-work-items-activity.js:75
 msgid "added work item"
 msgstr ""
 
@@ -211,15 +211,15 @@ msgstr ""
 msgid "am|pm"
 msgstr ""
 
-#: src/app/content-comment-activity.js:21
+#: src/app/content-comment-activity.js:22
 msgid "commented"
 msgstr ""
 
-#: src/app/content-vcs-activity.js:21
+#: src/app/content-vcs-activity.js:22
 msgid "committed changes"
 msgstr ""
 
-#: src/app/content-created-activity.js:16
+#: src/app/content-created-activity.js:17
 msgid "created issue"
 msgstr ""
 
@@ -231,11 +231,15 @@ msgstr ""
 msgid "m"
 msgstr ""
 
-#: src/app/content-resolved-activity.js:14
+#: src/app/content-resolved-activity.js:20
+msgid "reopened issue"
+msgstr ""
+
+#: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
 msgstr ""
 
-#: src/app/content-default-activity.js:77
+#: src/app/content-default-activity.js:78
 msgid "updated"
 msgstr ""
 
