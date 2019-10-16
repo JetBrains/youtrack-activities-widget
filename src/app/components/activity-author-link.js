@@ -29,22 +29,25 @@ class ActivityAuthorLink extends React.Component {
   render() {
     const {activity} = this.props;
     const author = this.props.user || activity.author;
-    const cardUser = this.toCardUser(author);
 
-    return (
-      <span className="activities-widget__author-link">
-        <UserCardTooltip
-          user={cardUser}
-        >
-          <Link
-            className="activities-widget__author-link__name"
-            href={cardUser.href}
-          >
-            {author.fullName}
-          </Link>
-        </UserCardTooltip>
-      </span>
-    );
+    if (author.isLocked) {
+      return (
+        <span className="activities-widget__author-link">
+          {author.fullName}
+        </span>
+      );
+    } else {
+      const cardUser = this.toCardUser(author);
+      return (
+        <span className="activities-widget__author-link">
+          <UserCardTooltip user={cardUser}>
+            <Link href={cardUser.href}>
+              {author.fullName}
+            </Link>
+          </UserCardTooltip>
+        </span>
+      );
+    }
   }
 }
 

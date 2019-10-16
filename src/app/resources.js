@@ -36,7 +36,7 @@ export async function loadConfigL10n(fetchYouTrack) {
 }
 
 const ISSUE = 'id,idReadable,summary,resolved';
-const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,online)';
+const AUTHOR = 'author(id,login,email,fullName,avatarUrl,ringId,isLocked)';
 const CHANGED_VALUES = [
   'id,name',
   'text',
