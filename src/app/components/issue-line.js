@@ -5,8 +5,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import fecha from 'fecha';
 import Link from '@jetbrains/ring-ui/components/link/link';
 import {
-  ChevronDownIcon,
-  ChevronUpIcon
+  ChevronDownIcon, ChevronRightIcon
 } from '@jetbrains/ring-ui/components/icon';
 
 import filter from '../activities-filter';
@@ -269,14 +268,14 @@ class IssueLine extends React.Component {
 
   renderChevron(expanded, color) {
     return expanded ? (
-      <ChevronUpIcon
-        size={ChevronUpIcon.Size.Size14}
+      <ChevronDownIcon
+        size={ChevronDownIcon.Size.Size14}
         color={color}
         onClick={this.getOnClick(expanded)}
       />
     ) : (
-      <ChevronDownIcon
-        size={ChevronDownIcon.Size.Size14}
+      <ChevronRightIcon
+        size={ChevronRightIcon.Size.Size14}
         color={color}
         onClick={this.getOnClick(expanded)}
       />
@@ -301,13 +300,13 @@ class IssueLine extends React.Component {
           {
             !showMore && (
               <React.Fragment>
+                <div className="activities-widget__issue-card__header__toggle">
+                  <span className="issue-card-panel__issue-toggle">
+                    {this.renderChevron(expanded, ChevronDownIcon.Color.GRAY)}
+                  </span>
+                </div>
                 <div className="activities-widget__issue-card__header__link">
                   {this.renderIssueLink(issue)}
-                </div>
-                <div className="activities-widget__issue-card__header__toggle">
-                  <span className="issue-card-paznel__issue-toggle">
-                    {this.renderChevron(expanded, ChevronUpIcon.Color.GRAY)}
-                  </span>
                 </div>
               </React.Fragment>
             )
@@ -319,7 +318,7 @@ class IssueLine extends React.Component {
                   className="issue-card-panel__issue-toggle"
                   onClick={this.getOnClick(expanded)}
                 >
-                  {this.renderChevron(expanded, ChevronUpIcon.Color.BLUE)}
+                  {this.renderChevron(expanded, ChevronDownIcon.Color.BLUE)}
                   <span className="issue-card-panel__issue-toggle__text">
                     {i18n('Show more')}
                   </span>
