@@ -13,7 +13,8 @@ class ContentCreatedActivity extends ContentDefaultActivity {
     super(props);
   }
 
-  getActionTitle = () => i18n('created issue');
+  // eslint-disable-next-line no-unused-vars
+  getActionTitle = activity => i18n('created issue');
 
   // eslint-disable-next-line react/display-name,no-unused-vars
   renderContent = activity => {

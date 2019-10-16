@@ -18,7 +18,8 @@ class ContentCommentActivity extends ContentDefaultActivity {
 
   canBeOpenInIssueStream = () => true;
 
-  getActionTitle = () => i18n('commented');
+  // eslint-disable-next-line no-unused-vars
+  getActionTitle = activity => i18n('commented');
 }
 
 

@@ -74,7 +74,8 @@ class ContentDefaultActivity extends React.Component {
     </div>
   );
 
-  getActionTitle = () => i18n('updated');
+  // eslint-disable-next-line no-unused-vars
+  getActionTitle = activity => i18n('updated');
 
   getCustomAuthor = () => null;
 
@@ -114,7 +115,7 @@ class ContentDefaultActivity extends React.Component {
                 />
                 <ActivityActionInfo
                   activity={activity}
-                  actionTitle={this.getActionTitle()}
+                  actionTitle={this.getActionTitle(activity)}
                 />
               </div>
               {this.canBeOpenInIssueStream() && (

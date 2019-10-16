@@ -13,20 +13,50 @@ class ContentResolvedActivity extends ContentDefaultActivity {
     super(props);
   }
 
-  getActionTitle = () => i18n('resolved issue');
+  getActionTitle = activity => {
+    if (activity.added) {
+      return i18n('resolved issue');
+    } else {
+      return i18n('reopened issue');
+    }
+  };
 
   // eslint-disable-next-line react/display-name,no-unused-vars
   renderContent = activity => {
-    const issue = activity.target;
-    return (
-      <div>
-        <IssueLine
-          issue={issue}
-          key={`${activity.id}${issue.id}`}
-          showMore
-        />
-      </div>
-    );
+    const stateActivity = activity.assistantActivities.filter(a => a.field &&
+        a.field.customField &&
+        a.field.customField.fieldType &&
+        a.field.customField.fieldType.valueType === 'state'
+    )[0];
+    if (stateActivity) {
+      const fieldName = stateActivity.field.customField.name;
+      const fieldValue = stateActivity.added &&
+        stateActivity.added.length &&
+        stateActivity.added[0].name;
+
+      return (
+        <div>
+          <span className="activities-widget__activity__change__field-name">
+            {`${fieldName}:`}
+          </span>
+          <span>
+            {fieldValue}
+          </span>
+        </div>
+      );
+    } else {
+      const issue = activity.target;
+
+      return (
+        <div>
+          <IssueLine
+            issue={issue}
+            key={`${activity.id}${issue.id}`}
+            showMore
+          />
+        </div>
+      );
+    }
   }
 }
 

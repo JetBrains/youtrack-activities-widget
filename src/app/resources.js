@@ -59,8 +59,9 @@ const REM = `removed(${CHANGE})`;
 const TARGET = `target(${ISSUE},issue(${ISSUE}))`;
 const FIELD = 'field(presentation,customField(name,fieldType(valueType,isMultiValue)))';
 const CONTAINER = 'container(id,trimmedDescription)';
+const ASSISTANT = `assistantActivities(id,${FIELD},added(id,name),removed(id,name))`;
 // eslint-disable-next-line max-len
-const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${FIELD},${CONTAINER}`;
+const ACTIVITIES_FIELDS = `id,timestamp,category(id),${TARGET},${AUTHOR},${ADD},${REM},${FIELD},${CONTAINER},${ASSISTANT}`;
 // eslint-disable-next-line max-len
 const ALL_CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 

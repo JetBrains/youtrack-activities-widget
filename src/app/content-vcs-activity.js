@@ -18,7 +18,8 @@ class ContentVcsChangeActivity extends ContentDefaultActivity {
 
   getCommitUrl = change => change.urls[0];
 
-  getActionTitle = () => i18n('committed changes');
+  // eslint-disable-next-line no-unused-vars
+  getActionTitle = activity => i18n('committed changes');
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => (

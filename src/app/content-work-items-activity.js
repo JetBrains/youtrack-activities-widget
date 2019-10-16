@@ -71,7 +71,8 @@ class ContentWorkItemsActivity extends ContentDefaultActivity {
     );
   };
 
-  getActionTitle = () => i18n('added work item');
+  // eslint-disable-next-line no-unused-vars
+  getActionTitle = activity => i18n('added work item');
 
   getCustomAuthor = () => this.props.activity.added[0].author;
 }
