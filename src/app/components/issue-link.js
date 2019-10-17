@@ -38,18 +38,23 @@ class IssueLink extends React.Component {
       return classNames(valueClass, modClass);
     };
 
+    const issueHref = this.linkToIssue(issue);
     return (
-      <Link
-        href={this.linkToIssue(issue)}
-        className="aw__issue"
-      >
-        <span className={getLinkClassName(false)}>
+      <div className="aw__issue">
+        <Link
+          className={getLinkClassName(false)}
+          href={issueHref}
+        >
           {issue.idReadable}
-        </span>
-        <span className={getLinkClassName(true)}>
+        </Link>
+        <Link
+          key={`issue-summary-${issue.id}`}
+          className={getLinkClassName(true)}
+          href={issueHref}
+        >
           {issue.summary}
-        </span>
-      </Link>
+        </Link>
+      </div>
     );
   }
 }

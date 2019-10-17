@@ -152,22 +152,18 @@
     &__header {
       display: flex;
 
-      &__link {
-        display: block;
-
-        overflow: hidden;
-
-        white-space: nowrap;
-
-        text-overflow: ellipsis;
-      }
-
       &__toggle {
         margin-right: $small-indent;
 
         text-align: left;
 
         vertical-align: baseline;
+      }
+
+      &__link {
+        flex-grow: 1;
+
+        width: 100px;
       }
     }
   }
