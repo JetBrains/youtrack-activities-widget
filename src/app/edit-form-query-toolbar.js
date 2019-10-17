@@ -57,8 +57,8 @@ class EditFormQueryToolbar extends React.Component {
     const {query} = filter;
 
     return (
-      <div className="activities-widget__issue-filter">
-        <div className="activities-widget__issue-filter__query">
+      <div className="aw__issue-filter">
+        <div className="aw__issue-filter__query">
           <QueryAssist
             query={query}
             placeholder={i18n('Enter a search query')}

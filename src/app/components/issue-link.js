@@ -28,8 +28,8 @@ class IssueLink extends React.Component {
 
     const getLinkClassName = isSummary => {
       const valueClass = isSummary
-        ? 'activities-widget__issue__summary'
-        : 'activities-widget__issue__id';
+        ? 'aw__issue__summary'
+        : 'aw__issue__id';
       const resolved = issue.resolved !== undefined && issue.resolved !== null;
       const modClass = resolved
         ? `${valueClass}_resolved`
@@ -41,7 +41,7 @@ class IssueLink extends React.Component {
     return (
       <Link
         href={this.linkToIssue(issue)}
-        className="activities-widget__issue"
+        className="aw__issue"
       >
         <span className={getLinkClassName(false)}>
           {issue.idReadable}

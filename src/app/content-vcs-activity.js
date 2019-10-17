@@ -24,7 +24,7 @@ class ContentVcsChangeActivity extends ContentDefaultActivity {
   // eslint-disable-next-line react/display-name
   renderContent = activity => (
     <div>
-      <div className="activities-widget__activity__vcs_change_link">
+      <div className="aw__activity__vcs_change_link">
         <Link href={this.getCommitUrl(activity.added[0])} target={'_blank'} >
           {this.getCommitHash(activity.added[0])}
         </Link>

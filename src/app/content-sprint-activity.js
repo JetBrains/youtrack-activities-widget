@@ -15,7 +15,7 @@ class ContentSprintActivity extends ContentDefaultActivity {
     <span key={`${sprint.id}-${removed}`}>
       <Link
         href={`${filter.youTrackUrl}/agiles/${sprint.agile.id}/${sprint.id}`}
-        className={removed ? 'activities-widget__activity__change__removed' : ''}
+        className={removed ? 'aw__activity__change__removed' : ''}
       >
         {sprint.name}
       </Link>
@@ -31,7 +31,7 @@ class ContentSprintActivity extends ContentDefaultActivity {
     return (
       <div key={activity.id}>
         <span>
-          <span className="activities-widget__activity__change__field-name">
+          <span className="aw__activity__change__field-name">
             {`${fieldName}:`}
           </span>
           {activity.removed.map(sprint =>

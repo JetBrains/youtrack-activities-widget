@@ -27,7 +27,7 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
     if (removed) {
       return (
         <span
-          className="activities-widget__activity__change__removed"
+          className="aw__activity__change__removed"
           key={uniqueKey}
         >
           {attachment.name}
@@ -78,7 +78,7 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
     const fieldName = i18n('Attachment');
     return (
       <div>
-        <span className="activities-widget__activity__change__field-name activities-widget__activity__change__preview-title">
+        <span className="aw__activity__change__field-name aw__activity__change__preview-title">
           {`${fieldName}:`}
         </span>
         <span>

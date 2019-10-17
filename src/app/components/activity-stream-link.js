@@ -23,7 +23,7 @@ class ActivityStreamLink extends React.Component {
     return (
       <a href={this.linkToActivityItem()}>
         <Renamed10pxIcon
-          className="activities-widget__stream-link-icon"
+          className="aw__stream-link-icon"
         />
       </a>
     );

@@ -21,10 +21,10 @@ class ActivityActionInfo extends React.Component {
 
     return (
       <React.Fragment>
-        <span className="activities-widget__action-name">
+        <span className="aw__action-name">
           {actionTitle}
         </span>
-        <span className="activities-widget__action-time">
+        <span className="aw__action-time">
           {format(timestamp, ActivityActionInfo.FORMAT)}
         </span>
       </React.Fragment>

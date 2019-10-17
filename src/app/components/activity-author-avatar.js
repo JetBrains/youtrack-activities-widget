@@ -18,16 +18,16 @@ class ActivityAuthorAvatar extends React.Component {
     const author = this.props.user || activity.author;
 
     return (
-      <div className="activities-widget__author-avatar">
+      <div className="aw__author-avatar">
         <Avatar
-          className="activities-widget__author-avatar__icon"
+          className="aw__author-avatar__icon"
           size={Size.Size40}
           url={author.avatarUrl}
         />
         {
           activity.authorGroup && (
             <img
-              className="activities-widget__author-avatar__group"
+              className="aw__author-avatar__group"
               src={activity.authorGroup.icon}
               alt=""
             />

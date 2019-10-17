@@ -82,7 +82,7 @@ class ActivitiesContent extends React.Component {
   };
 
   renderBody = () => (
-    <div className="activities-widget">
+    <div className="aw">
       {
         this.props.loadingError.incrementalUpdate &&
         (

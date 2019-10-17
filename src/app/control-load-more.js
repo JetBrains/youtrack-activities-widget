@@ -40,7 +40,7 @@ class ControlLoadMore extends React.Component {
 
   render() {
     return (
-      <div className="activities-widget__load-more">
+      <div className="aw__load-more">
         {
           this.state.isLoadingMore && (
             <LoaderInline/>

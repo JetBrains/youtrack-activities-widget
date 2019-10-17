@@ -16,14 +16,14 @@ class ContentLinkActivity extends ContentDefaultActivity {
 
     return (
       <React.Fragment>
-        <div className="activities-widget__activity__link">
+        <div className="aw__activity__link">
           {
             addedLinks.length > 0 && (
               <React.Fragment>
-                <div className="activities-widget__activity__link__field-name">
+                <div className="aw__activity__link__field-name">
                   {`${fieldName}:`}
                 </div>
-                <div className="activities-widget__activity__link__change">
+                <div className="aw__activity__link__change">
                   {addedLinks.map(issue => (
                     <IssueCard
                       issue={issue}
@@ -36,16 +36,16 @@ class ContentLinkActivity extends ContentDefaultActivity {
             )
           }
         </div>
-        <div className="activities-widget__activity__link">
+        <div className="aw__activity__link">
           {
             removedLinks.length > 0 && (
               <React.Fragment>
-                <div className="activities-widget__activity__link__field-name">
-                  <span className="activities-widget__activity__link__field-name_removed">
+                <div className="aw__activity__link__field-name">
+                  <span className="aw__activity__link__field-name_removed">
                     {fieldName}
                   </span>{':'}
                 </div>
-                <div className="activities-widget__activity__link__change">
+                <div className="aw__activity__link__change">
                   {removedLinks.map(issue => (
                     <IssueCard
                       issue={issue}

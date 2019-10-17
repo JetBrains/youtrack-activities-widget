@@ -32,14 +32,14 @@ class ActivityAuthorLink extends React.Component {
 
     if (author.isLocked) {
       return (
-        <span className="activities-widget__author-link">
+        <span className="aw__author-link">
           {author.fullName}
         </span>
       );
     } else {
       const cardUser = this.toCardUser(author);
       return (
-        <span className="activities-widget__author-link">
+        <span className="aw__author-link">
           <UserCardTooltip user={cardUser}>
             <Link href={cardUser.href}>
               {author.fullName}

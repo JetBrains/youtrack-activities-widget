@@ -25,9 +25,9 @@ class ContentTextActivity extends ContentDefaultActivity {
     );
 
     return (
-      <div className="activities-widget__activity__text">
+      <div className="aw__activity__text">
         <CollapsibleBlock fieldName={fieldName}>
-          <div className="activities-widget__activity__text__value">
+          <div className="aw__activity__text__value">
             <span dangerouslySetInnerHTML={{__html: formattedDiff}}/>
           </div>
         </CollapsibleBlock>

@@ -89,7 +89,7 @@ class ActivitiesEditForm extends React.Component {
         onSave={this.props.submitConfig}
         onCancel={this.props.cancelConfig}
       >
-        <div className="activities-widget">
+        <div className="aw">
           {
             <EditFormYoutrackSelector
               dashboardApi={this.props.dashboardApi}

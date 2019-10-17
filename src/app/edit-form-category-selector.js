@@ -49,11 +49,11 @@ class EditFormCategorySelector extends React.Component {
   render() {
     const {data, selection} = this.state;
     return (
-      <div className="activities-widget__category-selector">
-        <div className="activities-widget__category-selector__title">
+      <div className="aw__category-selector">
+        <div className="aw__category-selector__title">
           {i18n('Activity Categories')}
         </div>
-        <div className="activities-widget__category-selector__info">
+        <div className="aw__category-selector__info">
           {i18n('Select which types of updates are shown in the activity feed')}
         </div>
         <Table

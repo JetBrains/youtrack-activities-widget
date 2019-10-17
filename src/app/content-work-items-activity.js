@@ -16,7 +16,7 @@ class ContentWorkItemsActivity extends ContentDefaultActivity {
   static FORMAT = 'DD MMM YYYY';
 
   getCellClassName = cellName => {
-    const cellClass = 'activities-widget__activity__work_item__cell';
+    const cellClass = 'aw__activity__work_item__cell';
     return classNames(cellClass, `${cellClass}_${cellName}`);
   };
 
@@ -50,7 +50,7 @@ class ContentWorkItemsActivity extends ContentDefaultActivity {
   renderContent = activity => {
     const item = activity.added[0];
     return (
-      <div className="activities-widget__activity__work_item__container">
+      <div className="aw__activity__work_item__container">
         <div className={this.getCellClassName('date')}>
           <span>{format(item.date, ContentWorkItemsActivity.FORMAT)}</span>
         </div>

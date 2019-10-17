@@ -36,7 +36,7 @@ class ContentResolvedActivity extends ContentDefaultActivity {
 
       return (
         <div>
-          <span className="activities-widget__activity__change__field-name">
+          <span className="aw__activity__change__field-name">
             {`${fieldName}:`}
           </span>
           <span>

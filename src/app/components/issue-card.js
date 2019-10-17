@@ -264,20 +264,20 @@ class IssueCard extends React.Component {
     const {showMore} = this.props;
 
     return (
-      <div className="activities-widget__issue-card">
+      <div className="aw__issue-card">
         <div
-          className="activities-widget__issue-card__header"
+          className="aw__issue-card__header"
           key={issue.id}
         >
           {
             !showMore && (
               <React.Fragment>
-                <div className="activities-widget__issue-card__header__toggle">
+                <div className="aw__issue-card__header__toggle">
                   <span className="issue-card-panel__issue-toggle">
                     {this.renderChevron(expanded, ChevronDownIcon.Color.GRAY)}
                   </span>
                 </div>
-                <div className="activities-widget__issue-card__header__link">
+                <div className="aw__issue-card__header__link">
                   <IssueLink issue={issue}/>
                 </div>
               </React.Fragment>
@@ -285,7 +285,7 @@ class IssueCard extends React.Component {
           }
           {
             showMore && (
-              <div className="activities-widget__issue-card__header__toggle">
+              <div className="aw__issue-card__header__toggle">
                 <a
                   className="issue-card-panel__issue-toggle"
                   onClick={this.getOnClick(expanded)}

@@ -29,18 +29,20 @@ class CollapsibleBlock extends React.Component {
   render() {
     const fieldName = this.props.fieldName;
     return (
-      <div className="activities-widget__collapsible-block">
+      <div className="aw__collapsible-block">
         <div>
-          <span className="activities-widget__activity__text__field-name">
+          <span className="aw__activity__text__field-name">
             {`${fieldName}:`}
           </span>
           <ClickableLink onClick={this.toggleExpanded}>
             {this.state.expanded && <CaretDown10pxIcon/>}
             {!this.state.expanded && <CaretRight10pxIcon/>}
-            <span className="activities-widget__activity__text__field-details">{i18n('Details')}</span>
+            <span className="aw__activity__text__field-details">
+              {i18n('Details')}
+            </span>
           </ClickableLink>
         </div>
-        <div className="activities-widget__activity__text__value">
+        <div className="aw__activity__text__value">
           {this.state.expanded && this.props.children}
         </div>
       </div>

@@ -34,8 +34,11 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     const hoursPresentation = hours ? (hours + i18n('h')) : '';
     return (
       <React.Fragment>
-        <span className="activities-widget__activity__work_item__period_hours">{hoursPresentation}</span>&nbsp;
-        <span className="activities-widget__activity__work_item__period_minutes">{minutesPresentation}</span>
+        <span className="aw__activity__work_item__period_hours">
+          {hoursPresentation}
+        </span>&nbsp;<span className="aw__activity__work_item__period_minutes">
+          {minutesPresentation}
+        </span>
       </React.Fragment>
     );
   };
@@ -111,12 +114,12 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     return (
       <span>
         <span
-          className="activities-widget__activity__change__added"
+          className="aw__activity__change__added"
         >
           {activity.added.map(presentValue).join(',')}
         </span>
         <span
-          className="activities-widget__activity__change__removed"
+          className="aw__activity__change__removed"
         >
           {activity.removed.map(presentValue).join(',')}
         </span>
@@ -169,9 +172,9 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     );
 
     return (
-      <div className="activities-widget__activity__text">
+      <div className="aw__activity__text">
         <CollapsibleBlock fieldName={fieldName}>
-          <div className="activities-widget__activity__text__value">
+          <div className="aw__activity__text__value">
             <span dangerouslySetInnerHTML={{__html: formattedDiff}}/>
           </div>
         </CollapsibleBlock>
@@ -204,7 +207,7 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
 
     return (
       <div>
-        <span className="activities-widget__activity__change__field-name">
+        <span className="aw__activity__change__field-name">
           {`${fieldName}:`}
         </span>{change}
       </div>

@@ -85,8 +85,8 @@ class ContentDefaultActivity extends React.Component {
     const {activity} = this.props;
     const issue = activity.target.issue || activity.target;
     const getActivityClassName = () => classNames(
-      'activities-widget__entry',
-      this.state.new && 'activities-widget__entry_new'
+      'aw__entry',
+      this.state.new && 'aw__entry_new'
     );
 
     return (
@@ -94,19 +94,19 @@ class ContentDefaultActivity extends React.Component {
         key={`entry-${activity.id}`}
         className={getActivityClassName()}
       >
-        <div className="activities-widget__entry__container">
+        <div className="aw__entry__container">
           <IssueLink issue={issue}/>
         </div>
-        <div className="activities-widget__entry__user-activity">
-          <div className="activities-widget__entry__user-activity__avatar">
+        <div className="aw__entry__user-activity">
+          <div className="aw__entry__user-activity__avatar">
             <ActivityAuthorAvatar
               activity={activity}
               user={this.getCustomAuthor()}
             />
           </div>
-          <div className="activities-widget__entry__user-activity__data">
-            <div className="activities-widget__entry__user-activity__data__header">
-              <div className="activities-widget__entry__user-activity__data__header__action">
+          <div className="aw__entry__user-activity__data">
+            <div className="aw__entry__user-activity__data__header">
+              <div className="aw__entry__user-activity__data__header__action">
                 <ActivityAuthorLink
                   activity={activity}
                   user={this.getCustomAuthor()}
@@ -117,7 +117,7 @@ class ContentDefaultActivity extends React.Component {
                 />
               </div>
               {this.canBeOpenInIssueStream() && (
-                <div className="activities-widget__entry__user-activity__data__header__stream-link">
+                <div className="aw__entry__user-activity__data__header__stream-link">
                   <ActivityStreamLink
                     issue={issue}
                     activityId={activity.id}
@@ -126,7 +126,7 @@ class ContentDefaultActivity extends React.Component {
               )
               }
             </div>
-            <div className="activities-widget__entry__user-activity__data__content">
+            <div className="aw__entry__user-activity__data__content">
               {this.renderContent(activity)}
             </div>
           </div>

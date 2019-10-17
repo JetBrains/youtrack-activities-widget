@@ -11,18 +11,26 @@ class ContentTagActivity extends ContentDefaultActivity {
   renderContent = activity => (
     <div key={activity.id}>
       <span>
-        <span className="activities-widget__activity__change__field-name">
+        <span className="aw__activity__change__field-name">
           {`${activity.field.presentation}:`}
         </span>
         {activity.removed.map(tag =>
-          (<span key={tag.id} className="activities-widget__activity__change__removed">{tag.name}</span>)
+          (
+            <span key={tag.id} className="aw__activity__change__removed">
+              {tag.name}
+            </span>
+          )
         )}
         {activity.added.map(tag =>
-          (<span key={tag.id}>{tag.name}</span>)
+          (
+            <span key={tag.id}>
+              {tag.name}
+            </span>
+          )
         )}
       </span>
     </div>
-  )
+  );
 }
 
 export default ContentTagActivity;
