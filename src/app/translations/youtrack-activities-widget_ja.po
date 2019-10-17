@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-10-17 12:26\n"
+"PO-Revision-Date: 2019-10-17 16:30\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Description changed"
 msgstr ""
 
-#: src/app/components/collapsible-block.js:40
+#: src/app/components/collapsible-block.js:41
 msgid "Details"
 msgstr ""
 
