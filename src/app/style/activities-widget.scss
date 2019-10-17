@@ -160,10 +160,6 @@
         white-space: nowrap;
 
         text-overflow: ellipsis;
-
-        &__summary {
-          margin-left: $small-indent;
-        }
       }
 
       &__toggle {
@@ -442,10 +438,6 @@
 
       color: var(--ring-main-color);
     }
-  }
-
-  &__issue-summary {
-    margin-left: $ring-unit;
   }
 
   &__fields {

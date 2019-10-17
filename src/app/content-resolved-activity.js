@@ -4,7 +4,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import ContentDefaultActivity from './content-default-activity';
 import './style/activities-widget.scss';
-import IssueLine from './components/issue-line';
+import IssueCard from './components/issue-card';
 
 
 class ContentResolvedActivity extends ContentDefaultActivity {
@@ -49,7 +49,7 @@ class ContentResolvedActivity extends ContentDefaultActivity {
 
       return (
         <div>
-          <IssueLine
+          <IssueCard
             issue={issue}
             key={`${activity.id}${issue.id}`}
             showMore

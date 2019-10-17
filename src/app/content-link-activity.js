@@ -3,7 +3,7 @@ import React from 'react';
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
-import IssueLine from './components/issue-line';
+import IssueCard from './components/issue-card';
 
 
 class ContentLinkActivity extends ContentDefaultActivity {
@@ -25,7 +25,7 @@ class ContentLinkActivity extends ContentDefaultActivity {
                 </div>
                 <div className="activities-widget__activity__link__change">
                   {addedLinks.map(issue => (
-                    <IssueLine
+                    <IssueCard
                       issue={issue}
                       removed={false}
                       key={`${activity.id}${issue.id}`}
@@ -47,7 +47,7 @@ class ContentLinkActivity extends ContentDefaultActivity {
                 </div>
                 <div className="activities-widget__activity__link__change">
                   {removedLinks.map(issue => (
-                    <IssueLine
+                    <IssueCard
                       issue={issue}
                       key={`${activity.id}${issue.id}`}
                     />)

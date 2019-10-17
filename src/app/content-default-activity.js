@@ -6,7 +6,7 @@ import {format} from 'date-fns';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import ActivityAuthorLink from './components/activity-author-link';
-import ActivityIssueInfo from './components/activity-issue-info';
+import IssueLink from './components/issue-link';
 import ActivityStreamLink from './components/activity-stream-link';
 import ActivityActionInfo from './components/activity-action-info';
 import ActivityAuthorAvatar from './components/activity-author-avatar';
@@ -95,9 +95,7 @@ class ContentDefaultActivity extends React.Component {
         className={getActivityClassName()}
       >
         <div className="activities-widget__entry__container">
-          <ActivityIssueInfo
-            issue={issue}
-          />
+          <IssueLink issue={issue}/>
         </div>
         <div className="activities-widget__entry__user-activity">
           <div className="activities-widget__entry__user-activity__avatar">

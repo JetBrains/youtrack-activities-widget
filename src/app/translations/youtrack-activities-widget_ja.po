@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-10-16 15:56\n"
+"PO-Revision-Date: 2019-10-16 14:12\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Select which types of updates are shown in the activity feed"
 msgstr ""
 
-#: src/app/components/issue-line.js:323
+#: src/app/components/issue-card.js:324
 #: src/app/control-load-more.js:53
 msgid "Show more"
 msgstr ""

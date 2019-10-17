@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import fecha from 'fecha';
-import Link from '@jetbrains/ring-ui/components/link/link';
 import {
   ChevronDownIcon, ChevronRightIcon
 } from '@jetbrains/ring-ui/components/icon';
@@ -11,7 +9,9 @@ import {
 import filter from '../activities-filter';
 import {loadIssue} from '../resources';
 
-class IssueLine extends React.Component {
+import IssueLink from './issue-link';
+
+class IssueCard extends React.Component {
 
   static fieldColorToCss(color) {
     return {
@@ -22,7 +22,7 @@ class IssueLine extends React.Component {
 
   static getValuableIssueFields(issue) {
     return (issue.fields || []).filter(
-      field => IssueLine.toArray(field.value || []).length > 0
+      field => IssueCard.toArray(field.value || []).length > 0
     ).filter(
       field => {
         const valueType = field.projectCustomField &&
@@ -50,13 +50,13 @@ class IssueLine extends React.Component {
       issueField.projectCustomField.field;
     const fieldType = (field && field.fieldType && field.fieldType.valueType) ||
       '';
-    return IssueLine.toArray(issueField.value || []).map(value => {
+    return IssueCard.toArray(issueField.value || []).map(value => {
       if (fieldType.indexOf('date') > -1) {
-        return IssueLine.getDatePresentation(
+        return IssueCard.getDatePresentation(
           value, dateFormats, fieldType.indexOf('time') > -1
         );
       }
-      return IssueLine.getName(value) || value.presentation ||
+      return IssueCard.getName(value) || value.presentation ||
         value.minutes || value.name || value.login || value;
     }).join(', ');
   }
@@ -64,26 +64,26 @@ class IssueLine extends React.Component {
   static toArray = value => (Array.isArray(value) ? value : [value]);
 
   static getFirstLetter = value =>
-    (IssueLine.getName(value) || 'c')[0].toUpperCase();
+    (IssueCard.getName(value) || 'c')[0].toUpperCase();
 
   static isColoredValue = value => value.color && value.color.id > 0;
 
   static getColoredSquareModel(issue) {
 
     const makeColorFieldPresentationObject = issueField => {
-      const coloredValue = IssueLine.toArray(issueField.value).filter(
-        IssueLine.isColoredValue
+      const coloredValue = IssueCard.toArray(issueField.value).filter(
+        IssueCard.isColoredValue
       )[0];
       if (!coloredValue) {
         return null;
       }
-      const fieldName = IssueLine.getName(
+      const fieldName = IssueCard.getName(
         issueField.projectCustomField.field || {}
       );
       return {
-        style: IssueLine.fieldColorToCss(coloredValue.color),
-        letter: IssueLine.getFirstLetter(coloredValue),
-        title: `${fieldName}: ${IssueLine.getName(coloredValue)}`,
+        style: IssueCard.fieldColorToCss(coloredValue.color),
+        letter: IssueCard.getFirstLetter(coloredValue),
+        title: `${fieldName}: ${IssueCard.getName(coloredValue)}`,
         issueField
       };
     };
@@ -105,7 +105,7 @@ class IssueLine extends React.Component {
     }
     const fieldWithColoredValues = (issue.fields || []).filter(
       field =>
-        IssueLine.toArray(field.value || []).some(IssueLine.isColoredValue)
+        IssueCard.toArray(field.value || []).some(IssueCard.isColoredValue)
     )[0];
     if (!fieldWithColoredValues) {
       return null;
@@ -135,8 +135,8 @@ class IssueLine extends React.Component {
     this.state = {
       expanded: false,
       issue: this.props.issue,
-      coloredSquare: null, //IssueLine.getColoredSquareModel(issue),
-      valuableFields: null //IssueLine.getValuableIssueFields(issue)
+      coloredSquare: null, //IssueCard.getColoredSquareModel(issue),
+      valuableFields: null //IssueCard.getValuableIssueFields(issue)
     };
     this.getFieldsAndExpand = this.getFieldsAndExpand.bind(this);
   }
@@ -151,20 +151,10 @@ class IssueLine extends React.Component {
   //   return {
   //     issue,
   //     expanded,
-  //     coloredSquare: IssueLine.getColoredSquareModel(issue),
-  //     valuableFields: IssueLine.getValuableIssueFields(issue)
+  //     coloredSquare: IssueCard.getColoredSquareModel(issue),
+  //     valuableFields: IssueCard.getValuableIssueFields(issue)
   //   };
   // }
-
-
-  getValueClassName = (link, isSummary) => {
-    const valueClass = 'activities-widget__activity__link__change__value';
-    const modClass = link.removed ? `${valueClass}_removed` : `${valueClass}_added`;
-    if (!isSummary) {
-      return classNames(valueClass, modClass, 'activities-widget__issue__id');
-    }
-    return classNames(valueClass, modClass);
-  };
 
   linkToIssue = issue => {
     const issueId = issue.idReadable;
@@ -172,11 +162,11 @@ class IssueLine extends React.Component {
   };
 
   renderFieldValue(issueField) {
-    const firstValue = IssueLine.toArray(issueField.value)[0];
+    const firstValue = IssueCard.toArray(issueField.value)[0];
 
     return (
       <div className="issue-card-panel__field-value">
-        {IssueLine.getValuePresentation(issueField, this.props.dateFormats)}
+        {IssueCard.getValuePresentation(issueField, this.props.dateFormats)}
         {
           firstValue.avatarUrl &&
           (
@@ -187,13 +177,13 @@ class IssueLine extends React.Component {
           )
         }
         {
-          IssueLine.isColoredValue(firstValue) &&
+          IssueCard.isColoredValue(firstValue) &&
           (
             <span
               className="issue-card-panel__field-color issue-card-panel__colored-field"
-              style={IssueLine.fieldColorToCss(firstValue.color)}
+              style={IssueCard.fieldColorToCss(firstValue.color)}
             >
-              {IssueLine.getFirstLetter(firstValue)}
+              {IssueCard.getFirstLetter(firstValue)}
             </span>
           )
         }
@@ -213,7 +203,7 @@ class IssueLine extends React.Component {
             >
               <div className="issue-card-panel__field">
                 <div className="issue-card-panel__field-title">
-                  {IssueLine.getName(issueField.projectCustomField.field)}
+                  {IssueCard.getName(issueField.projectCustomField.field)}
                 </div>
                 {this.renderFieldValue(issueField)}
               </div>
@@ -234,7 +224,7 @@ class IssueLine extends React.Component {
         {
           issue,
           expanded: true,
-          valuableFields: IssueLine.getValuableIssueFields(issue)
+          valuableFields: IssueCard.getValuableIssueFields(issue)
         }
       );
     }
@@ -243,24 +233,6 @@ class IssueLine extends React.Component {
   closeFields = async () => {
     this.setState({expanded: false});
   };
-
-  renderIssueLink(issue) {
-    return (
-      <Link
-        href={this.linkToIssue(issue)}
-        className={this.getValueClassName(issue, true)}
-      >
-        <span className={this.getValueClassName(issue, false)}>
-          {issue.idReadable}
-        </span>
-        <span
-          className="activities-widget__issue-card__header__link__summary"
-        >
-          {issue.summary}
-        </span>
-      </Link>
-    );
-  }
 
   getOnClick(expanded) {
     return expanded ? this.closeFields : this.getFieldsAndExpand;
@@ -306,7 +278,7 @@ class IssueLine extends React.Component {
                   </span>
                 </div>
                 <div className="activities-widget__issue-card__header__link">
-                  {this.renderIssueLink(issue)}
+                  <IssueLink issue={issue}/>
                 </div>
               </React.Fragment>
             )
@@ -343,4 +315,4 @@ class IssueLine extends React.Component {
   }
 }
 
-export default IssueLine;
+export default IssueCard;
