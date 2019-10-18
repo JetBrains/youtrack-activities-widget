@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-10-17 16:31\n"
+"PO-Revision-Date: 2019-10-18 10:06\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Description changed"
 msgstr ""
 
-#: src/app/components/collapsible-block.js:41
+#: src/app/components/collapsible-block.js:37
 msgid "Details"
 msgstr ""
 
