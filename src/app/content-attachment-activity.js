@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import Link from '@jetbrains/ring-ui/components/link/link';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
@@ -22,45 +23,43 @@ const previewWhiteList = [
 
 class ContentAttachmentActivity extends ContentDefaultActivity {
 
-  renderRemovedAttachment(activity, attachment) {
+  renderAttachmentStub(activity, attachment, removed) {
     const uniqueKey = `${activity.id}${attachment.id}`;
+    const stubClass = 'aw__activity__attachment__header__stub';
+    const modClass = removed && 'aw__activity__attachment__header__stub_removed';
     return (
-      <span
-        className="aw__activity__attachment__header__removed"
-        key={uniqueKey}
-      >
+      <span className={classNames(stubClass, modClass)} key={uniqueKey}>
         {attachment.name}
       </span>
     );
   }
 
-  renderAddedAttachment(activity, attachment) {
+  renderAttachmentThumbnail(activity, attachment) {
     const uniqueKey = `${activity.id}${attachment.id}`;
-    if (attachment.url) {
-      if (!filter.hasOwnProperty('homeUrlNoContext')) {
-        // eslint-disable-next-line new-cap,max-len
-        filter.homeUrlNoContext = new window.URL(filter.youTrackUrl).origin;
-      }
+    if (!filter.hasOwnProperty('homeUrlNoContext')) {
+      // eslint-disable-next-line new-cap,max-len
+      filter.homeUrlNoContext = new window.URL(filter.youTrackUrl).origin;
+    }
 
-      const attachmentHref = `${filter.homeUrlNoContext}${attachment.url}`;
-      const hasPreview = previewWhiteList.indexOf(attachment.mimeType);
+    const attachmentHref = `${filter.homeUrlNoContext}${attachment.url}`;
+    const hasPreview = previewWhiteList.indexOf(attachment.mimeType);
 
-      if (hasPreview >= 0) {
-        const thumbnailURL = `${filter.homeUrlNoContext}${attachment.thumbnailURL}`;
-        return (
-          <div
-            className="aw__activity__attachment__added-panel__thumbnail"
-            key={uniqueKey}
+    if (hasPreview >= 0) {
+      const thumbnailURL = `${filter.homeUrlNoContext}${attachment.thumbnailURL}`;
+      return (
+        <div
+          className="aw__activity__attachment__added-panel__thumbnail"
+          key={uniqueKey}
+        >
+          <Link
+            target={'_blank'}
+            href={attachmentHref}
           >
-            <Link
-              target={'_blank'}
-              href={attachmentHref}
-            >
-              <img width={96} height={64} src={thumbnailURL} alt={'preview'}/>
-            </Link>
-          </div>
-        );
-      }
+            <img width={96} height={64} src={thumbnailURL} alt={'preview'}/>
+          </Link>
+        </div>
+      );
+    } else {
       return (
         <Link
           key={uniqueKey}
@@ -70,36 +69,37 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
           {attachment.name}
         </Link>
       );
-    } else {
-      return (
-        <span key={uniqueKey}>
-          {attachment.name}
-        </span>
-      );
     }
   }
 
   // eslint-disable-next-line react/display-name
   renderContent = activity => {
     const fieldName = i18n('Attachment');
+    const removedStubs = activity.removed;
+    const addedStubs = activity.added.filter(attachment => !attachment.url);
+    const addedThumbnails = activity.added.filter(attachment => attachment.url);
+
     return (
       <div className="aw__activity__attachment">
         <div className="aw__activity__attachment__header">
           <span className="aw__activity__attachment__header__field-name">
             {`${fieldName}:`}
           </span>
-          {activity.removed.map(attachment =>
-            this.renderRemovedAttachment(activity, attachment, true)
+          {removedStubs.map(attachment =>
+            this.renderAttachmentStub(activity, attachment, true)
+          )}
+          {addedStubs.map(attachment =>
+            this.renderAttachmentStub(activity, attachment, false)
           )}
         </div>
         <div className="aw__activity__attachment__added-panel">
-          {activity.added.map(attachment =>
-            this.renderAddedAttachment(activity, attachment, false)
+          {addedThumbnails.map(attachment =>
+            this.renderAttachmentThumbnail(activity, attachment)
           )}
         </div>
       </div>
     );
-  }
+  };
 }
 
 export default ContentAttachmentActivity;

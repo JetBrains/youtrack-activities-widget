@@ -386,12 +386,14 @@
           white-space: nowrap;
         }
 
-        &__removed {
+        &__stub {
           display: inline-block;
 
           margin-right: $ring-unit;
 
-          text-decoration: line-through;
+          &_removed {
+            text-decoration: line-through;
+          }
         }
       }
 
