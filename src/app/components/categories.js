@@ -2,7 +2,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 export const CATEGORIES = [
   {id: 'IssueCreatedCategory', name: i18n('New issues'), default: true},
-  {id: 'IssueResolvedCategory', name: i18n('Resolved issues'), default: true},
+  {id: 'IssueResolvedCategory', name: i18n('Resolved/reopened issues'), default: true},
   {id: 'ProjectCategory', name: i18n('Project'), default: true},
   {id: 'SummaryCategory', name: i18n('Summary'), default: true},
   {id: 'DescriptionCategory', name: i18n('Description'), default: true},
