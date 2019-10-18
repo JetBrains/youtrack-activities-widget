@@ -287,11 +287,11 @@ class IssueCard extends React.Component {
             showMore && (
               <div className="aw__issue-card__header__toggle">
                 <a
-                  className="issue-card-panel__issue-toggle"
+                  className="aw__toggle"
                   onClick={this.getOnClick(expanded)}
                 >
                   {this.renderChevron(expanded, ChevronDownIcon.Color.BLUE)}
-                  <span className="issue-card-panel__issue-toggle__text">
+                  <span className="aw__toggle__text">
                     {i18n('Show more')}
                   </span>
                 </a>

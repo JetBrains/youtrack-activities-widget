@@ -148,6 +148,22 @@
     color: var(--ring-icon-color);
   }
 
+  &__toggle {
+    margin-right: $small-indent;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    vertical-align: baseline;
+
+    &__text {
+      margin-left: $small-indent;
+
+      color: var(--ring-main-color);
+    }
+  }
+
   &__issue-card {
     &__header {
       display: flex;
@@ -255,10 +271,6 @@
         margin-right: $ring-unit;
 
         white-space: nowrap;
-      }
-
-      &__field-details {
-        margin-left: 2px;
       }
 
       &__value {
@@ -424,16 +436,6 @@
     font-size: 10px;
 
     line-height: 13px;
-  }
-
-  &__issue-toggle {
-    cursor: pointer;
-
-    &__text {
-      margin-left: $ring-unit / 2;
-
-      color: var(--ring-main-color);
-    }
   }
 
   &__fields {
