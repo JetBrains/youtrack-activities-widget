@@ -22,18 +22,21 @@ const previewWhiteList = [
 
 class ContentAttachmentActivity extends ContentDefaultActivity {
 
-  renderAttachmentLink(activity, attachment, removed) {
+  renderRemovedAttachment(activity, attachment) {
     const uniqueKey = `${activity.id}${attachment.id}`;
-    if (removed) {
-      return (
-        <span
-          className="aw__activity__change__removed"
-          key={uniqueKey}
-        >
-          {attachment.name}
-        </span>
-      );
-    } else if (attachment.url) {
+    return (
+      <span
+        className="aw__activity__attachment__header__removed"
+        key={uniqueKey}
+      >
+        {attachment.name}
+      </span>
+    );
+  }
+
+  renderAddedAttachment(activity, attachment) {
+    const uniqueKey = `${activity.id}${attachment.id}`;
+    if (attachment.url) {
       if (!filter.hasOwnProperty('homeUrlNoContext')) {
         // eslint-disable-next-line new-cap,max-len
         filter.homeUrlNoContext = new window.URL(filter.youTrackUrl).origin;
@@ -45,14 +48,17 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
       if (hasPreview >= 0) {
         const thumbnailURL = `${filter.homeUrlNoContext}${attachment.thumbnailURL}`;
         return (
-          <span key={uniqueKey}>
+          <div
+            className="aw__activity__attachment__added-panel__thumbnail"
+            key={uniqueKey}
+          >
             <Link
               target={'_blank'}
               href={attachmentHref}
             >
               <img width={96} height={64} src={thumbnailURL} alt={'preview'}/>
             </Link>
-          </span>
+          </div>
         );
       }
       return (
@@ -77,18 +83,20 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
   renderContent = activity => {
     const fieldName = i18n('Attachment');
     return (
-      <div>
-        <span className="aw__activity__change__field-name aw__activity__change__preview-title">
-          {`${fieldName}:`}
-        </span>
-        <span>
+      <div className="aw__activity__attachment">
+        <div className="aw__activity__attachment__header">
+          <span className="aw__activity__attachment__header__field-name">
+            {`${fieldName}:`}
+          </span>
           {activity.removed.map(attachment =>
-            this.renderAttachmentLink(activity, attachment, true)
+            this.renderRemovedAttachment(activity, attachment, true)
           )}
+        </div>
+        <div className="aw__activity__attachment__added-panel">
           {activity.added.map(attachment =>
-            this.renderAttachmentLink(activity, attachment, false)
+            this.renderAddedAttachment(activity, attachment, false)
           )}
-        </span>
+        </div>
       </div>
     );
   }

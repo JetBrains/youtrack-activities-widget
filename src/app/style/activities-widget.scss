@@ -376,9 +376,33 @@
       &__removed {
         text-decoration: line-through;
       }
+    }
 
-      &__preview-title {
-        float: left;
+    &__attachment {
+      &__header {
+        &__field-name {
+          margin-right: $ring-unit;
+
+          white-space: nowrap;
+        }
+
+        &__removed {
+          display: inline-block;
+
+          margin-right: $ring-unit;
+
+          text-decoration: line-through;
+        }
+      }
+
+      &__added-panel {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        &__thumbnail {
+          margin: $small-indent $ring-unit 0 0;
+        }
       }
     }
 
