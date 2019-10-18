@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-10-18 12:57\n"
+"PO-Revision-Date: 2019-10-18 13:02\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Set optional title"
 msgstr ""
 
-#: src/app/components/issue-card.js:295
+#: src/app/components/issue-card.js:288
 #: src/app/control-load-more.js:53
 msgid "Show more"
 msgstr ""
