@@ -6,6 +6,8 @@ class ActivitiesFilter {
 
   static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
 
+  @observable title = null;
+
   @observable query = null;
 
   @observable author = null;
@@ -24,6 +26,7 @@ class ActivitiesFilter {
   restore(props) {
     try {
       const storedFilter = props.configWrapper.getFieldValue('filter');
+      this.title = storedFilter.title;
       this.query = storedFilter.query;
       this.author = storedFilter.author || null;
       this.youTrackId = storedFilter.youTrack.id;
@@ -48,6 +51,7 @@ class ActivitiesFilter {
     };
 
     return {
+      title: this.title,
       query: this.query,
       author: toConfigAuthor(this.author),
       categoriesIds: this.categoriesIds.slice(),

@@ -13,6 +13,7 @@ import EditFormUserSelector from './edit-form-user-selector';
 import EditFormQueryToolbar from './edit-form-query-toolbar';
 import EditFormCategorySelector from './edit-form-category-selector';
 import EditFormYoutrackSelector from './edit-form-youtrack-selector';
+import EditFormOptionalTitle from './edit-form-optional-title';
 
 import '@jetbrains/ring-ui/components/form/form.scss';
 import './style/activities-widget.scss';
@@ -90,6 +91,7 @@ class ActivitiesEditForm extends React.Component {
         onCancel={this.props.cancelConfig}
       >
         <div className="aw">
+          <EditFormOptionalTitle/>
           {
             <EditFormYoutrackSelector
               dashboardApi={this.props.dashboardApi}

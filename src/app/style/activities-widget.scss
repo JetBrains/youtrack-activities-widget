@@ -3,6 +3,10 @@
 .aw {
   color: var(--ring-text-color);
 
+  &__optional-title {
+    margin-bottom: 0;
+  }
+
   &__issue-filter {
     margin-bottom: 3 * $ring-unit;
 
