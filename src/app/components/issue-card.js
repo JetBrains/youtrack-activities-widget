@@ -156,22 +156,17 @@ class IssueCard extends React.Component {
   //   };
   // }
 
-  linkToIssue = issue => {
-    const issueId = issue.idReadable;
-    return `${filter.youTrackUrl}/issue/${issueId}`;
-  };
-
   renderFieldValue(issueField) {
     const firstValue = IssueCard.toArray(issueField.value)[0];
 
     return (
-      <div className="issue-card-panel__field-value">
+      <div className="aw__issue-card__panel__field-value">
         {IssueCard.getValuePresentation(issueField, this.props.dateFormats)}
         {
           firstValue.avatarUrl &&
           (
             <img
-              className="issue-card-panel__field-avatar"
+              className="aw__issue-card__panel__field-avatar"
               src={firstValue.avatarUrl}
             />
           )
@@ -180,7 +175,7 @@ class IssueCard extends React.Component {
           IssueCard.isColoredValue(firstValue) &&
           (
             <span
-              className="issue-card-panel__field-color issue-card-panel__colored-field"
+              className="aw__issue-card__panel__field-color aw__issue-card__panel__colored-field"
               style={IssueCard.fieldColorToCss(firstValue.color)}
             >
               {IssueCard.getFirstLetter(firstValue)}
@@ -192,17 +187,17 @@ class IssueCard extends React.Component {
   }
 
   renderFields(issueFields, fixed) {
-    const fixClassName = fixed ? 'issue-card-panel__fields-fix' : '';
+    const fixClassName = fixed ? 'aw__issue-card__panel__fields-fix' : '';
     return (
-      <div className={`issue-card-panel__fields ${fixClassName}`}>
+      <div className={`aw__issue-card__panel__fields ${fixClassName}`}>
         {
           issueFields.map(issueField => (
             <div
               key={`field-line-${issueField.id}`}
-              className="issue-card-panel__field-row"
+              className="aw__issue-card__panel__field-row"
             >
-              <div className="issue-card-panel__field">
-                <div className="issue-card-panel__field-title">
+              <div className="aw__issue-card__panel__field">
+                <div className="aw__issue-card__panel__field-title">
                   {IssueCard.getName(issueField.projectCustomField.field)}
                 </div>
                 {this.renderFieldValue(issueField)}
@@ -273,9 +268,7 @@ class IssueCard extends React.Component {
             !showMore && (
               <React.Fragment>
                 <div className="aw__issue-card__header__toggle">
-                  <span className="issue-card-panel__issue-toggle">
-                    {this.renderChevron(expanded, ChevronDownIcon.Color.GRAY)}
-                  </span>
+                  {this.renderChevron(expanded, ChevronDownIcon.Color.GRAY)}
                 </div>
                 <div className="aw__issue-card__header__link">
                   <IssueLink issue={issue}/>
@@ -303,7 +296,7 @@ class IssueCard extends React.Component {
           expanded &&
           (
             <div
-              className="issue-card-panel__issue-expanded-block"
+              className="aw__issue-card__panel__issue-expanded-block"
               data-test="issue-line-expanded-block"
             >
               {this.renderFields(valuableFields)}

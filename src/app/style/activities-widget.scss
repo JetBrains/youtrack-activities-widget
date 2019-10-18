@@ -186,6 +186,120 @@
         width: 100px;
       }
     }
+
+    &__panel {
+      &__issue {
+        position: relative;
+
+        overflow-x: hidden;
+
+        margin: 0 -4px;
+
+        padding: 4px;
+
+        line-height: 20px;
+
+        &_expanded {
+          background-color: var(--ring-content-background-color);
+          box-shadow: 0 1px 4px var(--ring-borders-color);
+        }
+      }
+
+      &__issue-info {
+        display: inline-block;
+
+        padding-right: 2 * $ring-unit;
+        padding-left: 3 * $ring-unit;
+      }
+
+      &__colored-field {
+        position: absolute;
+        top: 6px;
+
+        display: inline-block;
+
+        width: 15px;
+        height: 13px;
+
+        cursor: default;
+
+        text-align: center;
+        vertical-align: text-bottom;
+        white-space: nowrap;
+
+        border: 1px solid transparent;
+        border-radius: 2px;
+
+        background-color: var(--ring-sidebar-background-color);
+
+        font-size: 10px;
+
+        line-height: 13px;
+      }
+
+      &__fields {
+        display: table;
+
+        min-width: $ring-unit * 20;
+        max-width: $ring-unit * 50;
+
+        padding: 2px 0 0 0;
+
+        text-align: left;
+
+        font-size: var(--ring-font-size-smaller);
+
+        line-height: 20px;
+      }
+
+      &__fields-fix {
+        padding-right: 4px !important;
+      }
+
+      &__field-row {
+        display: table-row-group;
+      }
+
+      &__field {
+        display: table-row;
+
+        padding: 0 6px;
+
+        &-title {
+          display: table-cell;
+
+          padding-right: $ring-unit*2;
+          padding-bottom: 2px;
+
+          color: var(--ring-secondary-color);
+        }
+
+        &-value {
+          display: table-cell;
+        }
+
+        &-avatar {
+          position: relative;
+          top: 5px;
+
+          width: 2 * $ring-unit;
+          height: 2 * $ring-unit;
+
+          margin-top: -$ring-unit;
+          margin-left: $ring-unit;
+
+          border-radius: 3px;
+        }
+
+        &-color {
+          position: static;
+
+          height: 12px;
+
+          margin-left: $ring-unit !important;
+        }
+      }
+    }
   }
 
   &__entry {
@@ -388,120 +502,6 @@
       float: right;
 
       margin-top: -24px;
-    }
-  }
-}
-
-.issue-card-panel {
-  &__issue {
-    position: relative;
-
-    overflow-x: hidden;
-
-    margin: 0 -4px;
-
-    padding: 4px;
-
-    line-height: 20px;
-
-    &_expanded {
-      background-color: var(--ring-content-background-color);
-      box-shadow: 0 1px 4px var(--ring-borders-color);
-    }
-  }
-
-  &__issue-info {
-    display: inline-block;
-
-    padding-right: 2 * $ring-unit;
-    padding-left: 3 * $ring-unit;
-  }
-
-  &__colored-field {
-    position: absolute;
-    top: 6px;
-
-    display: inline-block;
-
-    width: 15px;
-    height: 13px;
-
-    cursor: default;
-
-    text-align: center;
-    vertical-align: text-bottom;
-    white-space: nowrap;
-
-    border: 1px solid transparent;
-    border-radius: 2px;
-
-    background-color: var(--ring-sidebar-background-color);
-
-    font-size: 10px;
-
-    line-height: 13px;
-  }
-
-  &__fields {
-    display: table;
-
-    min-width: $ring-unit * 20;
-    max-width: $ring-unit * 50;
-
-    padding: 2px 0 0 0;
-
-    text-align: left;
-
-    font-size: var(--ring-font-size-smaller);
-
-    line-height: 20px;
-  }
-
-  &__fields-fix {
-    padding-right: 4px !important;
-  }
-
-  &__field-row {
-    display: table-row-group;
-  }
-
-  &__field {
-    display: table-row;
-
-    padding: 0 6px;
-
-    &-title {
-      display: table-cell;
-
-      padding-right: $ring-unit*2;
-      padding-bottom: 2px;
-
-      color: var(--ring-secondary-color);
-    }
-
-    &-value {
-      display: table-cell;
-    }
-
-    &-avatar {
-      position: relative;
-      top: 5px;
-
-      width: 2 * $ring-unit;
-      height: 2 * $ring-unit;
-
-      margin-top: -$ring-unit;
-      margin-left: $ring-unit;
-
-      border-radius: 3px;
-    }
-
-    &-color {
-      position: static;
-
-      height: 12px;
-
-      margin-left: $ring-unit !important;
     }
   }
 }
