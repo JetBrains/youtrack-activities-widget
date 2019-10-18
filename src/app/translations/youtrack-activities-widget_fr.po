@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-10-18 10:14\n"
+"PO-Revision-Date: 2019-10-18 12:50\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -85,11 +85,11 @@ msgstr ""
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:236
+#: src/app/activities-widget.js:240
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:235
+#: src/app/activities-widget.js:239
 msgid "Issue Activity Feed —"
 msgstr ""
 
@@ -127,7 +127,7 @@ msgid "Project"
 msgstr ""
 
 #: src/app/components/categories.js:5
-msgid "Resolved issues"
+msgid "Resolved/reopened issues"
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
@@ -140,6 +140,10 @@ msgstr ""
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
+msgstr ""
+
+#: src/app/edit-form-optional-title.js:45
+msgid "Set optional title"
 msgstr ""
 
 #: src/app/components/issue-card.js:295
