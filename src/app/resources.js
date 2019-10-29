@@ -88,10 +88,8 @@ export async function loadActivities(fetchYouTrack, params) {
 
 const ACTIVITIES_FIELDS_PAGE = `beforeCursor,hasBefore,afterCursor,hasAfter,activities(${ACTIVITIES_FIELDS})`;
 
-export async function loadActivitiesPage(fetchYouTrack, params) {
-  const packSize = 50;
-  const categories = params.categoriesIds && params.categoriesIds.join(',');
-  const queryParams = [
+function getQueryParams(categories, packSize, params) {
+  return [
     `fields=${ACTIVITIES_FIELDS_PAGE}`,
     `categories=${categories || ALL_CATEGORIES}`,
     `$top=${packSize}`,
@@ -100,8 +98,16 @@ export async function loadActivitiesPage(fetchYouTrack, params) {
     'imported=false',
     params.cursor && `cursor=${encodeURIComponent(params.cursor)}`,
     params.author && `author=${params.author.id}`,
-    params.query && `issueQuery=${encodeURIComponent(params.query)}`
+    params.query && `issueQuery=${encodeURIComponent(params.query)}`,
+    params.start && `start=${params.start}`,
+    params.end && `end=${params.end}`
   ];
+}
+
+export async function loadActivitiesPage(fetchYouTrack, params) {
+  const packSize = 50;
+  const categories = params.categoriesIds && params.categoriesIds.join(',');
+  const queryParams = getQueryParams(categories, packSize, params);
   const queryParamsStr = queryParams.filter(p => !!p).join('&');
   return await fetchYouTrack(`api/activitiesPage?${queryParamsStr}`);
 }

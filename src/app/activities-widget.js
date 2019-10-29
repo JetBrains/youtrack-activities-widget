@@ -14,6 +14,7 @@ import {loadActivities, loadActivitiesPage, loadConfigL10n} from './resources';
 import filter from './activities-filter';
 
 const MILLIS_IN_SEC = 1000;
+const TOP_DAYS = 90;
 
 @observer
 class ActivitiesWidget extends React.Component {
@@ -128,9 +129,11 @@ class ActivitiesWidget extends React.Component {
     return await dashboardApi.fetch(filter.youTrackId, url, params);
   };
 
+  // eslint-disable-next-line complexity
   tryLoadNewActivities = async () => {
     try {
-      const {timestamp} = this.state;
+      const lastTimestamp = (this.state || {}).timestamp;
+      const timestamp = lastTimestamp || this.getDefaultStartTime();
       const incActivities = await loadActivities(
         this.fetchYouTrack,
         {
@@ -158,15 +161,24 @@ class ActivitiesWidget extends React.Component {
     }
   };
 
+  getDefaultStartTime = () => {
+    const date = new Date();
+    date.setUTCDate(date.getUTCDate() - TOP_DAYS);
+    date.setUTCHours(0, 0, 0, 0);
+    return date.getTime();
+  };
+
   loadActivitiesPage = async loadMore => {
     const {cursor} = this.state;
+    const time = this.getDefaultStartTime();
     const page = await loadActivitiesPage(
       this.fetchYouTrack,
       {
         cursor: loadMore && cursor,
         author: filter.author,
         query: filter.query,
-        categoriesIds: filter.categoriesIds
+        categoriesIds: filter.categoriesIds,
+        start: time
       }
     );
     const newTimestamp = this.updatedTimestamp(loadMore, page);
