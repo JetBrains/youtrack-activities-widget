@@ -7,6 +7,16 @@
     margin-bottom: 0;
   }
 
+  &__empty-widget-message {
+    max-width: 288px;
+
+    margin: 3 * $ring-unit auto $ring-unit auto;
+
+    color: var(--ring-text-color);
+
+    font-size: var(--ring-font-size);
+  }
+
   &__issue-filter {
     margin-bottom: 3 * $ring-unit;
 

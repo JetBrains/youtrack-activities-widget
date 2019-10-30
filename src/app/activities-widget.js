@@ -20,7 +20,6 @@ import DateTime from './date-time';
 import filter from './activities-filter';
 
 const MILLIS_IN_SEC = 1000;
-const TOP_DAYS = 90;
 
 @observer
 class ActivitiesWidget extends React.Component {
@@ -154,7 +153,7 @@ class ActivitiesWidget extends React.Component {
   tryLoadNewActivities = async () => {
     try {
       const lastTimestamp = (this.state || {}).timestamp;
-      const timestamp = lastTimestamp || this.getDefaultStartTime();
+      const timestamp = lastTimestamp || filter.recentPeriodStart;
       const incActivities = await loadActivities(
         this.fetchYouTrack,
         {
@@ -184,16 +183,8 @@ class ActivitiesWidget extends React.Component {
     }
   };
 
-  getDefaultStartTime = () => {
-    const date = new Date();
-    date.setUTCDate(date.getUTCDate() - TOP_DAYS);
-    date.setUTCHours(0, 0, 0, 0);
-    return date.getTime();
-  };
-
   loadActivitiesPage = async loadMore => {
     const {cursor} = this.state;
-    const time = this.getDefaultStartTime();
     const page = await loadActivitiesPage(
       this.fetchYouTrack,
       {
@@ -201,7 +192,7 @@ class ActivitiesWidget extends React.Component {
         author: filter.author,
         query: filter.query,
         categoriesIds: filter.categoriesIds,
-        start: time
+        start: filter.recentPeriodStart
       }
     );
     const newTimestamp = this.updatedTimestamp(loadMore, page);

@@ -47,8 +47,12 @@ class ActivitiesContent extends React.Component {
     return (
       <EmptyWidget
         face={EmptyWidgetFaces.OK}
-        message={i18n('There aren\'t any recent activities that match the filters for this widget')}
       >
+        {
+          <div className="aw__empty-widget-message">
+            {i18n('There hasn\'t been any activity that matches the filters for this widget within the last 90 days')}
+          </div>
+        }
         {
           this.props.editable &&
           (
@@ -56,7 +60,7 @@ class ActivitiesContent extends React.Component {
               pseudo
               onClick={this.props.onEdit}
             >
-              {i18n('Edit filter settings')}
+              {i18n('Edit widget filters')}
             </Link>
           )
         }

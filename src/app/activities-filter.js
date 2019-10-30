@@ -2,9 +2,13 @@ import {observable} from 'mobx';
 
 import {CATEGORIES} from './components/categories';
 
+import DateTime from './date-time';
+
 class ActivitiesFilter {
 
   static DEFAULT_REFRESH_PERIOD = 240; // eslint-disable-line no-magic-numbers
+
+  static DEFAULT_RECENT_DAYS = 90; // eslint-disable-line no-magic-numbers
 
   @observable title = null;
 
@@ -22,6 +26,9 @@ class ActivitiesFilter {
   @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
   userFormats = null;
+
+  // eslint-disable-next-line max-len
+  recentPeriodStart = DateTime.getTimeDaysAgo(ActivitiesFilter.DEFAULT_RECENT_DAYS);
 
   dashboardApi = null;
 

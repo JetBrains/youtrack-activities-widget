@@ -21,6 +21,13 @@ function toLocalMidday(timestamp) {
   );
 }
 
+function getTimeDaysAgo(periodInDays) {
+  const date = new Date();
+  date.setUTCDate(date.getUTCDate() - periodInDays);
+  date.setUTCHours(0, 0, 0, 0);
+  return date.getTime();
+}
+
 export default {
-  toFechaFormat, toLocalMidday
+  toFechaFormat, toLocalMidday, getTimeDaysAgo
 };
