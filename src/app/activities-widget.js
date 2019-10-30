@@ -16,6 +16,7 @@ import {
   loadConfigL10n,
   loadMeProfile
 } from './resources';
+import DateTime from './date-time';
 import filter from './activities-filter';
 
 const MILLIS_IN_SEC = 1000;
@@ -82,13 +83,12 @@ class ActivitiesWidget extends React.Component {
   };
 
   createUserDateFormats = async () => {
-    const toFechaFormat = pattern => (pattern || '').replace(/y/g, 'Y').replace(/d/g, 'D').replace('aaa', 'A');
     try {
       const profile = await loadMeProfile(this.fetchYouTrack);
       const dateFormats = (profile && profile.dateFieldFormat) || {};
       return {
-        datePattern: toFechaFormat(dateFormats.datePattern),
-        dateTimePattern: toFechaFormat(dateFormats.pattern)
+        datePattern: DateTime.toFechaFormat(dateFormats.datePattern),
+        dateTimePattern: DateTime.toFechaFormat(dateFormats.pattern)
       };
     } catch (e) {
       return null;
@@ -175,10 +175,12 @@ class ActivitiesWidget extends React.Component {
         timestamp: newest && newest.timestamp || timestamp
       });
     } catch (error) {
-      this.updateError({incrementalUpdate: {
-        title: i18n('Could not load new activities'),
-        message: error.message
-      }});
+      this.updateError({
+        incrementalUpdate: {
+          title: i18n('Could not load new activities'),
+          message: error.message
+        }
+      });
     }
   };
 

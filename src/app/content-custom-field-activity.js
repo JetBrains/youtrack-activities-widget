@@ -7,9 +7,10 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import ContentDefaultActivity from './content-default-activity';
 
 import './style/activities-widget.scss';
-import ActivityAuthorLink from './components/activity-author-link';
 import diff from './diff';
 import CollapsibleBlock from './components/collapsible-block';
+import DateTime from './date-time';
+import filter from './activities-filter';
 
 const LOST_EMPTY_VALUE = i18n('[Empty value]');
 const UNKNOWN_FORMAT = i18n('[Unknown format]');
@@ -25,6 +26,9 @@ const SIMPLE_TYPES = [
 ];
 
 class ContentCustomFieldActivity extends ContentDefaultActivity {
+
+  static DATE_TIME_FORMAT = 'YYYY-MM-DD HH:mm';
+  static DATE_FORMAT = 'YYYY-MM-DD';
 
   // eslint-disable-next-line react/display-name
   static getPeriodPresentation = value => {
@@ -43,10 +47,24 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     );
   };
 
-  // eslint-disable-next-line react/display-name
   static getDatePresentation = value => {
     if (value) {
-      return format(value, ActivityAuthorLink.FORMAT);
+      const formats = filter.userFormats;
+      const pattern = formats && formats.datePattern ||
+        ContentCustomFieldActivity.DATE_FORMAT;
+      const date = DateTime.toLocalMidday(value);
+      return format(date, pattern);
+    } else {
+      return LOST_EMPTY_VALUE;
+    }
+  };
+
+  static getDateTimePresentation = value => {
+    if (value) {
+      const formats = filter.userFormats;
+      const pattern = formats && formats.dateTimePattern ||
+        ContentCustomFieldActivity.DATE_TIME_FORMAT;
+      return format(value, pattern);
     } else {
       return LOST_EMPTY_VALUE;
     }
@@ -86,8 +104,9 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
       case 'float':
         return ContentCustomFieldActivity.getValuePresentation;
       case 'date':
-      case 'date and time':
         return ContentCustomFieldActivity.getDatePresentation;
+      case 'date and time':
+        return ContentCustomFieldActivity.getDateTimePresentation;
       case 'period':
         return ContentCustomFieldActivity.getPeriodPresentation;
       default:
