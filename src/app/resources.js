@@ -1,4 +1,5 @@
 const QUERY_ASSIST_FIELDS = 'query,caret,styleRanges(start,length,style),suggestions(options,prefix,option,suffix,description,matchingStart,matchingEnd,caret,completionStart,completionEnd,group,icon)';
+const GENERAL_PROFILE_FIELDS = 'dateFieldFormat(datePattern,pattern)';
 
 const PROJECT_CUSTOM_FIELD_FIELDS = 'id,bundle(id),field(id,name,localizedName,fieldType(id,valueType))';
 const ISSUE_FIELD_VALUE_FIELDS = 'id,name,localizedName,login,avatarUrl,name,presentation,minutes,color(id,foreground,background)';
@@ -20,11 +21,16 @@ export async function queryUsers(fetchHub, query) {
   return fetchHub('api/rest/users', {
     query: {
       query,
-      fields: 'id,name,profile(avatar(url))',
+      fields: 'id,name,format(avatar(url))',
       orderBy: 'login',
       $top: 10
     }
   });
+}
+
+export async function loadMeProfile(fetchYouTrack) {
+  const path = 'api/admin/users/me/profiles/general';
+  return await fetchYouTrack(`${path}?fields=${GENERAL_PROFILE_FIELDS}`);
 }
 
 export async function loadConfigL10n(fetchYouTrack) {

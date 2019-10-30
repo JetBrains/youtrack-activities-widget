@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import {format} from 'date-fns';
 
+import filter from '../activities-filter';
+
 import '../style/activities-widget.scss';
 
 
@@ -18,6 +20,7 @@ class ActivityActionInfo extends React.Component {
   render() {
     const {activity, actionTitle} = this.props;
     const timestamp = activity.timestamp;
+    const pattern = filter.userFormats && filter.userFormats.dateTimePattern;
 
     return (
       <React.Fragment>
@@ -25,7 +28,7 @@ class ActivityActionInfo extends React.Component {
           {actionTitle}
         </span>
         <span className="aw__action-time">
-          {format(timestamp, ActivityActionInfo.FORMAT)}
+          {format(timestamp, pattern || ActivityActionInfo.FORMAT)}
         </span>
       </React.Fragment>
     );

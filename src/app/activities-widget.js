@@ -10,7 +10,12 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 import ServiceResource from './components/service-resource';
 import ActivitiesEditForm from './activities-edit-form';
 import ActivitiesContent from './activities-content';
-import {loadActivities, loadActivitiesPage, loadConfigL10n} from './resources';
+import {
+  loadActivities,
+  loadActivitiesPage,
+  loadConfigL10n,
+  loadMeProfile
+} from './resources';
 import filter from './activities-filter';
 
 const MILLIS_IN_SEC = 1000;
@@ -76,6 +81,20 @@ class ActivitiesWidget extends React.Component {
     }
   };
 
+  createUserDateFormats = async () => {
+    const toFechaFormat = pattern => (pattern || '').replace(/y/g, 'Y').replace(/d/g, 'D').replace('aaa', 'A');
+    try {
+      const profile = await loadMeProfile(this.fetchYouTrack);
+      const dateFormats = (profile && profile.dateFieldFormat) || {};
+      return {
+        datePattern: toFechaFormat(dateFormats.datePattern),
+        dateTimePattern: toFechaFormat(dateFormats.pattern)
+      };
+    } catch (e) {
+      return null;
+    }
+  };
+
   createDefaultQuery = async () => {
     try {
       const config = await loadConfigL10n(this.fetchYouTrack);
@@ -112,6 +131,7 @@ class ActivitiesWidget extends React.Component {
     if (youTrackService && youTrackService.id) {
       filter.youTrackId = youTrackService.id;
       filter.youTrackUrl = youTrackService.homeUrl;
+      filter.userFormats = await this.createUserDateFormats();
       await filter.sync(this.props);
       this.setState({isConfiguring: false});
       await this.reload();
@@ -122,6 +142,7 @@ class ActivitiesWidget extends React.Component {
     filter.youTrackId = selectedYouTrack.id;
     filter.youTrackUrl = selectedYouTrack.homeUrl;
     filter.query = await this.createDefaultQuery();
+    filter.userFormats = await this.createUserDateFormats();
   };
 
   fetchYouTrack = async (url, params) => {

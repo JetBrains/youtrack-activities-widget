@@ -21,6 +21,8 @@ class ActivitiesFilter {
 
   @observable refreshPeriod = ActivitiesFilter.DEFAULT_REFRESH_PERIOD;
 
+  userFormats = null;
+
   dashboardApi = null;
 
   restore(props) {
