@@ -39,10 +39,9 @@ class EditFormOptionalTitle extends React.Component {
     return (
       <Input
         className="aw__optional-title"
-        borderless
         size={InputSize.FULL}
         value={title}
-        placeholder={i18n('Set optional title')}
+        label={i18n('Set optional title')}
         onClear={this.clearTitle}
         onChange={this.changeTitle}
       />
