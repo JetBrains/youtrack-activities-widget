@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-10-30 10:43\n"
+"PO-Revision-Date: 2019-10-30 14:51\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: src/app/activities-widget.js:158
+#: src/app/activities-widget.js:180
 msgid "Could not load new activities"
 msgstr ""
 
@@ -85,11 +85,11 @@ msgstr ""
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:252
+#: src/app/activities-widget.js:275
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:251
+#: src/app/activities-widget.js:274
 msgid "Issue Activity Feed —"
 msgstr ""
 
@@ -195,15 +195,15 @@ msgstr "El widget se actualiza cada {{minutesCount}} minutos"
 msgid "Work items"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:14
+#: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:16
+#: src/app/content-custom-field-activity.js:17
 msgid "[Removed field]"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:15
+#: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
 msgstr ""
 
@@ -227,11 +227,11 @@ msgstr ""
 msgid "created issue"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:34
+#: src/app/content-custom-field-activity.js:38
 msgid "h"
 msgstr ""
 
-#: src/app/content-custom-field-activity.js:32
+#: src/app/content-custom-field-activity.js:36
 msgid "m"
 msgstr ""
 
