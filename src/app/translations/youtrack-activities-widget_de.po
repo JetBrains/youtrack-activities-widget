@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-10-29 13:12\n"
+"PO-Revision-Date: 2019-10-30 10:42\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -109,10 +109,6 @@ msgstr ""
 msgid "New issues"
 msgstr ""
 
-#: src/app/activities-content.js:50
-msgid "No activities found"
-msgstr ""
-
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
 msgstr ""
@@ -173,6 +169,10 @@ msgstr ""
 
 #: src/app/components/categories.js:13
 msgid "Tags"
+msgstr ""
+
+#: src/app/activities-content.js:50
+msgid "There aren't any recent activities that match the filters for this widget"
 msgstr ""
 
 #: src/app/content-project-activity.js:17
