@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-10-30 15:05\n"
+"PO-Revision-Date: 2019-10-30 17:41\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Attachments"
 msgstr ""
 
-#: src/app/activities-content.js:70
+#: src/app/activities-content.js:74
 msgid "Can't load information from service."
 msgstr ""
 
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: src/app/activities-widget.js:180
+#: src/app/activities-widget.js:179
 msgid "Could not load new activities"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: src/app/activities-content.js:146
+#: src/app/activities-content.js:150
 msgid "Description changed"
 msgstr ""
 
@@ -77,19 +77,19 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: src/app/activities-content.js:59
-msgid "Edit filter settings"
+#: src/app/activities-content.js:63
+msgid "Edit widget filters"
 msgstr ""
 
 #: src/app/edit-form-query-toolbar.js:64
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:275
+#: src/app/activities-widget.js:266
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:274
+#: src/app/activities-widget.js:265
 msgid "Issue Activity Feed —"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Summary"
 msgstr ""
 
-#: src/app/activities-content.js:139
+#: src/app/activities-content.js:143
 msgid "Summary changed"
 msgstr ""
 
@@ -171,8 +171,8 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: src/app/activities-content.js:50
-msgid "There aren't any recent activities that match the filters for this widget"
+#: src/app/activities-content.js:53
+msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr ""
 
 #: src/app/content-project-activity.js:17
