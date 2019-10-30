@@ -47,7 +47,7 @@ class ActivitiesContent extends React.Component {
     return (
       <EmptyWidget
         face={EmptyWidgetFaces.OK}
-        message={i18n('No activities found')}
+        message={i18n('There aren\'t any recent activities that match the filters for this widget')}
       >
         {
           this.props.editable &&
