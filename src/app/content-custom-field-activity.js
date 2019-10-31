@@ -47,7 +47,7 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     );
   };
 
-  static getDatePresentation = value => {
+  static getDatePresentation = (value, emptyValue) => {
     if (value) {
       const formats = filter.userFormats;
       const pattern = formats && formats.datePattern ||
@@ -55,42 +55,42 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
       const date = DateTime.toLocalMidday(value);
       return format(date, pattern);
     } else {
-      return LOST_EMPTY_VALUE;
+      return emptyValue || LOST_EMPTY_VALUE;
     }
   };
 
-  static getDateTimePresentation = value => {
+  static getDateTimePresentation = (value, emptyValue) => {
     if (value) {
       const formats = filter.userFormats;
       const pattern = formats && formats.dateTimePattern ||
         ContentCustomFieldActivity.DATE_TIME_FORMAT;
       return format(value, pattern);
     } else {
-      return LOST_EMPTY_VALUE;
+      return emptyValue || LOST_EMPTY_VALUE;
     }
   };
 
-  static getValuePresentation = value => {
+  static getValuePresentation = (value, emptyValue) => {
     if (value) {
       return value;
     } else {
-      return LOST_EMPTY_VALUE;
+      return emptyValue || LOST_EMPTY_VALUE;
     }
   };
 
-  static getNamePresentation = value => {
+  static getNamePresentation = (value, emptyValue) => {
     if (value) {
       return value.name || UNKNOWN_FORMAT;
     } else {
-      return LOST_EMPTY_VALUE;
+      return emptyValue || LOST_EMPTY_VALUE;
     }
   };
 
-  static getRemovedPresentation = value => {
+  static getRemovedPresentation = (value, emptyValue) => {
     if (value && typeof value === 'object') {
       return value.name || UNKNOWN_FORMAT;
     } else {
-      return value || LOST_EMPTY_VALUE;
+      return value || emptyValue || LOST_EMPTY_VALUE;
     }
   };
 
@@ -208,8 +208,8 @@ class ContentCustomFieldActivity extends ContentDefaultActivity {
     const fieldName = field && field.name || REMOVED_FIELD;
     const fieldType = field && field.fieldType || REMOVED_FIELD_TYPE;
 
-    // eslint-disable-next-line max-len
-    const presentValue = ContentCustomFieldActivity.getPresenter(fieldType);
+    const presenter = ContentCustomFieldActivity.getPresenter(fieldType);
+    const presentValue = value => presenter(value, activity.emptyFieldText);
 
     let change;
     if (this.isRemovedField(fieldType)) {
