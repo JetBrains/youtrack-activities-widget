@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import filter from '../activities-filter';
 import '../style/activities-widget.scss';
+import {i18n} from "hub-dashboard-addons/dist/localization";
 
 class ActivityStreamLink extends React.Component {
 
@@ -23,6 +24,7 @@ class ActivityStreamLink extends React.Component {
     return (
       <a href={this.linkToActivityItem()}>
         <Renamed10pxIcon
+          title={i18n('Open in issue')}
           className="aw__stream-link-icon"
         />
       </a>
