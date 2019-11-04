@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-10-31 21:06\n"
+"PO-Revision-Date: 2019-11-04 08:42\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -116,6 +116,10 @@ msgstr ""
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
 msgstr "¡Uy! Algo ha salido mal..."
+
+#: src/app/components/activity-stream-link.js:29
+msgid "Open in issue"
+msgstr ""
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
