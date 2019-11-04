@@ -3,9 +3,11 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
+import {i18n} from 'hub-dashboard-addons/dist/localization';
+
 import filter from '../activities-filter';
+
 import '../style/activities-widget.scss';
-import {i18n} from "hub-dashboard-addons/dist/localization";
 
 class ActivityStreamLink extends React.Component {
 
