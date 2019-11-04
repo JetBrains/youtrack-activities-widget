@@ -22,8 +22,7 @@ class ActivityAuthorLink extends React.Component {
     login: user.login,
     email: user.email,
     avatarUrl: user.avatarUrl,
-    href: `${filter.youTrackUrl}/users/${user.ringId}`,
-    isLocked: user.isLocked || user.ringId === undefined
+    href: `${filter.youTrackUrl}/users/${user.ringId}`
   });
 
 
@@ -31,7 +30,7 @@ class ActivityAuthorLink extends React.Component {
     const {activity} = this.props;
     const author = this.props.user || activity.author;
 
-    if (author.isLocked) {
+    if (author.isLocked || !author.ringId) {
       return (
         <span className="aw__author-link">
           {author.fullName}
