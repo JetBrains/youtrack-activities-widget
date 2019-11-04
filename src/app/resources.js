@@ -21,7 +21,7 @@ export async function queryUsers(fetchHub, query) {
   return fetchHub('api/rest/users', {
     query: {
       query,
-      fields: 'id,name,format(avatar(url))',
+      fields: 'id,name,profile(avatar(url))',
       orderBy: 'login',
       $top: 10
     }
