@@ -33,7 +33,9 @@ async function getYouTrackService(fetchHub, optionalYtId) {
   if (optionalYtId) {
     services = services.filter(service => service.id === optionalYtId);
   }
-  return services[0];
+  // eslint-disable-next-line max-len
+  const favoriteServices = services.filter(service => service.name && service.name === 'YouTrack');
+  return favoriteServices.length ? favoriteServices[0] : services[0];
 }
 
 export default {
