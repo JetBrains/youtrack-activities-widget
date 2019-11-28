@@ -6,11 +6,11 @@
   "applicationName": "YouTrack",
   "author": "pavel.nikolaev@jetbrains.com",
   "products": {
-    "Hub": "2019.1",
-    "YouTrack": "2019.1"
+    "YouTrack": ">=2019.2.60865",
+    "Hub": ">=2019.1"
   },
   "dependencies": {
-    "YouTrack": ">=2019.1",
+    "YouTrack": ">=2019.2.60865",
     "Hub": ">=2019.1"
   },
   "capabilities": {
