@@ -1,4 +1,4 @@
-const Dmp = require('diff_match_patch').diff_match_patch;
+import {diff_match_patch as Dmp} from 'diff_match_patch';
 
 // copy paste from YT codebase for diff changes
 function newDifference() {
