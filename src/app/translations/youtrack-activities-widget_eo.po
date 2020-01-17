@@ -3,253 +3,253 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: youtrackjetbrains\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: youtrackjetbrains\n"
-"X-Crowdin-Language: fr\n"
+"X-Crowdin-Language: eo\n"
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
-"Language-Team: French\n"
-"Language: fr_FR\n"
-"PO-Revision-Date: 2020-01-14 21:02\n"
+"Language-Team: Esperanto\n"
+"Language: eo_UY\n"
+"PO-Revision-Date: 2019-12-20 15:00\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr "Catégories d'activités"
+msgstr "crwdns2792684:0crwdne2792684:0"
 
 #: src/app/edit-form-query-toolbar.js:70
 msgid "Activity is only shown for issues that match the search criteria"
-msgstr "L'activité ne s'affiche que pour les tickets correspondant aux critères de recherche"
+msgstr "crwdns2829184:0crwdne2829184:0"
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr "Tout utilisateur"
+msgstr "crwdns2829186:0crwdne2829186:0"
 
 #: src/app/content-attachment-activity.js:77
 msgid "Attachment"
-msgstr "Pièce jointe"
+msgstr "crwdns3136852:0crwdne3136852:0"
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
-msgstr "Pièces jointes"
+msgstr "crwdns2792688:0crwdne2792688:0"
 
 #: src/app/activities-content.js:74
 msgid "Can't load information from service."
-msgstr "Impossible de charger les informations du service."
+msgstr "crwdns2792692:0crwdne2792692:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "crwdns2792694:0crwdne2792694:0"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr "Catégorie "
+msgstr "crwdns2829188:0crwdne2829188:0"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr "Auteurs des modifications"
+msgstr "crwdns2829190:0crwdne2829190:0"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
-msgstr "Commentaires"
+msgstr "crwdns2792696:0crwdne2792696:0"
 
 #: src/app/activities-widget.js:179
 msgid "Could not load new activities"
-msgstr "Impossible de charger les nouvelles activités"
+msgstr "crwdns2794914:0crwdne2794914:0"
 
 #: src/app/control-load-more.js:33
 msgid "Could not request more activities"
-msgstr "Impossible de demander d'autres activités"
+msgstr "crwdns2794074:0crwdne2794074:0"
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
-msgstr "Champs personnalisés"
+msgstr "crwdns2792698:0crwdne2792698:0"
 
 #: src/app/components/categories.js:8
 msgid "Description"
-msgstr "Description"
+msgstr "crwdns2792700:0crwdne2792700:0"
 
 #: src/app/activities-content.js:150
 msgid "Description changed"
-msgstr "Description modifiée"
+msgstr "crwdns3136854:0crwdne3136854:0"
 
 #: src/app/components/collapsible-block.js:37
 msgid "Details"
-msgstr "Détails"
+msgstr "crwdns2792702:0crwdne2792702:0"
 
 #: src/app/activities-content.js:63
 msgid "Edit widget filters"
-msgstr "Modifier les filtres des widgets"
+msgstr "crwdns3335170:0crwdne3335170:0"
 
 #: src/app/edit-form-query-toolbar.js:64
 msgid "Enter a search query"
-msgstr "Saisissez une requête de recherche"
+msgstr "crwdns2829192:0crwdne2829192:0"
 
 #: src/app/activities-widget.js:266
 msgid "Issue Activity Feed"
-msgstr "Flux des activités de tickets"
+msgstr "crwdns2829194:0crwdne2829194:0"
 
 #: src/app/activities-widget.js:265
 msgid "Issue Activity Feed —"
-msgstr "Flux des activités de tickets —"
+msgstr "crwdns2829196:0crwdne2829196:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr "Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre"
+msgstr "crwdns2792710:0crwdne2792710:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr "Jan|Fév|Mar|Avr|Mai|Jui|Jui|Aoû|Sep|Oct|Nov|Déc"
+msgstr "crwdns2792712:0crwdne2792712:0"
 
 #: src/app/components/categories.js:11
 msgid "Links"
-msgstr "Liens"
+msgstr "crwdns2792714:0crwdne2792714:0"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
-msgstr "Nouveaux tickets"
+msgstr "crwdns2792718:0crwdne2792718:0"
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
-msgstr "Aucun type"
+msgstr "crwdns2792722:0crwdne2792722:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "Désolé ! Un problème est survenu..."
+msgstr "crwdns2792726:0crwdne2792726:0"
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
-msgstr "Ouvrir dans le ticket"
+msgstr "crwdns3486330:0crwdne3486330:0"
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
 msgid "Project"
-msgstr "Projet"
+msgstr "crwdns2792728:0crwdne2792728:0"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
-msgstr "Tickets résolus/rouverts"
+msgstr "crwdns3212020:0crwdne3212020:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "crwdns2792732:0crwdne2792732:0"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
-msgstr "Sélectionner YouTrack"
+msgstr "crwdns2792734:0crwdne2792734:0"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
-msgstr "Sélectionnez les types de mises à jour à afficher dans le flux d'activités"
+msgstr "crwdns2829198:0crwdne2829198:0"
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
-msgstr "Définir un titre facultatif"
+msgstr "crwdns3212022:0crwdne3212022:0"
 
 #: src/app/components/issue-card.js:288
 #: src/app/control-load-more.js:53
 msgid "Show more"
-msgstr "Afficher plus"
+msgstr "crwdns2792738:0crwdne2792738:0"
 
 #: src/app/components/categories.js:14
 msgid "Sprints"
-msgstr "Sprints"
+msgstr "crwdns2792740:0crwdne2792740:0"
 
 #: src/app/components/categories.js:7
 msgid "Summary"
-msgstr "Résumé"
+msgstr "crwdns2792742:0crwdne2792742:0"
 
 #: src/app/activities-content.js:143
 msgid "Summary changed"
-msgstr "Résumé modifié"
+msgstr "crwdns3136856:0crwdne3136856:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr "Dimanche|Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi"
+msgstr "crwdns2792744:0crwdne2792744:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "Dim|Lun|Mar|Mer|Jeu|Ven|Sam"
+msgstr "crwdns2792746:0crwdne2792746:0"
 
 #: src/app/components/categories.js:13
 msgid "Tags"
-msgstr "Tags"
+msgstr "crwdns2792748:0crwdne2792748:0"
 
 #: src/app/activities-content.js:53
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr "Aucune activité correspondant aux filtres de ce widget n'a eu lieu au cours des 90 derniers jours"
+msgstr "crwdns3335172:0crwdne3335172:0"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
-msgstr "Inconnu"
+msgstr "crwdns2879450:0crwdne2879450:0"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
-msgstr "Modifications VCS"
+msgstr "crwdns2829200:0crwdne2829200:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr "Le widget s'actualise chaque minute."
+msgstr "crwdns2792756:0crwdne2792756:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "Le widget s'actualise toutes les {{minutesCount}} minutes"
+msgstr "crwdns2792758:0{{minutesCount}}crwdne2792758:0"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
-msgstr "Éléments de travail"
+msgstr "crwdns2792760:0crwdne2792760:0"
 
 #: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
-msgstr "[Valeur vide]"
+msgstr "crwdns2792762:0crwdne2792762:0"
 
 #: src/app/content-custom-field-activity.js:17
 msgid "[Removed field]"
-msgstr "[Champ supprimé]"
+msgstr "crwdns2792764:0crwdne2792764:0"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
-msgstr "[Format inconnu]"
+msgstr "crwdns2879452:0crwdne2879452:0"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr "a ajouté un élément de travail"
+msgstr "crwdns2795078:0crwdne2795078:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr "am|pm"
+msgstr "crwdns2792768:0crwdne2792768:0"
 
 #: src/app/content-comment-activity.js:22
 msgid "commented"
-msgstr "commenté"
+msgstr "crwdns2795080:0crwdne2795080:0"
 
 #: src/app/content-vcs-activity.js:22
 msgid "committed changes"
-msgstr "modifications validées"
+msgstr "crwdns2792770:0crwdne2792770:0"
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
-msgstr "a créé un ticket"
+msgstr "crwdns2795082:0crwdne2795082:0"
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
-msgstr "h"
+msgstr "crwdns2792772:0crwdne2792772:0"
 
 #: src/app/content-custom-field-activity.js:36
 msgid "m"
-msgstr "m"
+msgstr "crwdns2792774:0crwdne2792774:0"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr "a rouvert un ticket"
+msgstr "crwdns3175594:0crwdne3175594:0"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
-msgstr "a résolu un ticket"
+msgstr "crwdns2795084:0crwdne2795084:0"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"
-msgstr "mis à jour"
+msgstr "crwdns2792776:0crwdne2792776:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr "{{minutesCount}} mn"
+msgstr "crwdns2792778:0{{minutesCount}}crwdne2792778:0"
 
