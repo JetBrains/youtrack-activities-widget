@@ -85,9 +85,8 @@ class ActivitiesContent extends React.Component {
     this.props.onUpdateError({incrementalUpdate: null});
   };
 
-  shouldRender = activity => {
-    return !(activity.category.id === "CommentsCategory" && !activity.added[0].text);
-  };
+  shouldRender = activity =>
+    !(activity.category.id === 'CommentsCategory' && !activity.added[0].text);
 
   renderBody = () => (
     <div className="aw">
@@ -108,7 +107,9 @@ class ActivitiesContent extends React.Component {
         )
       }
       {
-        (this.props.activities || []).filter(activity => this.shouldRender(activity)).map(activity => (
+        (this.props.activities || []).filter(
+          activity => this.shouldRender(activity)
+        ).map(activity => (
           <div key={activity.id}>
             {this.renderActivity(activity)}
           </div>
