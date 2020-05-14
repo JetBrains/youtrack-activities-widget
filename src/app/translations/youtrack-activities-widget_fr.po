@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2020-01-14 21:02\n"
+"PO-Revision-Date: 2020-05-14 12:26\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -67,7 +67,7 @@ msgstr "Champs personnalisés"
 msgid "Description"
 msgstr "Description"
 
-#: src/app/activities-content.js:150
+#: src/app/activities-content.js:155
 msgid "Description changed"
 msgstr "Description modifiée"
 
@@ -157,7 +157,7 @@ msgstr "Sprints"
 msgid "Summary"
 msgstr "Résumé"
 
-#: src/app/activities-content.js:143
+#: src/app/activities-content.js:148
 msgid "Summary changed"
 msgstr "Résumé modifié"
 
