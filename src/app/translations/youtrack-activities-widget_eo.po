@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2020-05-14 12:32\n"
+"PO-Revision-Date: 2020-05-14 12:36\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
