@@ -101,3 +101,4 @@ const {username, selectedColor, isConfiguring} = this.state;
 Now we can hit "Reload widget" and see if everything works!
 
 [1]: http://yeoman.io/
+
