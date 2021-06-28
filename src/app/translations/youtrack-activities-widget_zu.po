@@ -2,256 +2,256 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: youtrackjetbrains\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: youtrackjetbrains\n"
-"X-Crowdin-Project-ID: 295498\n"
-"X-Crowdin-Language: ru\n"
+"Project-Id-Version: youtrack-custom-localization\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: youtrack-custom-localization\n"
+"X-Crowdin-Project-ID: 309400\n"
+"X-Crowdin-Language: zu\n"
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
-"X-Crowdin-File-ID: 112408\n"
-"Language-Team: Russian\n"
-"Language: ru_RU\n"
-"PO-Revision-Date: 2021-06-28 11:21\n"
+"X-Crowdin-File-ID: 419394\n"
+"Language-Team: Zulu\n"
+"Language: zu_ZA\n"
+"PO-Revision-Date: 2021-06-28 11:24\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr "Категории событий"
+msgstr "crwdns53327746:0crwdne53327746:0"
 
 #: src/app/edit-form-query-toolbar.js:70
 msgid "Activity is only shown for issues that match the search criteria"
-msgstr "Показываются только события по задачам, подходящим под критерии поиска"
+msgstr "crwdns53327748:0crwdne53327748:0"
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr "Любой пользователь"
+msgstr "crwdns53327750:0crwdne53327750:0"
 
 #: src/app/content-attachment-activity.js:77
 msgid "Attachment"
-msgstr "Вложение"
+msgstr "crwdns53327752:0crwdne53327752:0"
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
-msgstr "Вложения"
+msgstr "crwdns53327754:0crwdne53327754:0"
 
 #: src/app/activities-content.js:74
 msgid "Can't load information from service."
-msgstr "Не удается загрузить информацию от сервиса."
+msgstr "crwdns53327756:0crwdne53327756:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "crwdns53327758:0crwdne53327758:0"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr "Категория"
+msgstr "crwdns53327760:0crwdne53327760:0"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr "Изменить авторов"
+msgstr "crwdns53327762:0crwdne53327762:0"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
-msgstr "Комментарии"
+msgstr "crwdns53327764:0crwdne53327764:0"
 
 #: src/app/activities-widget.js:176
 msgid "Could not load new activities"
-msgstr "Не удалось загрузить новые события"
+msgstr "crwdns53327766:0crwdne53327766:0"
 
 #: src/app/control-load-more.js:33
 msgid "Could not request more activities"
-msgstr "Не удалось запросить больше событий"
+msgstr "crwdns53327768:0crwdne53327768:0"
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
-msgstr "Настраиваемые поля"
+msgstr "crwdns53327770:0crwdne53327770:0"
 
 #: src/app/components/categories.js:8
 msgid "Description"
-msgstr "Описание"
+msgstr "crwdns53327772:0crwdne53327772:0"
 
 #: src/app/activities-content.js:155
 msgid "Description changed"
-msgstr "Изменено описание"
+msgstr "crwdns53327774:0crwdne53327774:0"
 
 #: src/app/components/collapsible-block.js:37
 msgid "Details"
-msgstr "Подробнее"
+msgstr "crwdns53327776:0crwdne53327776:0"
 
 #: src/app/activities-content.js:63
 msgid "Edit widget filters"
-msgstr "Редактировать фильтры виджета"
+msgstr "crwdns53327778:0crwdne53327778:0"
 
 #: src/app/edit-form-query-toolbar.js:64
 msgid "Enter a search query"
-msgstr "Введите поисковый запрос"
+msgstr "crwdns53327780:0crwdne53327780:0"
 
 #: src/app/activities-widget.js:263
 msgid "Issue Activity Feed"
-msgstr "Лента событий по задачам"
+msgstr "crwdns53327782:0crwdne53327782:0"
 
 #: src/app/activities-widget.js:262
 msgid "Issue Activity Feed —"
-msgstr "Лента событий по задачам —"
+msgstr "crwdns53327784:0crwdne53327784:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь"
+msgstr "crwdns53327786:0crwdne53327786:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
+msgstr "crwdns53327788:0crwdne53327788:0"
 
 #: src/app/components/categories.js:11
 msgid "Links"
-msgstr "Ссылки"
+msgstr "crwdns53327790:0crwdne53327790:0"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
-msgstr "Новые задачи"
+msgstr "crwdns53327792:0crwdne53327792:0"
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
-msgstr "Нет типа"
+msgstr "crwdns53327794:0crwdne53327794:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "К сожалению, возникла какая-то проблема..."
+msgstr "crwdns53327796:0crwdne53327796:0"
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
-msgstr "Открыть на странице задачи"
+msgstr "crwdns53327798:0crwdne53327798:0"
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
 msgid "Project"
-msgstr "Проект"
+msgstr "crwdns53327800:0crwdne53327800:0"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
-msgstr "Завершенные/открытые повторно задачи"
+msgstr "crwdns53327802:0crwdne53327802:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
-msgstr "Сохранить"
+msgstr "crwdns53327804:0crwdne53327804:0"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
-msgstr "Выберите YouTrack"
+msgstr "crwdns53327806:0crwdne53327806:0"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
-msgstr "Выберите, какие типы обновлений будут показываться в ленте событий"
+msgstr "crwdns53327808:0crwdne53327808:0"
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
-msgstr "Задайте название (не обязательно)"
+msgstr "crwdns53327810:0crwdne53327810:0"
 
 #: src/app/components/issue-card.js:288
 #: src/app/control-load-more.js:53
 msgid "Show more"
-msgstr "Показать больше"
+msgstr "crwdns53327812:0crwdne53327812:0"
 
 #: src/app/components/categories.js:14
 msgid "Sprints"
-msgstr "Спринты"
+msgstr "crwdns53327814:0crwdne53327814:0"
 
 #: src/app/components/categories.js:7
 msgid "Summary"
-msgstr "Заголовок"
+msgstr "crwdns53327816:0crwdne53327816:0"
 
 #: src/app/activities-content.js:148
 msgid "Summary changed"
-msgstr "Изменен заголовок"
+msgstr "crwdns53327818:0crwdne53327818:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr "воскресенье|понедельник|вторник|среда|четверг|пятница|суббота"
+msgstr "crwdns53327820:0crwdne53327820:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "вс|пн|вт|ср|чт|пт|сб"
+msgstr "crwdns53327822:0crwdne53327822:0"
 
 #: src/app/components/categories.js:13
 msgid "Tags"
-msgstr "Теги"
+msgstr "crwdns53327824:0crwdne53327824:0"
 
 #: src/app/activities-content.js:53
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr "За последние 90 дней не зарегистрировано ни одного события, соответствующего фильтрам данного виджета"
+msgstr "crwdns53327826:0crwdne53327826:0"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
-msgstr "Неизвестно"
+msgstr "crwdns53327828:0crwdne53327828:0"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
-msgstr "Изменения в VCS"
+msgstr "crwdns53327830:0crwdne53327830:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr "Виджет обновляется раз в минуту"
+msgstr "crwdns53327832:0crwdne53327832:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "Виджет обновляется раз в {{minutesCount}} мин"
+msgstr "crwdns53327834:0{{minutesCount}}crwdne53327834:0"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
-msgstr "Единицы работы"
+msgstr "crwdns53327836:0crwdne53327836:0"
 
 #: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
-msgstr "[Пустое значение]"
+msgstr "crwdns53327838:0crwdne53327838:0"
 
 #: src/app/content-custom-field-activity.js:17
 msgid "[Removed field]"
-msgstr "[Удаленное поле]"
+msgstr "crwdns53327840:0crwdne53327840:0"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
-msgstr "[Неизвестный формат]"
+msgstr "crwdns53327842:0crwdne53327842:0"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr "добавлена единица работы"
+msgstr "crwdns53327844:0crwdne53327844:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr "ДП|ПП"
+msgstr "crwdns53327846:0crwdne53327846:0"
 
 #: src/app/content-comment-activity.js:22
 msgid "commented"
-msgstr "написал(а) комментарий"
+msgstr "crwdns53327848:0crwdne53327848:0"
 
 #: src/app/content-vcs-activity.js:22
 msgid "committed changes"
-msgstr "сделал(а) коммит"
+msgstr "crwdns53327850:0crwdne53327850:0"
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
-msgstr "создал(а) задачу"
+msgstr "crwdns53327852:0crwdne53327852:0"
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
-msgstr "ч"
+msgstr "crwdns53327854:0crwdne53327854:0"
 
 #: src/app/content-custom-field-activity.js:36
 msgid "m"
-msgstr "мин"
+msgstr "crwdns53327856:0crwdne53327856:0"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr "повторно открыл(а) задачу"
+msgstr "crwdns53327858:0crwdne53327858:0"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
-msgstr "завершил(а) задачу"
+msgstr "crwdns53327860:0crwdne53327860:0"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"
-msgstr "обновлено"
+msgstr "crwdns53327862:0crwdne53327862:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr "{{minutesCount}} мин"
+msgstr "crwdns53327864:0{{minutesCount}}crwdne53327864:0"
 

@@ -5,11 +5,13 @@ msgstr ""
 "Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Project-ID: 295498\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
+"X-Crowdin-File-ID: 112408\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2020-05-14 12:35\n"
+"PO-Revision-Date: 2021-06-28 11:21\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -35,7 +37,7 @@ msgstr "Pièces jointes"
 msgid "Can't load information from service."
 msgstr "Impossible de charger les informations du service."
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -51,7 +53,7 @@ msgstr "Auteurs des modifications"
 msgid "Comments"
 msgstr "Commentaires"
 
-#: src/app/activities-widget.js:179
+#: src/app/activities-widget.js:176
 msgid "Could not load new activities"
 msgstr "Impossible de charger les nouvelles activités"
 
@@ -83,11 +85,11 @@ msgstr "Modifier les filtres des widgets"
 msgid "Enter a search query"
 msgstr "Saisissez une requête de recherche"
 
-#: src/app/activities-widget.js:266
+#: src/app/activities-widget.js:263
 msgid "Issue Activity Feed"
 msgstr "Flux des activités de tickets"
 
-#: src/app/activities-widget.js:265
+#: src/app/activities-widget.js:262
 msgid "Issue Activity Feed —"
 msgstr "Flux des activités de tickets —"
 
@@ -128,7 +130,7 @@ msgstr "Projet"
 msgid "Resolved/reopened issues"
 msgstr "Tickets résolus/rouverts"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "Enregistrer"
 

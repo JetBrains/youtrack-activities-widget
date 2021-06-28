@@ -5,11 +5,13 @@ msgstr ""
 "Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Project-ID: 295498\n"
 "X-Crowdin-Language: eo\n"
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
+"X-Crowdin-File-ID: 112408\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2020-05-14 12:36\n"
+"PO-Revision-Date: 2021-06-28 11:21\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -35,7 +37,7 @@ msgstr "crwdns2792688:0crwdne2792688:0"
 msgid "Can't load information from service."
 msgstr "crwdns2792692:0crwdne2792692:0"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "crwdns2792694:0crwdne2792694:0"
 
@@ -51,7 +53,7 @@ msgstr "crwdns2829190:0crwdne2829190:0"
 msgid "Comments"
 msgstr "crwdns2792696:0crwdne2792696:0"
 
-#: src/app/activities-widget.js:179
+#: src/app/activities-widget.js:176
 msgid "Could not load new activities"
 msgstr "crwdns2794914:0crwdne2794914:0"
 
@@ -83,11 +85,11 @@ msgstr "crwdns3335170:0crwdne3335170:0"
 msgid "Enter a search query"
 msgstr "crwdns2829192:0crwdne2829192:0"
 
-#: src/app/activities-widget.js:266
+#: src/app/activities-widget.js:263
 msgid "Issue Activity Feed"
 msgstr "crwdns2829194:0crwdne2829194:0"
 
-#: src/app/activities-widget.js:265
+#: src/app/activities-widget.js:262
 msgid "Issue Activity Feed —"
 msgstr "crwdns2829196:0crwdne2829196:0"
 
@@ -128,7 +130,7 @@ msgstr "crwdns2792728:0crwdne2792728:0"
 msgid "Resolved/reopened issues"
 msgstr "crwdns3212020:0crwdne3212020:0"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "crwdns2792732:0crwdne2792732:0"
 
