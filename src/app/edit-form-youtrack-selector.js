@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import {Size as InputSize} from '@jetbrains/ring-ui/components/input/input';
 import Select from '@jetbrains/ring-ui/components/select/select';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
+import ServiceResources from '@jetbrains/hub-widget-ui/dist/service-resources';
 
 import '@jetbrains/ring-ui/components/form/form.scss';
 
-import ServiceResource from './components/service-resource';
 import filter from './activities-filter';
 
 import './style/activities-widget.scss';
@@ -45,8 +45,8 @@ class EditFormYoutrackSelector extends React.Component {
   }
 
   async loadYouTrackList() {
-    const youtracks = await ServiceResource.getYouTrackServices(
-      this.props.dashboardApi.fetchHub, MIN_YOUTRACK_VERSION
+    const youtracks = await ServiceResources.getYouTrackServices(
+      this.props.dashboardApi, MIN_YOUTRACK_VERSION
     );
     this.setState({
       availableYouTracks: youtracks

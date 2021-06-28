@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@jetbrains/babel-preset-jetbrains": "1.0.1",
-    "@jetbrains/hub-widget-ui": "1.0.32",
+    "@jetbrains/hub-widget-ui": "^1.0.45",
     "@jetbrains/icons": "1.12.0",
     "@jetbrains/logos": "0.1.6",
     "@jetbrains/ring-ui": "2.0.38",
@@ -63,7 +63,6 @@
   "devDependencies": {
     "@jetbrains/eslint-config": "^4.0.3",
     "@jetbrains/generator-ring-ui": "0.4.5",
-    "@jetbrains/hub-widget-ui": "1.0.32",
     "@jetbrains/stylelint-config": "^1.3.4",
     "babel-eslint": "^10.0.1",
     "chai": "4.0.2",
@@ -89,6 +88,7 @@
     "mobx-react": "^5.4.3",
     "mobx-react-devtools": "^6.0.1",
     "mocha": "5.1.1",
+    "postcss": "8.3.5",
     "react-test-renderer": "16.2.0",
     "sinon": "2.3.5",
     "sinon-chai": "2.11.0",

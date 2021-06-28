@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import ConfigurableWidget
   from '@jetbrains/hub-widget-ui/dist/configurable-widget';
+import ServiceResources from '@jetbrains/hub-widget-ui/dist/service-resources';
 import {observer} from 'mobx-react';
 
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
-import ServiceResource from './components/service-resource';
 import ActivitiesEditForm from './activities-edit-form';
 import ActivitiesContent from './activities-content';
 import {
@@ -26,13 +26,10 @@ class ActivitiesWidget extends React.Component {
 
   static getDefaultYouTrackService =
     async (dashboardApi, predefinedYouTrack) => {
-      if (predefinedYouTrack && predefinedYouTrack.id) {
-        return predefinedYouTrack;
-      }
       try {
         // TODO: pass min-required version here
-        return await ServiceResource.getYouTrackService(
-          dashboardApi.fetchHub.bind(dashboardApi)
+        return await ServiceResources.getYouTrackService(
+          dashboardApi, predefinedYouTrack && predefinedYouTrack.id
         );
       } catch (err) {
         return null;
