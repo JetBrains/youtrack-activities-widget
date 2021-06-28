@@ -10,7 +10,7 @@
   &__empty-widget-message {
     max-width: 288px;
 
-    margin: 3 * $ring-unit auto $ring-unit auto;
+    margin: calc(3 * var(--ring-unit)) auto var(--ring-unit) auto;
 
     color: var(--ring-text-color);
 
@@ -18,7 +18,7 @@
   }
 
   &__issue-filter {
-    margin-bottom: 3 * $ring-unit;
+    margin-bottom: calc(3 * var(--ring-unit));
 
     &__query {
       width: 100%;
@@ -28,7 +28,7 @@
   }
 
   &__user-selector {
-    margin-bottom: 3 * $ring-unit;
+    margin-bottom: calc(3 * var(--ring-unit));
 
     &__title {
       color: var(--ring-secondary-color);
@@ -44,17 +44,17 @@
   }
 
   &__category-selector {
-    margin-bottom: 2 * $ring-unit;
+    margin-bottom: calc(2 * var(--ring-unit));
 
     &__title {
-      padding: 0 0 $ring-unit/2 0;
+      padding: 0 0 4px 0;
 
       font-size: var(--ring-font-size);
       font-weight: bold;
     }
 
     &__info {
-      padding: 0 0 $ring-unit 0;
+      padding: 0 0 var(--ring-unit) 0;
 
       color: var(--ring-secondary-color);
 
@@ -62,18 +62,18 @@
     }
 
     [data-test|=ring-table-header-cell]:first-child {
-      padding-left: $ring-unit !important;
+      padding-left: var(--ring-unit) !important;
     }
 
     [data-test|=ring-table-cell]:first-child {
-      padding-left: $ring-unit !important;
+      padding-left: var(--ring-unit) !important;
     }
   }
 
-  $left-indent: $ring-unit * 4;
-  $right-indent: $ring-unit * 2;
-  $small-indent: $ring-unit / 2;
-  $header-line-height: 3 * $ring-unit;
+  $left-indent: calc(4 * var(--ring-unit));
+  $right-indent: calc(2 * var(--ring-unit));
+  $small-indent: 4px;
+  $header-line-height: calc(3 * var(--ring-unit));
 
   &__load-more {
     margin: 4px 0;
@@ -218,8 +218,8 @@
       &__issue-info {
         display: inline-block;
 
-        padding-right: 2 * $ring-unit;
-        padding-left: 3 * $ring-unit;
+        padding-right: calc(2 * var(--ring-unit));
+        padding-left: calc(3 * var(--ring-unit));
       }
 
       &__colored-field {
@@ -250,8 +250,8 @@
       &__fields {
         display: table;
 
-        min-width: $ring-unit * 20;
-        max-width: $ring-unit * 50;
+        min-width: calc(20 * var(--ring-unit));
+        max-width: calc(50 * var(--ring-unit));
 
         padding: 2px 0 0 0;
 
@@ -278,7 +278,7 @@
         &-title {
           display: table-cell;
 
-          padding-right: $ring-unit*2;
+          padding-right: calc(2 * var(--ring-unit));
           padding-bottom: 2px;
 
           color: var(--ring-secondary-color);
@@ -292,11 +292,11 @@
           position: relative;
           top: 5px;
 
-          width: 2 * $ring-unit;
-          height: 2 * $ring-unit;
+          width: calc(2 * var(--ring-unit));
+          height: calc(3 * var(--ring-unit));
 
-          margin-top: -$ring-unit;
-          margin-left: $ring-unit;
+          margin-top: calc(-1 * var(--ring-unit));
+          margin-left: var(--ring-unit);
 
           border-radius: 3px;
         }
@@ -306,14 +306,14 @@
 
           height: 12px;
 
-          margin-left: $ring-unit !important;
+          margin-left: var(--ring-unit) !important;
         }
       }
     }
   }
 
   &__entry {
-    padding-bottom: 3 * $ring-unit;
+    padding-bottom: calc(3 * var(--ring-unit));
 
     font-size: 14px;
 
@@ -322,7 +322,7 @@
     }
 
     &__container {
-      margin-bottom: $ring-unit;
+      margin-bottom: var(--ring-unit);
 
       font-weight: bold;
 
@@ -372,7 +372,7 @@
   &__activity {
     &__change {
       &__field-name {
-        margin-right: $ring-unit;
+        margin-right: var(--ring-unit);
 
         white-space: nowrap;
       }
@@ -391,7 +391,7 @@
     &__attachment {
       &__header {
         &__field-name {
-          margin-right: $ring-unit;
+          margin-right: var(--ring-unit);
 
           white-space: nowrap;
         }
@@ -399,7 +399,7 @@
         &__stub {
           display: inline-block;
 
-          margin-right: $ring-unit;
+          margin-right: var(--ring-unit);
 
           &_removed {
             text-decoration: line-through;
@@ -413,7 +413,7 @@
         flex-wrap: wrap;
 
         &__thumbnail {
-          margin: $small-indent $ring-unit 0 0;
+          margin: $small-indent var(--ring-unit) 0 0;
         }
       }
     }
@@ -422,7 +422,7 @@
       display: flex;
 
       &__field-name {
-        margin-right: $ring-unit;
+        margin-right: var(--ring-unit);
 
         white-space: nowrap;
       }
@@ -450,7 +450,7 @@
       display: flex;
 
       &__field-name {
-        margin-right: $ring-unit;
+        margin-right: var(--ring-unit);
 
         white-space: nowrap;
 
@@ -482,7 +482,7 @@
       }
 
       &__cell {
-        width: 11*$ring-unit;
+        width: calc(11 * var(--ring-unit));
 
         padding: 0 4px 0 4px;
 
@@ -517,7 +517,7 @@
           overflow: hidden;
 
           width: 112px;
-          min-width: 2*$ring-unit;
+          min-width: calc(2 * var(--ring-unit));
 
           text-overflow: ellipsis;
         }
