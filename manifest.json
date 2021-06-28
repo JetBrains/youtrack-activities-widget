@@ -1,7 +1,7 @@
 {
   "key": "youtrack-activities-widget",
   "name": "Issue Activity Feed",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Shows activities in selected categories for issues that match the specified search criteria",
   "applicationName": "YouTrack",
   "author": "JetBrains",
