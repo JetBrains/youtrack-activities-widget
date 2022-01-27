@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2021-06-28 14:25\n"
+"PO-Revision-Date: 2022-01-27 19:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr "Категории событий"
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
 msgstr "Показываются только события по задачам, подходящим под критерии поиска"
 
@@ -25,7 +25,7 @@ msgstr "Показываются только события по задачам
 msgid "Any user"
 msgstr "Любой пользователь"
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr "Вложение"
 
@@ -33,7 +33,7 @@ msgstr "Вложение"
 msgid "Attachments"
 msgstr "Вложения"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "Не удается загрузить информацию от сервиса."
 
@@ -53,11 +53,11 @@ msgstr "Изменить авторов"
 msgid "Comments"
 msgstr "Комментарии"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
 msgstr "Не удалось загрузить новые события"
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
 msgstr "Не удалось запросить больше событий"
 
@@ -69,7 +69,7 @@ msgstr "Настраиваемые поля"
 msgid "Description"
 msgstr "Описание"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr "Изменено описание"
 
@@ -77,19 +77,19 @@ msgstr "Изменено описание"
 msgid "Details"
 msgstr "Подробнее"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
 msgstr "Редактировать фильтры виджета"
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr "Введите поисковый запрос"
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
 msgstr "Лента событий по задачам"
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
 msgstr "Лента событий по задачам —"
 
@@ -147,7 +147,7 @@ msgid "Set optional title"
 msgstr "Задайте название (не обязательно)"
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "Показать больше"
 
@@ -159,7 +159,7 @@ msgstr "Спринты"
 msgid "Summary"
 msgstr "Заголовок"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr "Изменен заголовок"
 
@@ -175,7 +175,7 @@ msgstr "вс|пн|вт|ср|чт|пт|сб"
 msgid "Tags"
 msgstr "Теги"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr "За последние 90 дней не зарегистрировано ни одного события, соответствующего фильтрам данного виджета"
 

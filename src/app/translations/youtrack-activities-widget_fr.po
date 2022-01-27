@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2021-06-28 14:24\n"
+"PO-Revision-Date: 2022-01-27 19:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr "Catégories d'activités"
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
 msgstr "L'activité ne s'affiche que pour les tickets correspondant aux critères de recherche"
 
@@ -25,7 +25,7 @@ msgstr "L'activité ne s'affiche que pour les tickets correspondant aux critère
 msgid "Any user"
 msgstr "Tout utilisateur"
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr "Pièce jointe"
 
@@ -33,7 +33,7 @@ msgstr "Pièce jointe"
 msgid "Attachments"
 msgstr "Pièces jointes"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "Impossible de charger les informations du service."
 
@@ -53,11 +53,11 @@ msgstr "Auteurs des modifications"
 msgid "Comments"
 msgstr "Commentaires"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
 msgstr "Impossible de charger les nouvelles activités"
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
 msgstr "Impossible de demander d'autres activités"
 
@@ -69,7 +69,7 @@ msgstr "Champs personnalisés"
 msgid "Description"
 msgstr "Description"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr "Description modifiée"
 
@@ -77,19 +77,19 @@ msgstr "Description modifiée"
 msgid "Details"
 msgstr "Détails"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
 msgstr "Modifier les filtres des widgets"
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr "Saisissez une requête de recherche"
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
 msgstr "Flux des activités de tickets"
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
 msgstr "Flux des activités de tickets —"
 
@@ -147,7 +147,7 @@ msgid "Set optional title"
 msgstr "Définir un titre facultatif"
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "Afficher plus"
 
@@ -159,7 +159,7 @@ msgstr "Sprints"
 msgid "Summary"
 msgstr "Résumé"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr "Résumé modifié"
 
@@ -175,7 +175,7 @@ msgstr "Dim|Lun|Mar|Mer|Jeu|Ven|Sam"
 msgid "Tags"
 msgstr "Tags"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr "Aucune activité correspondant aux filtres de ce widget n'a eu lieu au cours des 90 derniers jours"
 

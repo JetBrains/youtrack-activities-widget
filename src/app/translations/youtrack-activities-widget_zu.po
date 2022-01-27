@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Zulu\n"
 "Language: zu_ZA\n"
-"PO-Revision-Date: 2021-06-28 13:24\n"
+"PO-Revision-Date: 2022-01-27 19:59\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr "crwdns53327746:0crwdne53327746:0"
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
 msgstr "crwdns53327748:0crwdne53327748:0"
 
@@ -25,7 +25,7 @@ msgstr "crwdns53327748:0crwdne53327748:0"
 msgid "Any user"
 msgstr "crwdns53327750:0crwdne53327750:0"
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr "crwdns53327752:0crwdne53327752:0"
 
@@ -33,7 +33,7 @@ msgstr "crwdns53327752:0crwdne53327752:0"
 msgid "Attachments"
 msgstr "crwdns53327754:0crwdne53327754:0"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "crwdns53327756:0crwdne53327756:0"
 
@@ -53,11 +53,11 @@ msgstr "crwdns53327762:0crwdne53327762:0"
 msgid "Comments"
 msgstr "crwdns53327764:0crwdne53327764:0"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
 msgstr "crwdns53327766:0crwdne53327766:0"
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
 msgstr "crwdns53327768:0crwdne53327768:0"
 
@@ -69,7 +69,7 @@ msgstr "crwdns53327770:0crwdne53327770:0"
 msgid "Description"
 msgstr "crwdns53327772:0crwdne53327772:0"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr "crwdns53327774:0crwdne53327774:0"
 
@@ -77,19 +77,19 @@ msgstr "crwdns53327774:0crwdne53327774:0"
 msgid "Details"
 msgstr "crwdns53327776:0crwdne53327776:0"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
 msgstr "crwdns53327778:0crwdne53327778:0"
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr "crwdns53327780:0crwdne53327780:0"
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
 msgstr "crwdns53327782:0crwdne53327782:0"
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
 msgstr "crwdns53327784:0crwdne53327784:0"
 
@@ -147,7 +147,7 @@ msgid "Set optional title"
 msgstr "crwdns53327810:0crwdne53327810:0"
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "crwdns53327812:0crwdne53327812:0"
 
@@ -159,7 +159,7 @@ msgstr "crwdns53327814:0crwdne53327814:0"
 msgid "Summary"
 msgstr "crwdns53327816:0crwdne53327816:0"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr "crwdns53327818:0crwdne53327818:0"
 
@@ -175,7 +175,7 @@ msgstr "crwdns53327822:0crwdne53327822:0"
 msgid "Tags"
 msgstr "crwdns53327824:0crwdne53327824:0"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr "crwdns53327826:0crwdne53327826:0"
 

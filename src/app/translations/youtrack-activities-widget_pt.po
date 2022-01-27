@@ -2,30 +2,30 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: youtrack-custom-localization\n"
+"Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: youtrack-custom-localization\n"
-"X-Crowdin-Project-ID: 309400\n"
+"X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Project-ID: 295498\n"
 "X-Crowdin-Language: pt-BR\n"
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
-"X-Crowdin-File-ID: 419394\n"
+"X-Crowdin-File-ID: 112408\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2021-06-28 13:24\n"
+"PO-Revision-Date: 2022-01-27 19:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr ""
+msgstr "Categorias de atividade"
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
-msgstr ""
+msgstr "A atividade é mostrada apenas para issues que correspondem aos critérios de pesquisa"
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr ""
+msgstr "Qualquer usuário"
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr "Anexo"
 
@@ -33,7 +33,7 @@ msgstr "Anexo"
 msgid "Attachments"
 msgstr "Anexos"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "Não é possível carregar informações do serviço."
 
@@ -43,23 +43,23 @@ msgstr "Cancelar"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr ""
+msgstr "Categoria"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr ""
+msgstr "Mudar autores"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
 msgstr "Comentários"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
-msgstr ""
+msgstr "Não foi possível carregar novas atividades"
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
-msgstr ""
+msgstr "Não foi possível solicitar mais atividades"
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
@@ -69,7 +69,7 @@ msgstr "Campos personalizados"
 msgid "Description"
 msgstr "Descrição"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr "Descrição alterada"
 
@@ -77,21 +77,21 @@ msgstr "Descrição alterada"
 msgid "Details"
 msgstr "Detalhes"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
-msgstr ""
+msgstr "Editar filtros de widget"
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
-msgstr ""
+msgstr "Inserir uma consulta de busca"
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
-msgstr ""
+msgstr "Feed de atividade de issues"
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
-msgstr ""
+msgstr "Feed de atividade de issues —"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -107,7 +107,7 @@ msgstr "Links"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
-msgstr ""
+msgstr "Novos issues"
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
@@ -115,11 +115,11 @@ msgstr "Sem tipo"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "Oops! Algo deu errado..."
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
-msgstr ""
+msgstr "Abrir no issue"
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
@@ -128,7 +128,7 @@ msgstr "Projeto"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
-msgstr ""
+msgstr "Issues resolvidos/reabertos"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -140,14 +140,14 @@ msgstr "Selecionar YouTrack"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
-msgstr ""
+msgstr "Selecione os tipos de atualizações que serão mostrados no feed de atividades"
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
 msgstr "Definir título opcional"
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "Mostrar mais"
 
@@ -159,7 +159,7 @@ msgstr "Sprints"
 msgid "Summary"
 msgstr "Resumo"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr "Resumo alterado"
 
@@ -175,9 +175,9 @@ msgstr "Dom|Seg|Ter|Qua|Qui|Sex|Sáb"
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr ""
+msgstr "Não tem havido nenhuma atividade que corresponda aos filtros deste widget nos últimos 90 dias"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
@@ -209,11 +209,11 @@ msgstr "[Campo removido]"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
-msgstr ""
+msgstr "[Formato desconhecido]"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr ""
+msgstr "adicionou item de trabalho"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
@@ -229,7 +229,7 @@ msgstr "submeteu alterações"
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
-msgstr ""
+msgstr "criou um issue"
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
@@ -241,11 +241,11 @@ msgstr "m"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr ""
+msgstr "reabriu um issue"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
-msgstr ""
+msgstr "resolveu um issue"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"

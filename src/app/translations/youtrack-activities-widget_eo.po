@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2021-06-28 14:25\n"
+"PO-Revision-Date: 2022-01-27 19:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr "crwdns2792684:0crwdne2792684:0"
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
 msgstr "crwdns2829184:0crwdne2829184:0"
 
@@ -25,7 +25,7 @@ msgstr "crwdns2829184:0crwdne2829184:0"
 msgid "Any user"
 msgstr "crwdns2829186:0crwdne2829186:0"
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr "crwdns3136852:0crwdne3136852:0"
 
@@ -33,7 +33,7 @@ msgstr "crwdns3136852:0crwdne3136852:0"
 msgid "Attachments"
 msgstr "crwdns2792688:0crwdne2792688:0"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "crwdns2792692:0crwdne2792692:0"
 
@@ -53,11 +53,11 @@ msgstr "crwdns2829190:0crwdne2829190:0"
 msgid "Comments"
 msgstr "crwdns2792696:0crwdne2792696:0"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
 msgstr "crwdns2794914:0crwdne2794914:0"
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
 msgstr "crwdns2794074:0crwdne2794074:0"
 
@@ -69,7 +69,7 @@ msgstr "crwdns2792698:0crwdne2792698:0"
 msgid "Description"
 msgstr "crwdns2792700:0crwdne2792700:0"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr "crwdns3136854:0crwdne3136854:0"
 
@@ -77,19 +77,19 @@ msgstr "crwdns3136854:0crwdne3136854:0"
 msgid "Details"
 msgstr "crwdns2792702:0crwdne2792702:0"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
 msgstr "crwdns3335170:0crwdne3335170:0"
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr "crwdns2829192:0crwdne2829192:0"
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
 msgstr "crwdns2829194:0crwdne2829194:0"
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
 msgstr "crwdns2829196:0crwdne2829196:0"
 
@@ -147,7 +147,7 @@ msgid "Set optional title"
 msgstr "crwdns3212022:0crwdne3212022:0"
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "crwdns2792738:0crwdne2792738:0"
 
@@ -159,7 +159,7 @@ msgstr "crwdns2792740:0crwdne2792740:0"
 msgid "Summary"
 msgstr "crwdns2792742:0crwdne2792742:0"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr "crwdns3136856:0crwdne3136856:0"
 
@@ -175,7 +175,7 @@ msgstr "crwdns2792746:0crwdne2792746:0"
 msgid "Tags"
 msgstr "crwdns2792748:0crwdne2792748:0"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr "crwdns3335172:0crwdne3335172:0"
 

@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2021-06-28 13:22\n"
+"PO-Revision-Date: 2022-01-27 19:58\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
 msgstr ""
 
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Any user"
 msgstr ""
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr "Csatolmány"
 
@@ -33,7 +33,7 @@ msgstr "Csatolmány"
 msgid "Attachments"
 msgstr "Csatolmányok"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "Nem lehet betölteni az információkat a szolgáltatásból."
 
@@ -53,11 +53,11 @@ msgstr ""
 msgid "Comments"
 msgstr "Hozzászólások"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
 msgstr ""
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr "Egyéni mezők"
 msgid "Description"
 msgstr "Leírás"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr "Megváltozott a leírás"
 
@@ -77,19 +77,19 @@ msgstr "Megváltozott a leírás"
 msgid "Details"
 msgstr "Részletek"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgid "Set optional title"
 msgstr "Választható cím beállítása"
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "Mutasson többet"
 
@@ -159,7 +159,7 @@ msgstr "Sprintek"
 msgid "Summary"
 msgstr "Összegzés"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr "Az összegzés megváltozott"
 
@@ -175,7 +175,7 @@ msgstr "Vas|Hét|Ked|Sze|Csü|Pén|Szo"
 msgid "Tags"
 msgstr "Címkék"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr ""
 

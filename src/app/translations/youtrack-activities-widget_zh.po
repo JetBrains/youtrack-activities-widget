@@ -2,30 +2,30 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: youtrack-custom-localization\n"
+"Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: youtrack-custom-localization\n"
-"X-Crowdin-Project-ID: 309400\n"
+"X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Project-ID: 295498\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
-"X-Crowdin-File-ID: 419394\n"
+"X-Crowdin-File-ID: 112408\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2021-06-28 13:20\n"
+"PO-Revision-Date: 2022-01-27 19:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr ""
+msgstr "活动类别"
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
-msgstr ""
+msgstr "仅显示符合搜索条件的问题的活动"
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr ""
+msgstr "任何用户"
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr "附件"
 
@@ -33,7 +33,7 @@ msgstr "附件"
 msgid "Attachments"
 msgstr "附件"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "无法从服务中加载信息。"
 
@@ -43,23 +43,23 @@ msgstr "取消"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr ""
+msgstr "类别"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr ""
+msgstr "更改作者"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
 msgstr "评论"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
-msgstr ""
+msgstr "无法加载新活动"
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
-msgstr ""
+msgstr "无法请求更多活动"
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
@@ -69,29 +69,29 @@ msgstr "自定义字段"
 msgid "Description"
 msgstr "描述"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr "描述已更改"
 
 #: src/app/components/collapsible-block.js:37
 msgid "Details"
-msgstr "详细信息"
+msgstr "详情"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
-msgstr ""
+msgstr "编辑微件筛选器"
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
-msgstr ""
+msgstr "输入搜索查询"
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
-msgstr ""
+msgstr "问题活动 Feed"
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
-msgstr ""
+msgstr "问题活动 Feed —"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -107,7 +107,7 @@ msgstr "链接"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
-msgstr ""
+msgstr "新问题"
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
@@ -119,7 +119,7 @@ msgstr "哎呀，出了些问题..."
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
-msgstr ""
+msgstr "在问题中打开"
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
@@ -128,7 +128,7 @@ msgstr "项目"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
-msgstr ""
+msgstr "已解决/重新打开的问题"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -136,30 +136,30 @@ msgstr "保存"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
-msgstr "选择 YoutTrack"
+msgstr "选择 YouTrack"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
-msgstr ""
+msgstr "选择在活动 Feed 中显示哪些类型的动态"
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
 msgstr "设置可选标题"
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "显示更多"
 
 #: src/app/components/categories.js:14
 msgid "Sprints"
-msgstr ""
+msgstr "冲刺"
 
 #: src/app/components/categories.js:7
 msgid "Summary"
 msgstr "摘要"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr "摘要已更改"
 
@@ -175,9 +175,9 @@ msgstr "周日|周一|周二|周三|周四|周五|周六"
 msgid "Tags"
 msgstr "标签"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr ""
+msgstr "在过去 90 天内没有任何活动与此微件的筛选器匹配"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
@@ -185,7 +185,7 @@ msgstr "未知"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
-msgstr ""
+msgstr "VCS 变更"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
@@ -197,7 +197,7 @@ msgstr "微件每 {{minutesCount}} 分钟刷新一次"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
-msgstr ""
+msgstr "工作项"
 
 #: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
@@ -209,11 +209,11 @@ msgstr "[移除字段]"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
-msgstr ""
+msgstr "[未知格式]"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr ""
+msgstr "添加的工作项"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
@@ -229,7 +229,7 @@ msgstr "已提交的更改"
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
-msgstr ""
+msgstr "创建的问题"
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
@@ -241,11 +241,11 @@ msgstr "分"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr ""
+msgstr "重新打开的问题"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
-msgstr ""
+msgstr "已解决的问题"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"

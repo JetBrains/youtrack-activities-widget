@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2021-06-28 13:23\n"
+"PO-Revision-Date: 2022-01-27 19:58\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
 msgstr ""
 
@@ -25,21 +25,21 @@ msgstr ""
 msgid "Any user"
 msgstr ""
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
-msgstr ""
+msgstr "Allegato"
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
-msgstr ""
+msgstr "Allegati"
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
@@ -51,45 +51,45 @@ msgstr ""
 
 #: src/app/components/categories.js:12
 msgid "Comments"
-msgstr ""
+msgstr "Commenti"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
 msgstr ""
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
 msgstr ""
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
-msgstr ""
+msgstr "Campi personalizzati"
 
 #: src/app/components/categories.js:8
 msgid "Description"
 msgstr "Descrizione"
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
-msgstr ""
+msgstr "Descrizione modificata"
 
 #: src/app/components/collapsible-block.js:37
 msgid "Details"
 msgstr "Dettagli"
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
 msgstr ""
 
@@ -103,7 +103,7 @@ msgstr ""
 
 #: src/app/components/categories.js:11
 msgid "Links"
-msgstr ""
+msgstr "Link"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
@@ -132,7 +132,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
-msgstr ""
+msgstr "Salva"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
@@ -147,7 +147,7 @@ msgid "Set optional title"
 msgstr ""
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "Visualizza di più"
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Summary"
 msgstr "Riepilogo"
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr ""
 
@@ -173,9 +173,9 @@ msgstr ""
 
 #: src/app/components/categories.js:13
 msgid "Tags"
-msgstr ""
+msgstr "Tag"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr ""
 
@@ -233,11 +233,11 @@ msgstr ""
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
-msgstr ""
+msgstr "o"
 
 #: src/app/content-custom-field-activity.js:36
 msgid "m"
-msgstr ""
+msgstr "m"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
@@ -249,7 +249,7 @@ msgstr ""
 
 #: src/app/content-default-activity.js:78
 msgid "updated"
-msgstr ""
+msgstr "aggiornato"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"

@@ -11,13 +11,13 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2021-06-28 13:22\n"
+"PO-Revision-Date: 2022-01-27 19:58\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:70
+#: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
 msgstr ""
 
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Any user"
 msgstr ""
 
-#: src/app/content-attachment-activity.js:77
+#: src/app/content-attachment-activity.js:78
 msgid "Attachment"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Attachments"
 msgstr ""
 
-#: src/app/activities-content.js:74
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr ""
 
@@ -53,11 +53,11 @@ msgstr ""
 msgid "Comments"
 msgstr "הערות/ תגובות"
 
-#: src/app/activities-widget.js:176
+#: src/app/activities-widget.js:169
 msgid "Could not load new activities"
 msgstr ""
 
-#: src/app/control-load-more.js:33
+#: src/app/control-load-more.js:32
 msgid "Could not request more activities"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: src/app/activities-content.js:155
+#: src/app/activities-content.js:154
 msgid "Description changed"
 msgstr ""
 
@@ -77,19 +77,19 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: src/app/activities-content.js:63
+#: src/app/activities-content.js:62
 msgid "Edit widget filters"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:64
+#: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:263
+#: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:262
+#: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgid "Set optional title"
 msgstr ""
 
 #: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:53
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr ""
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Summary"
 msgstr ""
 
-#: src/app/activities-content.js:148
+#: src/app/activities-content.js:147
 msgid "Summary changed"
 msgstr ""
 
@@ -175,7 +175,7 @@ msgstr "א'|ב'|ג'|ד'|ה'|ו'|ש'"
 msgid "Tags"
 msgstr "תגיות"
 
-#: src/app/activities-content.js:53
+#: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr ""
 
