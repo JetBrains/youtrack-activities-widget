@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LoaderInline
-  from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
-import ConfigurationForm
-  from '@jetbrains/hub-widget-ui/dist/configuration-form';
+import LoaderInline from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
+import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form';
 import RefreshPeriod from '@jetbrains/hub-widget-ui/dist/refresh-period';
 import {observer} from 'mobx-react';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import QueryAssist
-  from '@jetbrains/ring-ui/components/query-assist/query-assist';
+import QueryAssist from '@jetbrains/ring-ui/components/query-assist/query-assist';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 import '@jetbrains/ring-ui/components/form/form.scss';
 import {observer} from 'mobx-react';

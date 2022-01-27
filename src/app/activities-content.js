@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LoaderInline
-  from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
+import LoaderInline from '@jetbrains/ring-ui/components/loader-inline/loader-inline';
 import Link from '@jetbrains/ring-ui/components/link/link';
 import Alert, {Container} from '@jetbrains/ring-ui/components/alert/alert';
 import {i18n} from 'hub-dashboard-addons/dist/localization';

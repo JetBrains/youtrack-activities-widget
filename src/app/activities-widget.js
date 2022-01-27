@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ConfigurableWidget
-  from '@jetbrains/hub-widget-ui/dist/configurable-widget';
+import ConfigurableWidget from '@jetbrains/hub-widget-ui/dist/configurable-widget';
 import ServiceResources from '@jetbrains/hub-widget-ui/dist/service-resources';
 import {observer} from 'mobx-react';
 
