@@ -22,7 +22,7 @@ class ActivityAuthorLink extends React.Component {
     login: user.login,
     email: user.email,
     avatarUrl: user.avatarUrl,
-    href: `${filter.youTrackUrl}/users/${user.ringId}`
+    href: `${filter.youTrackUrl}users/${user.ringId}`
   });
 
 

@@ -14,7 +14,7 @@ class ContentSprintActivity extends ContentDefaultActivity {
   renderSprintLink = (sprint, removed) => (
     <span key={`${sprint.id}-${removed}`}>
       <Link
-        href={`${filter.youTrackUrl}/agiles/${sprint.agile.id}/${sprint.id}`}
+        href={`${filter.youTrackUrl}agiles/${sprint.agile.id}/${sprint.id}`}
         className={removed ? 'aw__activity__change__removed' : ''}
       >
         {sprint.name}

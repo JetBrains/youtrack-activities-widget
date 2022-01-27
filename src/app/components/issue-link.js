@@ -20,7 +20,7 @@ class IssueLink extends React.Component {
   linkToIssue() {
     const {issue} = this.props;
     const issueId = issue.idReadable;
-    return `${filter.youTrackUrl}/issue/${issueId}`;
+    return `${filter.youTrackUrl}issue/${issueId}`;
   }
 
   render() {

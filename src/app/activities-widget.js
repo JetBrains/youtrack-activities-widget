@@ -25,11 +25,11 @@ const MILLIS_IN_SEC = 1000;
 class ActivitiesWidget extends React.Component {
 
   static getDefaultYouTrackService =
-    async (dashboardApi, predefinedYouTrack) => {
+    async (dashboardApi, predefinedYouTrackId) => {
       try {
         // TODO: pass min-required version here
         return await ServiceResources.getYouTrackService(
-          dashboardApi, predefinedYouTrack && predefinedYouTrack.id
+          dashboardApi, predefinedYouTrackId
         );
       } catch (err) {
         return null;
@@ -103,10 +103,7 @@ class ActivitiesWidget extends React.Component {
 
   async initializeNewWidget(dashboardApi) {
     const youTrackService = await ActivitiesWidget.getDefaultYouTrackService(
-      dashboardApi, {
-        id: filter.youTrackId,
-        homeUrl: filter.youTrackUrl
-      }
+      dashboardApi, filter.youTrackId
     );
     if (youTrackService && youTrackService.id) {
       await this.setNewService(youTrackService);
@@ -118,10 +115,7 @@ class ActivitiesWidget extends React.Component {
     await filter.restore(this.props);
 
     const youTrackService = await ActivitiesWidget.getDefaultYouTrackService(
-      dashboardApi, {
-        id: filter.youTrackId,
-        homeUrl: filter.youTrackUrl
-      }
+      dashboardApi, filter.youTrackId
     );
 
     if (youTrackService && youTrackService.id) {

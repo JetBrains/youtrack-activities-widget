@@ -36,16 +36,17 @@ class ContentAttachmentActivity extends ContentDefaultActivity {
 
   renderAttachmentThumbnail(activity, attachment) {
     const uniqueKey = `${activity.id}${attachment.id}`;
-    if (!filter.hasOwnProperty('homeUrlNoContext')) {
-      // eslint-disable-next-line new-cap,max-len
-      filter.homeUrlNoContext = new window.URL(filter.youTrackUrl).origin;
-    }
 
-    const attachmentHref = `${filter.homeUrlNoContext}${attachment.url}`;
+    const trimAttachmentsContext = url => {
+      const attachmentsPrefix = 'api/files';
+      return attachmentsPrefix + (url || '').split(attachmentsPrefix).pop();
+    };
+
+    const attachmentHref = `${filter.youTrackUrl}${trimAttachmentsContext(attachment.url)}`;
     const hasPreview = previewWhiteList.indexOf(attachment.mimeType);
 
     if (hasPreview >= 0) {
-      const thumbnailURL = `${filter.homeUrlNoContext}${attachment.thumbnailURL}`;
+      const thumbnailURL = `${filter.youTrackUrl}${trimAttachmentsContext(attachment.thumbnailURL)}`;
       return (
         <div
           className="aw__activity__attachment__added-panel__thumbnail"

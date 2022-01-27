@@ -18,7 +18,7 @@ class ActivityStreamLink extends React.Component {
 
   linkToActivityItem() {
     const {issue, activityId} = this.props;
-    const issueHref = `${filter.youTrackUrl}/issue/${issue.idReadable}`;
+    const issueHref = `${filter.youTrackUrl}issue/${issue.idReadable}`;
     return `${issueHref}#focus=streamItem-${activityId}`;
   }
 
