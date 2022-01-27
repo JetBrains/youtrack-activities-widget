@@ -68,7 +68,7 @@
     "chai-spies": "1.0.0",
     "copy-webpack-plugin": "5.1.1",
     "css-loader": "3.4.2",
-    "electron": "^16.0.7",
+    "electron": "3.0.10",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
     "eslint": "^5.12.1",
