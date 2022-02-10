@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2022-01-27 20:10\n"
+"PO-Revision-Date: 2022-02-10 21:05\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -35,7 +35,7 @@ msgstr "Allegati"
 
 #: src/app/activities-content.js:73
 msgid "Can't load information from service."
-msgstr ""
+msgstr "Impossibile caricare informazioni dal servizio."
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
@@ -95,11 +95,11 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "Gennaio|Febbraio|Marzo|Aprile|Maggio|Giugno|Luglio|Agosto|Settembre|Ottobre|Novembre|Dicembre"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "Gen|Feb|Mar|Apr|Mag|Giu|Lug|Ago|Set|Ott|Nov|Dic"
 
 #: src/app/components/categories.js:11
 msgid "Links"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
-msgstr ""
+msgstr "Nessun tipo"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
@@ -136,7 +136,7 @@ msgstr "Salva"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
-msgstr ""
+msgstr "Seleziona YouTrack"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
-msgstr ""
+msgstr "Imposta titolo facoltativo"
 
 #: src/app/components/issue-card.js:288
 #: src/app/control-load-more.js:52
@@ -153,7 +153,7 @@ msgstr "Visualizza di più"
 
 #: src/app/components/categories.js:14
 msgid "Sprints"
-msgstr ""
+msgstr "Sprint"
 
 #: src/app/components/categories.js:7
 msgid "Summary"
@@ -161,15 +161,15 @@ msgstr "Riepilogo"
 
 #: src/app/activities-content.js:147
 msgid "Summary changed"
-msgstr ""
+msgstr "Riepilogo modificato"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "Domenica|Lunedi|Martedi|Mercoledi|Giovedi|Venerdi|Sabato"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "Dom|Lun|Mar|Mer|Gio|Ven|Sab"
 
 #: src/app/components/categories.js:13
 msgid "Tags"
@@ -181,15 +181,15 @@ msgstr ""
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
-msgstr ""
+msgstr "Sconosciuto"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
-msgstr ""
+msgstr "Modifiche VCS"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "Il widget si aggiorna ogni minuto"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
@@ -197,15 +197,15 @@ msgstr ""
 
 #: src/app/components/categories.js:15
 msgid "Work items"
-msgstr ""
+msgstr "Elementi di lavoro"
 
 #: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
-msgstr ""
+msgstr "[Valore vuoto]"
 
 #: src/app/content-custom-field-activity.js:17
 msgid "[Removed field]"
-msgstr ""
+msgstr "[Campo rimosso]"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
@@ -217,7 +217,7 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr ""
+msgstr "am|pm"
 
 #: src/app/content-comment-activity.js:22
 msgid "commented"
