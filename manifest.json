@@ -3,8 +3,8 @@
   "name": "Issue Activity Feed",
   "version": "1.0.8",
   "description": "Shows activities in selected categories for issues that match the specified search criteria",
-  "applicationName": "YouTrack",
   "author": "JetBrains",
+  "applicationName": "YouTrack",
   "products": {
     "YouTrack": ">=2019.2.60865",
     "Hub": ">=2019.1"
