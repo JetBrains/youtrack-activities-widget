@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2022-02-08 19:37\n"
+"PO-Revision-Date: 2022-04-18 22:06\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -157,7 +157,7 @@ msgstr ""
 
 #: src/app/components/categories.js:7
 msgid "Summary"
-msgstr ""
+msgstr "Podsumowanie"
 
 #: src/app/activities-content.js:147
 msgid "Summary changed"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
-msgstr ""
+msgstr "Nieznane"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
@@ -221,7 +221,7 @@ msgstr "am|pm"
 
 #: src/app/content-comment-activity.js:22
 msgid "commented"
-msgstr ""
+msgstr "skomentowano"
 
 #: src/app/content-vcs-activity.js:22
 msgid "committed changes"

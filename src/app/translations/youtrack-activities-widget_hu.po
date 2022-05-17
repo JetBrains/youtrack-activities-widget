@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2022-02-08 19:37\n"
+"PO-Revision-Date: 2022-04-27 23:49\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -35,7 +35,7 @@ msgstr "Csatolmányok"
 
 #: src/app/activities-content.js:73
 msgid "Can't load information from service."
-msgstr "Nem lehet betölteni az információkat a szolgáltatásból."
+msgstr "Nem lehet betölteni az információt a szolgáltatásból."
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
@@ -115,7 +115,7 @@ msgstr "Nincs típus"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "Hoppá, valami hiba történt..."
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
@@ -193,7 +193,7 @@ msgstr "A widget percenként frissül"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "A widget {{minutesCount}} percenként frissül"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
@@ -253,5 +253,5 @@ msgstr "frissítve"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr ""
+msgstr "{{minutesCount}} perc"
 

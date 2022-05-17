@@ -11,19 +11,19 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2022-02-10 21:05\n"
+"PO-Revision-Date: 2022-05-17 11:03\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr ""
+msgstr "Categorie attività"
 
 #: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
-msgstr ""
+msgstr "L'attività viene visualizzata solo per i ticket che corrispondono ai criteri di ricerca"
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr ""
+msgstr "Qualsiasi utente"
 
 #: src/app/content-attachment-activity.js:78
 msgid "Attachment"
@@ -43,11 +43,11 @@ msgstr "Annulla"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr ""
+msgstr "Categoria"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr ""
+msgstr "Cambia autori"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
@@ -55,11 +55,11 @@ msgstr "Commenti"
 
 #: src/app/activities-widget.js:169
 msgid "Could not load new activities"
-msgstr ""
+msgstr "Impossibile caricare nuove attività"
 
 #: src/app/control-load-more.js:32
 msgid "Could not request more activities"
-msgstr ""
+msgstr "Impossibile richiedere altre attività"
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
@@ -79,19 +79,19 @@ msgstr "Dettagli"
 
 #: src/app/activities-content.js:62
 msgid "Edit widget filters"
-msgstr ""
+msgstr "Modifica i filtri dei widget"
 
 #: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
-msgstr ""
+msgstr "Inserisci una query di ricerca"
 
 #: src/app/activities-widget.js:256
 msgid "Issue Activity Feed"
-msgstr ""
+msgstr "Feed attività del ticket"
 
 #: src/app/activities-widget.js:255
 msgid "Issue Activity Feed —"
-msgstr ""
+msgstr "Feed attività del ticket —"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -107,7 +107,7 @@ msgstr "Link"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
-msgstr ""
+msgstr "Nuovi ticket"
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
@@ -115,11 +115,11 @@ msgstr "Nessun tipo"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "Oops! Qualcosa è andato storto..."
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
-msgstr ""
+msgstr "Apri nel ticket"
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
@@ -128,7 +128,7 @@ msgstr "Progetto"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
-msgstr ""
+msgstr "Ticket risolti/riaperti"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -140,7 +140,7 @@ msgstr "Seleziona YouTrack"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
-msgstr ""
+msgstr "Seleziona i tipi di aggiornamenti visualizzati nel feed attività"
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
@@ -177,7 +177,7 @@ msgstr "Tag"
 
 #: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr ""
+msgstr "Non c'è stata alcuna attività che corrisponda ai filtri per questo widget negli ultimi 90 giorni"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
@@ -193,7 +193,7 @@ msgstr "Il widget si aggiorna ogni minuto"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "Il widget si aggiorna ogni {{minutesCount}} minuti"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
@@ -209,11 +209,11 @@ msgstr "[Campo rimosso]"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
-msgstr ""
+msgstr "[Formato sconosciuto]"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr ""
+msgstr "elemento di lavoro aggiunto"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
@@ -229,7 +229,7 @@ msgstr "ha fatto il committ delle modifiche"
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
-msgstr ""
+msgstr "ticket creato"
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
@@ -241,11 +241,11 @@ msgstr "m"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr ""
+msgstr "ticket riaperto"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
-msgstr ""
+msgstr "ticket risolto"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"
@@ -253,5 +253,5 @@ msgstr "aggiornato"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr ""
+msgstr "{{minutesCount}} min"
 

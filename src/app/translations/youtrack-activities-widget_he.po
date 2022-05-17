@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2022-02-08 19:44\n"
+"PO-Revision-Date: 2022-04-21 14:24\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/app/content-attachment-activity.js:78
 msgid "Attachment"
-msgstr ""
+msgstr "קובץ מצורף"
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
@@ -35,11 +35,11 @@ msgstr ""
 
 #: src/app/activities-content.js:73
 msgid "Can't load information from service."
-msgstr ""
+msgstr "לא ניתן לטעון מידע מהשירות."
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: src/app/components/categories.js:8
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
 #: src/app/activities-content.js:154
 msgid "Description changed"
@@ -124,7 +124,7 @@ msgstr ""
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
 msgid "Project"
-msgstr ""
+msgstr "פרויקט"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
@@ -157,7 +157,7 @@ msgstr ""
 
 #: src/app/components/categories.js:7
 msgid "Summary"
-msgstr ""
+msgstr "תקציר"
 
 #: src/app/activities-content.js:147
 msgid "Summary changed"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
-msgstr ""
+msgstr "לא ידוע"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
@@ -253,5 +253,5 @@ msgstr "עודכן"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr ""
+msgstr "{{minutesCount}} דקות"
 

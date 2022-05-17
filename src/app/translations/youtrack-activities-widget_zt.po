@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2022-02-08 19:36\n"
+"PO-Revision-Date: 2022-05-03 23:53\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -27,11 +27,11 @@ msgstr ""
 
 #: src/app/content-attachment-activity.js:78
 msgid "Attachment"
-msgstr ""
+msgstr "附件"
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
-msgstr ""
+msgstr "附件"
 
 #: src/app/activities-content.js:73
 msgid "Can't load information from service."
@@ -51,7 +51,7 @@ msgstr ""
 
 #: src/app/components/categories.js:12
 msgid "Comments"
-msgstr ""
+msgstr "回應"
 
 #: src/app/activities-widget.js:169
 msgid "Could not load new activities"
@@ -71,7 +71,7 @@ msgstr ""
 
 #: src/app/activities-content.js:154
 msgid "Description changed"
-msgstr ""
+msgstr "描述已更改"
 
 #: src/app/components/collapsible-block.js:37
 msgid "Details"
@@ -124,7 +124,7 @@ msgstr ""
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
 msgid "Project"
-msgstr ""
+msgstr "專案"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
@@ -161,7 +161,7 @@ msgstr ""
 
 #: src/app/activities-content.js:147
 msgid "Summary changed"
-msgstr ""
+msgstr "摘要已更改"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
@@ -193,7 +193,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "小工具每 {{minutesCount}} 分鐘重新整理一次"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
@@ -221,7 +221,7 @@ msgstr ""
 
 #: src/app/content-comment-activity.js:22
 msgid "commented"
-msgstr ""
+msgstr "已回應"
 
 #: src/app/content-vcs-activity.js:22
 msgid "committed changes"
@@ -233,11 +233,11 @@ msgstr ""
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
-msgstr ""
+msgstr "小時"
 
 #: src/app/content-custom-field-activity.js:36
 msgid "m"
-msgstr ""
+msgstr "分鐘"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
@@ -249,9 +249,9 @@ msgstr ""
 
 #: src/app/content-default-activity.js:78
 msgid "updated"
-msgstr ""
+msgstr "已更新"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr ""
+msgstr "{{minutesCount}} 分鐘"
 

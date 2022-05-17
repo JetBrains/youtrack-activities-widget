@@ -3,15 +3,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: youtrack-custom-localization\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Crowdin-Project: youtrack-custom-localization\n"
 "X-Crowdin-Project-ID: 309400\n"
-"X-Crowdin-Language: tr\n"
+"X-Crowdin-Language: ar\n"
 "X-Crowdin-File: /widgets/youtrack-activities-widget/default.pot\n"
 "X-Crowdin-File-ID: 419394\n"
-"Language-Team: Turkish\n"
-"Language: tr_TR\n"
-"PO-Revision-Date: 2022-04-21 14:24\n"
+"Language-Team: Arabic\n"
+"Language: ar_SA\n"
+"PO-Revision-Date: 2022-03-31 11:33\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "Hoppala! Bir şeyler ters gitti..."
+msgstr ""
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
@@ -189,11 +189,11 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr "Widget dakikada bir yenilenmekte"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "Widget {{minutesCount}} dakikada bir yenilenmekte"
+msgstr ""
 
 #: src/app/components/categories.js:15
 msgid "Work items"
@@ -253,5 +253,5 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
-msgstr "{{minutesCount}} dk"
+msgstr ""
 
