@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2022-05-17 21:56\n"
+"PO-Revision-Date: 2022-05-20 12:22\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
@@ -132,7 +132,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
-msgstr ""
+msgstr "Зберегти"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
