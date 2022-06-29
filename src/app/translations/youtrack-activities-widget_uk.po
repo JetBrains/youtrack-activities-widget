@@ -11,180 +11,151 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2022-05-20 13:50\n"
+"PO-Revision-Date: 2022-06-29 12:09\n"
 
-#: src/app/edit-form-category-selector.js:54
+#: src/app/edit-form-category-selector.js:70
 msgid "Activity Categories"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:69
-msgid "Activity is only shown for issues that match the search criteria"
-msgstr ""
+#: src/app/edit-form-user-selector.js:91
+msgid "All authors"
+msgstr "Усі автори"
 
-#: src/app/edit-form-user-selector.js:92
-msgid "Any user"
-msgstr ""
-
-#: src/app/content-attachment-activity.js:78
-msgid "Attachment"
-msgstr ""
-
-#: src/app/components/categories.js:10
+#: src/app/edit-form-category-selector.js:19
 msgid "Attachments"
-msgstr ""
+msgstr "Вкладення"
 
-#: src/app/activities-content.js:73
+#: src/app/edit-form-user-selector.js:75
+msgid "Author"
+msgstr "Автор"
+
+#: src/app/activities-content.js:69
 msgid "Can't load information from service."
-msgstr ""
+msgstr "Не вдалося завантажити інформацію з сервісу."
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/app/edit-form-category-selector.js:45
-msgid "Category"
-msgstr ""
-
-#: src/app/edit-form-user-selector.js:75
-msgid "Change authors"
-msgstr ""
-
-#: src/app/components/categories.js:12
+#: src/app/edit-form-category-selector.js:21
 msgid "Comments"
-msgstr ""
+msgstr "Коментарі"
 
-#: src/app/activities-widget.js:169
-msgid "Could not load new activities"
-msgstr ""
-
-#: src/app/control-load-more.js:32
-msgid "Could not request more activities"
-msgstr ""
-
-#: src/app/components/categories.js:9
+#: src/app/edit-form-category-selector.js:18
 msgid "Custom fields"
-msgstr ""
+msgstr "Користувацькі поля"
 
-#: src/app/components/categories.js:8
+#: src/app/edit-form-category-selector.js:17
 msgid "Description"
-msgstr ""
+msgstr "Опис"
 
-#: src/app/activities-content.js:154
-msgid "Description changed"
-msgstr ""
-
-#: src/app/components/collapsible-block.js:37
+#: src/app/components/collapsible-block.js:36
 msgid "Details"
+msgstr "Деталі"
+
+#: src/app/activities-content.js:58
+msgid "Edit filter settings"
 msgstr ""
 
-#: src/app/activities-content.js:62
-msgid "Edit widget filters"
-msgstr ""
+#: src/app/content-created-activity.js:15
+msgid "Issue created"
+msgstr "Завдання створено"
 
-#: src/app/edit-form-query-toolbar.js:63
-msgid "Enter a search query"
-msgstr ""
-
-#: src/app/activities-widget.js:256
-msgid "Issue Activity Feed"
-msgstr ""
-
-#: src/app/activities-widget.js:255
-msgid "Issue Activity Feed —"
-msgstr ""
+#: src/app/content-created-activity.js:17
+msgid "Issue resolved"
+msgstr "Завдання виконано"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "Січень|Лютий|Березень|Квітень|Травень|Червень|Липень|Серпень|Вересень|Жовтень|Листопад|Грудень"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "Січ|Лют|Бер|Кві|Тра|Чер|Лип|Сер|Вер|Жов|Лис|Гру"
 
-#: src/app/components/categories.js:11
+#: src/app/edit-form-category-selector.js:20
 msgid "Links"
 msgstr ""
 
-#: src/app/components/categories.js:4
+#: src/app/edit-form-category-selector.js:61
+msgid "Name"
+msgstr "Назва"
+
+#: src/app/edit-form-category-selector.js:12
 msgid "New issues"
 msgstr ""
 
-#: src/app/content-work-items-activity.js:67
+#: src/app/activities-content.js:49
+msgid "No activities found"
+msgstr ""
+
+#: src/app/content-work-items-activity.js:56
 msgid "No type"
+msgstr ""
+
+#: src/app/edit-form-query-toolbar.js:74
+msgid "Only activities from the issues matching the search query get to the result."
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
 msgstr ""
 
-#: src/app/components/activity-stream-link.js:29
-msgid "Open in issue"
-msgstr ""
-
-#: src/app/components/categories.js:6
-#: src/app/content-project-activity.js:23
+#: src/app/content-project-activity.js:19
+#: src/app/edit-form-category-selector.js:14
 msgid "Project"
+msgstr "Проєкт"
+
+#: src/app/edit-form-category-selector.js:13
+msgid "Resolved issues"
 msgstr ""
 
-#: src/app/components/categories.js:5
-msgid "Resolved/reopened issues"
-msgstr ""
-
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
 msgid "Save"
 msgstr "Зберегти"
 
-#: src/app/edit-form-youtrack-selector.js:95
+#: src/app/edit-form-youtrack-selector.js:103
 msgid "Select YouTrack"
 msgstr ""
 
-#: src/app/edit-form-category-selector.js:57
-msgid "Select which types of updates are shown in the activity feed"
+#: src/app/edit-form-youtrack-selector.js:68
+msgid "Selected YouTrack service is not available"
 msgstr ""
 
-#: src/app/edit-form-optional-title.js:44
-msgid "Set optional title"
-msgstr ""
-
-#: src/app/components/issue-card.js:288
-#: src/app/control-load-more.js:52
+#: src/app/activities-content.js:105
 msgid "Show more"
-msgstr ""
+msgstr "Показати ще"
 
-#: src/app/components/categories.js:14
+#: src/app/edit-form-category-selector.js:22
 msgid "Sprints"
 msgstr ""
 
-#: src/app/components/categories.js:7
+#: src/app/edit-form-category-selector.js:16
 msgid "Summary"
-msgstr ""
-
-#: src/app/activities-content.js:147
-msgid "Summary changed"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "Неділя|Понеділок|Вівторок|Середа|Четвер|Пʼятниця|Субота"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "Нд|Пн|Вт|Ср|Чт|Пт|Сб"
 
-#: src/app/components/categories.js:13
+#: src/app/edit-form-category-selector.js:15
 msgid "Tags"
 msgstr ""
 
-#: src/app/activities-content.js:52
-msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
+#: src/app/edit-form-category-selector.js:73
+msgid "Text about what categories are and other info"
 msgstr ""
 
-#: src/app/content-project-activity.js:17
-msgid "Unknown"
+#: src/app/edit-form-query-toolbar.js:68
+msgid "Type search query"
 msgstr ""
 
-#: src/app/components/categories.js:16
-msgid "VCS changes"
+#: src/app/edit-form-category-selector.js:24
+msgid "Vcs changes"
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
@@ -195,61 +166,41 @@ msgstr ""
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr ""
 
-#: src/app/components/categories.js:15
+#: src/app/edit-form-category-selector.js:23
 msgid "Work items"
-msgstr ""
+msgstr "робочі елементи"
 
-#: src/app/content-custom-field-activity.js:15
+#: src/app/content-custom-field-activity.js:13
 msgid "[Empty value]"
-msgstr ""
+msgstr "[Пусте значення]"
 
-#: src/app/content-custom-field-activity.js:17
+#: src/app/content-custom-field-activity.js:14
 msgid "[Removed field]"
-msgstr ""
+msgstr "[Вилучене поле]"
 
-#: src/app/content-custom-field-activity.js:16
-msgid "[Unknown format]"
-msgstr ""
-
-#: src/app/content-work-items-activity.js:75
-msgid "added work item"
+#: src/app/content-work-items-activity.js:67
+msgid "added work item on"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr ""
 
-#: src/app/content-comment-activity.js:22
-msgid "commented"
-msgstr ""
-
-#: src/app/content-vcs-activity.js:22
+#: src/app/content-vcs-activity.js:27
 msgid "committed changes"
-msgstr ""
+msgstr "зафіксовані зміни"
 
-#: src/app/content-created-activity.js:17
-msgid "created issue"
-msgstr ""
-
-#: src/app/content-custom-field-activity.js:38
+#: src/app/content-custom-field-activity.js:33
 msgid "h"
 msgstr "г"
 
-#: src/app/content-custom-field-activity.js:36
+#: src/app/content-custom-field-activity.js:31
 msgid "m"
-msgstr ""
+msgstr "хв"
 
-#: src/app/content-resolved-activity.js:20
-msgid "reopened issue"
-msgstr ""
-
-#: src/app/content-resolved-activity.js:18
-msgid "resolved issue"
-msgstr ""
-
-#: src/app/content-default-activity.js:78
+#: src/app/components/activity-author-link.js:39
 msgid "updated"
-msgstr ""
+msgstr "оновлено"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"
