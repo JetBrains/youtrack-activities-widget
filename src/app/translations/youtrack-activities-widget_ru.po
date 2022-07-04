@@ -11,59 +11,87 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2022-06-29 12:10\n"
+"PO-Revision-Date: 2022-07-04 16:12\n"
 
-#: src/app/edit-form-category-selector.js:70
+#: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr "Категории событий"
 
-#: src/app/edit-form-user-selector.js:91
-msgid "All authors"
-msgstr ""
+#: src/app/edit-form-query-toolbar.js:69
+msgid "Activity is only shown for issues that match the search criteria"
+msgstr "Показываются только события по задачам, подходящим под критерии поиска"
 
-#: src/app/edit-form-category-selector.js:19
+#: src/app/edit-form-user-selector.js:92
+msgid "Any user"
+msgstr "Любой пользователь"
+
+#: src/app/content-attachment-activity.js:78
+msgid "Attachment"
+msgstr "Вложение"
+
+#: src/app/components/categories.js:10
 msgid "Attachments"
 msgstr "Вложения"
 
-#: src/app/edit-form-user-selector.js:75
-msgid "Author"
-msgstr ""
-
-#: src/app/activities-content.js:69
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "Не удается загрузить информацию от сервиса."
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/app/edit-form-category-selector.js:21
+#: src/app/edit-form-category-selector.js:45
+msgid "Category"
+msgstr "Категория"
+
+#: src/app/edit-form-user-selector.js:75
+msgid "Change authors"
+msgstr "Изменить авторов"
+
+#: src/app/components/categories.js:12
 msgid "Comments"
 msgstr "Комментарии"
 
-#: src/app/edit-form-category-selector.js:18
+#: src/app/activities-widget.js:169
+msgid "Could not load new activities"
+msgstr "Не удалось загрузить новые события"
+
+#: src/app/control-load-more.js:32
+msgid "Could not request more activities"
+msgstr "Не удалось запросить больше событий"
+
+#: src/app/components/categories.js:9
 msgid "Custom fields"
 msgstr "Настраиваемые поля"
 
-#: src/app/edit-form-category-selector.js:17
+#: src/app/components/categories.js:8
 msgid "Description"
 msgstr "Описание"
 
-#: src/app/components/collapsible-block.js:36
+#: src/app/activities-content.js:154
+msgid "Description changed"
+msgstr "Изменено описание"
+
+#: src/app/components/collapsible-block.js:37
 msgid "Details"
 msgstr "Подробнее"
 
-#: src/app/activities-content.js:58
-msgid "Edit filter settings"
-msgstr ""
+#: src/app/activities-content.js:62
+msgid "Edit widget filters"
+msgstr "Редактировать фильтры виджета"
 
-#: src/app/content-created-activity.js:15
-msgid "Issue created"
-msgstr ""
+#: src/app/edit-form-query-toolbar.js:63
+msgid "Enter a search query"
+msgstr "Введите поисковый запрос"
 
-#: src/app/content-created-activity.js:17
-msgid "Issue resolved"
-msgstr ""
+#: src/app/activities-widget.js:256
+msgid "Issue Activity Feed"
+msgstr "Лента событий по задачам"
+
+#: src/app/activities-widget.js:255
+msgid "Issue Activity Feed —"
+msgstr "Лента событий по задачам —"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -73,66 +101,67 @@ msgstr "январь|февраль|март|апрель|май|июнь|июл
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
 
-#: src/app/edit-form-category-selector.js:20
+#: src/app/components/categories.js:11
 msgid "Links"
 msgstr "Ссылки"
 
-#: src/app/edit-form-category-selector.js:61
-msgid "Name"
-msgstr ""
-
-#: src/app/edit-form-category-selector.js:12
+#: src/app/components/categories.js:4
 msgid "New issues"
 msgstr "Новые задачи"
 
-#: src/app/activities-content.js:49
-msgid "No activities found"
-msgstr ""
-
-#: src/app/content-work-items-activity.js:56
+#: src/app/content-work-items-activity.js:67
 msgid "No type"
 msgstr "Нет типа"
-
-#: src/app/edit-form-query-toolbar.js:74
-msgid "Only activities from the issues matching the search query get to the result."
-msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
 msgstr "К сожалению, возникла какая-то проблема..."
 
-#: src/app/content-project-activity.js:19
-#: src/app/edit-form-category-selector.js:14
+#: src/app/components/activity-stream-link.js:29
+msgid "Open in issue"
+msgstr "Открыть на странице задачи"
+
+#: src/app/components/categories.js:6
+#: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Проект"
 
-#: src/app/edit-form-category-selector.js:13
-msgid "Resolved issues"
-msgstr ""
+#: src/app/components/categories.js:5
+msgid "Resolved/reopened issues"
+msgstr "Завершенные/открытые повторно задачи"
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/app/edit-form-youtrack-selector.js:103
+#: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
 msgstr "Выберите YouTrack"
 
-#: src/app/edit-form-youtrack-selector.js:68
-msgid "Selected YouTrack service is not available"
-msgstr ""
+#: src/app/edit-form-category-selector.js:57
+msgid "Select which types of updates are shown in the activity feed"
+msgstr "Выберите, какие типы обновлений будут показываться в ленте событий"
 
-#: src/app/activities-content.js:105
+#: src/app/edit-form-optional-title.js:44
+msgid "Set optional title"
+msgstr "Задайте название (не обязательно)"
+
+#: src/app/components/issue-card.js:288
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "Показать больше"
 
-#: src/app/edit-form-category-selector.js:22
+#: src/app/components/categories.js:14
 msgid "Sprints"
 msgstr "Спринты"
 
-#: src/app/edit-form-category-selector.js:16
+#: src/app/components/categories.js:7
 msgid "Summary"
 msgstr "Заголовок"
+
+#: src/app/activities-content.js:147
+msgid "Summary changed"
+msgstr "Заголовок был изменен"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -142,21 +171,21 @@ msgstr "воскресенье|понедельник|вторник|среда|
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "вс|пн|вт|ср|чт|пт|сб"
 
-#: src/app/edit-form-category-selector.js:15
+#: src/app/components/categories.js:13
 msgid "Tags"
 msgstr "Теги"
 
-#: src/app/edit-form-category-selector.js:73
-msgid "Text about what categories are and other info"
-msgstr ""
+#: src/app/activities-content.js:52
+msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
+msgstr "За последние 90 дней не зарегистрировано ни одного события, соответствующего фильтрам данного виджета"
 
-#: src/app/edit-form-query-toolbar.js:68
-msgid "Type search query"
-msgstr ""
+#: src/app/content-project-activity.js:17
+msgid "Unknown"
+msgstr "Неизвестно"
 
-#: src/app/edit-form-category-selector.js:24
-msgid "Vcs changes"
-msgstr ""
+#: src/app/components/categories.js:16
+msgid "VCS changes"
+msgstr "Изменения в VCS"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
@@ -166,39 +195,59 @@ msgstr "Виджет обновляется раз в минуту"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "Виджет обновляется раз в {{minutesCount}} мин"
 
-#: src/app/edit-form-category-selector.js:23
+#: src/app/components/categories.js:15
 msgid "Work items"
 msgstr "Единицы работы"
 
-#: src/app/content-custom-field-activity.js:13
+#: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
 msgstr "[Пустое значение]"
 
-#: src/app/content-custom-field-activity.js:14
+#: src/app/content-custom-field-activity.js:17
 msgid "[Removed field]"
 msgstr "[Удаленное поле]"
 
-#: src/app/content-work-items-activity.js:67
-msgid "added work item on"
-msgstr ""
+#: src/app/content-custom-field-activity.js:16
+msgid "[Unknown format]"
+msgstr "[Неизвестный формат]"
+
+#: src/app/content-work-items-activity.js:75
+msgid "added work item"
+msgstr "добавлена единица работы"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr "ДП|ПП"
 
-#: src/app/content-vcs-activity.js:27
+#: src/app/content-comment-activity.js:22
+msgid "commented"
+msgstr "написал(а) комментарий"
+
+#: src/app/content-vcs-activity.js:22
 msgid "committed changes"
 msgstr "сделал(а) коммит"
 
-#: src/app/content-custom-field-activity.js:33
+#: src/app/content-created-activity.js:17
+msgid "created issue"
+msgstr "создал(а) задачу"
+
+#: src/app/content-custom-field-activity.js:38
 msgid "h"
 msgstr "ч"
 
-#: src/app/content-custom-field-activity.js:31
+#: src/app/content-custom-field-activity.js:36
 msgid "m"
 msgstr "мин"
 
-#: src/app/components/activity-author-link.js:39
+#: src/app/content-resolved-activity.js:20
+msgid "reopened issue"
+msgstr "повторно открыл(а) задачу"
+
+#: src/app/content-resolved-activity.js:18
+msgid "resolved issue"
+msgstr "завершил(а) задачу"
+
+#: src/app/content-default-activity.js:78
 msgid "updated"
 msgstr "обновлено"
 

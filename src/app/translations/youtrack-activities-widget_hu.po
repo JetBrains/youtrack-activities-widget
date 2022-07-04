@@ -11,59 +11,87 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2022-06-29 12:08\n"
+"PO-Revision-Date: 2022-07-04 16:14\n"
 
-#: src/app/edit-form-category-selector.js:70
+#: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
 msgstr ""
 
-#: src/app/edit-form-user-selector.js:91
-msgid "All authors"
-msgstr "Összes szerző"
+#: src/app/edit-form-query-toolbar.js:69
+msgid "Activity is only shown for issues that match the search criteria"
+msgstr ""
 
-#: src/app/edit-form-category-selector.js:19
+#: src/app/edit-form-user-selector.js:92
+msgid "Any user"
+msgstr ""
+
+#: src/app/content-attachment-activity.js:78
+msgid "Attachment"
+msgstr "Csatolmány"
+
+#: src/app/components/categories.js:10
 msgid "Attachments"
 msgstr "Csatolmányok"
 
-#: src/app/edit-form-user-selector.js:75
-msgid "Author"
-msgstr "Szerző"
-
-#: src/app/activities-content.js:69
+#: src/app/activities-content.js:73
 msgid "Can't load information from service."
 msgstr "Nem lehet betölteni az információt a szolgáltatásból."
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:52
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: src/app/edit-form-category-selector.js:21
+#: src/app/edit-form-category-selector.js:45
+msgid "Category"
+msgstr ""
+
+#: src/app/edit-form-user-selector.js:75
+msgid "Change authors"
+msgstr ""
+
+#: src/app/components/categories.js:12
 msgid "Comments"
 msgstr "Hozzászólások"
 
-#: src/app/edit-form-category-selector.js:18
+#: src/app/activities-widget.js:169
+msgid "Could not load new activities"
+msgstr ""
+
+#: src/app/control-load-more.js:32
+msgid "Could not request more activities"
+msgstr ""
+
+#: src/app/components/categories.js:9
 msgid "Custom fields"
 msgstr "Egyéni mezők"
 
-#: src/app/edit-form-category-selector.js:17
+#: src/app/components/categories.js:8
 msgid "Description"
 msgstr "Leírás"
 
-#: src/app/components/collapsible-block.js:36
+#: src/app/activities-content.js:154
+msgid "Description changed"
+msgstr "Megváltozott a leírás"
+
+#: src/app/components/collapsible-block.js:37
 msgid "Details"
 msgstr "Részletek"
 
-#: src/app/activities-content.js:58
-msgid "Edit filter settings"
+#: src/app/activities-content.js:62
+msgid "Edit widget filters"
 msgstr ""
 
-#: src/app/content-created-activity.js:15
-msgid "Issue created"
-msgstr "Hibajegy létrehozva"
+#: src/app/edit-form-query-toolbar.js:63
+msgid "Enter a search query"
+msgstr ""
 
-#: src/app/content-created-activity.js:17
-msgid "Issue resolved"
-msgstr "Hibajegy megoldva"
+#: src/app/activities-widget.js:256
+msgid "Issue Activity Feed"
+msgstr ""
+
+#: src/app/activities-widget.js:255
+msgid "Issue Activity Feed —"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -73,66 +101,67 @@ msgstr "Január|Február|Március|Április|Május|Június|Július|Augusztus|Szep
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Jan|Febr|Már|Ápr|Máj|Jún|Júl|Aug|Szept|Okt|Nov|Dec"
 
-#: src/app/edit-form-category-selector.js:20
+#: src/app/components/categories.js:11
 msgid "Links"
 msgstr "Hivatkozások"
 
-#: src/app/edit-form-category-selector.js:61
-msgid "Name"
-msgstr "Név"
-
-#: src/app/edit-form-category-selector.js:12
+#: src/app/components/categories.js:4
 msgid "New issues"
 msgstr ""
 
-#: src/app/activities-content.js:49
-msgid "No activities found"
-msgstr ""
-
-#: src/app/content-work-items-activity.js:56
+#: src/app/content-work-items-activity.js:67
 msgid "No type"
 msgstr "Nincs típus"
-
-#: src/app/edit-form-query-toolbar.js:74
-msgid "Only activities from the issues matching the search query get to the result."
-msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
 msgstr "Hoppá, valami hiba történt..."
 
-#: src/app/content-project-activity.js:19
-#: src/app/edit-form-category-selector.js:14
+#: src/app/components/activity-stream-link.js:29
+msgid "Open in issue"
+msgstr ""
+
+#: src/app/components/categories.js:6
+#: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Projekt"
 
-#: src/app/edit-form-category-selector.js:13
-msgid "Resolved issues"
+#: src/app/components/categories.js:5
+msgid "Resolved/reopened issues"
 msgstr ""
 
-#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:45
+#: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
 msgstr "Mentés"
 
-#: src/app/edit-form-youtrack-selector.js:103
+#: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
 msgstr "YouTrack kiválasztása"
 
-#: src/app/edit-form-youtrack-selector.js:68
-msgid "Selected YouTrack service is not available"
-msgstr "A kiválasztott YouTrace szolgáltatás nem elérhető"
+#: src/app/edit-form-category-selector.js:57
+msgid "Select which types of updates are shown in the activity feed"
+msgstr ""
 
-#: src/app/activities-content.js:105
+#: src/app/edit-form-optional-title.js:44
+msgid "Set optional title"
+msgstr "Választható cím beállítása"
+
+#: src/app/components/issue-card.js:288
+#: src/app/control-load-more.js:52
 msgid "Show more"
 msgstr "Mutasson többet"
 
-#: src/app/edit-form-category-selector.js:22
+#: src/app/components/categories.js:14
 msgid "Sprints"
 msgstr "Sprintek"
 
-#: src/app/edit-form-category-selector.js:16
+#: src/app/components/categories.js:7
 msgid "Summary"
 msgstr "Összegzés"
+
+#: src/app/activities-content.js:147
+msgid "Summary changed"
+msgstr "Az összegzés megváltozott"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -142,21 +171,21 @@ msgstr "Vasárnap|Hétfő|Kedd|Szerda|Csütörtök|Péntek|Szombat"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Vas|Hét|Ked|Sze|Csü|Pén|Szo"
 
-#: src/app/edit-form-category-selector.js:15
+#: src/app/components/categories.js:13
 msgid "Tags"
 msgstr "Címkék"
 
-#: src/app/edit-form-category-selector.js:73
-msgid "Text about what categories are and other info"
+#: src/app/activities-content.js:52
+msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr ""
 
-#: src/app/edit-form-query-toolbar.js:68
-msgid "Type search query"
-msgstr "Írja be a keresési paramétereket"
+#: src/app/content-project-activity.js:17
+msgid "Unknown"
+msgstr "Ismeretlen"
 
-#: src/app/edit-form-category-selector.js:24
-msgid "Vcs changes"
-msgstr ""
+#: src/app/components/categories.js:16
+msgid "VCS changes"
+msgstr "VCS változások"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
@@ -166,39 +195,59 @@ msgstr "A widget percenként frissül"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "A widget {{minutesCount}} percenként frissül"
 
-#: src/app/edit-form-category-selector.js:23
+#: src/app/components/categories.js:15
 msgid "Work items"
 msgstr "Munka ráfordítás"
 
-#: src/app/content-custom-field-activity.js:13
+#: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
 msgstr "[Üres érték]"
 
-#: src/app/content-custom-field-activity.js:14
+#: src/app/content-custom-field-activity.js:17
 msgid "[Removed field]"
 msgstr "[Eltávolított mező]"
 
-#: src/app/content-work-items-activity.js:67
-msgid "added work item on"
+#: src/app/content-custom-field-activity.js:16
+msgid "[Unknown format]"
+msgstr ""
+
+#: src/app/content-work-items-activity.js:75
+msgid "added work item"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr "am|pm"
 
-#: src/app/content-vcs-activity.js:27
+#: src/app/content-comment-activity.js:22
+msgid "commented"
+msgstr "hozzászólás készült hozzá"
+
+#: src/app/content-vcs-activity.js:22
 msgid "committed changes"
 msgstr "közzétett változások"
 
-#: src/app/content-custom-field-activity.js:33
+#: src/app/content-created-activity.js:17
+msgid "created issue"
+msgstr ""
+
+#: src/app/content-custom-field-activity.js:38
 msgid "h"
 msgstr "ó"
 
-#: src/app/content-custom-field-activity.js:31
+#: src/app/content-custom-field-activity.js:36
 msgid "m"
 msgstr "p"
 
-#: src/app/components/activity-author-link.js:39
+#: src/app/content-resolved-activity.js:20
+msgid "reopened issue"
+msgstr ""
+
+#: src/app/content-resolved-activity.js:18
+msgid "resolved issue"
+msgstr ""
+
+#: src/app/content-default-activity.js:78
 msgid "updated"
 msgstr "frissítve"
 
