@@ -29,7 +29,7 @@ export async function queryUsers(fetchHub, query) {
 }
 
 export async function loadMeProfile(fetchYouTrack) {
-  const path = 'api/admin/users/me/profiles/general';
+  const path = 'api/users/me/profiles/general';
   return await fetchYouTrack(`${path}?fields=${GENERAL_PROFILE_FIELDS}`);
 }
 
