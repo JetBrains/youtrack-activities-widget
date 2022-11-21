@@ -141,6 +141,9 @@ class ActivitiesWidget extends React.Component {
 
   // eslint-disable-next-line complexity
   tryLoadNewActivities = async () => {
+    if (document.hidden) {
+      return;
+    }
     try {
       const lastTimestamp = (this.state || {}).timestamp;
       const timestamp = lastTimestamp || filter.recentPeriodStart;
