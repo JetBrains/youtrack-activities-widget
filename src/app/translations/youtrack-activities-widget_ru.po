@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2022-10-29 00:16\n"
+"PO-Revision-Date: 2022-11-21 15:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -53,7 +53,7 @@ msgstr "Изменить авторов"
 msgid "Comments"
 msgstr "Комментарии"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
 msgstr "Не удалось загрузить новые события"
 
@@ -85,11 +85,11 @@ msgstr "Редактировать фильтры виджета"
 msgid "Enter a search query"
 msgstr "Введите поисковый запрос"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr "Лента событий по задачам"
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr "Лента событий по задачам —"
 

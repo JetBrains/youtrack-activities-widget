@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2022-10-29 00:16\n"
+"PO-Revision-Date: 2022-11-21 15:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -53,7 +53,7 @@ msgstr "作者を変更"
 msgid "Comments"
 msgstr "コメント"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
 msgstr "新しいアクティビティを読み込めませんでした"
 
@@ -85,11 +85,11 @@ msgstr "ウィジェットフィルタを編集"
 msgid "Enter a search query"
 msgstr "検索クエリを入力してください"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr "課題アクティビティフィード"
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr "課題アクティビティフィード —"
 

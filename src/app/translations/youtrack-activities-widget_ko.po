@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2022-10-31 00:09\n"
+"PO-Revision-Date: 2022-11-21 15:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -53,7 +53,7 @@ msgstr "작성자 변경"
 msgid "Comments"
 msgstr "코멘트"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
 msgstr "새로운 활동을 불러올 수 없습니다"
 
@@ -85,11 +85,11 @@ msgstr "위젯 필터 편집"
 msgid "Enter a search query"
 msgstr "검색 쿼리 입력"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr "이슈 활동 피드"
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr "이슈 활동 피드 —"
 

@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2022-10-29 00:16\n"
+"PO-Revision-Date: 2022-11-21 15:57\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -53,7 +53,7 @@ msgstr "更改作者"
 msgid "Comments"
 msgstr "评论"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
 msgstr "无法加载新活动"
 
@@ -85,11 +85,11 @@ msgstr "编辑微件筛选器"
 msgid "Enter a search query"
 msgstr "输入搜索查询"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr "问题活动 Feed"
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr "问题活动 Feed —"
 
