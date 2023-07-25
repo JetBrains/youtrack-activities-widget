@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 112408\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2023-02-01 15:29\n"
+"PO-Revision-Date: 2023-07-25 12:48\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -115,7 +115,7 @@ msgstr "无类型"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "哎呀，出了些问题..."
+msgstr "哎呀，出了些问题…"
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
@@ -185,7 +185,7 @@ msgstr "未知"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
-msgstr "VCS 变更"
+msgstr "VCS 更改"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
