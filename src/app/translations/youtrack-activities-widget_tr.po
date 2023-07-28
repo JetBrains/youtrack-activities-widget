@@ -11,11 +11,11 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2022-07-04 16:14\n"
+"PO-Revision-Date: 2023-07-28 13:08\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr ""
+msgstr "Aktivite Kategorileri"
 
 #: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
@@ -23,87 +23,87 @@ msgstr ""
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr ""
+msgstr "Herhangi bir kullanıcı"
 
 #: src/app/content-attachment-activity.js:78
 msgid "Attachment"
-msgstr ""
+msgstr "Ek"
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
-msgstr ""
+msgstr "Ekler"
 
 #: src/app/activities-content.js:73
 msgid "Can't load information from service."
-msgstr ""
+msgstr "Hizmetten bilgi yüklenemiyor."
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:58
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr ""
+msgstr "Kategori"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr ""
+msgstr "Yazarları değiştir"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
-msgstr ""
+msgstr "Yorumlar"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
-msgstr ""
+msgstr "Yeni aktiviteler yüklenemedi"
 
 #: src/app/control-load-more.js:32
 msgid "Could not request more activities"
-msgstr ""
+msgstr "Daha fazla aktivite talep edilemedi"
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
-msgstr ""
+msgstr "Özel alanlar"
 
 #: src/app/components/categories.js:8
 msgid "Description"
-msgstr ""
+msgstr "Açıklama"
 
 #: src/app/activities-content.js:154
 msgid "Description changed"
-msgstr ""
+msgstr "Açıklama değiştirildi"
 
 #: src/app/components/collapsible-block.js:37
 msgid "Details"
-msgstr ""
+msgstr "Detaylar"
 
 #: src/app/activities-content.js:62
 msgid "Edit widget filters"
-msgstr ""
+msgstr "Widget filtrelerini düzenle"
 
 #: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
-msgstr ""
+msgstr "Arama sorgusu girin"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "Oca|Şub|Mar|Nis|May|Haz|Tem|Ağu|Eyl|Eki|Kas|Ara"
 
 #: src/app/components/categories.js:11
 msgid "Links"
-msgstr ""
+msgstr "Bağlantılar"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr "Hoppala! Bir şeyler ters gitti..."
+msgstr "Hay aksi! Bir şeyler ters gitti..."
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
@@ -124,7 +124,7 @@ msgstr ""
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
 msgid "Project"
-msgstr ""
+msgstr "Proje"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
@@ -132,11 +132,11 @@ msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
-msgstr ""
+msgstr "YouTrack'i seçin"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
@@ -144,12 +144,12 @@ msgstr ""
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
-msgstr ""
+msgstr "İsteğe bağlı başlık belirleyin"
 
 #: src/app/components/issue-card.js:288
 #: src/app/control-load-more.js:52
 msgid "Show more"
-msgstr ""
+msgstr "Daha fazla göster"
 
 #: src/app/components/categories.js:14
 msgid "Sprints"
@@ -157,47 +157,47 @@ msgstr ""
 
 #: src/app/components/categories.js:7
 msgid "Summary"
-msgstr ""
+msgstr "Özet"
 
 #: src/app/activities-content.js:147
 msgid "Summary changed"
-msgstr ""
+msgstr "Özet değiştirildi"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "Pazar|Pazartesi|Salı|Çarşamba|Perşembe|Cuma|Cumartesi"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "Paz|Pzt|Sal|Çrş|Prş|Cum|Cmt"
 
 #: src/app/components/categories.js:13
 msgid "Tags"
-msgstr ""
+msgstr "Etiketler"
 
 #: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr ""
+msgstr "Son 90 gün içinde bu widget'ın filtreleriyle eşleşen herhangi bir aktivite olmadı"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
-msgstr ""
+msgstr "Bilinmeyen"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
-msgstr ""
+msgstr "VCS değişiklikleri"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr "Widget dakikada bir yenilenmekte"
+msgstr "Widget dakikada bir yenilenir"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr "Widget {{minutesCount}} dakikada bir yenilenmekte"
+msgstr "Widget {{minutesCount}} dakikada bir yenilenir"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
-msgstr ""
+msgstr "İş ögeleri"
 
 #: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
@@ -213,15 +213,15 @@ msgstr ""
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr ""
+msgstr "iş ögesi ekledi"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr ""
+msgstr "öö|ös"
 
 #: src/app/content-comment-activity.js:22
 msgid "commented"
-msgstr ""
+msgstr "yorum yapıldı"
 
 #: src/app/content-vcs-activity.js:22
 msgid "committed changes"
@@ -233,11 +233,11 @@ msgstr ""
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
-msgstr ""
+msgstr "sa"
 
 #: src/app/content-custom-field-activity.js:36
 msgid "m"
-msgstr ""
+msgstr "dk"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
@@ -249,7 +249,7 @@ msgstr ""
 
 #: src/app/content-default-activity.js:78
 msgid "updated"
-msgstr ""
+msgstr "güncellendi"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:64
 msgid "{{minutesCount}} min"

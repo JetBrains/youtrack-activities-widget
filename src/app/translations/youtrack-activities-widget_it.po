@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2022-07-04 16:14\n"
+"PO-Revision-Date: 2023-07-28 13:08\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -53,7 +53,7 @@ msgstr "Cambia autori"
 msgid "Comments"
 msgstr "Commenti"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
 msgstr "Impossibile caricare nuove attività"
 
@@ -85,11 +85,11 @@ msgstr "Modifica i filtri dei widget"
 msgid "Enter a search query"
 msgstr "Inserisci una query di ricerca"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr "Feed attività del ticket"
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr "Feed attività del ticket —"
 

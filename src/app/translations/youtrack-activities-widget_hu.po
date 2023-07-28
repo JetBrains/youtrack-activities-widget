@@ -11,19 +11,19 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2022-07-04 16:14\n"
+"PO-Revision-Date: 2023-07-28 13:08\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr ""
+msgstr "Tevékenység kategóriák"
 
 #: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
-msgstr ""
+msgstr "A tevékenység csak a keresési feltételeknek megfelelő hibajegyeknél jelenik meg"
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr ""
+msgstr "Bármely felhasználó"
 
 #: src/app/content-attachment-activity.js:78
 msgid "Attachment"
@@ -43,23 +43,23 @@ msgstr "Mégsem"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr ""
+msgstr "Kategória"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr ""
+msgstr "Szerzők módosítása"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
 msgstr "Hozzászólások"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
-msgstr ""
+msgstr "Nem lehet új tevékenységeket betölteni"
 
 #: src/app/control-load-more.js:32
 msgid "Could not request more activities"
-msgstr ""
+msgstr "Több tevékenységet nem lehet kérni"
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
@@ -79,19 +79,19 @@ msgstr "Részletek"
 
 #: src/app/activities-content.js:62
 msgid "Edit widget filters"
-msgstr ""
+msgstr "Widget szűrők szerkesztése"
 
 #: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
-msgstr ""
+msgstr "Adjon meg egy keresőkérdést"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
-msgstr ""
+msgstr "Hibajegy Tevékenység Hírfolyam"
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
-msgstr ""
+msgstr "Hibajegy Tevékenység Hírfolyam -"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -107,7 +107,7 @@ msgstr "Hivatkozások"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
-msgstr ""
+msgstr "Új hibajegyek"
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
@@ -119,7 +119,7 @@ msgstr "Hoppá, valami hiba történt..."
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
-msgstr ""
+msgstr "Hibajegyben megnyitva"
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
@@ -128,7 +128,7 @@ msgstr "Projekt"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
-msgstr ""
+msgstr "Megoldott/újranyitott hibajegyek"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -140,7 +140,7 @@ msgstr "YouTrack kiválasztása"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
-msgstr ""
+msgstr "Válassza ki, a frissítések mely típusai jelenjenek meg a tevékenység hírfolyamban"
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
@@ -177,7 +177,7 @@ msgstr "Címkék"
 
 #: src/app/activities-content.js:52
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr ""
+msgstr "Az elmúlt 90 napban nem volt olyan tevékenység, amely egyezne az ehhez az elemhez beállított szűrőkkel"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
@@ -209,11 +209,11 @@ msgstr "[Eltávolított mező]"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
-msgstr ""
+msgstr "[Ismeretlen formátum]"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr ""
+msgstr "hozzáadott munkaelem"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
@@ -229,7 +229,7 @@ msgstr "közzétett változások"
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
-msgstr ""
+msgstr "létrehozott hibajegy"
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
@@ -241,11 +241,11 @@ msgstr "p"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr ""
+msgstr "újranyitott hibajegy"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
-msgstr ""
+msgstr "megoldott hibajegy"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"

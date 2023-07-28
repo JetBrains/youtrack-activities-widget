@@ -11,11 +11,11 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2022-07-04 16:14\n"
+"PO-Revision-Date: 2023-07-28 13:07\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
-msgstr ""
+msgstr "קטגוריות פעילות"
 
 #: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
-msgstr ""
+msgstr "כל משתמש"
 
 #: src/app/content-attachment-activity.js:78
 msgid "Attachment"
@@ -31,7 +31,7 @@ msgstr "קובץ מצורף"
 
 #: src/app/components/categories.js:10
 msgid "Attachments"
-msgstr ""
+msgstr "קבצים מצורפים"
 
 #: src/app/activities-content.js:73
 msgid "Can't load information from service."
@@ -43,17 +43,17 @@ msgstr "ביטול"
 
 #: src/app/edit-form-category-selector.js:45
 msgid "Category"
-msgstr ""
+msgstr "קטגוריה"
 
 #: src/app/edit-form-user-selector.js:75
 msgid "Change authors"
-msgstr ""
+msgstr "שינוי מחברים"
 
 #: src/app/components/categories.js:12
 msgid "Comments"
 msgstr "הערות/ תגובות"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgstr ""
 
 #: src/app/components/categories.js:9
 msgid "Custom fields"
-msgstr ""
+msgstr "שדות מותאמים אישית"
 
 #: src/app/components/categories.js:8
 msgid "Description"
@@ -75,21 +75,21 @@ msgstr ""
 
 #: src/app/components/collapsible-block.js:37
 msgid "Details"
-msgstr ""
+msgstr "פרטים"
 
 #: src/app/activities-content.js:62
 msgid "Edit widget filters"
-msgstr ""
+msgstr "עריכת מסנני הווידג'טים"
 
 #: src/app/edit-form-query-toolbar.js:63
 msgid "Enter a search query"
 msgstr ""
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr ""
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr ""
 
@@ -99,27 +99,27 @@ msgstr "ינואר|פברואר|מרץ|אפריל|מאי|יוני|יולי|או�
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "ינו'|פבר'|מרץ|אפר'|מאי|יונ'|יול'|אוג'|ספט'|אוק'|נוב'|דצמ'"
 
 #: src/app/components/categories.js:11
 msgid "Links"
-msgstr ""
+msgstr "קישורים"
 
 #: src/app/components/categories.js:4
 msgid "New issues"
-msgstr ""
+msgstr "בעיות חדשות"
 
 #: src/app/content-work-items-activity.js:67
 msgid "No type"
-msgstr ""
+msgstr "ללא סוג"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/http-error-handler/http-error-handler.js:4
 msgid "Oops! Something went wrong..."
-msgstr ""
+msgstr "אופס! משהו השתבש..."
 
 #: src/app/components/activity-stream-link.js:29
 msgid "Open in issue"
-msgstr ""
+msgstr "פתיחה בבעיה"
 
 #: src/app/components/categories.js:6
 #: src/app/content-project-activity.js:23
@@ -136,7 +136,7 @@ msgstr "שמור"
 
 #: src/app/edit-form-youtrack-selector.js:95
 msgid "Select YouTrack"
-msgstr ""
+msgstr "בחירת מופע YouTrack"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
@@ -144,16 +144,16 @@ msgstr ""
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
-msgstr ""
+msgstr "הגדרת כותרת אופציונלית"
 
 #: src/app/components/issue-card.js:288
 #: src/app/control-load-more.js:52
 msgid "Show more"
-msgstr ""
+msgstr "להציג עוד"
 
 #: src/app/components/categories.js:14
 msgid "Sprints"
-msgstr ""
+msgstr "ספרינטים"
 
 #: src/app/components/categories.js:7
 msgid "Summary"
@@ -185,43 +185,43 @@ msgstr "לא ידוע"
 
 #: src/app/components/categories.js:16
 msgid "VCS changes"
-msgstr ""
+msgstr "שינויים ב-VCS"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:69
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "הווידג'ט מתרענן כל דקה"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/refresh-period/refresh-period.js:70
 msgid "Widget refreshes every {{minutesCount}} minutes"
-msgstr ""
+msgstr "הווידג'ט מתרענן כל {{minutesCount}} דקות"
 
 #: src/app/components/categories.js:15
 msgid "Work items"
-msgstr ""
+msgstr "פריטי עבודה"
 
 #: src/app/content-custom-field-activity.js:15
 msgid "[Empty value]"
-msgstr ""
+msgstr "[ערך ריק]"
 
 #: src/app/content-custom-field-activity.js:17
 msgid "[Removed field]"
-msgstr ""
+msgstr "[שדה שהוסר]"
 
 #: src/app/content-custom-field-activity.js:16
 msgid "[Unknown format]"
-msgstr ""
+msgstr "[פורמט לא ידוע]"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr ""
+msgstr "נוסף פריט עבודה"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr ""
+msgstr "לפנ\"צ|אחה\"צ"
 
 #: src/app/content-comment-activity.js:22
 msgid "commented"
-msgstr ""
+msgstr "הגיב/ה"
 
 #: src/app/content-vcs-activity.js:22
 msgid "committed changes"
@@ -229,7 +229,7 @@ msgstr ""
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
-msgstr ""
+msgstr "בעיה שנוצרה"
 
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
@@ -241,11 +241,11 @@ msgstr "ד'"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr ""
+msgstr "בעיה שנפתחה מחדש"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
-msgstr ""
+msgstr "בעיה שנפתרה"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"

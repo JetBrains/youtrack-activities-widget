@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Zulu\n"
 "Language: zu_ZA\n"
-"PO-Revision-Date: 2022-07-04 16:15\n"
+"PO-Revision-Date: 2023-07-28 13:09\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -53,7 +53,7 @@ msgstr "crwdns272127186:0crwdne272127186:0"
 msgid "Comments"
 msgstr "crwdns53327764:0crwdne53327764:0"
 
-#: src/app/activities-widget.js:169
+#: src/app/activities-widget.js:172
 msgid "Could not load new activities"
 msgstr "crwdns272127188:0crwdne272127188:0"
 
@@ -85,11 +85,11 @@ msgstr "crwdns272127194:0crwdne272127194:0"
 msgid "Enter a search query"
 msgstr "crwdns272127196:0crwdne272127196:0"
 
-#: src/app/activities-widget.js:256
+#: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
 msgstr "crwdns272127198:0crwdne272127198:0"
 
-#: src/app/activities-widget.js:255
+#: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
 msgstr "crwdns272127200:0crwdne272127200:0"
 
