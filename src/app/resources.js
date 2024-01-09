@@ -69,7 +69,7 @@ const ASSISTANT = `assistantActivities(id,${FIELD},added(id,name),removed(id,nam
 // eslint-disable-next-line max-len
 const ACTIVITIES_FIELDS = `id,timestamp,category(id),emptyFieldText,${TARGET},${AUTHOR},${ADD},${REM},${FIELD},${CONTAINER},${ASSISTANT}`;
 // eslint-disable-next-line max-len
-const ALL_CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
+const ALL_CATEGORIES = 'CommentsCategory,AttachmentsCategory,AttachmentRenameCategory,CustomFieldCategory,DescriptionCategory,IssueCreatedCategory,IssueResolvedCategory,IssueDeletedCategory,IssueRestoredCategory,LinksCategory,ProjectCategory,IssueVisibilityCategory,SprintCategory,SummaryCategory,TagsCategory,VcsChangeCategory';
 
 export async function loadActivities(fetchYouTrack, params) {
   const packSize = 50;
