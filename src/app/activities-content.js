@@ -22,6 +22,7 @@ import ContentResolvedActivity from './content-resolved-activity';
 import ContentVcsChangeActivity from './content-vcs-activity';
 import ContentSprintActivity from './content-sprint-activity';
 import ContentWorkItemsActivity from './content-work-items-activity';
+import ContentModifiedActivity from './content-modified-activity';
 import './style/activities-widget.scss';
 
 class ActivitiesContent extends React.Component {
@@ -158,6 +159,9 @@ class ActivitiesContent extends React.Component {
         return <ContentCreatedActivity activity={activity}/>;
       case 'IssueResolvedCategory':
         return <ContentResolvedActivity activity={activity}/>;
+      case 'IssueDeletedCategory':
+      case 'IssueRestoredCategory':
+        return <ContentModifiedActivity activity={activity}/>;
       case 'VcsChangeCategory':
         return <ContentVcsChangeActivity activity={activity}/>;
       case 'WorkItemCategory':
