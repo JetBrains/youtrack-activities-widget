@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2023-07-28 15:56\n"
+"PO-Revision-Date: 2024-01-09 15:37\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -29,11 +29,11 @@ msgstr "Будь-який користувач"
 msgid "Attachment"
 msgstr "Вкладення"
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:12
 msgid "Attachments"
 msgstr "Вкладення"
 
-#: src/app/activities-content.js:73
+#: src/app/activities-content.js:74
 msgid "Can't load information from service."
 msgstr "Не вдалося завантажити інформацію із сервісу."
 
@@ -49,7 +49,7 @@ msgstr "Категорія"
 msgid "Change authors"
 msgstr "Змінити авторів"
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:14
 msgid "Comments"
 msgstr "Коментарі"
 
@@ -61,15 +61,19 @@ msgstr "Не вдалося завантажити нові дії"
 msgid "Could not request more activities"
 msgstr "Не вдалось отримати дані про інші дії"
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:11
 msgid "Custom fields"
 msgstr "Користувацькі поля"
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:6
+msgid "Deleted issues"
+msgstr ""
+
+#: src/app/components/categories.js:10
 msgid "Description"
 msgstr "Опис"
 
-#: src/app/activities-content.js:154
+#: src/app/activities-content.js:155
 msgid "Description changed"
 msgstr "Опис змінено"
 
@@ -77,7 +81,7 @@ msgstr "Опис змінено"
 msgid "Details"
 msgstr "Деталі"
 
-#: src/app/activities-content.js:62
+#: src/app/activities-content.js:63
 msgid "Edit widget filters"
 msgstr "Редагувати фільтри віджета"
 
@@ -101,7 +105,7 @@ msgstr "Січень|Лютий|Березень|Квітень|Травень|�
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Січ|Лют|Бер|Кві|Тра|Чер|Лип|Сер|Вер|Жов|Лис|Гру"
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:13
 msgid "Links"
 msgstr "Посилання"
 
@@ -121,7 +125,7 @@ msgstr "Отакої! Щось пішло не так…"
 msgid "Open in issue"
 msgstr "Відкрити у завданні"
 
-#: src/app/components/categories.js:6
+#: src/app/components/categories.js:8
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Проєкт"
@@ -129,6 +133,10 @@ msgstr "Проєкт"
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
 msgstr "Виконані/перевідкриті завдання"
+
+#: src/app/components/categories.js:7
+msgid "Restored issues"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -151,15 +159,15 @@ msgstr "Додати необовʼязкову назву"
 msgid "Show more"
 msgstr "Показати більше"
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:16
 msgid "Sprints"
 msgstr "Спринти"
 
-#: src/app/components/categories.js:7
+#: src/app/components/categories.js:9
 msgid "Summary"
 msgstr "Назва"
 
-#: src/app/activities-content.js:147
+#: src/app/activities-content.js:148
 msgid "Summary changed"
 msgstr "Назву змінено"
 
@@ -171,11 +179,11 @@ msgstr "Неділя|Понеділок|Вівторок|Середа|Четве
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Нд|Пн|Вт|Ср|Чт|Пт|Сб"
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:15
 msgid "Tags"
 msgstr "Мітки"
 
-#: src/app/activities-content.js:52
+#: src/app/activities-content.js:53
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr "За останні 90 днів не відбулося жодних дій, які відповідають фільтрам для цього віджета"
 
@@ -183,7 +191,7 @@ msgstr "За останні 90 днів не відбулося жодних д�
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:18
 msgid "VCS changes"
 msgstr "Зміни VCS"
 
@@ -195,7 +203,7 @@ msgstr "Віджет оновлюється щохвилини"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "Віджет оновлюється кожні {{minutesCount}} хв"
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:17
 msgid "Work items"
 msgstr "Робочі елементи"
 
@@ -231,6 +239,10 @@ msgstr "зафіксовані зміни"
 msgid "created issue"
 msgstr "створені завдання"
 
+#: src/app/content-modified-activity.js:16
+msgid "deleted"
+msgstr ""
+
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
 msgstr "г"
@@ -246,6 +258,10 @@ msgstr "перевідкриті завдання"
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
 msgstr "виконані завдання"
+
+#: src/app/content-modified-activity.js:16
+msgid "restored"
+msgstr ""
 
 #: src/app/content-default-activity.js:78
 msgid "updated"

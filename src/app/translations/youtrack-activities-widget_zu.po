@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Zulu\n"
 "Language: zu_ZA\n"
-"PO-Revision-Date: 2023-07-28 15:57\n"
+"PO-Revision-Date: 2024-01-09 15:37\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -29,11 +29,11 @@ msgstr "crwdns272127180:0crwdne272127180:0"
 msgid "Attachment"
 msgstr "crwdns272127182:0crwdne272127182:0"
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:12
 msgid "Attachments"
 msgstr "crwdns53327754:0crwdne53327754:0"
 
-#: src/app/activities-content.js:73
+#: src/app/activities-content.js:74
 msgid "Can't load information from service."
 msgstr "crwdns53327756:0crwdne53327756:0"
 
@@ -49,7 +49,7 @@ msgstr "crwdns272127184:0crwdne272127184:0"
 msgid "Change authors"
 msgstr "crwdns272127186:0crwdne272127186:0"
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:14
 msgid "Comments"
 msgstr "crwdns53327764:0crwdne53327764:0"
 
@@ -61,15 +61,19 @@ msgstr "crwdns272127188:0crwdne272127188:0"
 msgid "Could not request more activities"
 msgstr "crwdns272127190:0crwdne272127190:0"
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:11
 msgid "Custom fields"
 msgstr "crwdns53327770:0crwdne53327770:0"
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:6
+msgid "Deleted issues"
+msgstr "crwdns299401708:0crwdne299401708:0"
+
+#: src/app/components/categories.js:10
 msgid "Description"
 msgstr "crwdns53327772:0crwdne53327772:0"
 
-#: src/app/activities-content.js:154
+#: src/app/activities-content.js:155
 msgid "Description changed"
 msgstr "crwdns272127192:0crwdne272127192:0"
 
@@ -77,7 +81,7 @@ msgstr "crwdns272127192:0crwdne272127192:0"
 msgid "Details"
 msgstr "crwdns53327776:0crwdne53327776:0"
 
-#: src/app/activities-content.js:62
+#: src/app/activities-content.js:63
 msgid "Edit widget filters"
 msgstr "crwdns272127194:0crwdne272127194:0"
 
@@ -101,7 +105,7 @@ msgstr "crwdns53327786:0crwdne53327786:0"
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "crwdns53327788:0crwdne53327788:0"
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:13
 msgid "Links"
 msgstr "crwdns53327790:0crwdne53327790:0"
 
@@ -121,7 +125,7 @@ msgstr "crwdns53327796:0crwdne53327796:0"
 msgid "Open in issue"
 msgstr "crwdns272127202:0crwdne272127202:0"
 
-#: src/app/components/categories.js:6
+#: src/app/components/categories.js:8
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "crwdns53327800:0crwdne53327800:0"
@@ -129,6 +133,10 @@ msgstr "crwdns53327800:0crwdne53327800:0"
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
 msgstr "crwdns272127204:0crwdne272127204:0"
+
+#: src/app/components/categories.js:7
+msgid "Restored issues"
+msgstr "crwdns299401710:0crwdne299401710:0"
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -151,15 +159,15 @@ msgstr "crwdns272127208:0crwdne272127208:0"
 msgid "Show more"
 msgstr "crwdns53327812:0crwdne53327812:0"
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:16
 msgid "Sprints"
 msgstr "crwdns53327814:0crwdne53327814:0"
 
-#: src/app/components/categories.js:7
+#: src/app/components/categories.js:9
 msgid "Summary"
 msgstr "crwdns53327816:0crwdne53327816:0"
 
-#: src/app/activities-content.js:147
+#: src/app/activities-content.js:148
 msgid "Summary changed"
 msgstr "crwdns272127210:0crwdne272127210:0"
 
@@ -171,11 +179,11 @@ msgstr "crwdns53327820:0crwdne53327820:0"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "crwdns53327822:0crwdne53327822:0"
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:15
 msgid "Tags"
 msgstr "crwdns53327824:0crwdne53327824:0"
 
-#: src/app/activities-content.js:52
+#: src/app/activities-content.js:53
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr "crwdns272127212:0crwdne272127212:0"
 
@@ -183,7 +191,7 @@ msgstr "crwdns272127212:0crwdne272127212:0"
 msgid "Unknown"
 msgstr "crwdns272127214:0crwdne272127214:0"
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:18
 msgid "VCS changes"
 msgstr "crwdns272127216:0crwdne272127216:0"
 
@@ -195,7 +203,7 @@ msgstr "crwdns53327832:0crwdne53327832:0"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "crwdns53327834:0{{minutesCount}}crwdne53327834:0"
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:17
 msgid "Work items"
 msgstr "crwdns53327836:0crwdne53327836:0"
 
@@ -231,6 +239,10 @@ msgstr "crwdns53327850:0crwdne53327850:0"
 msgid "created issue"
 msgstr "crwdns272127224:0crwdne272127224:0"
 
+#: src/app/content-modified-activity.js:16
+msgid "deleted"
+msgstr "crwdns299401712:0crwdne299401712:0"
+
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
 msgstr "crwdns53327854:0crwdne53327854:0"
@@ -246,6 +258,10 @@ msgstr "crwdns272127226:0crwdne272127226:0"
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
 msgstr "crwdns272127228:0crwdne272127228:0"
+
+#: src/app/content-modified-activity.js:16
+msgid "restored"
+msgstr "crwdns299401714:0crwdne299401714:0"
 
 #: src/app/content-default-activity.js:78
 msgid "updated"

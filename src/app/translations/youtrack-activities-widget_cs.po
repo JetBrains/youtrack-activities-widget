@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2023-07-28 15:55\n"
+"PO-Revision-Date: 2024-01-09 15:33\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -19,7 +19,7 @@ msgstr "Kategorie aktivit"
 
 #: src/app/edit-form-query-toolbar.js:69
 msgid "Activity is only shown for issues that match the search criteria"
-msgstr ""
+msgstr "Aktivita se zobrazuje pouze u problémů, které odpovídají kritériím vyhledávání"
 
 #: src/app/edit-form-user-selector.js:92
 msgid "Any user"
@@ -29,11 +29,11 @@ msgstr "Libovolný uživatel"
 msgid "Attachment"
 msgstr "Příloha"
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:12
 msgid "Attachments"
 msgstr "Přílohy"
 
-#: src/app/activities-content.js:73
+#: src/app/activities-content.js:74
 msgid "Can't load information from service."
 msgstr "Nelze načíst data ze služby."
 
@@ -49,7 +49,7 @@ msgstr "Kategorie"
 msgid "Change authors"
 msgstr "Změna autorů"
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:14
 msgid "Comments"
 msgstr "Komentáře"
 
@@ -59,17 +59,21 @@ msgstr "Nelze načíst nové aktivity"
 
 #: src/app/control-load-more.js:32
 msgid "Could not request more activities"
-msgstr ""
+msgstr "Nelze požádat o další aktivity"
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:11
 msgid "Custom fields"
 msgstr "Vlastní políčka"
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:6
+msgid "Deleted issues"
+msgstr ""
+
+#: src/app/components/categories.js:10
 msgid "Description"
 msgstr "Popis"
 
-#: src/app/activities-content.js:154
+#: src/app/activities-content.js:155
 msgid "Description changed"
 msgstr "Změna popisu"
 
@@ -77,7 +81,7 @@ msgstr "Změna popisu"
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: src/app/activities-content.js:62
+#: src/app/activities-content.js:63
 msgid "Edit widget filters"
 msgstr "Upravit filtry widgetů"
 
@@ -87,11 +91,11 @@ msgstr "Zadejte vyhledávací dotaz"
 
 #: src/app/activities-widget.js:259
 msgid "Issue Activity Feed"
-msgstr ""
+msgstr "Informační kanál o aktivitách problémů"
 
 #: src/app/activities-widget.js:258
 msgid "Issue Activity Feed —"
-msgstr ""
+msgstr "Informační kanál o aktivitách problému —"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -101,7 +105,7 @@ msgstr "Leden|Únor|Březen|Duben|Květen|Červen|Červenec|Srpen|Září|Říje
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Led|Úno|Bře|Dub|Kvě|Čer|Čvc|Srp|Zář|Říj|Lis|Pro"
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:13
 msgid "Links"
 msgstr "Odkazy"
 
@@ -121,7 +125,7 @@ msgstr "Jejda! Něco se pokazilo…"
 msgid "Open in issue"
 msgstr "Otevřít v případu"
 
-#: src/app/components/categories.js:6
+#: src/app/components/categories.js:8
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Projekt"
@@ -129,6 +133,10 @@ msgstr "Projekt"
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
 msgstr "Vyřešené/znovu otevřené případy"
+
+#: src/app/components/categories.js:7
+msgid "Restored issues"
+msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -140,7 +148,7 @@ msgstr "Vyberte YouTrack"
 
 #: src/app/edit-form-category-selector.js:57
 msgid "Select which types of updates are shown in the activity feed"
-msgstr ""
+msgstr "Vyberte, které typy aktualizací se budou zobrazovat v informačním kanálu o aktivitách"
 
 #: src/app/edit-form-optional-title.js:44
 msgid "Set optional title"
@@ -151,15 +159,15 @@ msgstr "Nastavit volitelný název"
 msgid "Show more"
 msgstr "Zobrazit další"
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:16
 msgid "Sprints"
 msgstr "Sprinty"
 
-#: src/app/components/categories.js:7
+#: src/app/components/categories.js:9
 msgid "Summary"
 msgstr "Souhrn"
 
-#: src/app/activities-content.js:147
+#: src/app/activities-content.js:148
 msgid "Summary changed"
 msgstr "Souhrn byl změněn"
 
@@ -171,19 +179,19 @@ msgstr "Neděle|Pondělí|Úterý|Středa|Čtvrtek|Pátek|Sobota"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Ne|Po|Út|St|Čt|Pá|So"
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:15
 msgid "Tags"
 msgstr "Štítky"
 
-#: src/app/activities-content.js:52
+#: src/app/activities-content.js:53
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
-msgstr ""
+msgstr "Za posledních 90 dní nebyla zaznamenána žádná aktivita, která by odpovídala filtrům pro tento widget"
 
 #: src/app/content-project-activity.js:17
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:18
 msgid "VCS changes"
 msgstr "Změny VCS"
 
@@ -195,7 +203,7 @@ msgstr "Widget se aktualizuje každou minutu"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "Widget se aktualizuje každých {{minutesCount}} minut"
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:17
 msgid "Work items"
 msgstr "Výkazů práce"
 
@@ -213,7 +221,7 @@ msgstr "[Neznámý formát]"
 
 #: src/app/content-work-items-activity.js:75
 msgid "added work item"
-msgstr ""
+msgstr "přidaná pracovní položka"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
@@ -225,10 +233,14 @@ msgstr "komentováno"
 
 #: src/app/content-vcs-activity.js:22
 msgid "committed changes"
-msgstr ""
+msgstr "potvrzené změny"
 
 #: src/app/content-created-activity.js:17
 msgid "created issue"
+msgstr "vytvořené problémy"
+
+#: src/app/content-modified-activity.js:16
+msgid "deleted"
 msgstr ""
 
 #: src/app/content-custom-field-activity.js:38
@@ -241,10 +253,14 @@ msgstr "m"
 
 #: src/app/content-resolved-activity.js:20
 msgid "reopened issue"
-msgstr ""
+msgstr "znovu otevřené problémy"
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
+msgstr "vyřešené problémy"
+
+#: src/app/content-modified-activity.js:16
+msgid "restored"
 msgstr ""
 
 #: src/app/content-default-activity.js:78

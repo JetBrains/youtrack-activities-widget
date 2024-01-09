@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Karakalpak\n"
 "Language: kaa\n"
-"PO-Revision-Date: 2023-07-28 15:56\n"
+"PO-Revision-Date: 2024-01-09 15:36\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -29,11 +29,11 @@ msgstr ""
 msgid "Attachment"
 msgstr ""
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:12
 msgid "Attachments"
 msgstr ""
 
-#: src/app/activities-content.js:73
+#: src/app/activities-content.js:74
 msgid "Can't load information from service."
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Change authors"
 msgstr ""
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:14
 msgid "Comments"
 msgstr ""
 
@@ -61,15 +61,19 @@ msgstr ""
 msgid "Could not request more activities"
 msgstr ""
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:11
 msgid "Custom fields"
 msgstr ""
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:6
+msgid "Deleted issues"
+msgstr ""
+
+#: src/app/components/categories.js:10
 msgid "Description"
 msgstr ""
 
-#: src/app/activities-content.js:154
+#: src/app/activities-content.js:155
 msgid "Description changed"
 msgstr ""
 
@@ -77,7 +81,7 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: src/app/activities-content.js:62
+#: src/app/activities-content.js:63
 msgid "Edit widget filters"
 msgstr ""
 
@@ -101,7 +105,7 @@ msgstr ""
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr ""
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:13
 msgid "Links"
 msgstr ""
 
@@ -121,13 +125,17 @@ msgstr ""
 msgid "Open in issue"
 msgstr ""
 
-#: src/app/components/categories.js:6
+#: src/app/components/categories.js:8
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr ""
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
+msgstr ""
+
+#: src/app/components/categories.js:7
+msgid "Restored issues"
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
@@ -151,15 +159,15 @@ msgstr ""
 msgid "Show more"
 msgstr ""
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:16
 msgid "Sprints"
 msgstr ""
 
-#: src/app/components/categories.js:7
+#: src/app/components/categories.js:9
 msgid "Summary"
 msgstr ""
 
-#: src/app/activities-content.js:147
+#: src/app/activities-content.js:148
 msgid "Summary changed"
 msgstr ""
 
@@ -171,11 +179,11 @@ msgstr ""
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr ""
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:15
 msgid "Tags"
 msgstr ""
 
-#: src/app/activities-content.js:52
+#: src/app/activities-content.js:53
 msgid "There hasn't been any activity that matches the filters for this widget within the last 90 days"
 msgstr ""
 
@@ -183,7 +191,7 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:18
 msgid "VCS changes"
 msgstr ""
 
@@ -195,7 +203,7 @@ msgstr ""
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr ""
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:17
 msgid "Work items"
 msgstr ""
 
@@ -231,6 +239,10 @@ msgstr ""
 msgid "created issue"
 msgstr ""
 
+#: src/app/content-modified-activity.js:16
+msgid "deleted"
+msgstr ""
+
 #: src/app/content-custom-field-activity.js:38
 msgid "h"
 msgstr ""
@@ -245,6 +257,10 @@ msgstr ""
 
 #: src/app/content-resolved-activity.js:18
 msgid "resolved issue"
+msgstr ""
+
+#: src/app/content-modified-activity.js:16
+msgid "restored"
 msgstr ""
 
 #: src/app/content-default-activity.js:78
