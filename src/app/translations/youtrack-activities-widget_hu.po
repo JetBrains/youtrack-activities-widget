@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2024-01-09 22:28\n"
+"PO-Revision-Date: 2024-01-15 15:24\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -29,7 +29,7 @@ msgstr "Bármely felhasználó"
 msgid "Attachment"
 msgstr "Csatolmány"
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:11
 msgid "Attachments"
 msgstr "Csatolmányok"
 
@@ -49,7 +49,7 @@ msgstr "Kategória"
 msgid "Change authors"
 msgstr "Szerzők módosítása"
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:13
 msgid "Comments"
 msgstr "Hozzászólások"
 
@@ -61,15 +61,15 @@ msgstr "Nem lehet új tevékenységeket betölteni"
 msgid "Could not request more activities"
 msgstr "Több tevékenységet nem lehet kérni"
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:10
 msgid "Custom fields"
 msgstr "Egyéni mezők"
 
 #: src/app/components/categories.js:6
-msgid "Deleted issues"
+msgid "Deleted/Restored issues"
 msgstr ""
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:9
 msgid "Description"
 msgstr "Leírás"
 
@@ -105,7 +105,7 @@ msgstr "Január|Február|Március|Április|Május|Június|Július|Augusztus|Szep
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Jan|Febr|Már|Ápr|Máj|Jún|Júl|Aug|Szept|Okt|Nov|Dec"
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:12
 msgid "Links"
 msgstr "Hivatkozások"
 
@@ -125,7 +125,7 @@ msgstr "Hoppá, valami hiba történt..."
 msgid "Open in issue"
 msgstr "Hibajegyben megnyitva"
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:7
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Projekt"
@@ -133,10 +133,6 @@ msgstr "Projekt"
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
 msgstr "Megoldott/újranyitott hibajegyek"
-
-#: src/app/components/categories.js:7
-msgid "Restored issues"
-msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -159,11 +155,11 @@ msgstr "Választható cím beállítása"
 msgid "Show more"
 msgstr "Mutasson többet"
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:15
 msgid "Sprints"
 msgstr "Sprintek"
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:8
 msgid "Summary"
 msgstr "Összegzés"
 
@@ -179,7 +175,7 @@ msgstr "Vasárnap|Hétfő|Kedd|Szerda|Csütörtök|Péntek|Szombat"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Vas|Hét|Ked|Sze|Csü|Pén|Szo"
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:14
 msgid "Tags"
 msgstr "Címkék"
 
@@ -191,7 +187,7 @@ msgstr "Az elmúlt 90 napban nem volt olyan tevékenység, amely egyezne az ehhe
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: src/app/components/categories.js:18
+#: src/app/components/categories.js:17
 msgid "VCS changes"
 msgstr "VCS változások"
 
@@ -203,7 +199,7 @@ msgstr "A widget percenként frissül"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "A widget {{minutesCount}} percenként frissül"
 
-#: src/app/components/categories.js:17
+#: src/app/components/categories.js:16
 msgid "Work items"
 msgstr "Munka ráfordítás"
 

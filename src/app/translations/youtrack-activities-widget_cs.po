@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2024-01-09 22:27\n"
+"PO-Revision-Date: 2024-01-15 15:23\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -29,7 +29,7 @@ msgstr "Libovolný uživatel"
 msgid "Attachment"
 msgstr "Příloha"
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:11
 msgid "Attachments"
 msgstr "Přílohy"
 
@@ -49,7 +49,7 @@ msgstr "Kategorie"
 msgid "Change authors"
 msgstr "Změna autorů"
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:13
 msgid "Comments"
 msgstr "Komentáře"
 
@@ -61,15 +61,15 @@ msgstr "Nelze načíst nové aktivity"
 msgid "Could not request more activities"
 msgstr "Nelze požádat o další aktivity"
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:10
 msgid "Custom fields"
 msgstr "Vlastní políčka"
 
 #: src/app/components/categories.js:6
-msgid "Deleted issues"
+msgid "Deleted/Restored issues"
 msgstr ""
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:9
 msgid "Description"
 msgstr "Popis"
 
@@ -105,7 +105,7 @@ msgstr "Leden|Únor|Březen|Duben|Květen|Červen|Červenec|Srpen|Září|Říje
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Led|Úno|Bře|Dub|Kvě|Čer|Čvc|Srp|Zář|Říj|Lis|Pro"
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:12
 msgid "Links"
 msgstr "Odkazy"
 
@@ -125,7 +125,7 @@ msgstr "Jejda! Něco se pokazilo…"
 msgid "Open in issue"
 msgstr "Otevřít v případu"
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:7
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Projekt"
@@ -133,10 +133,6 @@ msgstr "Projekt"
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
 msgstr "Vyřešené/znovu otevřené případy"
-
-#: src/app/components/categories.js:7
-msgid "Restored issues"
-msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -159,11 +155,11 @@ msgstr "Nastavit volitelný název"
 msgid "Show more"
 msgstr "Zobrazit další"
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:15
 msgid "Sprints"
 msgstr "Sprinty"
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:8
 msgid "Summary"
 msgstr "Souhrn"
 
@@ -179,7 +175,7 @@ msgstr "Neděle|Pondělí|Úterý|Středa|Čtvrtek|Pátek|Sobota"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Ne|Po|Út|St|Čt|Pá|So"
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:14
 msgid "Tags"
 msgstr "Štítky"
 
@@ -191,7 +187,7 @@ msgstr "Za posledních 90 dní nebyla zaznamenána žádná aktivita, která by 
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: src/app/components/categories.js:18
+#: src/app/components/categories.js:17
 msgid "VCS changes"
 msgstr "Změny VCS"
 
@@ -203,7 +199,7 @@ msgstr "Widget se aktualizuje každou minutu"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "Widget se aktualizuje každých {{minutesCount}} minut"
 
-#: src/app/components/categories.js:17
+#: src/app/components/categories.js:16
 msgid "Work items"
 msgstr "Výkazů práce"
 

@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2024-01-09 22:29\n"
+"PO-Revision-Date: 2024-01-15 15:25\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "Attachment"
 msgstr "Załącznik"
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:11
 msgid "Attachments"
 msgstr "Załączniki"
 
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Change authors"
 msgstr ""
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:13
 msgid "Comments"
 msgstr "Komentarze"
 
@@ -61,15 +61,15 @@ msgstr ""
 msgid "Could not request more activities"
 msgstr ""
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:10
 msgid "Custom fields"
 msgstr "Pola niestandardowe"
 
 #: src/app/components/categories.js:6
-msgid "Deleted issues"
+msgid "Deleted/Restored issues"
 msgstr ""
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:9
 msgid "Description"
 msgstr "Opis"
 
@@ -105,7 +105,7 @@ msgstr "Styczeń|Luty|Marzec|Kwiecień|Maj|Czerwiec|Lipiec|Sierpień|Wrzesień|P
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Sty|Lut|Mar|Kwi|Maj|Cze|Lip|Sie|Wrz|Paź|Lis|Gru"
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:12
 msgid "Links"
 msgstr ""
 
@@ -125,17 +125,13 @@ msgstr "Ups. Coś poszło nie tak..."
 msgid "Open in issue"
 msgstr ""
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:7
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Projekt"
 
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
-msgstr ""
-
-#: src/app/components/categories.js:7
-msgid "Restored issues"
 msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
@@ -159,11 +155,11 @@ msgstr "Ustaw opcjonalny tytuł"
 msgid "Show more"
 msgstr "Pokaż więcej"
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:15
 msgid "Sprints"
 msgstr ""
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:8
 msgid "Summary"
 msgstr "Podsumowanie"
 
@@ -179,7 +175,7 @@ msgstr "Niedziela|Poniedziałek|Wtorek|Środa|Czwartek|Piątek|Sobota"
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "N|Po|Wt|Śr|Cz|Pt|So"
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:14
 msgid "Tags"
 msgstr "Tagi"
 
@@ -191,7 +187,7 @@ msgstr ""
 msgid "Unknown"
 msgstr "Nieznane"
 
-#: src/app/components/categories.js:18
+#: src/app/components/categories.js:17
 msgid "VCS changes"
 msgstr ""
 
@@ -203,7 +199,7 @@ msgstr "Widżet jest odświeżany co minutę"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "Widżet jest odświeżany co {{minutesCount}} min"
 
-#: src/app/components/categories.js:17
+#: src/app/components/categories.js:16
 msgid "Work items"
 msgstr ""
 

@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2024-01-09 22:29\n"
+"PO-Revision-Date: 2024-01-15 15:25\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
@@ -29,7 +29,7 @@ msgstr "Будь-який користувач"
 msgid "Attachment"
 msgstr "Вкладення"
 
-#: src/app/components/categories.js:12
+#: src/app/components/categories.js:11
 msgid "Attachments"
 msgstr "Вкладення"
 
@@ -49,7 +49,7 @@ msgstr "Категорія"
 msgid "Change authors"
 msgstr "Змінити авторів"
 
-#: src/app/components/categories.js:14
+#: src/app/components/categories.js:13
 msgid "Comments"
 msgstr "Коментарі"
 
@@ -61,15 +61,15 @@ msgstr "Не вдалося завантажити нові дії"
 msgid "Could not request more activities"
 msgstr "Не вдалось отримати дані про інші дії"
 
-#: src/app/components/categories.js:11
+#: src/app/components/categories.js:10
 msgid "Custom fields"
 msgstr "Користувацькі поля"
 
 #: src/app/components/categories.js:6
-msgid "Deleted issues"
+msgid "Deleted/Restored issues"
 msgstr ""
 
-#: src/app/components/categories.js:10
+#: src/app/components/categories.js:9
 msgid "Description"
 msgstr "Опис"
 
@@ -105,7 +105,7 @@ msgstr "Січень|Лютий|Березень|Квітень|Травень|�
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Січ|Лют|Бер|Кві|Тра|Чер|Лип|Сер|Вер|Жов|Лис|Гру"
 
-#: src/app/components/categories.js:13
+#: src/app/components/categories.js:12
 msgid "Links"
 msgstr "Посилання"
 
@@ -125,7 +125,7 @@ msgstr "Отакої! Щось пішло не так…"
 msgid "Open in issue"
 msgstr "Відкрити у завданні"
 
-#: src/app/components/categories.js:8
+#: src/app/components/categories.js:7
 #: src/app/content-project-activity.js:23
 msgid "Project"
 msgstr "Проєкт"
@@ -133,10 +133,6 @@ msgstr "Проєкт"
 #: src/app/components/categories.js:5
 msgid "Resolved/reopened issues"
 msgstr "Виконані/перевідкриті завдання"
-
-#: src/app/components/categories.js:7
-msgid "Restored issues"
-msgstr ""
 
 #: node_modules/@jetbrains/hub-widget-ui/src/configuration-form/configuration-form.js:47
 msgid "Save"
@@ -159,11 +155,11 @@ msgstr "Додати необовʼязкову назву"
 msgid "Show more"
 msgstr "Показати більше"
 
-#: src/app/components/categories.js:16
+#: src/app/components/categories.js:15
 msgid "Sprints"
 msgstr "Спринти"
 
-#: src/app/components/categories.js:9
+#: src/app/components/categories.js:8
 msgid "Summary"
 msgstr "Назва"
 
@@ -179,7 +175,7 @@ msgstr "Неділя|Понеділок|Вівторок|Середа|Четве
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "Нд|Пн|Вт|Ср|Чт|Пт|Сб"
 
-#: src/app/components/categories.js:15
+#: src/app/components/categories.js:14
 msgid "Tags"
 msgstr "Мітки"
 
@@ -191,7 +187,7 @@ msgstr "За останні 90 днів не відбулося жодних д�
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: src/app/components/categories.js:18
+#: src/app/components/categories.js:17
 msgid "VCS changes"
 msgstr "Зміни VCS"
 
@@ -203,7 +199,7 @@ msgstr "Віджет оновлюється щохвилини"
 msgid "Widget refreshes every {{minutesCount}} minutes"
 msgstr "Віджет оновлюється кожні {{minutesCount}} хв"
 
-#: src/app/components/categories.js:17
+#: src/app/components/categories.js:16
 msgid "Work items"
 msgstr "Робочі елементи"
 
