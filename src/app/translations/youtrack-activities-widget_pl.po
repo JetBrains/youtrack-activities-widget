@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 419394\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2024-01-25 11:04\n"
+"PO-Revision-Date: 2024-01-25 11:43\n"
 
 #: src/app/edit-form-category-selector.js:54
 msgid "Activity Categories"
