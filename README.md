@@ -1,6 +1,12 @@
 # Issue Activity Feed
 
-[![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+[![obsolete JetBrains project](https://jb.gg/badges/obsolete-flat-square.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
+---
+
+### Important: the repository is archived. Widget is converted into YouTrack App and is now hosted [here](https://github.com/JetBrains/youtrack-apps/tree/main/packages/issue-dashboard-widgets/widgets/youtrack-activities-widget)
+
+---
 
 [YouTrack](https://www.jetbrains.com/youtrack/) dashboard widget, which shows activities in selected categories for issues that match the specified search criteria.
 
